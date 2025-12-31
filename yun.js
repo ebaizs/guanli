@@ -1,324 +1,1094 @@
-function isAdmin(){return currentUser&&currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']==="uyiq".split("").reverse().join("");}function canDelete(){return hasPermission?hasPermission("\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073"):isAdmin();}function canEditTime(){return hasPermission?hasPermission("\u0065\u0064\u0069\u0074\u0041\u006C\u006C"):isAdmin();}function canEditStatus(){return hasPermission?hasPermission("\u0065\u0064\u0069\u0074\u0041\u006C\u006C"):isAdmin();}function canEditQuote(){return hasPermission?hasPermission("etouQtide".split("").reverse().join("")):isAdmin();}function canClearLog(){return hasPermission?hasPermission("sgoLweiv".split("").reverse().join("")):isAdmin();}function canAdd(){return hasPermission?hasPermission("\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073"):currentUser!==null;}function canEditWorkerRating(){return hasPermission?hasPermission("llAtide".split("").reverse().join("")):currentUser!==null;}function canEditWorkerTime(){return hasPermission?hasPermission("\u0065\u0064\u0069\u0074\u0041\u006C\u006C"):currentUser!==null;}function canEditNote(){return hasPermission?hasPermission("llAtide".split("").reverse().join("")):currentUser!==null;}function initTabs(){var _0xdgaacd;const _0x3c3da=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u0054\u0061\u0062\u0073");_0xdgaacd=544059^544057;if(!_0x3c3da){console['\u0065\u0072\u0072\u006F\u0072']("\u627E\u4E0D\u5230\u0020\u0073\u0069\u0074\u0065\u0054\u0061\u0062\u0073\u0020\u5BB9\u5668");return;}var _0x9ef=(368520^368526)+(214300^214298);const _0xd380b=currentUser?getAllowedTabs():PERMISSION_CONFIG['\u0061\u0076\u0061\u0069\u006C\u0061\u0062\u006C\u0065\u0054\u0061\u0062\u0073'];_0x9ef=619377^619379;_0x3c3da['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';_0xd380b['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((tab,index)=>{var _0xd4c91b=(908250^908251)+(471266^471264);const _0xfebc4e=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0xd4c91b=863864^863871;_0xfebc4e['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']=`tab ${index===(900731^900731)?"\u0061\u0063\u0074\u0069\u0076\u0065":''}`;_0xfebc4e['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=tab['\u006E\u0061\u006D\u0065'];_0xfebc4e['\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("bat-atad".split("").reverse().join(""),tab['\u0069\u0064']);_0xfebc4e['\u006F\u006E\u0063\u006C\u0069\u0063\u006B']=e=>{e['\u0073\u0074\u006F\u0070\u0050\u0072\u006F\u0070\u0061\u0067\u0061\u0074\u0069\u006F\u006E']();console['\u006C\u006F\u0067']("\u5207\u6362\u6807\u7B7E\u9875\u003A",tab['\u0069\u0064']);switchTab(tab['\u0069\u0064']);};_0x3c3da['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xfebc4e);});const _0x33ec=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0xd380b[465771^465771]?.id);if(_0x33ec){_0x33ec['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");}}async function loadGithubConfig(){if(GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']){console['\u006C\u006F\u0067']("\u8F7D\u52A0\u590D\u91CD\u8FC7\u8DF3\uFF0C\u8F7D\u52A0\u5DF2\u7F6E\u914D".split("").reverse().join(""));return!![];}console['\u006C\u006F\u0067']("...\u7F6E\u914DbuHtiG\u8F7D\u52A0\u59CB\u5F00".split("").reverse().join(""));const _0xc18cae=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("gifnoc_buhtig".split("").reverse().join(""));if(_0xc18cae){try{const _0xc86a=JSON['\u0070\u0061\u0072\u0073\u0065'](_0xc18cae);GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']=_0xc86a['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']||'';GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']=_0xc86a['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']||'';if(GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']&&GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']){GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=!![];console['\u006C\u006F\u0067']("\u4ECE\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065\u52A0\u8F7D\u0047\u0069\u0074\u0048\u0075\u0062\u914D\u7F6E\u6210\u529F");console['\u006C\u006F\u0067']("\u0047\u0049\u0053\u0054\u005F\u0049\u0044\u003A",GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](159954^159954,557075^557083)+"\u002E\u002E\u002E");console['\u006C\u006F\u0067']("\u5DF2\u4ECE\u672C\u5730\u5B58\u50A8\u52A0\u8F7D\u914D\u7F6E\uFF0C\u8DF3\u8FC7\u914D\u7F6E\u5BF9\u8BDD\u6846");return!![];}else{console['\u0077\u0061\u0072\u006E']("\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065\u4E2D\u7684\u914D\u7F6E\u4E0D\u5B8C\u6574\uFF0C\u9700\u8981\u91CD\u65B0\u914D\u7F6E");localStorage['\u0072\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']("\u0067\u0069\u0074\u0068\u0075\u0062\u005F\u0063\u006F\u006E\u0066\u0069\u0067");GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=false;}}catch(e){console['\u0077\u0061\u0072\u006E']("\u89E3\u6790\u4FDD\u5B58\u7684\u914D\u7F6E\u5931\u8D25\u003A",e);localStorage['\u0072\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']("gifnoc_buhtig".split("").reverse().join(""));GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=false;}}console['\u006C\u006F\u0067']("\u6846\u8BDD\u5BF9\u7F6E\u914D\u793A\u663E\u8981\u9700\uFF0C\u7F6E\u914D\u5730\u672C\u5230\u627E\u672A".split("").reverse().join(""));var _0x4b4f1c=(604241^604247)+(236678^236687);const _0xb894d=await promptForConfigFile();_0x4b4f1c=148329^148320;if(_0xb894d){console['\u006C\u006F\u0067']("\u7528\u6237\u914D\u7F6E\u5B8C\u6210\uFF0C\u914D\u7F6E\u5DF2\u52A0\u8F7D");return!![];}else{console['\u006C\u006F\u0067']("\u7528\u6237\u8DF3\u8FC7\u4E86\u914D\u7F6E\u6216\u914D\u7F6E\u5931\u8D25");return false;}}async function promptForConfigFile(){return new Promise(resolve=>{var _0xd0720a=(922843^922835)+(505680^505687);const _0xb8873b=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0xd0720a=(136684^136682)+(323956^323954);_0xb8873b['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
+
+// ==================== GitHub Token 管理函数 ====================
+async function ensureGitHubToken(options = {}) {
+    const {
+        checkDataSize = true,      // 是否检查数据大小
+        purpose = 'upload',        // 用途: 'upload'|'config'|'permission'
+        showWarning = true         // 是否显示警告
+    } = options;
+    
+    // 1. 先检查是否已有 Token
+    if (GIST_CONFIG.GITHUB_TOKEN && GIST_CONFIG.GITHUB_TOKEN.length > 10) {
+        console.log('已有 Token，直接使用');
+        return GIST_CONFIG.GITHUB_TOKEN;
+    }
+    
+    // 2. 检查 localStorage
+    const savedConfig = localStorage.getItem('github_config');
+    if (savedConfig) {
+        try {
+            const config = JSON.parse(savedConfig);
+            if (config.GITHUB_TOKEN && config.GITHUB_TOKEN.length > 10) {
+                GIST_CONFIG.GITHUB_TOKEN = config.GITHUB_TOKEN;
+                GIST_CONFIG.configLoaded = true;
+                console.log('从 localStorage 加载 Token');
+                return GIST_CONFIG.GITHUB_TOKEN;
+            }
+        } catch (e) {
+            console.warn('解析 localStorage 配置失败:', e);
+        }
+    }
+    
+    // 3. 如果没有 Token，提示用户输入
+    return await promptForGitHubToken({ checkDataSize, purpose, showWarning });
+}
+
+// 独立的 Token 输入函数
+async function promptForGitHubToken(options = {}) {
+    return new Promise((resolve) => {
+        const {
+            checkDataSize = true,
+            purpose = 'upload',
+            showWarning = true
+        } = options;
+        
+        // 根据用途显示不同的提示
+        const purposeText = {
+            'upload': '备份数据到云端',
+            'config': '同步云端配置',
+            'permission': '上传权限配置'
+        }[purpose] || '操作';
+        
+        // 创建输入模态框
+        const modal = document.createElement('div');
+        modal.className = 'github-token-modal';
+        modal.style.cssText = `
+            display: flex;
             position: fixed;
-            top: 0;
+            z-index: 9999;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: flex;
+            background: rgba(0,0,0,0.7);
             justify-content: center;
             align-items: center;
-            z-index: 9999;
-            backdrop-filter: blur(5px);
-        `;_0xb8873b['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <div style="background: white; padding: 30px; border-radius: 15px; max-width: 500px; width: 90%;">
-                <h2 style="margin-bottom: 20px; color: #333;">首次使用配置</h2>
-                <p style="margin-bottom: 20px; color: #666;">
-                    这是第一次使用GitHub同步功能，请加载包含GitHub密钥的配置文件。
-                </p>
-                <p style="margin-bottom: 20px; color: #666; font-size: 14px;">
-                    请选择包含以下内容的TXT文件：<br>
-                    GIST_ID=你的Gist_ID<br>
-                    GITHUB_TOKEN=你的GitHub_Token
-                </p>
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 8px; font-weight: bold;">
-                        选择配置文件：
-                    </label>
-                    <input type="file" id="configFileInput" accept=".txt" 
-                           style="width: 100%; padding: 10px; border: 2px dashed #ddd; border-radius: 5px;">
-                </div>
-                <div style="text-align: right;">
-                    <button id="manualConfigBtn" style="padding: 10px 20px; margin-right: 10px; 
-                           background: #f8f9fa; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;">
-                        手动输入
-                    </button>
-                    <button id="skipConfigBtn" style="padding: 10px 20px; 
-                           background: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                        跳过配置
-                    </button>
-                </div>
-                <div id="manualConfig" style="display: none; margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px;">
-                    <div style="margin-bottom: 10px;">
-                        <label style="display: block; margin-bottom: 5px;">Gist ID：</label>
-                        <input type="text" id="manualGistId" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" 
-                               placeholder="例如：097f8adbb3790f3a95ba586a0867699b">
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        `;
+        
+        // 检查数据大小（只在需要时）
+        let sizeCheck = { canUpload: true, humanSize: '0 MB' };
+        let warningHtml = '';
+        
+        if (checkDataSize) {
+            sizeCheck = checkDataSizeBeforeUpload();
+            
+            if (!sizeCheck.canUpload) {
+                warningHtml = `
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                        ⚠️ <strong>数据过大警告</strong><br>
+                        当前数据大小：${sizeCheck.humanSize}<br>
+                        GitHub Gist 单个文件限制为10MB。<br>
+                        请先清理数据再尝试上传。
                     </div>
-                    <div style="margin-bottom: 10px;">
-                        <label style="display: block; margin-bottom: 5px;">GitHub Token：</label>
-                        <input type="text" id="manualToken" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" 
-                               placeholder="例如：ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
+                `;
+            } else if (sizeCheck.totalSize > 5 * 1024 * 1024) {
+                warningHtml = `
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                        ⚠️ <strong>数据较大提醒</strong><br>
+                        当前数据大小：${sizeCheck.humanSize}<br>
+                        包含 ${sizeCheck.imageCount} 个图片文件。<br>
+                        建议压缩图片后再上传。
                     </div>
-                    <button id="saveManualConfig" style="padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                        保存配置
+                `;
+            }
+        }
+        
+        modal.innerHTML = `
+            <div style="background: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; box-shadow: 0 5px 30px rgba(0,0,0,0.3);">
+                <h3 style="margin: 0 0 20px 0; color: #333;"> Token秘钥 配置</h3>
+                
+                ${warningHtml}
+                
+                <p style="color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 20px;">
+                    <strong>需要 Token 才能 ${purposeText}。</strong><br>
+                    ${
+                        purpose === 'upload' 
+                            ? '从云端加载数据不需要 Token。' 
+                            : '从云端加载配置不需要 Token。'
+                    }
+                    
+                </p>
+                
+                <div style="margin-bottom: 15px;">
+                    <input type="password" 
+                           id="githubTokenInput" 
+                           style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box;"
+                           placeholder="请输入 GitHub Token，如：ghp_xxxxxxxxxxxxxxxxxxxx"
+                           autocomplete="off">
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin-top: 25px;">
+                    <button id="saveTokenBtn" 
+                            style="padding: 12px 24px; background: #28a745; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; flex: 1; margin-right: 10px;">
+                        保存 Token
+                    </button>
+                    <button id="cancelBtn" 
+                            style="padding: 12px 24px; background: #6c757d; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; flex: 1; margin-left: 10px;">
+                        取消
                     </button>
                 </div>
-                <p id="configError" style="color: #dc3545; margin-top: 10px; display: none;"></p>
+                
+                ${!sizeCheck.canUpload ? `
+                <div style="margin-top: 15px; text-align: center;">
+                    <button id="cleanDataBtn" 
+                            style="padding: 8px 16px; background: #fd7e14; color: white; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">
+                        先去清理数据
+                    </button>
+                </div>
+                ` : ''}
+                
+               
+                
             </div>
-        `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xb8873b);var _0xb30a;const _0xc2451a=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0023\u0063\u006F\u006E\u0066\u0069\u0067\u0046\u0069\u006C\u0065\u0049\u006E\u0070\u0075\u0074");_0xb30a=(959648^959649)+(305292^305290);var _0x2f5bca=(640766^640761)+(553634^553635);const _0xcd25dd=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("ntBgifnoCpiks#".split("").reverse().join(""));_0x2f5bca=(862884^862884)+(527996^527999);var _0x7ae3ac;const _0x5f6f3f=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("ntBgifnoClaunam#".split("").reverse().join(""));_0x7ae3ac=(565874^565876)+(883480^883487);const _0x12db=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("gifnoClaunam#".split("").reverse().join(""));var _0x322bbd;const _0x678d=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("rorrEgifnoc#".split("").reverse().join(""));_0x322bbd=(743710^743708)+(749424^749428);_0xc2451a['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u0068\u0061\u006E\u0067\u0065",async function(e){var _0x_0xafg=(699267^699270)+(624303^624301);const _0x4acc=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][105009^105009];_0x_0xafg=(349089^349091)+(556203^556205);if(!_0x4acc){console['\u006C\u006F\u0067']("\u672A\u9009\u62E9\u6587\u4EF6");return;}console['\u006C\u006F\u0067'](":\u4EF6\u6587\u4E86\u62E9\u9009".split("").reverse().join(""),_0x4acc['\u006E\u0061\u006D\u0065'],":\u5C0F\u5927".split("").reverse().join(""),_0x4acc['\u0073\u0069\u007A\u0065']);var _0x26cca=(104792^104792)+(352712^352715);const _0xe8ef=new FileReader();_0x26cca=(220004^220001)+(859151^859150);_0xe8ef['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){console['\u006C\u006F\u0067']("\u6587\u4EF6\u8BFB\u53D6\u5B8C\u6210\uFF0C\u5F00\u59CB\u89E3\u6790\u914D\u7F6E\u002E\u002E\u002E");const _0xdb7bf=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074'];console['\u006C\u006F\u0067'](":\u7B26\u5B5705\u524D\u5BB9\u5185\u4EF6\u6587".split("").reverse().join(""),_0xdb7bf['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](405869^405869,994893^994943));var _0xbef1g;const _0x15b29d=parseConfigFile(_0xdb7bf);_0xbef1g=(716569^716572)+(712635^712637);console['\u006C\u006F\u0067'](":\u7F6E\u914D\u7684\u540E\u6790\u89E3".split("").reverse().join(""),_0x15b29d);if(_0x15b29d['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']&&_0x15b29d['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']){GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']=_0x15b29d['\u0047\u0049\u0053\u0054\u005F\u0049\u0044'];GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']=_0x15b29d['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E'];GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=!![];console['\u006C\u006F\u0067']("\u914D\u7F6E\u9A8C\u8BC1\u6210\u529F\uFF0C\u4FDD\u5B58\u5230\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065");localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0067\u0069\u0074\u0068\u0075\u0062\u005F\u0063\u006F\u006E\u0066\u0069\u0067",JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({"GIST_ID":_0x15b29d['\u0047\u0049\u0053\u0054\u005F\u0049\u0044'],'\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E':_0x15b29d['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E'],'\u006C\u0061\u0073\u0074\u0055\u0070\u0064\u0061\u0074\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()}));console['\u006C\u006F\u0067']("\u914D\u7F6E\u5DF2\u4FDD\u5B58\u5230\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065");setTimeout(()=>{if(_0xb8873b['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){_0xb8873b['\u0072\u0065\u006D\u006F\u0076\u0065']();}showSimpleToast("\uFF01\u529F\u6210\u8F7D\u52A0\u7F6E\u914D".split("").reverse().join(""));resolve(!![]);},829440^829540);}else{console['\u0077\u0061\u0072\u006E']("\u914D\u7F6E\u6587\u4EF6\u683C\u5F0F\u4E0D\u6B63\u786E");_0x678d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u914D\u7F6E\u6587\u4EF6\u683C\u5F0F\u4E0D\u6B63\u786E\uFF0C\u8BF7\u786E\u4FDD\u5305\u542B\u0047\u0049\u0053\u0054\u005F\u0049\u0044\u548C\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E";_0x678d['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";}};_0xe8ef['\u006F\u006E\u0065\u0072\u0072\u006F\u0072']=function(e){console['\u0065\u0072\u0072\u006F\u0072']("\u6587\u4EF6\u8BFB\u53D6\u5931\u8D25\u003A",e);_0x678d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u6587\u4EF6\u8BFB\u53D6\u5931\u8D25\uFF0C\u8BF7\u91CD\u8BD5";_0x678d['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";};_0xe8ef['\u0072\u0065\u0061\u0064\u0041\u0073\u0054\u0065\u0078\u0074'](_0x4acc);});_0xcd25dd['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",function(){GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=false;_0xb8873b['\u0072\u0065\u006D\u006F\u0076\u0065']();showSimpleToast("\u7528\u53EF\u4E0D\u80FD\u529F\u6B65\u540CbuHtiG\uFF0C\u7F6E\u914D\u8FC7\u8DF3\u5DF2".split("").reverse().join(""),"\u0077\u0061\u0072\u006E\u0069\u006E\u0067");resolve(false);});_0x5f6f3f['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("kcilc".split("").reverse().join(""),function(){_0x12db['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");_0x5f6f3f['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");});_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("gifnoClaunaMevas#".split("").reverse().join(""))['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",function(){var _0x35g=(468574^468572)+(883451^883448);const _0xf8967a=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("dItsiGlaunam#".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0x35g='\u006A\u0068\u006C\u0067\u0070\u0065';const _0x7eacb=_0xb8873b['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0023\u006D\u0061\u006E\u0075\u0061\u006C\u0054\u006F\u006B\u0065\u006E")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();if(!_0xf8967a||!_0x7eacb){_0x678d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u8BF7\u586B\u5199\u5B8C\u6574\u7684\u914D\u7F6E\u4FE1\u606F";_0x678d['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";return;}console['\u006C\u006F\u0067']("\u624B\u52A8\u4FDD\u5B58\u914D\u7F6E\u003A",{'\u0067\u0069\u0073\u0074\u0049\u0064':_0xf8967a['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](584166^584166,102731^102723)+"\u002E\u002E\u002E",'\u0074\u006F\u006B\u0065\u006E':_0x7eacb['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](238804^238804,329464^329456)+"\u002E\u002E\u002E"});GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']=_0xf8967a;GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']=_0x7eacb;GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=!![];localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("gifnoc_buhtig".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u0047\u0049\u0053\u0054\u005F\u0049\u0044':_0xf8967a,"GITHUB_TOKEN":_0x7eacb,'\u006C\u0061\u0073\u0074\u0055\u0070\u0064\u0061\u0074\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()}));console['\u006C\u006F\u0067']("\u624B\u52A8\u914D\u7F6E\u5DF2\u4FDD\u5B58\u5230\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065");setTimeout(()=>{if(_0xb8873b['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){_0xb8873b['\u0072\u0065\u006D\u006F\u0076\u0065']();}showSimpleToast("\u914D\u7F6E\u4FDD\u5B58\u6210\u529F\uFF01");resolve(!![]);},893725^893817);});});}function parseConfigFile(content){const _0x4a_0xe86={"GIST_ID":'','\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E':''};var _0x1a3gf;const _0x49egad=content['\u0073\u0070\u006C\u0069\u0074']("\u000A");_0x1a3gf=(843858^843866)+(592137^592141);console['\u006C\u006F\u0067']("\u5F00\u59CB\u89E3\u6790\u914D\u7F6E\u6587\u4EF6\uFF0C\u884C\u6570\u003A",_0x49egad['\u006C\u0065\u006E\u0067\u0074\u0068']);_0x49egad['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((line,index)=>{var _0x97d=(295490^295488)+(219146^219150);const _0xcg_0xa29=line['\u0074\u0072\u0069\u006D']();_0x97d=(497234^497232)+(934254^934254);console['\u006C\u006F\u0067'](`第${index+(583853^583852)}行: ${_0xcg_0xa29['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](955375^955375,585175^585189)}`);if(_0xcg_0xa29['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("=DI_TSIG".split("").reverse().join(""))){_0x4a_0xe86['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']=_0xcg_0xa29['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](804486^804494)['\u0074\u0072\u0069\u006D']();console['\u006C\u006F\u0067'](":DI_TSIG \u5230\u627E".split("").reverse().join(""),_0x4a_0xe86['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](946114^946114,182152^182144)+"\u002E\u002E\u002E");}else if(_0xcg_0xa29['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E\u003D")){_0x4a_0xe86['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']=_0xcg_0xa29['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](583474^583487)['\u0074\u0072\u0069\u006D']();console['\u006C\u006F\u0067'](":NEKOT_BUHTIG \u5230\u627E".split("").reverse().join(""),_0x4a_0xe86['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](427846^427846,215179^215171)+"\u002E\u002E\u002E");}});console['\u006C\u006F\u0067']("\u89E3\u6790\u5B8C\u6210\uFF0C\u914D\u7F6E\u003A",_0x4a_0xe86);return _0x4a_0xe86;}function manageGithubConfig(){localStorage['\u0072\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']("gifnoc_buhtig".split("").reverse().join(""));GIST_CONFIG={"GIST_ID":'',"GITHUB_TOKEN":'',"configLoaded":false};showSimpleToast("\u7F6E\u914D\u65B0\u91CD\u5C06\u65F6\u6B65\u540C\u6B21\u4E0B\uFF0C\u7F6E\u91CD\u5DF2\u7F6E\u914D".split("").reverse().join(""));}function renderTodoList(site){var _0xbe50b=(711206^711201)+(957034^957027);const _0xg57f=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLodot".split("").reverse().join(""));_0xbe50b=(300901^300900)+(169823^169822);if(!site['\u0074\u006F\u0064\u006F\u0073']||site['\u0074\u006F\u0064\u006F\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(174251^174251)){_0xg57f['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">p/<\u9879\u4E8B\u529E\u5F85\u65E0\u6682>\";xp02 :gniddap ;xp02 :pot-nigram ;retnec :ngila-txet ;999# :roloc\"=elyts p<".split("").reverse().join("");return;}var _0x8af=(780709^780708)+(157575^157573);let _0xd3849a="\u003C\u0074\u0061\u0062\u006C\u0065\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065\u0022\u003E\u003C\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0072\u003E"+"\u003C\u0074\u0068\u003E\u4E8B\u9879\u540D\u79F0\u003C\u002F\u0074\u0068\u003E"+">ht/<\u6001\u72B6>\"loc-sutats\"=ssalc ht<".split("").reverse().join("")+">ht/<\u95F4\u65F6>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u64CD\u4F5C\u4EBA\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0063\u006F\u006C\u0022\u003E\u64CD\u4F5C\u003C\u002F\u0074\u0068\u003E"+"\u003C\u002F\u0074\u0072\u003E\u003C\u002F\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0062\u006F\u0064\u0079\u003E";_0x8af=(396781^396772)+(996045^996041);site['\u0074\u006F\u0064\u006F\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](todo=>{var _0xc4ecbf;let _0xb9e3c='';_0xc4ecbf=(670944^670952)+(519823^519817);if(canEditStatus()){_0xb9e3c=`<td>
-                <select class="todo-status-select" data-id="${todo['\u0069\u0064']}" onchange="updateTodoStatus('${todo['\u0069\u0064']}', this.value)">
-                    <option value="pending" ${todo['\u0073\u0074\u0061\u0074\u0075\u0073']==="\u0070\u0065\u006E\u0064\u0069\u006E\u0067"?"\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064":''}>待办</option>
-                    <option value="in-progress" ${todo['\u0073\u0074\u0061\u0074\u0075\u0073']==="\u0069\u006E\u002D\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073"?"detceles".split("").reverse().join(""):''}>进行中</option>
-                    <option value="completed" ${todo['\u0073\u0074\u0061\u0074\u0075\u0073']==="\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0064"?"\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064":''}>已完成</option>
-                </select>
-            </td>`;}else{var _0x9f837f;const _0x3058d={"\u0070\u0065\u006E\u0064\u0069\u006E\u0067":'待办',"\u0069\u006E\u002D\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073":"\u8FDB\u884C\u4E2D",'completed':'已完成'};_0x9f837f="ndgqnm".split("").reverse().join("");const _0xf2_0x1fe={"\u0070\u0065\u006E\u0064\u0069\u006E\u0067":'#ff9800','in-progress':"\u0023\u0032\u0031\u0039\u0036\u0066\u0033",'completed':"\u0023\u0034\u0063\u0061\u0066\u0035\u0030"};_0xb9e3c=`<td><span style="color: ${_0xf2_0x1fe[todo['\u0073\u0074\u0061\u0074\u0075\u0073']]}">${_0x3058d[todo['\u0073\u0074\u0061\u0074\u0075\u0073']]}</span></td>`;}_0xd3849a+=`<tr>
-            <td class="multi-line" title="${todo['\u0069\u0074\u0065\u006D']}">${todo['\u0069\u0074\u0065\u006D']}</td>
-            ${_0xb9e3c}
-            <td>${formatDate(todo['\u0074\u0069\u006D\u0065'])}</td>
-            <td class="multi-line">${todo['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']}</td>
-            <td>
-                <div class="action-btns compact">
-                    ${canDelete()?`<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${todo['\u0069\u0064']}', 'todo')">删除</button>`:''}
-                </div>
-            </td>
-        </tr>`;if(todo['\u006E\u006F\u0074\u0065']&&todo['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0xd3849a+=`<tr class="note-row">
-                <td colspan="5" class="note-cell" onclick="editNoteAutoSave('todo', '${todo['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display multi-line">备注：${todo['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="todo" 
-                              data-id="${todo['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${todo['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0xd3849a+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0xg57f['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xd3849a;}function renderExpenseList(site){const _0x11cbfb=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u004C\u0069\u0073\u0074");if(!site['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']||site['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(995343^995343)){_0x11cbfb['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0070\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0063\u006F\u006C\u006F\u0072\u003A\u0020\u0023\u0039\u0039\u0039\u003B\u0020\u0074\u0065\u0078\u0074\u002D\u0061\u006C\u0069\u0067\u006E\u003A\u0020\u0063\u0065\u006E\u0074\u0065\u0072\u003B\u0020\u006D\u0061\u0072\u0067\u0069\u006E\u002D\u0074\u006F\u0070\u003A\u0020\u0032\u0030\u0070\u0078\u003B\u0020\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0032\u0030\u0070\u0078\u003B\u0022\u003E\u6682\u65E0\u652F\u51FA\u8BB0\u5F55\u003C\u002F\u0070\u003E";return;}var _0x3ea9bd=(120128^120133)+(311896^311899);let _0xc961ed=">rt<>daeht<>\"elbat-atad\"=ssalc elbat<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u9879\u76EE\u540D\u79F0\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0075\u006E\u0069\u0074\u002D\u0063\u006F\u006C\u0022\u003E\u5355\u4F4D\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u003E\u91D1\u989D\u003C\u002F\u0074\u0068\u003E"+">ht/<\u95F4\u65F6>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u64CD\u4F5C\u4EBA\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0063\u006F\u006C\u0022\u003E\u64CD\u4F5C\u003C\u002F\u0074\u0068\u003E"+"\u003C\u002F\u0074\u0072\u003E\u003C\u002F\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0062\u006F\u0064\u0079\u003E";_0x3ea9bd=990372^990373;site['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](expense=>{var _0xb_0xbg2;let _0x1f686c='';_0xb_0xbg2=(160634^160639)+(893632^893637);if(canEditTime()){_0x1f686c=`<td onclick="editTime(this, '${expense['\u0069\u0064']}')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(expense['\u0074\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(expense['\u0074\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveTime('${expense['\u0069\u0064']}', this.value, 'time')">
-            </td>`;}else{_0x1f686c=`<td>${formatDate(expense['\u0074\u0069\u006D\u0065'])}</td>`;}_0xc961ed+=`<tr>
-            <td class="multi-line" title="${expense['\u0069\u0074\u0065\u006D']}">${expense['\u0069\u0074\u0065\u006D']}</td>
-            <td class="unit-col">${expense['\u0075\u006E\u0069\u0074']||"\u9879"}</td>
-            <td>¥${expense['\u0061\u006D\u006F\u0075\u006E\u0074']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](522298^522296)}</td>
-            ${_0x1f686c}
-            <td class="multi-line">${expense['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']||"\u002D"}</td>
-            <td>
-                <div class="action-btns compact">
-                    ${canDelete()?`<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${expense['\u0069\u0064']}', 'expense')">删除</button>`:''}
-                </div>
-            </td>
-        </tr>`;if(expense['\u006E\u006F\u0074\u0065']&&expense['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0xc961ed+=`<tr class="note-row">
-                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('expense', '${expense['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display multi-line">备注：${expense['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="expense" 
-                              data-id="${expense['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${expense['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0xc961ed+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0x11cbfb['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xc961ed;}function renderRequirementList(site){const _0x8cd6dc=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLtnemeriuqer".split("").reverse().join(""));if(!site['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']||site['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(831795^831795)){_0x8cd6dc['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">p/<\u6C42\u8981\u6237\u5BA2\u65E0\u6682>\";xp02 :gniddap ;xp02 :pot-nigram ;retnec :ngila-txet ;999# :roloc\"=elyts p<".split("").reverse().join("");return;}let _0xdd222d="\u003C\u0074\u0061\u0062\u006C\u0065\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065\u0022\u003E\u003C\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0072\u003E"+">ht/<\u5BB9\u5185\u6C42\u8981>\";xp08 :htdiw-xam\"=elyts ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0077\u0069\u0064\u0074\u0068\u003A\u0020\u0036\u0030\u0070\u0078\u003B\u0022\u003E\u7C7B\u578B\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0073\u0074\u0061\u0074\u0075\u0073\u002D\u0063\u006F\u006C\u0022\u003E\u72B6\u6001\u003C\u002F\u0074\u0068\u003E"+">ht/<\u95F4\u65F6>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u64CD\u4F5C\u4EBA\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0063\u006F\u006C\u0022\u003E\u64CD\u4F5C\u003C\u002F\u0074\u0068\u003E"+">ydobt<>daeht/<>rt/<".split("").reverse().join("");site['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](req=>{const _0x7dfd=req['\u0074\u0079\u0070\u0065']==="\u006E\u0065\u0065\u0064"?"\u8981\u9700".split("").reverse().join(""):"\u6392\u9664";var _0xdf1e7g=(676314^676313)+(920380^920378);const _0xe4c=req['\u0074\u0079\u0070\u0065']==="deen".split("").reverse().join("")?"\u0023\u0034\u0063\u0061\u0066\u0035\u0030":"\u0023\u0066\u0066\u0036\u0062\u0036\u0062";_0xdf1e7g=(873885^873880)+(441459^441459);var _0x8d4ef=(935494^935502)+(292138^292137);let _0x76aa='';_0x8d4ef=(686104^686096)+(872792^872792);if(canEditStatus()){_0x76aa=`<td>
-                <select class="requirement-status-select" data-id="${req['\u0069\u0064']}" onchange="updateRequirementStatus('${req['\u0069\u0064']}', this.value)">
-                    <option value="pending" ${req['\u0073\u0074\u0061\u0074\u0075\u0073']==="gnidnep".split("").reverse().join("")?"\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064":''}>待完成</option>
-                    <option value="in-progress" ${req['\u0073\u0074\u0061\u0074\u0075\u0073']==="ssergorp-ni".split("").reverse().join("")?"detceles".split("").reverse().join(""):''}>进行中</option>
-                    <option value="completed" ${req['\u0073\u0074\u0061\u0074\u0075\u0073']==="\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0064"?"\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064":''}>已完成</option>
-                </select>
-            </td>`;}else{const _0x23666e={"\u0070\u0065\u006E\u0064\u0069\u006E\u0067":'待完成',"\u0069\u006E\u002D\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073":'进行中','completed':'已完成'};var _0x9fbfbe;const _0x25469b={'pending':'#666',"\u0069\u006E\u002D\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073":"\u0023\u0066\u0066\u0039\u0038\u0030\u0030","\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0064":"\u0023\u0034\u0063\u0061\u0066\u0035\u0030"};_0x9fbfbe=(298187^298190)+(980900^980901);_0x76aa=`<td><span style="color: ${_0x25469b[req['\u0073\u0074\u0061\u0074\u0075\u0073']]}">${_0x23666e[req['\u0073\u0074\u0061\u0074\u0075\u0073']]}</span></td>`;}let _0xc899c='';if(canEditTime()){_0xc899c=`<td onclick="editTime(this, '${req['\u0069\u0064']}')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(req['\u0074\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(req['\u0074\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveTime('${req['\u0069\u0064']}', this.value, 'time')">
-            </td>`;}else{_0xc899c=`<td>${formatDate(req['\u0074\u0069\u006D\u0065'])}</td>`;}_0xdd222d+=`<tr>
-            <td class="compact-text multi-line" title="${req['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}">${req['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}</td>
-            <td style="color: ${_0xe4c}; font-weight: 500;">${_0x7dfd}</td>
-            ${_0x76aa}
-            ${_0xc899c}
-            <td class="compact-text multi-line">${req['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']}</td>
-            <td>
-                <div class="action-btns compact">
-                    ${canDelete()?`<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${req['\u0069\u0064']}', 'requirement')">删除</button>`:''}
-                </div>
-            </td>
-        </tr>`;if(req['\u006E\u006F\u0074\u0065']&&req['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0xdd222d+=`<tr class="note-row">
-                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('requirement', '${req['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display multi-line">备注：${req['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="requirement" 
-                              data-id="${req['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${req['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0xdd222d+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0x8cd6dc['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xdd222d;}function renderRepairList(site){const _0x54445d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0070\u0061\u0069\u0072\u004C\u0069\u0073\u0074");if(!site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']||site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(667501^667501)){_0x54445d['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0070\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0063\u006F\u006C\u006F\u0072\u003A\u0020\u0023\u0039\u0039\u0039\u003B\u0020\u0074\u0065\u0078\u0074\u002D\u0061\u006C\u0069\u0067\u006E\u003A\u0020\u0063\u0065\u006E\u0074\u0065\u0072\u003B\u0020\u006D\u0061\u0072\u0067\u0069\u006E\u002D\u0074\u006F\u0070\u003A\u0020\u0032\u0030\u0070\u0078\u003B\u0020\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0032\u0030\u0070\u0078\u003B\u0022\u003E\u6682\u65E0\u7EF4\u4FEE\u9879\u003C\u002F\u0070\u003E";return;}var _0x7bc8b;let _0x9d9d1c="\u003C\u0074\u0061\u0062\u006C\u0065\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065\u0022\u003E\u003C\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0072\u003E"+"\u003C\u0074\u0068\u003E\u56FE\u7247\u4FE1\u606F\u003C\u002F\u0074\u0068\u003E"+">ht/<\u6001\u72B6>\"loc-sutats\"=ssalc ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u7EF4\u4FEE\u5185\u5BB9\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u003E\u65F6\u95F4\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u003E\u64CD\u4F5C\u4EBA\u003C\u002F\u0074\u0068\u003E"+">ht/<\u4F5C\u64CD>\"loc-noitca\"=ssalc ht<".split("").reverse().join("")+">ydobt<>daeht/<>rt/<".split("").reverse().join("");_0x7bc8b="fhlmbf".split("").reverse().join("");site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](repair=>{var _0x1194a;let _0xc57bc='';_0x1194a=(404018^404021)+(570974^570970);if(!repair['\u0070\u0068\u006F\u0074\u006F']){_0xc57bc=`<div class="photo-placeholder">
-                <div>📷</div>
-                <div>无图片</div>
-                <button onclick="addPhotoToRepair('${repair['\u0069\u0064']}')">添加图片</button>
-                <input type="file" accept="image/*" style="display: none;" id="addPhotoInput_${repair['\u0069\u0064']}" 
-                       onchange="uploadPhotoForRepair('${repair['\u0069\u0064']}', this)">
-            </div>`;}else if(repair['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068'](":OTOHP[".split("").reverse().join(""))){var _0x162a5e;const _0x8bf52e=repair['\u0070\u0068\u006F\u0074\u006F']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("]\\)?+.(:OTOHP[\\".split("").reverse().join(""),""))[539104^539105];_0x162a5e=(390621^390617)+(276304^276309);_0xc57bc=`<div class="photo-missing">
-                <div>⚠️</div>
-                <div>图片缺失<br><small>需要单独加载</small></div>
-                <button onclick="tryLoadMissingFile('${_0x8bf52e}')">加载图片</button>
-            </div>`;}else{_0xc57bc=`<div class="photo-container">
-                <img src="${repair['\u0070\u0068\u006F\u0074\u006F']}" onclick="viewImage('${repair['\u0070\u0068\u006F\u0074\u006F']}')">
-                <button onclick="changeRepairPhoto('${repair['\u0069\u0064']}', this)">↻</button>
-                <input type="file" accept="image/*" style="display: none;" 
-                       onchange="uploadNewRepairPhoto('${repair['\u0069\u0064']}', this)" class="repair-photo-input">
-            </div>`;}let _0xb9dg6c='';if(canEditStatus()){_0xb9dg6c=`<td>
-                <select class="repair-status-select" data-id="${repair['\u0069\u0064']}" onchange="updateRepairStatus('${repair['\u0069\u0064']}', this.value)">
-                    <option value="pending" ${repair['\u0073\u0074\u0061\u0074\u0075\u0073']==="gnidnep".split("").reverse().join("")?"\u0073\u0065\u006C\u0065\u0063\u0074\u0065\u0064":''}>待维修</option>
-                    <option value="completed" ${repair['\u0073\u0074\u0061\u0074\u0075\u0073']==="\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0064"?"detceles".split("").reverse().join(""):''}>已完成</option>
-                </select>
-            </td>`;}else{_0xb9dg6c=`<td><span style="color: ${repair['\u0073\u0074\u0061\u0074\u0075\u0073']==="detelpmoc".split("").reverse().join("")?"05fac4#".split("").reverse().join(""):"\u0023\u0066\u0066\u0039\u0038\u0030\u0030"}">${repair['\u0073\u0074\u0061\u0074\u0075\u0073']==="\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0064"?"\u5DF2\u5B8C\u6210":"\u5F85\u7EF4\u4FEE"}</span></td>`;}var _0x4f2d3c=(782856^782858)+(528290^528290);let _0xf76faa='';_0x4f2d3c=(599892^599891)+(633904^633906);if(canEditTime()){_0xf76faa=`<td onclick="editTime(this, '${repair['\u0069\u0064']}')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(repair['\u0074\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(repair['\u0074\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveTime('${repair['\u0069\u0064']}', this.value, 'time')">
-            </td>`;}else{_0xf76faa=`<td>${formatDate(repair['\u0074\u0069\u006D\u0065'])}</td>`;}const _0xa8ade=repair['\u0073\u0074\u0061\u0074\u0075\u0073']==="gnidnep".split("").reverse().join("")?`<button class="action-btn btn-success compact-btn" onclick="completeRepair('${repair['\u0069\u0064']}')">完成</button>`:'';_0x9d9d1c+=`<tr>
-            <td>${_0xc57bc}</td>
-            ${_0xb9dg6c}
-            <td class="multi-line" title="${repair['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}">${repair['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}</td>
-            ${_0xf76faa}
-            <td class="multi-line">${repair['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']}</td>
-            <td>
-                <div class="action-btns compact">
-                    ${canDelete()?`<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${repair['\u0069\u0064']}', 'repair')">删除</button>`:''}
-                    ${_0xa8ade}
-                </div>
-            </td>
-        </tr>`;if(repair['\u006E\u006F\u0074\u0065']&&repair['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0x9d9d1c+=`<tr class="note-row">
-                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('repair', '${repair['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display multi-line">备注：${repair['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="repair" 
-                              data-id="${repair['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${repair['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0x9d9d1c+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0x54445d['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x9d9d1c;}function addPhotoToRepair(repairId){const _0x86931d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`addPhotoInput_${repairId}`);if(_0x86931d)_0x86931d['\u0063\u006C\u0069\u0063\u006B']();}function uploadPhotoForRepair(repairId,fileInput){const _0xb19afe=fileInput['\u0066\u0069\u006C\u0065\u0073'][656917^656917];if(!_0xb19afe)return;if(!_0xb19afe['\u0074\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("/egami".split("").reverse().join(""))){alert("\uFF01\u4EF6\u6587\u7247\u56FE\u62E9\u9009\u8BF7".split("").reverse().join(""));return;}resizeImage(_0xb19afe,963194^963470,function(resizedDataUrl){const _0x7abgef=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0x7abgef)return;var _0x061ecg;const _0x59g=_0x7abgef['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u0069\u006E\u0064'](r=>r['\u0069\u0064']===repairId);_0x061ecg='\u006D\u0063\u0064\u0068\u0071\u0065';if(_0x59g){_0x59g['\u0070\u0068\u006F\u0074\u006F']=resizedDataUrl;_0x59g['\u0070\u0068\u006F\u0074\u006F\u004E\u0061\u006D\u0065']=_0xb19afe['\u006E\u0061\u006D\u0065'];saveData();renderRepairList(_0x7abgef);addChangeLog("\u7247\u56FE\u4FEE\u7EF4\u52A0\u6DFB".split("").reverse().join(""),`为维修项"${_0x59g['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}"添加了图片`);alert("\uFF01\u529F\u6210\u52A0\u6DFB\u7247\u56FE".split("").reverse().join(""));}});}function renderWorkerList(site){var _0x1b441g=(715899^715899)+(420853^420850);const _0x8_0x834=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLrekrow".split("").reverse().join(""));_0x1b441g=(744379^744382)+(431968^431974);if(!site['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']||site['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(241910^241910)){_0x8_0x834['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">p/<\u5F55\u8BB0\u4EBA\u5DE5\u65E0\u6682>\";xp02 :pot-nigram ;retnec :ngila-txet ;999# :roloc\"=elyts p<".split("").reverse().join("");return;}let _0x6aa54f="\u003C\u0074\u0061\u0062\u006C\u0065\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065\u0022\u003E\u003C\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0072\u003E"+">ht/<\u76EE\u9879\u5DE5\u65BD>ht<".split("").reverse().join("")+">ht/<\u540D\u59D3>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u5F00\u59CB\u65F6\u95F4\u003C\u002F\u0074\u0068\u003E"+">ht/<\u95F4\u65F6\u675F\u7ED3>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u64CD\u4F5C\u4EBA\u003C\u002F\u0074\u0068\u003E"+">ht/<\u4F5C\u64CD>\"loc-noitca\"=ssalc ht<".split("").reverse().join("")+"\u003C\u002F\u0074\u0072\u003E\u003C\u002F\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0062\u006F\u0064\u0079\u003E";site['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](worker=>{var _0x806ba;const _0xfa763e=canEditWorkerTime()?`<td onclick="editWorkerTime('${worker['\u0069\u0064']}', this, 'startTime')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveWorkerTime('${worker['\u0069\u0064']}', this.value, 'startTime')">
-            </td>`:`<td>${formatDate(worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065'])}</td>`;_0x806ba=(564598^564607)+(589850^589853);const _0xa8ad5f=canEditWorkerTime()?`<td onclick="editWorkerTime('${worker['\u0069\u0064']}', this, 'endTime')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveWorkerTime('${worker['\u0069\u0064']}', this.value, 'endTime')">
-            </td>`:`<td>${worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']?formatDate(worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']):"\u675F\u7ED3\u672A".split("").reverse().join("")}</td>`;_0x6aa54f+=`<tr>
-            <td>${worker['\u0074\u0079\u0070\u0065']}</td>
-            <td>${worker['\u006E\u0061\u006D\u0065']}</td>
-            ${_0xfa763e}
-            ${_0xa8ad5f}
-            <td>${worker['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']}</td>
-            <td>
-                <div class="action-btns">
-                    ${canDelete()?`<button class="action-btn delete-btn" onclick="deleteItem('${worker['\u0069\u0064']}', 'worker')">删除</button>`:''}
-                </div>
-            </td>
-        </tr>`;if(worker['\u006E\u006F\u0074\u0065']&&worker['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0x6aa54f+=`<tr class="note-row">
-                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('worker', '${worker['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display">备注：${worker['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="worker" 
-                              data-id="${worker['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${worker['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0x6aa54f+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0x8_0x834['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x6aa54f;}function renderAddRemoveList(site){const _0xgf556c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLevomeRdda".split("").reverse().join(""));if(!site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']||site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(492221^492221)){_0xgf556c['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">p/<\u9879\u51CF\u589E\u65E0\u6682>\";xp02 :gniddap ;xp02 :pot-nigram ;retnec :ngila-txet ;999# :roloc\"=elyts p<".split("").reverse().join("");return;}var _0xb3a8bb;let _0x3fd2cf=">rt<>daeht<>\"elbat-atad\"=ssalc elbat<".split("").reverse().join("")+">ht/<\u79F0\u540D\u76EE\u9879>ht<".split("").reverse().join("")+">ht/<\u578B\u7C7B>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u91D1\u989D\u003C\u002F\u0074\u0068\u003E"+"\u003C\u0074\u0068\u003E\u65F6\u95F4\u003C\u002F\u0074\u0068\u003E"+">ht/<\u4EBA\u4F5C\u64CD>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0063\u006F\u006C\u0022\u003E\u64CD\u4F5C\u003C\u002F\u0074\u0068\u003E"+"\u003C\u002F\u0074\u0072\u003E\u003C\u002F\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0062\u006F\u0064\u0079\u003E";_0xb3a8bb=732459^732461;site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{var _0x929ff;let _0xac46a='';_0x929ff=(420143^420137)+(986303^986294);if(canEditTime()){_0xac46a=`<td onclick="editTime(this, '${item['\u0069\u0064']}')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(item['\u0074\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(item['\u0074\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveTime('${item['\u0069\u0064']}', this.value, 'time')">
-            </td>`;}else{_0xac46a=`<td>${formatDate(item['\u0074\u0069\u006D\u0065'])}</td>`;}_0x3fd2cf+=`<tr>
-            <td class="multi-line" title="${item['\u0069\u0074\u0065\u006D']}">${item['\u0069\u0074\u0065\u006D']}</td>
-            <td><span style="color: ${item['\u0074\u0079\u0070\u0065']==="\u0061\u0064\u0064"?"\u0023\u0034\u0063\u0061\u0066\u0035\u0030":"\u0023\u0066\u0066\u0036\u0062\u0036\u0062"}">${item['\u0074\u0079\u0070\u0065']==="dda".split("").reverse().join("")?"\u589E\u52A0":"\u5C11\u51CF".split("").reverse().join("")}</span></td>
-            <td>${item['\u0074\u0079\u0070\u0065']==="\u0061\u0064\u0064"?"\u002B":"\u002D"}¥${item['\u0061\u006D\u006F\u0075\u006E\u0074']['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](528029^528031)}</td>
-            ${_0xac46a}
-            <td class="multi-line">${item['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']||"\u002D"}</td>
-            <td>
-                <div class="action-btns compact">
-                    ${canDelete()?`<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${item['\u0069\u0064']}', 'addRemove')">删除</button>`:''}
-                </div>
-            </td>
-        </tr>`;if(item['\u006E\u006F\u0074\u0065']&&item['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0x3fd2cf+=`<tr class="note-row">
-                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('addRemove', '${item['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display multi-line">备注：${item['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="addRemove" 
-                              data-id="${item['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${item['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0x3fd2cf+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0xgf556c['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x3fd2cf;}function renderDrawingList(site){var _0x6e352c;const _0x7291a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u004C\u0069\u0073\u0074");_0x6e352c="gcledk".split("").reverse().join("");if(!site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']||site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(922394^922394)){_0x7291a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">p/<\u7EB8\u56FE\u65E0\u6682>\";xp02 :gniddap ;xp02 :pot-nigram ;retnec :ngila-txet ;999# :roloc\"=elyts p<".split("").reverse().join("");return;}let _0xf5g="\u003C\u0074\u0061\u0062\u006C\u0065\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065\u0022\u003E\u003C\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0072\u003E"+">ht/<\u606F\u4FE1\u4EF6\u6587>\";xp021 :htdiw ;xp08 :thgieh-nim\"=elyts ht<".split("").reverse().join("")+">ht/<\u578B\u7C7B\u7EB8\u56FE>ht<".split("").reverse().join("")+">ht/<\u540D\u4EF6\u6587>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u003E\u65F6\u95F4\u003C\u002F\u0074\u0068\u003E"+">ht/<\u4EBA\u4F5C\u64CD>ht<".split("").reverse().join("")+"\u003C\u0074\u0068\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0063\u006F\u006C\u0022\u003E\u64CD\u4F5C\u003C\u002F\u0074\u0068\u003E"+">ydobt<>daeht/<>rt/<".split("").reverse().join("");site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](drawing=>{let _0x4bd='';if(drawing['\u0066\u0069\u006C\u0065']){if(drawing['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u005B\u0046\u0049\u004C\u0045\u003A")){var _0xec03gd;const _0x59caf=drawing['\u0066\u0069\u006C\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005C\u005B\u0046\u0049\u004C\u0045\u003A\u0028\u002E\u002B\u003F\u0029\u005C\u005D',""))[406506^406507];_0xec03gd='\u0070\u0063\u0068\u006D\u006E\u0066';_0x4bd=`<div class="file-missing">
-                    <div>📄</div>
-                    <div>文件缺失<br><small>需单独加载</small></div>
-                    <button onclick="tryLoadMissingFile('${_0x59caf}')">加载文件</button>
-                </div>`;}else{if(drawing['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']&&drawing['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("/egami".split("").reverse().join(""))){_0x4bd=`<div class="file-container">
-                        <img src="${drawing['\u0066\u0069\u006C\u0065']}" onclick="viewImage('${drawing['\u0066\u0069\u006C\u0065']}')">
-                        <button class="image-change-btn" onclick="changeDrawingFile('${drawing['\u0069\u0064']}', this)" title="更换文件">↻</button>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv" 
-                               style="display: none;" onchange="uploadNewDrawingFile('${drawing['\u0069\u0064']}', this)" 
-                               class="drawing-file-input">
-                    </div>`;}else{var _0x3a_0x988;const _0xd2e9fa=getFileIcon(drawing['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']);_0x3a_0x988=638914^638915;const _0xb553fd=drawing['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||"\u4EF6\u6587\u540D\u547D\u672A".split("").reverse().join("");var _0x5c7eef;const _0x96ea=_0xb553fd['\u006C\u0065\u006E\u0067\u0074\u0068']>(449616^449628)?_0xb553fd['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](624728^624728,560223^560211)+"...".split("").reverse().join(""):_0xb553fd;_0x5c7eef=(843891^843895)+(396017^396022);_0x4bd=`<div class="file-container non-image">
-                        <div>${_0xd2e9fa}</div>
-                        <div>${_0x96ea}</div>
-                        <button class="image-change-btn" onclick="changeDrawingFile('${drawing['\u0069\u0064']}', this)" title="更换文件">↻</button>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv" 
-                               style="display: none;" onchange="uploadNewDrawingFile('${drawing['\u0069\u0064']}', this)" 
-                               class="drawing-file-input">
-                    </div>`;}}}else{_0x4bd=`<div class="file-placeholder">
-                <div>📄</div>
-                <div>无文件</div>
-                <button onclick="addFileToDrawing('${drawing['\u0069\u0064']}')">添加文件</button>
-                <input type="file" accept=".pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv" 
-                       style="display: none;" id="addDrawingFile_${drawing['\u0069\u0064']}" 
-                       onchange="uploadFileForDrawing('${drawing['\u0069\u0064']}', this)">
-            </div>`;}let _0x194b='';if(canEditTime()){_0x194b=`<td onclick="editTime(this, '${drawing['\u0069\u0064']}')" title="点击编辑日期" style="cursor: pointer;">
-                <span class="date-display">${formatDate(drawing['\u0074\u0069\u006D\u0065'])}</span>
-                <input type="date" class="date-edit" value="${formatDate(drawing['\u0074\u0069\u006D\u0065'])}" 
-                       style="display: none;" 
-                       onblur="saveTime('${drawing['\u0069\u0064']}', this.value, 'time')">
-            </td>`;}else{_0x194b=`<td>${formatDate(drawing['\u0074\u0069\u006D\u0065'])}</td>`;}_0xf5g+=`<tr style="min-height: 80px;">`;_0xf5g+=`<td>${_0x4bd}</td>`;_0xf5g+=`<td class="multi-line" title="${getDrawingTypeText(drawing['\u0074\u0079\u0070\u0065'])}">${getDrawingTypeText(drawing['\u0074\u0079\u0070\u0065'])}</td>`;_0xf5g+=`<td class="multi-line" title="${drawing['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||"\u540D\u547D\u672A".split("").reverse().join("")}">${drawing['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||"\u672A\u547D\u540D"}</td>`;_0xf5g+=`${_0x194b}`;_0xf5g+=`<td class="multi-line">${drawing['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']}</td>`;_0xf5g+=`<td>
-            <div class="action-btns compact">
-                ${canDelete()?`<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${drawing['\u0069\u0064']}', 'drawing')">删除</button>`:''}
-                <button class="action-btn btn-primary compact-btn" onclick="downloadDrawing('${drawing['\u0069\u0064']}')">下载</button>
-            </div>
-        </td>`;_0xf5g+=`</tr>`;if(drawing['\u006E\u006F\u0074\u0065']&&drawing['\u006E\u006F\u0074\u0065']['\u0074\u0072\u0069\u006D']()){_0xf5g+=`<tr class="note-row">
-                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('drawing', '${drawing['\u0069\u0064']}', this)" title="点击编辑备注" style="cursor: pointer;">
-                    <div class="note-display multi-line">备注：${drawing['\u006E\u006F\u0074\u0065']}</div>
-                    <textarea class="note-edit-auto" 
-                              style="display: none;"
-                              data-type="drawing" 
-                              data-id="${drawing['\u0069\u0064']}"
-                              onblur="saveNoteAutoSave(event)"
-                              onkeydown="handleNoteKeydown(event)">${drawing['\u006E\u006F\u0074\u0065']}</textarea>
-                </td>
-            </tr>`;}});_0xf5g+="\u003C\u002F\u0074\u0062\u006F\u0064\u0079\u003E\u003C\u002F\u0074\u0061\u0062\u006C\u0065\u003E";_0x7291a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xf5g;}function addFileToDrawing(drawingId){var _0xb66c=(419956^419952)+(941039^941033);const _0xb79fea=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](`addDrawingFile_${drawingId}`);_0xb66c=(756840^756832)+(388201^388204);if(_0xb79fea)_0xb79fea['\u0063\u006C\u0069\u0063\u006B']();}function uploadFileForDrawing(drawingId,fileInput){const _0x36fcfa=fileInput['\u0066\u0069\u006C\u0065\u0073'][686618^686618];if(!_0x36fcfa)return;const _0x709e=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0x709e)return;const _0x87a38g=_0x709e['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u0069\u006E\u0064'](d=>d['\u0069\u0064']===drawingId);if(!_0x87a38g)return;if(_0x36fcfa['\u0074\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("/egami".split("").reverse().join(""))){resizeImage(_0x36fcfa,887875^888247,function(resizedDataUrl){_0x87a38g['\u0066\u0069\u006C\u0065']=resizedDataUrl;_0x87a38g['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x36fcfa['\u006E\u0061\u006D\u0065'];_0x87a38g['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']=_0x36fcfa['\u0074\u0079\u0070\u0065'];_0x87a38g['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065']=_0x36fcfa['\u0073\u0069\u007A\u0065'];saveData();renderDrawingList(_0x709e);addChangeLog("\u6DFB\u52A0\u56FE\u7EB8\u6587\u4EF6",`为图纸"${_0x87a38g['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||"\u672A\u547D\u540D"}"添加了文件`);alert("\uFF01\u529F\u6210\u52A0\u6DFB\u4EF6\u6587".split("").reverse().join(""));});}else{const _0xd05gf=new FileReader();_0xd05gf['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){_0x87a38g['\u0066\u0069\u006C\u0065']=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074'];_0x87a38g['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x36fcfa['\u006E\u0061\u006D\u0065'];_0x87a38g['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']=_0x36fcfa['\u0074\u0079\u0070\u0065'];_0x87a38g['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065']=_0x36fcfa['\u0073\u0069\u007A\u0065'];saveData();renderDrawingList(_0x709e);addChangeLog("\u6DFB\u52A0\u56FE\u7EB8\u6587\u4EF6",`为图纸"${_0x87a38g['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||"\u672A\u547D\u540D"}"添加了文件`);alert("\u6587\u4EF6\u6DFB\u52A0\u6210\u529F\uFF01");};_0xd05gf['\u0072\u0065\u0061\u0064\u0041\u0073\u0044\u0061\u0074\u0061\u0055\u0052\u004C'](_0x36fcfa);}}function renderExperienceList(site){var _0xce501d;const _0x6f30a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLecneirepxe".split("").reverse().join(""));_0xce501d=(700623^700619)+(410595^410603);if(!site['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']||site['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']===(393457^393457)){_0x6f30a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=">p/<\u7ED3\u603B\u9A8C\u7ECF\u65E0\u6682>\";xp02 :pot-nigram ;retnec :ngila-txet ;999# :roloc\"=elyts p<".split("").reverse().join("");return;}_0x6f30a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';site['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](exp=>{const _0x12c7bf=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x12c7bf['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="meti-ecneirepxe".split("").reverse().join("");const _0x53cf=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x53cf['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006C\u0065\u0078']="\u0031";_0x53cf['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0057\u0069\u0064\u0074\u0068']="\u0030";var _0xfb38fd;const _0xc9a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0xfb38fd=(221324^221316)+(535234^535242);_0xc9a['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="redaeh-ecneirepxe".split("").reverse().join("");_0xc9a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <span>${exp['\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072']} - 经验总结</span>
-            <span class="experience-time">${exp['\u0074\u0069\u006D\u0065']}</span>
-        `;const _0xe11c=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0xe11c['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u002D\u0063\u006F\u006E\u0074\u0065\u006E\u0074";_0xe11c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=exp['\u0063\u006F\u006E\u0074\u0065\u006E\u0074'];_0xe11c['\u0074\u0069\u0074\u006C\u0065']=exp['\u0063\u006F\u006E\u0074\u0065\u006E\u0074'];_0x53cf['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xc9a);_0x53cf['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xe11c);const _0x26gbb=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));if(canDelete()){_0x26gbb['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`<button class="action-btn delete-btn" onclick="deleteItem('${exp['\u0069\u0064']}', 'experience')">删除</button>`;}_0x12c7bf['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x53cf);_0x12c7bf['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x26gbb);_0x6f30a['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x12c7bf);});}function showSimpleToast(message,type="\u0073\u0075\u0063\u0063\u0065\u0073\u0073"){const _0xfb624d=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0xfb624d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=message;_0xfb624d['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
+        `;
+        
+        document.body.appendChild(modal);
+        
+        const tokenInput = document.getElementById('githubTokenInput');
+        const saveBtn = document.getElementById('saveTokenBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const cleanDataBtn = document.getElementById('cleanDataBtn');
+        
+        // 如果数据过大，禁用保存按钮
+        if (!sizeCheck.canUpload) {
+            saveBtn.disabled = true;
+            saveBtn.style.backgroundColor = '#6c757d';
+            saveBtn.style.cursor = 'not-allowed';
+            saveBtn.title = '数据过大，请先清理';
+        }
+        
+        setTimeout(() => tokenInput.focus(), 100);
+        
+        saveBtn.onclick = () => {
+            if (!sizeCheck.canUpload) {
+                alert('数据过大，无法上传！请先清理数据。');
+                return;
+            }
+            
+            const token = tokenInput.value.trim();
+            
+            if (!token) {
+                alert('请输入 GitHub Token');
+                return;
+            }
+            
+            // 验证 Token 格式
+            if (!token.startsWith('ghp_') && !token.startsWith('github_pat_')) {
+                if (!confirm('警告：Token 格式看起来不正确！\n正确的 Token 通常以 "ghp_" 或 "github_pat_" 开头。\n是否继续使用此 Token？')) {
+                    return;
+                }
+            }
+            
+            // 保存 Token
+            GIST_CONFIG.GITHUB_TOKEN = token;
+            GIST_CONFIG.configLoaded = true;
+            
+            localStorage.setItem('github_config', JSON.stringify({
+                GIST_ID: BUILT_IN_CONFIG.GIST_ID,
+                GITHUB_TOKEN: token,
+                configLoaded: true,
+                lastUpdated: new Date().toISOString(),
+                purpose: purpose
+            }));
+            
+            modal.remove();
+            resolve(token); // 返回 Token
+        };
+        
+        cancelBtn.onclick = () => {
+            modal.remove();
+            resolve(null); // 返回 null 表示取消
+        };
+        
+        if (cleanDataBtn) {
+            cleanDataBtn.onclick = () => {
+                modal.remove();
+                alert('建议清理以下数据：\n1. 删除不需要的维修图片\n2. 删除旧的图纸文件\n3. 压缩现有图片\n\n清理完成后重新尝试。');
+                resolve(null);
+            };
+        }
+        
+        tokenInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                saveBtn.click();
+            }
+        });
+        
+        document.addEventListener('keydown', function escHandler(e) {
+            if (e.key === 'Escape') {
+                document.removeEventListener('keydown', escHandler);
+                cancelBtn.click();
+            }
+        });
+    });
+}
+// 对于其他权限检查函数，同样避免直接覆盖
+function checkAndWrapFunction(funcName, fallbackFunc) {
+    if (typeof window[funcName] === 'undefined') {
+        window[funcName] = function() {
+            // 先检查是否是管理员
+            if (isAdmin && isAdmin()) {
+                return true;
+            }
+            // 使用quanxian.js中的hasPermission函数
+            if (window.hasPermission && typeof window.hasPermission === 'function') {
+                return window.hasPermission(funcName);
+            }
+            // 使用备用函数
+            return fallbackFunc ? fallbackFunc() : false;
+        };
+    }
+}
+
+// 包装权限函数
+checkAndWrapFunction('canShowPermissionManager', function() {
+    return window.hasPermission ? window.hasPermission('showPermissionManager') : false;
+});
+
+checkAndWrapFunction('canShowChangeLog', function() {
+    return window.hasPermission ? window.hasPermission('viewLogs') : false;
+});
+// ==================== 内置GitHub配置 ====================
+const BUILT_IN_CONFIG = {
+    GIST_ID: '2769a9e28995f23cf9be60dd8f2891ca', // Gist ID 保持内置
+    GITHUB_TOKEN: '', // Token 改为空，需要用户输入
+    configLoaded: false // 初始状态为未加载
+};
+
+// 不再自动初始化配置
+
+// 在yun.js开头添加
+if (typeof window.currentUser === 'undefined') {
+    window.currentUser = null;
+}
+async function saveToJsFile() {
+    try {
+        if (!currentUser) {
+            alert('请先登录！');
+            return;
+        }
+
+        if (!confirm('即将下载完整数据备份ZIP包，包含所有文本和图片数据。文本数据不包含base64，图片以文件形式保存。是否继续？')) {
+            return;
+        }
+
+        // 创建完整数据对象（包含所有数据）
+        const fullData = {
+            sites: JSON.parse(JSON.stringify(sites)), // 深拷贝原始数据
+            changeLog: changeLog,
+            exportTime: new Date().toLocaleString('zh-CN'),
+            exportedBy: currentUser.name,
+            dataVersion: '2.3',
+            note: '完整数据备份（图片以文件形式保存）'
+        };
+
+        await generateAndDownloadZip(fullData);
+        addChangeLog('备份完整数据', '下载了包含完整数据的ZIP包（图片以文件形式保存）');
+
+    } catch (error) {
+        console.error('保存失败:', error);
+        alert('保存失败：' + error.message);
+    }
+}
+
+// 重新配置 GitHub Token
+function resetGithubConfig() {
+    localStorage.removeItem('github_config');
+    GIST_CONFIG.configLoaded = false;
+    GIST_CONFIG.GITHUB_TOKEN = '';
+    
+    promptForGithubToken().then((success) => {
+        if (success) {
+            showSimpleToast('GitHub 配置已重置并重新配置');
+        }
+    });
+}
+
+// 修改所有权限检查函数，先检查管理员权限
+function canDelete() { 
+    return isAdmin() || (hasPermission ? hasPermission('deleteItems') : false); 
+}
+
+function canEditTime() { 
+    return isAdmin() || (hasPermission ? hasPermission('editAll') : false); 
+}
+
+function canEditStatus() { 
+    return isAdmin() || (hasPermission ? hasPermission('editAll') : false); 
+}
+
+function canEditQuote() { 
+    return isAdmin() || (hasPermission ? hasPermission('editQuote') : false); 
+}
+
+function canClearLog() { 
+    return isAdmin() || (hasPermission ? hasPermission('viewLogs') : false); 
+}
+
+function canAdd() { 
+    return isAdmin() || (hasPermission ? hasPermission('addItems') : false); 
+}
+
+function canEditWorkerRating() { 
+    return isAdmin() || (hasPermission ? hasPermission('editAll') : false); 
+}
+
+function canEditWorkerTime() { 
+    return isAdmin() || (hasPermission ? hasPermission('editAll') : false); 
+}
+
+function canEditNote() { 
+    return isAdmin() || (hasPermission ? hasPermission('editAll') : false); 
+}
+
+
+// 可选：添加一个查看配置的函数
+function showCurrentConfig() {
+    alert(`当前GitHub配置：
+Gist ID: ${GIST_CONFIG.GIST_ID.substring(0, 8)}...
+Token: ${GIST_CONFIG.GITHUB_TOKEN.substring(0, 8)}...
+配置状态: ${GIST_CONFIG.configLoaded ? '已加载' : '未加载'}`);
+}
+
+
+
+
+
+// ==================== 配置管理 ====================
+async function loadGithubConfig() {
+    console.log('开始加载 GitHub 配置...');
+    
+    // 先尝试从 localStorage 读取
+    const savedConfig = localStorage.getItem('github_config');
+    
+    if (savedConfig) {
+        try {
+            const config = JSON.parse(savedConfig);
+            GIST_CONFIG.GIST_ID = config.GIST_ID || BUILT_IN_CONFIG.GIST_ID;
+            GIST_CONFIG.GITHUB_TOKEN = config.GITHUB_TOKEN;
+            GIST_CONFIG.configLoaded = true;
+            console.log('已从 localStorage 加载 GitHub 配置');
+            return true;
+        } catch (e) {
+            console.warn('解析 localStorage 配置失败:', e);
+            localStorage.removeItem('github_config');
+        }
+    }
+    
+    // 如果没有保存的配置，弹出输入框要求用户输入
+    return await promptForGithubToken();
+}
+// 在 quanxian.js 中添加一个检查 GitHub 配置的函数
+function checkGitHubConfig() {
+    // 首先检查 localStorage
+    const savedConfig = localStorage.getItem('github_config');
+    if (savedConfig) {
+        try {
+            const config = JSON.parse(savedConfig);
+            if (config.GIST_ID && config.GITHUB_TOKEN) {
+                return config;
+            }
+        } catch (e) {
+            console.warn('解析 GitHub 配置失败:', e);
+        }
+    }
+    
+    // 检查全局变量
+    if (window.GIST_CONFIG && window.GIST_CONFIG.configLoaded) {
+        return {
+            GIST_ID: window.GIST_CONFIG.GIST_ID,
+            GITHUB_TOKEN: window.GIST_CONFIG.GITHUB_TOKEN
+        };
+    }
+    
+    // 检查 BUILT_IN_CONFIG
+    if (window.BUILT_IN_CONFIG && window.BUILT_IN_CONFIG.GIST_ID) {
+        return {
+            GIST_ID: window.BUILT_IN_CONFIG.GIST_ID,
+            GITHUB_TOKEN: window.BUILT_IN_CONFIG.GITHUB_TOKEN
+        };
+    }
+    
+    return null;
+}
+
+// 添加数据清理提示
+function showDataCleanupTips() {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.style.cssText = `
+        display: flex;
         position: fixed;
-        top: 20px;
-        right: 20px;
-        background: ${type==="\u0073\u0075\u0063\u0063\u0065\u0073\u0073"?"05fac4#".split("").reverse().join(""):"\u0023\u0066\u0066\u0039\u0038\u0030\u0030"};
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
         z-index: 9999;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        animation: toastSlideIn 0.3s ease;
-    `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xfb624d);setTimeout(()=>{_0xfb624d['\u0073\u0074\u0079\u006C\u0065']['\u0061\u006E\u0069\u006D\u0061\u0074\u0069\u006F\u006E']="\u0074\u006F\u0061\u0073\u0074\u0053\u006C\u0069\u0064\u0065\u004F\u0075\u0074\u0020\u0030\u002E\u0033\u0073\u0020\u0065\u0061\u0073\u0065";setTimeout(()=>_0xfb624d['\u0072\u0065\u006D\u006F\u0076\u0065'](),746512^746812);},545052^547492);}const toastStyle=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("elyts".split("").reverse().join(""));toastStyle['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`
-    @keyframes toastSlideIn {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    `;
+    
+    modal.innerHTML = `
+        <div style="background: white; padding: 30px; border-radius: 10px; width: 90%; max-width: 500px; max-height: 80vh; overflow-y: auto;">
+            <h3 style="margin: 0 0 20px 0; color: #333;">数据清理指南</h3>
+            
+            <div style="margin-bottom: 20px;">
+                <h4 style="color: #d63031;">⚠️ 数据过大，需要清理</h4>
+                <p>您的数据大小超过了GitHub Gist的10MB限制，无法上传。</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h4>清理建议：</h4>
+                <ul style="margin-left: 20px; color: #666;">
+                    <li><strong>删除不需要的图片：</strong>删除维修记录中的旧照片</li>
+                    <li><strong>压缩现有图片：</strong>点击图片旁边的"更换"按钮重新上传压缩版</li>
+                    <li><strong>删除旧的图纸文件：</strong>删除不再需要的设计图纸</li>
+                    <li><strong>清理历史数据：</strong>删除已完成的工地的相关数据</li>
+                </ul>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h4>操作步骤：</h4>
+                <ol style="margin-left: 20px; color: #666;">
+                    <li>进入各个工地详情页面</li>
+                    <li>在"待维修"标签页，删除不需要的维修图片</li>
+                    <li>在"图纸"标签页，删除大的图纸文件</li>
+                    <li>使用"备份完整数据ZIP"功能先本地备份</li>
+                    <li>清理完成后重新尝试云端备份</li>
+                </ol>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 25px;">
+                <button id="closeBtn" 
+                        style="padding: 12px 24px; background: #6c757d; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; flex: 1;">
+                    关闭
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    document.getElementById('closeBtn').onclick = () => {
+        modal.remove();
+    };
+}
+// 修改 exportPermissionConfig 函数，添加配置检查
+function exportPermissionConfig() {
+    if (!isAdmin()) {
+        alert('只有管理员可以导出权限配置！');
+        return;
     }
-    @keyframes toastSlideOut {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(100%); opacity: 0; }
+    
+    // 检查 GitHub 配置
+    const config = checkGitHubConfig();
+    if (!config) {
+        alert('请先配置GitHub同步！');
+        
+        // 尝试显示配置管理按钮
+        ensureGitHubToken();
+                return;
+                
     }
-`;document['\u0068\u0065\u0061\u0064']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](toastStyle);function getDrawingTypeText(type){const _0x9_0xd58={"\u0064\u0065\u0073\u0069\u0067\u006E":"\u8BBE\u8BA1\u56FE\u7EB8","\u0071\u0075\u006F\u0074\u0065":"\u62A5\u4EF7\u8868","\u006F\u0074\u0068\u0065\u0072":"\u5176\u4ED6"};return _0x9_0xd58[type]||"\u672A\u77E5";}function getFileIcon(fileType){if(fileType['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0070\u0064\u0066"))return"\uD83D\uDCD5";if(fileType['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0065\u0078\u0063\u0065\u006C")||fileType['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0073\u0068\u0065\u0065\u0074"))return"\uD83D\uDCCA";if(fileType['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0077\u006F\u0072\u0064"))return"\uD83D\uDCDD";if(fileType['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("vsc".split("").reverse().join("")))return"\uD83D\uDCCB";if(fileType['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0069\u006D\u0061\u0067\u0065"))return"\uFE0F\uDDBC\uD83D".split("").reverse().join("");return"\uDCC4\uD83D".split("").reverse().join("");}function getMimeTypeFromFileName(fileName){var _0x5cg9aa;const _0x94ca=fileName['\u0073\u0070\u006C\u0069\u0074']("\u002E")['\u0070\u006F\u0070']()['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']();_0x5cg9aa=(617574^617572)+(308207^308198);var _0x43fcbe=(829018^829018)+(652719^652715);const _0x8gcb={"\u006A\u0070\u0067":'image/jpeg','jpeg':'image/jpeg','png':"\u0069\u006D\u0061\u0067\u0065\u002F\u0070\u006E\u0067",'gif':"\u0069\u006D\u0061\u0067\u0065\u002F\u0067\u0069\u0066",'webp':"\u0069\u006D\u0061\u0067\u0065\u002F\u0077\u0065\u0062\u0070","\u0062\u006D\u0070":"\u0069\u006D\u0061\u0067\u0065\u002F\u0062\u006D\u0070","\u0070\u0064\u0066":'application/pdf',"\u0078\u006C\u0073":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u006D\u0073\u002D\u0065\u0078\u0063\u0065\u006C",'xlsx':"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u006F\u0070\u0065\u006E\u0078\u006D\u006C\u0066\u006F\u0072\u006D\u0061\u0074\u0073\u002D\u006F\u0066\u0066\u0069\u0063\u0065\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074\u002E\u0073\u0070\u0072\u0065\u0061\u0064\u0073\u0068\u0065\u0065\u0074\u006D\u006C\u002E\u0073\u0068\u0065\u0065\u0074","\u0064\u006F\u0063":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006D\u0073\u0077\u006F\u0072\u0064","\u0064\u006F\u0063\u0078":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u006F\u0070\u0065\u006E\u0078\u006D\u006C\u0066\u006F\u0072\u006D\u0061\u0074\u0073\u002D\u006F\u0066\u0066\u0069\u0063\u0065\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074\u002E\u0077\u006F\u0072\u0064\u0070\u0072\u006F\u0063\u0065\u0073\u0073\u0069\u006E\u0067\u006D\u006C\u002E\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074",'csv':"\u0074\u0065\u0078\u0074\u002F\u0063\u0073\u0076","\u0074\u0078\u0074":"\u0074\u0065\u0078\u0074\u002F\u0070\u006C\u0061\u0069\u006E",'json':'application/json'};_0x43fcbe='\u0066\u0063\u0064\u006A\u0064\u006B';return _0x8gcb[_0x94ca]||"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006F\u0063\u0074\u0065\u0074\u002D\u0073\u0074\u0072\u0065\u0061\u006D";}function getExtensionFromMimeType(mimeType){const _0x10_0x8c5={"\u0069\u006D\u0061\u0067\u0065\u002F\u006A\u0070\u0065\u0067":"\u006A\u0070\u0067","\u0069\u006D\u0061\u0067\u0065\u002F\u0070\u006E\u0067":"\u0070\u006E\u0067","\u0069\u006D\u0061\u0067\u0065\u002F\u0067\u0069\u0066":"\u0067\u0069\u0066","\u0069\u006D\u0061\u0067\u0065\u002F\u0077\u0065\u0062\u0070":"\u0077\u0065\u0062\u0070","\u0069\u006D\u0061\u0067\u0065\u002F\u0062\u006D\u0070":"\u0062\u006D\u0070",'application/pdf':"\u0070\u0064\u0066","\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u006D\u0073\u002D\u0065\u0078\u0063\u0065\u006C":'xls',"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u006F\u0070\u0065\u006E\u0078\u006D\u006C\u0066\u006F\u0072\u006D\u0061\u0074\u0073\u002D\u006F\u0066\u0066\u0069\u0063\u0065\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074\u002E\u0073\u0070\u0072\u0065\u0061\u0064\u0073\u0068\u0065\u0065\u0074\u006D\u006C\u002E\u0073\u0068\u0065\u0065\u0074":'xlsx',"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006D\u0073\u0077\u006F\u0072\u0064":'doc',"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u006F\u0070\u0065\u006E\u0078\u006D\u006C\u0066\u006F\u0072\u006D\u0061\u0074\u0073\u002D\u006F\u0066\u0066\u0069\u0063\u0065\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074\u002E\u0077\u006F\u0072\u0064\u0070\u0072\u006F\u0063\u0065\u0073\u0073\u0069\u006E\u0067\u006D\u006C\u002E\u0064\u006F\u0063\u0075\u006D\u0065\u006E\u0074":'docx',"\u0074\u0065\u0078\u0074\u002F\u0063\u0073\u0076":'csv',"\u0074\u0065\u0078\u0074\u002F\u0070\u006C\u0061\u0069\u006E":'txt',"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0073\u006F\u006E":'json'};return _0x10_0x8c5[mimeType]||"\u0062\u0069\u006E";}function getExtensionFromFileName(fileName){if(!fileName)return null;const _0x44c13e=fileName['\u0073\u0070\u006C\u0069\u0074']("\u002E");return _0x44c13e['\u006C\u0065\u006E\u0067\u0074\u0068']>(345587^345586)?_0x44c13e[_0x44c13e['\u006C\u0065\u006E\u0067\u0074\u0068']-(234440^234441)]['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']():null;}function removeAllBase64Data(sitesArray){if(!sitesArray)return;sitesArray['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](site=>{var _0x6a58de=(590556^590559)+(215171^215179);const _0x8b404d=(site['\u006E\u0061\u006D\u0065']||`site_${site['\u0069\u0064']}`)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]|><\"?*:/\\\\[".split("").reverse().join(""),'\u0067'),"\u005F");_0x6a58de=(766408^766413)+(639492^639501);if(site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']){site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((repair,index)=>{if(repair['\u0070\u0068\u006F\u0074\u006F']&&repair['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A")){const extension=repair['\u0070\u0068\u006F\u0074\u006F']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u0064\u0061\u0074\u0061\u003A\u0069\u006D\u0061\u0067\u0065\u005C\u002F\u0028\u005C\u0077\u002B\u0029\u003B',""))?.[703270^703271]||"gpj".split("").reverse().join("");repair['\u0070\u0068\u006F\u0074\u006F']=`[PHOTO:${_0x8b404d}/repairs/repair_${index+(880570^880571)}.${extension}]`;repair['\u0068\u0061\u0073\u0050\u0068\u006F\u0074\u006F']=!![];}});}if(site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']){site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((drawing,index)=>{if(drawing['\u0066\u0069\u006C\u0065']&&drawing['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068'](":atad".split("").reverse().join(""))){var _0x7ae84f=(133960^133964)+(884425^884426);const _0x3aa=drawing['\u0066\u0069\u006C\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u0064\u0061\u0074\u0061\u003A\u0028\u005B\u005E\u003B\u005D\u002B\u0029\u003B',""));_0x7ae84f=(588648^588654)+(139124^139122);if(_0x3aa){var _0xcf579a=(652062^652060)+(198448^198448);const _0xbecebd=_0x3aa[514038^514039];_0xcf579a=703733^703730;var _0xc8730c=(206264^206271)+(365218^365226);const extension=getExtensionFromMimeType(_0xbecebd)||"\u0062\u0069\u006E";_0xc8730c='\u006B\u0064\u006F\u0071\u0070\u0068';var _0xge7e4b=(820315^820315)+(966184^966177);let _0x87c=drawing['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||`drawing_${index+(543566^543567)}.${extension}`;_0xge7e4b=(750847^750841)+(447187^447184);_0x87c=_0x87c['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005B\u005C\u005C\u002F\u003A\u002A\u003F\u0022\u003C\u003E\u007C\u005D','\u0067'),"\u005F");drawing['\u0066\u0069\u006C\u0065']=`[FILE:${_0x8b404d}/drawings/${_0x87c}]`;drawing['\u0068\u0061\u0073\u0046\u0069\u006C\u0065']=!![];}}});}});}function checkIfHasFiles(sitesArray){var _0xe073a=(177872^177873)+(204876^204873);let _0x8d271a=false;_0xe073a=755453^755448;if(!sitesArray)return false;sitesArray['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](site=>{if(site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0073\u006F\u006D\u0065'](repair=>repair['\u0070\u0068\u006F\u0074\u006F']&&repair['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A"))){_0x8d271a=!![];}if(site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0073\u006F\u006D\u0065'](drawing=>drawing['\u0066\u0069\u006C\u0065']&&drawing['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A"))){_0x8d271a=!![];}});return _0x8d271a;}function resizeImage(file,maxDimension,callback){if(!maxDimension)maxDimension=164982^165250;var _0x3286bg=(965539^965546)+(816685^816677);const _0x3gdf6g=new FileReader();_0x3286bg=(273006^273000)+(639256^639249);_0x3gdf6g['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){const _0xa8c09a=new Image();_0xa8c09a['\u006F\u006E\u006C\u006F\u0061\u0064']=function(_0xa3g8ca){const _0x7f239g=_0xa8c09a['\u0077\u0069\u0064\u0074\u0068'];const _0x9eb41e=_0xa8c09a['\u0068\u0065\u0069\u0067\u0068\u0074'];const _0xe99ca=maxDimension/Math['\u006D\u0061\u0078'](_0x7f239g,_0x9eb41e);if(_0xe99ca>=(785669^785668)){callback(e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074']);return;}var _0x4bbag=(484478^484470)+(599108^599117);const _0xda38gf=Math['\u0072\u006F\u0075\u006E\u0064'](_0x7f239g*_0xe99ca);_0x4bbag=731104^731104;var _0x5c68f=(308041^308046)+(311076^311078);const _0x6gaa2f=Math['\u0072\u006F\u0075\u006E\u0064'](_0x9eb41e*_0xe99ca);_0x5c68f='\u006B\u0067\u0067\u006E\u006D\u006F';const _0x47ebe=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0063\u0061\u006E\u0076\u0061\u0073");const _0xfe11c=_0x47ebe['\u0067\u0065\u0074\u0043\u006F\u006E\u0074\u0065\u0078\u0074']("\u0032\u0064");_0x47ebe['\u0077\u0069\u0064\u0074\u0068']=_0xda38gf;_0x47ebe['\u0068\u0065\u0069\u0067\u0068\u0074']=_0x6gaa2f;_0xfe11c['\u0066\u0069\u006C\u006C\u0053\u0074\u0079\u006C\u0065']="\u0077\u0068\u0069\u0074\u0065";_0xfe11c['\u0066\u0069\u006C\u006C\u0052\u0065\u0063\u0074'](278423^278423,987876^987876,_0xda38gf,_0x6gaa2f);_0xfe11c['\u0064\u0072\u0061\u0077\u0049\u006D\u0061\u0067\u0065'](_0xa8c09a,467017^467017,834741^834741,_0xda38gf,_0x6gaa2f);const _0x25eccb=file['\u0074\u0079\u0070\u0065']||"\u0069\u006D\u0061\u0067\u0065\u002F\u006A\u0070\u0065\u0067";if(_0x25eccb==="gepj/egami".split("").reverse().join("")){_0xa3g8ca=_0x47ebe['\u0074\u006F\u0044\u0061\u0074\u0061\u0055\u0052\u004C']("\u0069\u006D\u0061\u0067\u0065\u002F\u006A\u0070\u0065\u0067",0.6);}else if(_0x25eccb==="\u0069\u006D\u0061\u0067\u0065\u002F\u0070\u006E\u0067"){_0xa3g8ca=_0x47ebe['\u0074\u006F\u0044\u0061\u0074\u0061\u0055\u0052\u004C']("gnp/egami".split("").reverse().join(""));}else if(_0x25eccb==="\u0069\u006D\u0061\u0067\u0065\u002F\u0077\u0065\u0062\u0070"){_0xa3g8ca=_0x47ebe['\u0074\u006F\u0044\u0061\u0074\u0061\u0055\u0052\u004C']("\u0069\u006D\u0061\u0067\u0065\u002F\u0077\u0065\u0062\u0070",0.6);}else{_0xa3g8ca=_0x47ebe['\u0074\u006F\u0044\u0061\u0074\u0061\u0055\u0052\u004C']("gepj/egami".split("").reverse().join(""),0.6);}callback(_0xa3g8ca);};_0xa8c09a['\u0073\u0072\u0063']=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074'];};_0x3gdf6g['\u0072\u0065\u0061\u0064\u0041\u0073\u0044\u0061\u0074\u0061\u0055\u0052\u004C'](file);}function formatFileSize(bytes,k){if(bytes===(423142^423142))return"\u0030\u0020\u0042\u0079\u0074\u0065\u0073";var _0xgdf;k=248579^249603;_0xgdf=(633898^633899)+(595355^595359);const _0xc1c=["\u0042\u0079\u0074\u0065\u0073","\u004B\u0042","\u004D\u0042","BG".split("").reverse().join("")];const i=Math['\u0066\u006C\u006F\u006F\u0072'](Math['\u006C\u006F\u0067'](bytes)/Math['\u006C\u006F\u0067'](k));return parseFloat((bytes/Math['\u0070\u006F\u0077'](k,i))['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](181336^181338))+"\u0020"+_0xc1c[i];}function formatDate(dateStr){if(!dateStr)return'';if(dateStr['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$}2{d\\-}2{d\\-}4{d\\^".split("").reverse().join(""),""))){return dateStr;}const _0xec8gc=new Date(dateStr);if(isNaN(_0xec8gc['\u0067\u0065\u0074\u0054\u0069\u006D\u0065']()))return dateStr;return _0xec8gc['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[268585^268585];}function calculateDaysLeft(endDate){if(!endDate)return 383753^383753;var _0xb2_0x4f9=(395672^395674)+(110792^110795);const _0x3d13bb=new Date(endDate);_0xb2_0x4f9='\u006E\u006F\u0061\u006B\u0069\u006C';var _0xfa11bb;const _0x4aba6f=new Date();_0xfa11bb="ipgojh".split("").reverse().join("");_0x3d13bb['\u0073\u0065\u0074\u0048\u006F\u0075\u0072\u0073'](291707^291707,286997^286997,744561^744561,715551^715551);_0x4aba6f['\u0073\u0065\u0074\u0048\u006F\u0075\u0072\u0073'](660824^660824,956952^956952,284765^284765,211840^211840);const _0xfa15g=_0x3d13bb-_0x4aba6f;return Math['\u0063\u0065\u0069\u006C'](_0xfa15g/((519242^520098)*(886370^886366)*(913973^913929)*(974684^974660)));}function getSiteStatus(progress,daysLeft){if(progress>=(263931^263839)){return{'\u0063\u006C\u0061\u0073\u0073':"\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0064",'\u0074\u0065\u0078\u0074':"\u5DF2\u5B8C\u6210"};}else if(daysLeft<(533882^533882)){return{"class":'delayed','\u0074\u0065\u0078\u0074':"\u5DF2\u903E\u671F"};}else{return{'\u0063\u006C\u0061\u0073\u0073':"\u0061\u0063\u0074\u0069\u0076\u0065","text":"\u8FDB\u884C\u4E2D"};}}function generateId(){return Date['\u006E\u006F\u0077']()['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067'](279222^279186)+Math['\u0072\u0061\u006E\u0064\u006F\u006D']()['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067'](580010^579982)['\u0073\u0075\u0062\u0073\u0074\u0072'](573007^573005);}function saveData(){try{localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("setiSnoitcurtsnoc".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](sites));localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("goLegnahc".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](changeLog));}catch(error){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u636E\u6570\u5B58\u4FDD".split("").reverse().join(""),error);alert("\u9650\u6743\u50A8\u5B58\u5668\u89C8\u6D4F\u67E5\u68C0\u8BF7\uFF0C\u8D25\u5931\u636E\u6570\u5B58\u4FDD".split("").reverse().join(""));}}function loadFromLocalStorage(){try{const _0x5a2baa=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0063\u006F\u006E\u0073\u0074\u0072\u0075\u0063\u0074\u0069\u006F\u006E\u0053\u0069\u0074\u0065\u0073");const _0x6550a=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("goLegnahc".split("").reverse().join(""));if(_0x5a2baa){sites=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x5a2baa);}if(_0x6550a){changeLog=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x6550a);}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u4ECE\u0020\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065\u0020\u52A0\u8F7D\u6570\u636E\u5931\u8D25\u003A",error);sites=[];changeLog=[];}}async function saveToGitHub(){console['\u006C\u006F\u0067']("\u003D\u003D\u003D\u0020\u5F00\u59CB\u0073\u0061\u0076\u0065\u0054\u006F\u0047\u0069\u0074\u0048\u0075\u0062\u51FD\u6570\u0020\u003D\u003D\u003D");console['\u006C\u006F\u0067'](":GIFNOC_TSIG\u524D\u5F53".split("").reverse().join(""),{"GIST_ID":GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']?GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](274376^274376,360784^360792)+"\u002E\u002E\u002E":"\u7A7A",'\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E':GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']?GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](487620^487620,806609^806617)+"...".split("").reverse().join(""):"\u7A7A",'\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064':GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']});if(!GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']){console['\u006C\u006F\u0067']("\u914D\u7F6E\u672A\u52A0\u8F7D\uFF0C\u5F00\u59CB\u8C03\u7528\u006C\u006F\u0061\u0064\u0047\u0069\u0074\u0068\u0075\u0062\u0043\u006F\u006E\u0066\u0069\u0067\u002E\u002E\u002E");var _0xeaffe=(606524^606522)+(718902^718899);const _0xcc_0x5a8=await loadGithubConfig();_0xeaffe=(951801^951793)+(679267^679267);console['\u006C\u006F\u0067'](":\u56DE\u8FD4gifnoCbuhtiGdaol".split("").reverse().join(""),_0xcc_0x5a8);if(!_0xcc_0x5a8){console['\u006C\u006F\u0067']("\u793A\u63D0\u8BEF\u9519\u793A\u663E\uFF0C\u8D25\u5931\u8F7D\u52A0\u7F6E\u914D".split("").reverse().join(""));showSimpleToast("\u0047\u0069\u0074\u0048\u0075\u0062\u914D\u7F6E\u672A\u5B8C\u6210\uFF0C\u65E0\u6CD5\u540C\u6B65","\u0065\u0072\u0072\u006F\u0072");return false;}console['\u006C\u006F\u0067']("\u914D\u7F6E\u52A0\u8F7D\u6210\u529F\uFF0C\u7EE7\u7EED\u6267\u884C\u540C\u6B65");}else{console['\u006C\u006F\u0067']("\u914D\u7F6E\u5DF2\u52A0\u8F7D\uFF0C\u76F4\u63A5\u6267\u884C\u540C\u6B65");}if(isSyncing){showSimpleToast("\u6B63\u5728\u540C\u6B65\u4E2D\uFF0C\u8BF7\u7A0D\u540E\u91CD\u8BD5","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");return false;}if(!confirm("\u5373\u5C06\u4FDD\u5B58\u5230\u4E91\u7AEF\uFF1A\u000A\u0031\u002E\u0020\u6587\u672C\u6570\u636E\u4F1A\u4E0A\u4F20\u5230\u4E91\u7AEF\u000A\u0032\u002E\u0020\u56FE\u7247\u53CA\u56FE\u7247\u76F8\u5173\u6587\u4EF6\u4F1A\u6253\u5305\u4E3A\u005A\u0049\u0050\u4E0B\u8F7D\u000A\u000A\u662F\u5426\u7EE7\u7EED\uFF1F")){return;}isSyncing=!![];try{var _0xa_0xe26=(978932^978940)+(759691^759688);const _0x5e_0xc12={'\u0073\u0069\u0074\u0065\u0073':JSON['\u0070\u0061\u0072\u0073\u0065'](JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](sites)),'\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':JSON['\u0070\u0061\u0072\u0073\u0065'](JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](changeLog)),"lastSync":new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067'](),"user":currentUser['\u006E\u0061\u006D\u0065'],"syncVersion":"\u0032\u002E\u0032","hasSeparateFiles":!![],'\u006E\u006F\u0074\u0065':'此文件仅包含文本数据，图片和文件请使用ZIP包'};_0xa_0xe26='\u006D\u006B\u0063\u006E\u0065\u0065';removeAllBase64Data(_0x5e_0xc12['\u0073\u0069\u0074\u0065\u0073']);var _0xegb3e;const _0xfdc=checkIfHasFiles(sites);_0xegb3e=(645344^645344)+(901746^901746);var _0x172a9e=(834230^834227)+(245147^245146);const _0x795d=await fetch(`https://api.github.com/gists/${GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']}`,{'\u006D\u0065\u0074\u0068\u006F\u0064':'PATCH','\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{'Authorization':`token ${GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']}`,"\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u002D\u0054\u0079\u0070\u0065":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0073\u006F\u006E","\u0041\u0063\u0063\u0065\u0070\u0074":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u0067\u0069\u0074\u0068\u0075\u0062\u002E\u0076\u0033\u002B\u006A\u0073\u006F\u006E"},"body":JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':`工地装饰管理系统数据 - ${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']()}`,"files":{"\u0063\u006F\u006E\u0073\u0074\u0072\u0075\u0063\u0074\u0069\u006F\u006E\u005F\u0064\u0061\u0074\u0061\u002E\u006A\u0073\u006F\u006E":{'\u0063\u006F\u006E\u0074\u0065\u006E\u0074':JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0x5e_0xc12,null,861306^861304)}}})});_0x172a9e="mpmhhb".split("").reverse().join("");if(_0x795d['\u006F\u006B']){showSimpleToast("\u7AEF\u4E91\u5230\u5B58\u4FDD\u5DF2\u636E\u6570\u672C\u6587".split("").reverse().join(""));if(_0xfdc){setTimeout(()=>{if(confirm("\uFF09\u6784\u7ED3\u5939\u4EF6\u6587\u548C\u7247\u56FE\u542B\u5305\u4EC5\uFF08\u5305\u636E\u6570\u7247\u56FE\u8F7D\u4E0B\u5C06\u5373\uFF0C\u636E\u6570\u4EF6\u6587\u548C\u7247\u56FE\u5230\u6D4B\u68C0".split("").reverse().join(""))){saveImagesZipOnly();}},521509^521425);}return!![];}else{var _0xd63e4a;const _0x3f94e=await _0x795d['\u0074\u0065\u0078\u0074']();_0xd63e4a=(234549^234549)+(294565^294564);console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u6B65\u540CbuHtiG".split("").reverse().join(""),_0x3f94e);showSimpleToast("\u8D25\u5931\u5B58\u4FDD\u7AEF\u4E91".split("").reverse().join(""),"\u0065\u0072\u0072\u006F\u0072");return false;}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u0047\u0069\u0074\u0048\u0075\u0062\u540C\u6B65\u5F02\u5E38\u003A",error);showSimpleToast(" :\u8D25\u5931\u5B58\u4FDD".split("").reverse().join("")+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065'],"rorre".split("").reverse().join(""));return false;}finally{isSyncing=false;}}async function loadFromGitHub(){if(!GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']){var _0xc3dc3c=(574392^574399)+(282610^282615);const _0x22d=await loadGithubConfig();_0xc3dc3c=(351431^351425)+(835407^835399);if(!_0x22d){showSimpleToast("\u6B65\u540C\u6CD5\u65E0\uFF0C\u6210\u5B8C\u672A\u7F6E\u914DbuHtiG".split("").reverse().join(""),"\u0065\u0072\u0072\u006F\u0072");return false;}}if(!confirm("\u4ECE\u4E91\u7AEF\u52A0\u8F7D\u6570\u636E\u5C06\u4E0E\u73B0\u6709\u6570\u636E\u5408\u5E76\u3002\u76F8\u540C\u0049\u0044\u7684\u5DE5\u5730\u5C06\u88AB\u8986\u76D6\uFF0C\u65B0\u5DE5\u5730\u5C06\u88AB\u6DFB\u52A0\u3002\u662F\u5426\u7EE7\u7EED\uFF1F")){return;}try{let _0x27549e;if(GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']){_0x27549e=await fetch(`https://api.github.com/gists/${GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']}`,{"headers":{"\u0041\u0075\u0074\u0068\u006F\u0072\u0069\u007A\u0061\u0074\u0069\u006F\u006E":`token ${GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']}`,"\u0041\u0063\u0063\u0065\u0070\u0074":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u0067\u0069\u0074\u0068\u0075\u0062\u002E\u0076\u0033\u002B\u006A\u0073\u006F\u006E"}});}else{_0x27549e=await fetch(`https://api.github.com/gists/${GIST_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']}`,{'\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{"\u0041\u0063\u0063\u0065\u0070\u0074":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u0067\u0069\u0074\u0068\u0075\u0062\u002E\u0076\u0033\u002B\u006A\u0073\u006F\u006E"}});}if(!_0x27549e['\u006F\u006B']){throw new Error(`HTTP ${_0x27549e['\u0073\u0074\u0061\u0074\u0075\u0073']}: ${_0x27549e['\u0073\u0074\u0061\u0074\u0075\u0073\u0054\u0065\u0078\u0074']}`);}const _0x23gb7e=await _0x27549e['\u006A\u0073\u006F\u006E']();var _0x4dbb;const _0x34de=_0x23gb7e['\u0066\u0069\u006C\u0065\u0073']['construction_data.json']?.content;_0x4dbb=(299765^299767)+(114372^114370);if(!_0x34de){throw new Error("\u4EF6\u6587\u636E\u6570\u5230\u627E\u6709\u6CA1\u4E2D tsiG".split("").reverse().join(""));}const _0xa0e=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x34de);const _0xd4a=_0xa0e['\u0073\u0069\u0074\u0065\u0073']||[];const _0x8g2c2a=_0xa0e['\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']||[];let _0x96e=489407^489407;let _0x70230a=711596^711596;for(const _0xd711ec of _0xd4a){const _0x89e=sites['\u0066\u0069\u006E\u0064\u0049\u006E\u0064\u0065\u0078'](s=>s['\u0069\u0064']===_0xd711ec['\u0069\u0064']);if(_0x89e>=(861181^861181)){var _0xgfa=(280140^280142)+(539143^539141);const _0x9b27g=sites[_0x89e];_0xgfa=(349964^349957)+(596378^596376);["\u006E\u0061\u006D\u0065","\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065","\u0065\u006E\u0064\u0044\u0061\u0074\u0065","\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073","\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065","etouQlairetam".split("").reverse().join(""),"etouQtnempiuqe".split("").reverse().join(""),"etouQerutinruf".split("").reverse().join(""),"etouQrehto".split("").reverse().join("")]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](field=>{if(_0xd711ec[field]!==undefined){_0x9b27g[field]=_0xd711ec[field];}});["sodot".split("").reverse().join(""),"\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073","stnemeriuqer".split("").reverse().join(""),"sriaper".split("").reverse().join(""),"\u0077\u006F\u0072\u006B\u0065\u0072\u0073","\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073","sgniward".split("").reverse().join(""),"\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073"]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](arrayField=>{if(_0xd711ec[arrayField]&&Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](_0xd711ec[arrayField])){if(!_0x9b27g[arrayField]){_0x9b27g[arrayField]=[];}const _0xc28cd=new Set(_0x9b27g[arrayField]['\u006D\u0061\u0070'](item=>item['\u0069\u0064']));_0xd711ec[arrayField]['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](cloudItem=>{if(!_0xc28cd['\u0068\u0061\u0073'](cloudItem['\u0069\u0064'])){_0x9b27g[arrayField]['\u0070\u0075\u0073\u0068'](cloudItem);}});}});_0x70230a++;}else{sites['\u0070\u0075\u0073\u0068'](_0xd711ec);_0x96e++;}}var _0xd198g=(820175^820174)+(818065^818069);const _0xd44d3d=new Set(changeLog['\u006D\u0061\u0070'](log=>`${log['\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070']}-${log['\u0075\u0073\u0065\u0072']}-${log['\u0061\u0063\u0074\u0069\u006F\u006E']}`));_0xd198g=(385874^385879)+(207443^207447);_0x8g2c2a['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](log=>{var _0x5ae=(877232^877241)+(728880^728881);const _0x7132c=`${log['\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070']}-${log['\u0075\u0073\u0065\u0072']}-${log['\u0061\u0063\u0074\u0069\u006F\u006E']}`;_0x5ae=282965^282961;if(!_0xd44d3d['\u0068\u0061\u0073'](_0x7132c)){changeLog['\u0075\u006E\u0073\u0068\u0069\u0066\u0074'](log);_0xd44d3d['\u0061\u0064\u0064'](_0x7132c);}});if(changeLog['\u006C\u0065\u006E\u0067\u0074\u0068']>(332181^332413)){changeLog=changeLog['\u0073\u006C\u0069\u0063\u0065'](997047^997047,973082^973554);}saveData();renderSiteList();showSimpleToast(`云端数据已合并 (新增: ${_0x96e}, 更新: ${_0x70230a})`);if(currentSiteId){var _0xeed=(426975^426973)+(632285^632284);const _0x8cd=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0xeed=(644176^644178)+(885212^885208);if(_0x8cd)loadSiteData(_0x8cd);}return!![];}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u4ECE\u0047\u0069\u0074\u0048\u0075\u0062\u52A0\u8F7D\u5931\u8D25\u003A",error);showSimpleToast("\u4E91\u7AEF\u52A0\u8F7D\u5931\u8D25","rorre".split("").reverse().join(""));return false;}renderSiteList();}async function saveToJsFile(){try{if(!currentUser){alert("\u8BF7\u5148\u767B\u5F55\uFF01");return;}if(!confirm("\u5373\u5C06\u4E0B\u8F7D\u5B8C\u6574\u6570\u636E\u5907\u4EFD\u005A\u0049\u0050\u5305\uFF0C\u5305\u542B\uFF1A\u000A\u0031\u002E\u0020\u65E0\u0062\u0061\u0073\u0065\u0036\u0034\u56FE\u7247\u7684\u6587\u672C\u6570\u636E\u0028\u0073\u0068\u0075\u006A\u0075\u005F\u006C\u0069\u0067\u0068\u0074\u002E\u006A\u0073\u0029\u000A\u0032\u002E\u0020\u6240\u6709\u56FE\u7247\u548C\u6587\u4EF6\u000A\u000A\u662F\u5426\u7EE7\u7EED\uFF1F")){return;}const _0x3c742c={'\u0073\u0069\u0074\u0065\u0073':[],"changeLog":changeLog,"exportTime":new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E"),"exportedBy":currentUser['\u006E\u0061\u006D\u0065'],'\u0064\u0061\u0074\u0061\u0056\u0065\u0072\u0073\u0069\u006F\u006E':"\u0032\u002E\u0032",'\u006E\u006F\u0074\u0065':"\u6B64\u6587\u4EF6\u4EC5\u5305\u542B\u6587\u672C\u6570\u636E\uFF0C\u56FE\u7247\u548C\u6587\u4EF6\u8BF7\u67E5\u770B\u005A\u0049\u0050\u5305\u4E2D\u7684\u0073\u0068\u0075\u006A\u0075\u6587\u4EF6\u5939"};for(const _0x13_0x99c of sites){var _0x5c17f=(803540^803536)+(263068^263064);const _0x9257d={"id":_0x13_0x99c['\u0069\u0064'],"name":_0x13_0x99c['\u006E\u0061\u006D\u0065'],'\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065':_0x13_0x99c['\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065'],'\u0065\u006E\u0064\u0044\u0061\u0074\u0065':_0x13_0x99c['\u0065\u006E\u0064\u0044\u0061\u0074\u0065'],'\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073':_0x13_0x99c['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073'],"todos":_0x13_0x99c['\u0074\u006F\u0064\u006F\u0073']||[],'\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073':_0x13_0x99c['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']||[],"requirements":_0x13_0x99c['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']||[],"repairs":[],"workers":_0x13_0x99c['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']||[],'\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073':_0x13_0x99c['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']||[],'\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073':[],'\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073':_0x13_0x99c['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']||[],'\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065':_0x13_0x99c['\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065']||941396^941396,'\u006D\u0061\u0074\u0065\u0072\u0069\u0061\u006C\u0051\u0075\u006F\u0074\u0065':_0x13_0x99c['\u006D\u0061\u0074\u0065\u0072\u0069\u0061\u006C\u0051\u0075\u006F\u0074\u0065']||763429^763429,"equipmentQuote":_0x13_0x99c['\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065']||895222^895222,'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065':_0x13_0x99c['\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065']||856615^856615,'\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065':_0x13_0x99c['\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065']||897342^897342,'\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C':_0x13_0x99c['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C']||702259^702259,'\u0074\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065':_0x13_0x99c['\u0074\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065']||580520^580520,'\u006D\u0061\u0078\u0049\u006D\u0061\u0067\u0065\u0044\u0069\u006D\u0065\u006E\u0073\u0069\u006F\u006E':_0x13_0x99c['\u006D\u0061\u0078\u0049\u006D\u0061\u0067\u0065\u0044\u0069\u006D\u0065\u006E\u0073\u0069\u006F\u006E']||791970^792194,"dataVersion":'2.2'};_0x5c17f=(302633^302624)+(229714^229719);if(_0x13_0x99c['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&_0x13_0x99c['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(186796^186796)){for(let i=320821^320821;i<_0x13_0x99c['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068'];i++){const _0xc9g8cc=_0x13_0x99c['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'][i];const _0xcd7g={..._0xc9g8cc};if(_0xc9g8cc['\u0070\u0068\u006F\u0074\u006F']&&_0xc9g8cc['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068'](":atad".split("").reverse().join(""))){var _0xf1413e=(411260^411261)+(957441^957443);const extension=getExtensionFromMimeType(_0xc9g8cc['\u0070\u0068\u006F\u0074\u006F']['\u006D\u0061\u0074\u0063\u0068'](new RegExp(";)+];^[(:atad^".split("").reverse().join(""),""))?.[143786^143787])||"\u006A\u0070\u0067";_0xf1413e=(182301^182302)+(102764^102761);_0xcd7g['\u0070\u0068\u006F\u0074\u006F']=`[PHOTO:${_0x13_0x99c['\u006E\u0061\u006D\u0065']||_0x13_0x99c['\u0069\u0064']}/repairs/repair_${i+(593314^593315)}.${extension}]`;_0xcd7g['\u0068\u0061\u0073\u0050\u0068\u006F\u0074\u006F']=!![];}_0x9257d['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0070\u0075\u0073\u0068'](_0xcd7g);}}if(_0x13_0x99c['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&_0x13_0x99c['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(676582^676582)){for(let i=442417^442417;i<_0x13_0x99c['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068'];i++){const _0x1f70e=_0x13_0x99c['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'][i];var _0xa2_0x13d=(447710^447709)+(609290^609290);const _0x7fd={..._0x1f70e};_0xa2_0x13d=(536391^536388)+(475001^475003);if(_0x1f70e['\u0066\u0069\u006C\u0065']&&_0x1f70e['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068'](":atad".split("").reverse().join(""))){var _0x96d3a=(245697^245697)+(237916^237916);const extension=getExtensionFromMimeType(_0x1f70e['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065'])||getExtensionFromFileName(_0x1f70e['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'])||"\u0062\u0069\u006E";_0x96d3a='\u0069\u0066\u006D\u006B\u0071\u006A';_0x7fd['\u0066\u0069\u006C\u0065']=`[FILE:${_0x13_0x99c['\u006E\u0061\u006D\u0065']||_0x13_0x99c['\u0069\u0064']}/drawings/${_0x1f70e['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||`drawing_${i+(760996^760997)}.${extension}`}]`;_0x7fd['\u0068\u0061\u0073\u0046\u0069\u006C\u0065']=!![];}_0x9257d['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0070\u0075\u0073\u0068'](_0x7fd);}}_0x3c742c['\u0073\u0069\u0074\u0065\u0073']['\u0070\u0075\u0073\u0068'](_0x9257d);}await generateAndDownloadZip(_0x3c742c);addChangeLog("\u5907\u4EFD\u5B8C\u6574\u6570\u636E","\u4E0B\u8F7D\u4E86\u5305\u542B\u56FE\u7247\u548C\u65E0\u0062\u0061\u0073\u0065\u0036\u0034\u6587\u672C\u6570\u636E\u7684\u5B8C\u6574\u005A\u0049\u0050\u5305");}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u4FDD\u5B58\u5931\u8D25\u003A",error);alert("\u4FDD\u5B58\u5931\u8D25\uFF1A"+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']);}}async function generateAndDownloadZip(textData){try{if(typeof JSZip==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){alert("\u4EF6\u6587 PIZ \u6210\u751F\u6CD5\u65E0\uFF0C\u8F7D\u52A0\u672A\u5E93 piZSJ".split("").reverse().join(""));return;}var _0xc741b;const _0x6gebff=new JSZip();_0xc741b=(744150^744145)+(598035^598037);var _0x2_0x484=(249430^249428)+(281121^281121);const _0x6e9g=`// 工地装饰管理系统数据文件（文本版）
-// 生成时间：${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E")}
-// 生成用户：${currentUser['\u006E\u0061\u006D\u0065']}
-// 数据版本：${textData['\u0064\u0061\u0074\u0061\u0056\u0065\u0072\u0073\u0069\u006F\u006E']}
+    
+    const yonghuJsContent = `// 权限配置数据结构
+const PERMISSION_CONFIG = ${JSON.stringify(PERMISSION_CONFIG, null, 4)};
+
+// ==================== 权限管理系统 ====================
+// 内置用户列表
+const builtInUsers = ${JSON.stringify(builtInUsers, null, 2)};
+`;
+    
+    // 只保留导出到云端功能
+    uploadToCloudDirectly(yonghuJsContent);
+}
+// 添加获取云端数据的函数
+async function fetchCloudData() {
+    try {
+        const response = await fetch(`https://api.github.com/gists/${GIST_CONFIG.GIST_ID}`, {
+            headers: {
+                'Authorization': `token ${GIST_CONFIG.GITHUB_TOKEN}`,
+                'Accept': 'application/vnd.github.v3+json'
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const gist = await response.json();
+        const fileContent = gist.files['data.json']?.content;
+        
+        if (!fileContent) {
+            return { sites: [], changeLog: [] };
+        }
+        
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.warn('获取云端数据失败:', error);
+        return { sites: [], changeLog: [] };
+    }
+}
+
+// 添加合并工地数据的函数
+function mergeSites(cloudSites, localSites) {
+    const mergedSites = [...cloudSites];
+    
+    for (const localSite of localSites) {
+        const existingIndex = mergedSites.findIndex(s => s.id === localSite.id);
+        
+        if (existingIndex >= 0) {
+            // 合并现有工地（本地数据优先）
+            const cloudSite = mergedSites[existingIndex];
+            
+            // 基础信息用本地数据覆盖
+            cloudSite.name = localSite.name || cloudSite.name;
+            cloudSite.startDate = localSite.startDate || cloudSite.startDate;
+            cloudSite.endDate = localSite.endDate || cloudSite.endDate;
+            cloudSite.progress = localSite.progress !== undefined ? localSite.progress : cloudSite.progress;
+            
+            // 报价信息
+            const quoteFields = ['basicQuote', 'materialQuote', 'equipmentQuote', 'furnitureQuote', 'otherQuote', 'totalQuote'];
+            quoteFields.forEach(field => {
+                if (localSite[field] !== undefined) {
+                    cloudSite[field] = localSite[field];
+                }
+            });
+            
+            // 合并数组数据
+            ['todos', 'expenses', 'requirements', 'repairs', 'workers', 
+             'addRemoveItems', 'drawings', 'experiences'].forEach(arrayField => {
+                if (localSite[arrayField] && Array.isArray(localSite[arrayField])) {
+                    if (!cloudSite[arrayField]) {
+                        cloudSite[arrayField] = [];
+                    }
+                    
+                    // 创建ID集合用于快速查找
+                    const existingIds = new Set(cloudSite[arrayField].map(item => item.id));
+                    
+                    // 添加本地特有的项目
+                    localSite[arrayField].forEach(localItem => {
+                        if (!existingIds.has(localItem.id)) {
+                            cloudSite[arrayField].push(localItem);
+                        } else {
+                            // 如果已存在，用本地数据更新（基于时间戳判断哪个更新）
+                            const cloudItem = cloudSite[arrayField].find(item => item.id === localItem.id);
+                            if (cloudItem && localItem.time) {
+                                const localTime = new Date(localItem.time);
+                                const cloudTime = new Date(cloudItem.time || '2000-01-01');
+                                if (localTime > cloudTime) {
+                                    Object.assign(cloudItem, localItem);
+                                }
+                            }
+                        }
+                    });
+                    
+                    // 按时间排序
+                    cloudSite[arrayField].sort((a, b) => new Date(b.time || 0) - new Date(a.time || 0));
+                }
+            });
+        } else {
+            // 添加新工地
+            mergedSites.push({ ...localSite });
+        }
+    }
+    
+    return mergedSites;
+}
+
+// 添加合并更改日志的函数
+function mergeChangeLogs(cloudLogs, localLogs) {
+    const mergedLogs = [...cloudLogs];
+    const logKeys = new Set(cloudLogs.map(log => `${log.timestamp}-${log.user}-${log.action}`));
+    
+    // 添加本地特有的日志
+    localLogs.forEach(localLog => {
+        const logKey = `${localLog.timestamp}-${localLog.user}-${localLog.action}`;
+        if (!logKeys.has(logKey)) {
+            mergedLogs.unshift(localLog);
+            logKeys.add(logKey);
+        }
+    });
+    
+    // 限制日志数量并排序
+    return mergedLogs
+        .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+        .slice(0, 1000);
+}
+
+
+// 修改 saveToGitHub 函数，要求必须有token
+async function saveToGitHub() {
+    console.log('=== 开始 saveToGitHub 函数 ===');
+    
+    // 使用新的 Token 管理函数
+    const token = await ensureGitHubToken({
+        checkDataSize: true,
+        purpose: 'upload',
+        showWarning: true
+    });
+    
+    if (!token) {
+        showSimpleToast('备份到云端需要 GitHub Token，请先配置', 'error');
+        return false;
+    }
+    
+    // 确保 Token 已设置
+    GIST_CONFIG.GITHUB_TOKEN = token;
+    
+    if (isSyncing) {
+        showSimpleToast('正在同步中，请稍后重试', 'warning');
+        return false;
+    }
+    
+    // 检查数据大小
+    const dataSizeCheck = checkDataSizeBeforeUpload();
+    if (!dataSizeCheck.canUpload) {
+        alert(`数据过大，无法上传！\n\n当前数据大小：${dataSizeCheck.humanSize}\n建议删除部分图片或清理数据后再试。`);
+        return false;
+    }
+
+    // 修改确认提示，包含大小信息
+    if (!confirm(`即将备份完整数据到云端。\n\n当前数据大小：${dataSizeCheck.humanSize}\n\n包含所有文本和图片数据，是否继续？`)) {
+        return false;
+    }
+
+    isSyncing = true;
+
+    try {
+        const fullData = {
+            sites: JSON.parse(JSON.stringify(sites)),
+            changeLog: JSON.parse(JSON.stringify(changeLog)),
+            lastSync: new Date().toISOString(),
+            user: currentUser.name,
+            syncVersion: '2.3',
+            note: '完整数据备份'
+        };
+
+        const dataString = JSON.stringify(fullData);
+        console.log('JSON数据大小:', (dataString.length / 1024 / 1024).toFixed(2), 'MB');
+        
+        // GitHub Gist 有10MB文件大小限制
+        if (dataString.length > 8 * 1024 * 1024) { // 8MB，留一些余量
+            alert('警告：数据大小超过8MB，上传到GitHub可能会失败！\n\n建议：\n1. 删除部分不重要的图片\n2. 压缩图片质量\n3. 分多次备份');
+            isSyncing = false;
+            return false;
+        }
+
+        const response = await fetch(`https://api.github.com/gists/${GIST_CONFIG.GIST_ID}`, {
+            method: 'PATCH',
+            headers: {
+                'Authorization': `token ${GIST_CONFIG.GITHUB_TOKEN}`,
+                'Content-Type': 'application/json',
+                'Accept': 'application/vnd.github.v3+json'
+            },
+            body: JSON.stringify({
+                description: `工地装饰管理系统完整数据备份 - ${new Date().toLocaleString()} (${dataSizeCheck.humanSize})`,
+                files: {
+                    'data.json': {
+                        content: dataString
+                    }
+                }
+            })
+        });
+
+        if (response.ok) {
+            showSimpleToast(`完整数据(${dataSizeCheck.humanSize})已备份到云端！`);
+            addChangeLog('云端备份', `备份了完整数据(${dataSizeCheck.humanSize})到云端`);
+            return true;
+        } else {
+            const error = await response.text();
+            console.error('云端备份失败:', error);
+            
+            // 检查是否是文件过大导致的错误
+            if (response.status === 422) {
+                const errorObj = JSON.parse(error);
+                if (errorObj.message && errorObj.message.includes('too large')) {
+                    alert('上传失败：文件过大！\n\nGitHub Gist 单个文件限制为10MB。\n请压缩图片或删除部分数据后重试。');
+                } else {
+                    alert('上传失败：' + errorObj.message);
+                }
+            } else if (response.status === 401) {
+                alert('GitHub Token 已过期或无效！\n\n请重新配置GitHub Token。');
+                GIST_CONFIG.GITHUB_TOKEN = '';
+                GIST_CONFIG.configLoaded = false;
+                localStorage.removeItem('github_config');
+            } else {
+                alert(`上传失败：${response.status} ${response.statusText}`);
+            }
+            return false;
+        }
+
+    } catch (error) {
+        console.error('云端备份异常:', error);
+        
+        let errorMsg = '备份失败：';
+        if (error.message.includes('Failed to fetch')) {
+            errorMsg = '网络连接失败，请检查网络连接。';
+        } else if (error.message.includes('token')) {
+            errorMsg = 'GitHub Token 无效，请重新配置。';
+        } else {
+            errorMsg += error.message;
+        }
+        
+        showSimpleToast(errorMsg, 'error');
+        return false;
+    } finally {
+        isSyncing = false;
+    }
+}
+
+// 添加检查数据大小的函数
+function checkDataSizeBeforeUpload() {
+    try {
+        // 创建一个临时数据对象来估算大小
+        const tempData = {
+            sites: JSON.parse(JSON.stringify(sites)),
+            changeLog: JSON.parse(JSON.stringify(changeLog))
+        };
+        
+        const dataString = JSON.stringify(tempData);
+        const byteSize = dataString.length;
+        
+        // 估算base64图片的大小（base64比原始文件大33%）
+        let estimatedImageSize = 0;
+        let imageCount = 0;
+        
+        sites.forEach(site => {
+            // 统计维修图片
+            if (site.repairs) {
+                site.repairs.forEach(repair => {
+                    if (repair.photo && repair.photo.startsWith('data:')) {
+                        // base64数据大约是原始文件的133%
+                        const base64Size = repair.photo.length;
+                        estimatedImageSize += base64Size;
+                        imageCount++;
+                    }
+                });
+            }
+            
+            // 统计图纸文件
+            if (site.drawings) {
+                site.drawings.forEach(drawing => {
+                    if (drawing.file && drawing.file.startsWith('data:')) {
+                        const base64Size = drawing.file.length;
+                        estimatedImageSize += base64Size;
+                        imageCount++;
+                    }
+                });
+            }
+        });
+        
+        const totalSize = byteSize + estimatedImageSize;
+        
+        // 转换为可读格式
+        const formatSize = (bytes) => {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            if (bytes < 1024 * 1024 * 1024) return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+            return (bytes / (1024 * 1024 * 1024)).toFixed(1) + ' GB';
+        };
+        
+        return {
+            canUpload: totalSize < 8 * 1024 * 1024, // 8MB限制
+            totalSize: totalSize,
+            humanSize: formatSize(totalSize),
+            textSize: formatSize(byteSize),
+            imageSize: formatSize(estimatedImageSize),
+            imageCount: imageCount,
+            warning: totalSize > 6 * 1024 * 1024 ? '数据较大，建议压缩图片' : '大小正常'
+        };
+        
+    } catch (error) {
+        console.error('检查数据大小失败:', error);
+        return {
+            canUpload: true,
+            humanSize: '未知大小',
+            warning: '无法计算数据大小'
+        };
+    }
+}
+// 添加检查函数
+function checkIfHasFiles(sitesArray) {
+    if (!sitesArray) return false;
+    
+    let hasFiles = false;
+    let totalSize = 0;
+    
+    sitesArray.forEach(site => {
+        if (site.repairs) {
+            site.repairs.forEach(repair => {
+                if (repair.photo && repair.photo.startsWith('data:')) {
+                    hasFiles = true;
+                    // 估算base64大小
+                    totalSize += Math.floor(repair.photo.length * 3 / 4);
+                }
+            });
+        }
+        
+        if (site.drawings) {
+            site.drawings.forEach(drawing => {
+                if (drawing.file && drawing.file.startsWith('data:')) {
+                    hasFiles = true;
+                    totalSize += Math.floor(drawing.file.length * 3 / 4);
+                }
+            });
+        }
+    });
+    
+    console.log('图片数据估算大小:', (totalSize / 1024 / 1024).toFixed(2), 'MB');
+    return hasFiles;
+}
+
+// 在 yun.js 中添加这个函数
+function convertAllTimesToDate() {
+    if (!sites) return;
+    
+    sites.forEach(site => {
+        if (site.todos) {
+            site.todos.forEach(todo => {
+                if (todo.time && !todo.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    todo.time = formatDate(todo.time);
+                }
+            });
+        }
+
+        function convertAllTimesToDate() {
+    sites.forEach(site => {
+        if (site.todos) {
+            site.todos.forEach(todo => {
+                if (todo.time && !todo.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    todo.time = formatDate(todo.time);
+                }
+            });
+        }
+
+        if (site.expenses) {
+            site.expenses.forEach(expense => {
+                if (expense.time && !expense.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    expense.time = formatDate(expense.time);
+                }
+            });
+        }
+
+        if (site.requirements) {
+            site.requirements.forEach(req => {
+                if (req.time && !req.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    req.time = formatDate(req.time);
+                }
+            });
+        }
+
+        if (site.repairs) {
+            site.repairs.forEach(repair => {
+                if (repair.time && !repair.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    repair.time = formatDate(repair.time);
+                }
+            });
+        }
+
+        if (site.workers) {
+            site.workers.forEach(worker => {
+                if (worker.time && !worker.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    worker.time = formatDate(worker.time);
+                }
+                if (worker.startTime && !worker.startTime.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    worker.startTime = formatDate(worker.startTime);
+                }
+                if (worker.endTime && !worker.endTime.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    worker.endTime = formatDate(worker.endTime);
+                }
+            });
+        }
+
+        if (site.addRemoveItems) {
+            site.addRemoveItems.forEach(item => {
+                if (item.time && !item.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    item.time = formatDate(item.time);
+                }
+            });
+        }
+
+        if (site.drawings) {
+            site.drawings.forEach(drawing => {
+                if (drawing.time && !drawing.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    drawing.time = formatDate(drawing.time);
+                }
+            });
+        }
+
+        if (site.experiences) {
+            site.experiences.forEach(exp => {
+                if (exp.time && !exp.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    exp.time = formatDate(exp.time);
+                }
+            });
+        }
+    });
+}
+
+    });
+}
+async function generateAndDownloadZip(textData) {
+    try {
+        if (typeof JSZip === 'undefined') {
+            alert('JSZip 库未加载，无法生成 ZIP 文件');
+            return;
+        }
+
+        const zip = new JSZip();
+
+        // 1. 创建轻量版数据（不包含base64）
+        const lightData = {
+            sites: JSON.parse(JSON.stringify(textData.sites)),
+            changeLog: textData.changeLog,
+            exportTime: new Date().toLocaleString('zh-CN'),
+            exportedBy: currentUser.name,
+            dataVersion: '2.3',
+            note: '轻量版数据（不含图片base64）'
+        };
+
+        // 移除所有base64数据，替换为路径占位符
+        removeAllBase64Data(lightData.sites);
+
+        const jsContent = `// 工地装饰管理系统轻量版数据文件
+// 生成时间：${new Date().toLocaleString('zh-CN')}
+// 生成用户：${currentUser.name}
+// 数据版本：${lightData.dataVersion}
 // 说明：此文件只包含路径信息，需要配合shuju文件夹中的文件使用
-const savedData = ${JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](textData,null,459202^459200)};`;_0x2_0x484="kjlbge".split("").reverse().join("");_0x6gebff['\u0066\u0069\u006C\u0065']("sj.thgil_ujuhs".split("").reverse().join(""),_0x6e9g);var _0x23a=(297012^297013)+(495798^495799);const _0x1a82fe=_0x6gebff['\u0066\u006F\u006C\u0064\u0065\u0072']("\u0073\u0068\u0075\u006A\u0075");_0x23a=118895^118893;const _0x6e_0xg5e={"info":'图片和文件位置信息','\u0067\u0065\u006E\u0065\u0072\u0061\u0074\u0065\u0064':new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("NC-hz".split("").reverse().join("")),"user":currentUser['\u006E\u0061\u006D\u0065'],"totalSites":sites['\u006C\u0065\u006E\u0067\u0074\u0068'],'\u0073\u0069\u0074\u0065\u0073':[]};for(let i=896323^896323;i<sites['\u006C\u0065\u006E\u0067\u0074\u0068'];i++){const _0xaaf4a=sites[i];const _0xgc_0x1bd=(_0xaaf4a['\u006E\u0061\u006D\u0065']||`工地_${_0xaaf4a['\u0069\u0064']}`)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005B\u005C\u005C\u002F\u003A\u002A\u003F\u0022\u003C\u003E\u007C\u005D','\u0067'),"\u005F");var _0x3eb44d;const _0x2efbda=_0x1a82fe['\u0066\u006F\u006C\u0064\u0065\u0072'](_0xgc_0x1bd);_0x3eb44d='\u0070\u006D\u006E\u006C\u0070\u0069';const _0x37fcaa={'\u0069\u0064':_0xaaf4a['\u0069\u0064'],"name":_0xaaf4a['\u006E\u0061\u006D\u0065'],"folder":_0xgc_0x1bd,"repairs":[],'\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073':[]};if(_0xaaf4a['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&_0xaaf4a['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(106392^106392)){const _0xfcacae=_0x2efbda['\u0066\u006F\u006C\u0064\u0065\u0072']("\u0072\u0065\u0070\u0061\u0069\u0072\u0073");for(let j=711442^711442;j<_0xaaf4a['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068'];j++){const _0xgdg6b=_0xaaf4a['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'][j];if(_0xgdg6b['\u0070\u0068\u006F\u0074\u006F']&&_0xgdg6b['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068'](":atad".split("").reverse().join(""))){var _0x3_0x6gf=(340961^340968)+(555339^555338);const match=_0xgdg6b['\u0070\u0068\u006F\u0074\u006F']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$)+.(,46esab;)+];^[(:atad^".split("").reverse().join(""),""));_0x3_0x6gf=(668526^668521)+(487119^487119);if(match){const mimeType=match[376560^376561];var _0x5671f=(579675^579675)+(550178^550178);const base64Data=match[271829^271831];_0x5671f=895934^895935;var _0xb8d4dc;const extension=getExtensionFromMimeType(mimeType)||"\u006A\u0070\u0067";_0xb8d4dc=620517^620515;const fileName=`repair_${j+(580318^580319)}.${extension}`;_0xfcacae['\u0066\u0069\u006C\u0065'](fileName,base64Data,{'\u0062\u0061\u0073\u0065\u0036\u0034':!![]});_0x37fcaa['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0070\u0075\u0073\u0068']({'\u0069\u006E\u0064\u0065\u0078':j,"repairId":_0xgdg6b['\u0069\u0064'],'\u0072\u0065\u0070\u0061\u0069\u0072\u0043\u006F\u006E\u0074\u0065\u006E\u0074':_0xgdg6b['\u0063\u006F\u006E\u0074\u0065\u006E\u0074'],'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':fileName,'\u0070\u0061\u0074\u0068':`${_0xgc_0x1bd}/repairs/${fileName}`,'\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()});}}}}if(_0xaaf4a['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&_0xaaf4a['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(406415^406415)){const _0xb2b=_0x2efbda['\u0066\u006F\u006C\u0064\u0065\u0072']("\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073");for(let j=750811^750811;j<_0xaaf4a['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068'];j++){var _0x4_0x90a=(713379^713380)+(802885^802883);const _0xf8g38e=_0xaaf4a['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'][j];_0x4_0x90a=918299^918300;if(_0xf8g38e['\u0066\u0069\u006C\u0065']&&_0xf8g38e['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A")){const match=_0xf8g38e['\u0066\u0069\u006C\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u0064\u0061\u0074\u0061\u003A\u0028\u005B\u005E\u003B\u005D\u002B\u0029\u003B\u0062\u0061\u0073\u0065\u0036\u0034\u002C\u0028\u002E\u002B\u0029\u0024',""));if(match){var _0x0c3df;const mimeType=match[409138^409139];_0x0c3df=341501^341497;const base64Data=match[678646^678644];const extension=getExtensionFromMimeType(mimeType)||getExtensionFromFileName(_0xf8g38e['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'])||"\u0062\u0069\u006E";let fileName=_0xf8g38e['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||`drawing_${j+(284196^284197)}.${extension}`;fileName=fileName['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005B\u005C\u005C\u002F\u003A\u002A\u003F\u0022\u003C\u003E\u007C\u005D','\u0067'),"\u005F");_0xb2b['\u0066\u0069\u006C\u0065'](fileName,base64Data,{"base64":!![]});_0x37fcaa['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0070\u0075\u0073\u0068']({'\u0069\u006E\u0064\u0065\u0078':j,"drawingId":_0xf8g38e['\u0069\u0064'],'\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0054\u0079\u0070\u0065':_0xf8g38e['\u0074\u0079\u0070\u0065'],'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':fileName,"originalName":_0xf8g38e['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'],"path":`${_0xgc_0x1bd}/drawings/${fileName}`,"timestamp":new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()});}}}}if(_0x37fcaa['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(435187^435187)||_0x37fcaa['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(670188^670188)){_0x6e_0xg5e['\u0073\u0069\u0074\u0065\u0073']['\u0070\u0075\u0073\u0068'](_0x37fcaa);}}_0x6gebff['\u0066\u0069\u006C\u0065']("nosj.\u606F\u4FE1\u7F6E\u4F4D\u4EF6\u6587".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0x6e_0xg5e,null,986316^986318));const _0x4fd=`工地装饰管理系统完整数据备份包
+const savedData = ${JSON.stringify(lightData, null, 2)};`;
+
+        zip.file('shuju_light.js', jsContent);
+
+        // 2. 创建文件和图片文件夹结构
+        const shujuFolder = zip.folder('shuju');
+        const locationInfo = {
+            info: '图片和文件位置信息',
+            generated: new Date().toLocaleString('zh-CN'),
+            user: currentUser.name,
+            totalSites: sites.length,
+            sites: []
+        };
+
+        // 3. 遍历所有工地，提取图片并保存到ZIP
+        for (let i = 0; i < sites.length; i++) {
+            const originalSite = sites[i]; // 使用原始数据
+            const lightSite = lightData.sites[i]; // 对应的轻量版数据
+            const siteName = (originalSite.name || `工地_${originalSite.id}`).replace(/[\\/:*?"<>|]/g, '_');
+            const siteFolder = shujuFolder.folder(siteName);
+
+            const siteInfo = {
+                id: originalSite.id,
+                name: originalSite.name,
+                folder: siteName,
+                repairs: [],
+                drawings: []
+            };
+
+            // 处理维修图片
+            if (originalSite.repairs && originalSite.repairs.length > 0) {
+                const repairsFolder = siteFolder.folder('repairs');
+                for (let j = 0; j < originalSite.repairs.length; j++) {
+                    const repair = originalSite.repairs[j];
+                    const lightRepair = lightSite.repairs ? lightSite.repairs[j] : null;
+                    
+                    if (repair.photo && repair.photo.startsWith('data:')) {
+                        const match = repair.photo.match(/^data:([^;]+);base64,(.+)$/);
+                        if (match) {
+                            const mimeType = match[1];
+                            const base64Data = match[2];
+                            const extension = getExtensionFromMimeType(mimeType) || 'jpg';
+                            const fileName = `repair_${j + 1}.${extension}`;
+
+                            repairsFolder.file(fileName, base64Data, { base64: true });
+
+                            siteInfo.repairs.push({
+                                index: j,
+                                repairId: repair.id,
+                                repairContent: repair.content,
+                                fileName: fileName,
+                                path: `${siteName}/repairs/${fileName}`,
+                                timestamp: new Date().toISOString()
+                            });
+
+                            // 更新轻量版数据的路径
+                            if (lightRepair) {
+                                lightRepair.photo = `[PHOTO:${siteName}/repairs/${fileName}]`;
+                                lightRepair.hasPhoto = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 处理图纸文件
+            if (originalSite.drawings && originalSite.drawings.length > 0) {
+                const drawingsFolder = siteFolder.folder('drawings');
+                for (let j = 0; j < originalSite.drawings.length; j++) {
+                    const drawing = originalSite.drawings[j];
+                    const lightDrawing = lightSite.drawings ? lightSite.drawings[j] : null;
+                    
+                    if (drawing.file && drawing.file.startsWith('data:')) {
+                        const match = drawing.file.match(/^data:([^;]+);base64,(.+)$/);
+                        if (match) {
+                            const mimeType = match[1];
+                            const base64Data = match[2];
+                            const extension = getExtensionFromMimeType(mimeType) ||
+                                getExtensionFromFileName(drawing.fileName) ||
+                                'bin';
+                            let fileName = drawing.fileName ||
+                                `drawing_${j + 1}.${extension}`;
+                            fileName = fileName.replace(/[\\/:*?"<>|]/g, '_');
+
+                            drawingsFolder.file(fileName, base64Data, { base64: true });
+
+                            siteInfo.drawings.push({
+                                index: j,
+                                drawingId: drawing.id,
+                                drawingType: drawing.type,
+                                fileName: fileName,
+                                originalName: drawing.fileName,
+                                path: `${siteName}/drawings/${fileName}`,
+                                timestamp: new Date().toISOString()
+                            });
+
+                            // 更新轻量版数据的路径
+                            if (lightDrawing) {
+                                lightDrawing.file = `[FILE:${siteName}/drawings/${fileName}]`;
+                                lightDrawing.hasFile = true;
+                                lightDrawing.fileName = fileName;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (siteInfo.repairs.length > 0 || siteInfo.drawings.length > 0) {
+                locationInfo.sites.push(siteInfo);
+            }
+        }
+
+        // 4. 保存位置信息文件
+        zip.file('文件位置信息.json', JSON.stringify(locationInfo, null, 2));
+
+        // 5. 更新轻量版数据的内容（因为上面的循环修改了数据）
+        const updatedJsContent = `// 工地装饰管理系统轻量版数据文件
+// 生成时间：${new Date().toLocaleString('zh-CN')}
+// 生成用户：${currentUser.name}
+// 数据版本：${lightData.dataVersion}
+// 说明：此文件只包含路径信息，需要配合shuju文件夹中的文件使用
+const savedData = ${JSON.stringify(lightData, null, 2)};`;
+
+        zip.file('shuju_light.js', updatedJsContent);
+
+        // 6. 添加README文件
+        const readmeContent = `工地装饰管理系统完整数据备份包
 
 文件结构：
-├── shuju_light.js            # 文本数据文件（不包含base64）
+├── shuju_light.js            # 文本数据文件（不包含base64，只含路径信息）
 ├── 文件位置信息.json         # 图片和文件位置信息
 └── shuju/                    # 文件和图片文件夹
     ├── 工地1/                # 第一个工地文件夹
@@ -334,54 +1104,1272 @@ const savedData = ${JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079
 2. 系统会自动加载 shuju_light.js 和对应的图片文件
 3. 如需手动加载，可使用"从文件加载数据"功能
 
-生成时间：${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E")}
-生成用户：${currentUser['\u006E\u0061\u006D\u0065']}
-数据版本：${textData['\u0064\u0061\u0074\u0061\u0056\u0065\u0072\u0073\u0069\u006F\u006E']}`;_0x6gebff['\u0066\u0069\u006C\u0065']("txt.\u660E\u8BF4\u590D\u6062_EMDAER".split("").reverse().join(""),_0x4fd);const _0xg5ed2c=await _0x6gebff['\u0067\u0065\u006E\u0065\u0072\u0061\u0074\u0065\u0041\u0073\u0079\u006E\u0063']({'\u0074\u0079\u0070\u0065':"\u0062\u006C\u006F\u0062","compression":"\u0044\u0045\u0046\u004C\u0041\u0054\u0045",'\u0063\u006F\u006D\u0070\u0072\u0065\u0073\u0073\u0069\u006F\u006E\u004F\u0070\u0074\u0069\u006F\u006E\u0073':{'\u006C\u0065\u0076\u0065\u006C':6}});var _0x5eebdd;const _0x1f_0xb70=URL['\u0063\u0072\u0065\u0061\u0074\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0xg5ed2c);_0x5eebdd=578209^578215;const a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");a['\u0068\u0072\u0065\u0066']=_0x1f_0xb70;a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']=`工地完整数据备份_${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0044\u0061\u0074\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E")['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005C\u002F','\u0067'),"\u002D")}_${currentUser['\u006E\u0061\u006D\u0065']}.zip`;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](a);a['\u0063\u006C\u0069\u0063\u006B']();document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](a);URL['\u0072\u0065\u0076\u006F\u006B\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0x1f_0xb70);console['\u006C\u006F\u0067']("\u5B8C\u6574\u6570\u636E\u005A\u0049\u0050\u5305\u5DF2\u751F\u6210\u5E76\u4E0B\u8F7D");}catch(error){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u5305PIZ\u6210\u751F".split("").reverse().join(""),error);throw new Error("\uFF1A\u8D25\u5931\u5305PIZ\u6210\u751F".split("").reverse().join("")+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']);}}async function saveImagesZipOnly(){try{if(typeof JSZip==="denifednu".split("").reverse().join("")){alert("\u004A\u0053\u005A\u0069\u0070\u0020\u5E93\u672A\u52A0\u8F7D\uFF0C\u65E0\u6CD5\u751F\u6210\u0020\u005A\u0049\u0050\u0020\u6587\u4EF6");return;}const _0x863c7b=new JSZip();var _0xc347ab;const _0x16_0xc8a=`工地装饰管理系统图片数据包
+注意：此备份包中的 shuju_light.js 不包含图片base64数据，图片以文件形式存放在shuju文件夹中
 
-文件说明：
-1. 此ZIP包仅包含图片和文件数据
-2. 文本数据已上传到GitHub Gist云端
-3. 文件夹结构：
-  工地名称/
-    ├── repairs/          # 维修图片文件夹
-    │   ├── repair_1.jpg
-    │   └── repair_2.jpg
-    └── drawings/         # 图纸文件夹
-        ├── drawing_1.pdf
-        └── drawing_2.xlsx
+生成时间：${new Date().toLocaleString('zh-CN')}
+生成用户：${currentUser.name}
+数据版本：${lightData.dataVersion}`;
 
-恢复说明：
-1. 请确保已从云端同步文本数据
-2. 系统会自动根据路径加载对应的图片文件
-3. 如需手动加载，可使用"手动加载"功能
+        zip.file('README_恢复说明.txt', readmeContent);
 
-生成时间：${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E")}
-生成用户：${currentUser['\u006E\u0061\u006D\u0065']}`;_0xc347ab=461540^461536;_0x863c7b['\u0066\u0069\u006C\u0065']("\u0052\u0045\u0041\u0044\u004D\u0045\u005F\u56FE\u7247\u5305\u8BF4\u660E\u002E\u0074\u0078\u0074",_0x16_0xc8a);let _0xcfgf={"info":'图片位置信息文件 - 用于系统定位图片','\u0067\u0065\u006E\u0065\u0072\u0061\u0074\u0065\u0064':new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("NC-hz".split("").reverse().join("")),'\u0075\u0073\u0065\u0072':currentUser['\u006E\u0061\u006D\u0065'],"totalSites":sites['\u006C\u0065\u006E\u0067\u0074\u0068'],'\u0073\u0069\u0074\u0065\u0073':[]};for(let i=573735^573735;i<sites['\u006C\u0065\u006E\u0067\u0074\u0068'];i++){const _0xec2fbd=sites[i];const _0x2a42d=(_0xec2fbd['\u006E\u0061\u006D\u0065']||`工地_${_0xec2fbd['\u0069\u0064']}`)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]|><\"?*:/\\\\[".split("").reverse().join(""),'\u0067'),"\u005F");const _0x17_0xe5d=_0x863c7b['\u0066\u006F\u006C\u0064\u0065\u0072'](_0x2a42d);const _0xc28fb={'\u0069\u0064':_0xec2fbd['\u0069\u0064'],'\u006E\u0061\u006D\u0065':_0xec2fbd['\u006E\u0061\u006D\u0065'],'\u0066\u006F\u006C\u0064\u0065\u0072':_0x2a42d,'\u0072\u0065\u0070\u0061\u0069\u0072\u0073':[],'\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073':[]};if(_0xec2fbd['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&_0xec2fbd['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(332216^332216)){const _0x42c=_0x17_0xe5d['\u0066\u006F\u006C\u0064\u0065\u0072']("\u0072\u0065\u0070\u0061\u0069\u0072\u0073");for(let j=947338^947338;j<_0xec2fbd['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068'];j++){var _0xc60d6c=(674987^674990)+(877892^877891);const _0x9dd=_0xec2fbd['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'][j];_0xc60d6c=529307^529307;if(_0x9dd['\u0070\u0068\u006F\u0074\u006F']&&_0x9dd['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068'](":atad".split("").reverse().join(""))){const match=_0x9dd['\u0070\u0068\u006F\u0074\u006F']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$)+.(,46esab;)+];^[(:atad^".split("").reverse().join(""),""));if(match){const mimeType=match[869179^869178];var _0x2c_0x56b;const base64Data=match[143781^143783];_0x2c_0x56b='\u006D\u0062\u006E\u0068\u006A\u006D';const extension=getExtensionFromMimeType(mimeType)||"gpj".split("").reverse().join("");var _0xf1cd=(878997^878999)+(437940^437938);const fileName=`repair_${j+(662513^662512)}.${extension}`;_0xf1cd=(363359^363359)+(858832^858832);_0x42c['\u0066\u0069\u006C\u0065'](fileName,base64Data,{'\u0062\u0061\u0073\u0065\u0036\u0034':!![]});_0xc28fb['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0070\u0075\u0073\u0068']({"index":j,'\u0072\u0065\u0070\u0061\u0069\u0072\u0049\u0064':_0x9dd['\u0069\u0064'],'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':fileName,'\u0070\u0061\u0074\u0068':`${_0x2a42d}/repairs/${fileName}`,'\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()});}}}}if(_0xec2fbd['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&_0xec2fbd['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(551576^551576)){const _0xd4390e=_0x17_0xe5d['\u0066\u006F\u006C\u0064\u0065\u0072']("\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073");for(let j=392539^392539;j<_0xec2fbd['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068'];j++){var _0x285e;const _0x5a24f=_0xec2fbd['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'][j];_0x285e=(183549^183540)+(168427^168426);if(_0x5a24f['\u0066\u0069\u006C\u0065']&&_0x5a24f['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A")){var _0xdd16e=(662326^662322)+(426264^426256);const match=_0x5a24f['\u0066\u0069\u006C\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$)+.(,46esab;)+];^[(:atad^".split("").reverse().join(""),""));_0xdd16e=418113^418119;if(match){var _0xe549a=(364999^365006)+(406763^406761);const mimeType=match[277863^277862];_0xe549a=266048^266057;var _0x41b4c=(438247^438247)+(640875^640876);const base64Data=match[732572^732574];_0x41b4c=(623360^623367)+(622487^622487);var _0x262db=(900011^900013)+(457606^457615);const extension=getExtensionFromMimeType(mimeType)||getExtensionFromFileName(_0x5a24f['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'])||"\u0062\u0069\u006E";_0x262db=(821712^821717)+(285935^285931);let fileName=_0x5a24f['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||`drawing_${j+(880627^880626)}.${extension}`;fileName=fileName['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]|><\"?*:/\\\\[".split("").reverse().join(""),'\u0067'),"\u005F");_0xd4390e['\u0066\u0069\u006C\u0065'](fileName,base64Data,{'\u0062\u0061\u0073\u0065\u0036\u0034':!![]});_0xc28fb['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0070\u0075\u0073\u0068']({"index":j,"drawingId":_0x5a24f['\u0069\u0064'],"fileName":fileName,"originalName":_0x5a24f['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'],"path":`${_0x2a42d}/drawings/${fileName}`,"timestamp":new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()});}}}}if(_0xc28fb['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(979584^979584)||_0xc28fb['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']>(969869^969869)){_0xcfgf['\u0073\u0069\u0074\u0065\u0073']['\u0070\u0075\u0073\u0068'](_0xc28fb);}}_0x863c7b['\u0066\u0069\u006C\u0065']("nosj.\u606F\u4FE1\u7F6E\u4F4D\u4EF6\u6587".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0xcfgf,null,147733^147735));var _0x0a1gc;const _0xa5f6b=await _0x863c7b['\u0067\u0065\u006E\u0065\u0072\u0061\u0074\u0065\u0041\u0073\u0079\u006E\u0063']({'\u0074\u0079\u0070\u0065':"\u0062\u006C\u006F\u0062","compression":"\u0044\u0045\u0046\u004C\u0041\u0054\u0045",'\u0063\u006F\u006D\u0070\u0072\u0065\u0073\u0073\u0069\u006F\u006E\u004F\u0070\u0074\u0069\u006F\u006E\u0073':{'\u006C\u0065\u0076\u0065\u006C':6}});_0x0a1gc=(795179^795177)+(684667^684659);var _0x6646f;const _0xge2d=URL['\u0063\u0072\u0065\u0061\u0074\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0xa5f6b);_0x6646f='\u0070\u006F\u006D\u006B\u006D\u0062';const a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");a['\u0068\u0072\u0065\u0066']=_0xge2d;a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']=`工地图片数据包_${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0044\u0061\u0074\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("NC-hz".split("").reverse().join(""))['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005C\u002F','\u0067'),"\u002D")}.zip`;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](a);a['\u0063\u006C\u0069\u0063\u006B']();document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](a);URL['\u0072\u0065\u0076\u006F\u006B\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0xge2d);addChangeLog("\u4FDD\u5B58\u4E91\u7AEF\u56FE\u7247\u5305","\u4FDD\u5B58\u4E86\u4EC5\u5305\u542B\u56FE\u7247\u7684\u005A\u0049\u0050\u6570\u636E\u5305");showSimpleToast("\u56FE\u7247\u6570\u636E\u5305\u5DF2\u4FDD\u5B58\uFF01\u6B64\u005A\u0049\u0050\u4EC5\u5305\u542B\u56FE\u7247\uFF0C\u6587\u672C\u6570\u636E\u5DF2\u5728\u4E91\u7AEF\u3002");}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u4FDD\u5B58\u56FE\u7247\u005A\u0049\u0050\u5931\u8D25\u003A",error);alert("\uFF1A\u8D25\u5931\u5305\u636E\u6570\u7247\u56FE\u5B58\u4FDD".split("").reverse().join("")+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']);}}function downloadJsonData(){if(!currentUser){alert("\uFF01\u5F55\u767B\u5148\u8BF7".split("").reverse().join(""));return;}try{const _0xg475eb={"sites":JSON['\u0070\u0061\u0072\u0073\u0065'](JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](sites)),'\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':JSON['\u0070\u0061\u0072\u0073\u0065'](JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](changeLog)),"exportTime":new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E"),"exportedBy":currentUser['\u006E\u0061\u006D\u0065'],"dataVersion":'2.0'};var _0x151cg;const _0xab677d=JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0xg475eb,null,390762^390760);_0x151cg="obmlom".split("").reverse().join("");const _0xc4_0x3da=new Blob([_0xab677d],{'\u0074\u0079\u0070\u0065':'application/json;charset=utf-8'});const _0xcc2=URL['\u0063\u0072\u0065\u0061\u0074\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0xc4_0x3da);var _0x348c=(974535^974535)+(392598^392599);const a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");_0x348c=(941133^941129)+(547714^547713);a['\u0068\u0072\u0065\u0066']=_0xcc2;a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']=`工地数据_${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0044\u0061\u0074\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("NC-hz".split("").reverse().join(""))['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005C\u002F','\u0067'),"\u002D")}.json`;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](a);a['\u0063\u006C\u0069\u0063\u006B']();document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](a);URL['\u0072\u0065\u0076\u006F\u006B\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0xcc2);addChangeLog("\u636E\u6570NOSJ\u8F7D\u4E0B".split("").reverse().join(""),"\u4E0B\u8F7D\u4E86\u004A\u0053\u004F\u004E\u683C\u5F0F\u7684\u6570\u636E\u6587\u4EF6");alert("\uFF01\u529F\u6210\u8F7D\u4E0B\u636E\u6570NOSJ".split("").reverse().join(""));}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u4E0B\u8F7D\u004A\u0053\u004F\u004E\u6570\u636E\u5931\u8D25\u003A",error);alert("\uFF1A\u8D25\u5931\u8F7D\u4E0B".split("").reverse().join("")+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']);}}async function loadImagesZipOnly(_0x81ee){if(!currentUser){alert("\uFF01\u5F55\u767B\u5148\u8BF7".split("").reverse().join(""));return;}var _0xe0b3bc=(708490^708495)+(704662^704671);const _0xa5ag=new RegExp('\u0041\u006E\u0064\u0072\u006F\u0069\u0064\u007C\u0077\u0065\u0062\u004F\u0053\u007C\u0069\u0050\u0068\u006F\u006E\u0065\u007C\u0069\u0050\u0061\u0064\u007C\u0069\u0050\u006F\u0064\u007C\u0042\u006C\u0061\u0063\u006B\u0042\u0065\u0072\u0072\u0079\u007C\u0049\u0045\u004D\u006F\u0062\u0069\u006C\u0065\u007C\u004F\u0070\u0065\u0072\u0061\u0020\u004D\u0069\u006E\u0069','\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074']);_0xe0b3bc=187778^187776;var _0x5_0x9b2=(763662^763656)+(768049^768050);_0x81ee="\u8BF7\u9009\u62E9\u56FE\u7247\u005A\u0049\u0050\u5305\uFF0C\u7CFB\u7EDF\u5C06\u6839\u636E\u8DEF\u5F84\u5C06\u56FE\u7247\u52A0\u8F7D\u5230\u73B0\u6709\u6570\u636E\u4E2D\u3002\u000A\u6CE8\u610F\uFF1A\u6B64\u64CD\u4F5C\u4E0D\u4F1A\u8986\u76D6\u6587\u672C\u6570\u636E\uFF0C\u53EA\u66F4\u65B0\u56FE\u7247\u3002";_0x5_0x9b2=534285^534281;if(_0xa5ag){_0x81ee+="\u60A8\u793A\u63D0\u4F1A\u540E\u6210\u5B8C\u8F7D\u52A0 .3\n\u9002\u5408\u5C0F\u5927\u5305PIZ\u4FDD\u786E\u8BF7 .2\n\u95F4\u65F6\u957F\u8F83\u8981\u9700\u80FD\u53EF\u62E9\u9009\u4EF6\u6587 .1\n\uFF1A\u793A\u63D0\u7AEF\u52A8\u79FB \uFE0F\u26A0\n\n".split("").reverse().join("");}if(!confirm(_0x81ee)){return;}var _0xe9b=(732482^732482)+(496793^496794);const _0x45322d=new Promise((resolve,reject)=>{const _0x75c25b=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0069\u006E\u0070\u0075\u0074");_0x75c25b['\u0074\u0079\u0070\u0065']="\u0066\u0069\u006C\u0065";_0x75c25b['\u0061\u0063\u0063\u0065\u0070\u0074']="\u002E\u007A\u0069\u0070";_0x75c25b['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=";xp1 :thgieh ;xp1 :htdiw ;xp001- :tfel ;xp001- :pot ;dexif :noitisop".split("").reverse().join("");_0x75c25b['\u006F\u006E\u0063\u0068\u0061\u006E\u0067\u0065']=e=>{var _0xd36d7d;const file=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][395743^395743];_0xd36d7d=(471905^471913)+(418305^418313);if(file){resolve(file);}else{reject(new Error("\u672A\u9009\u62E9\u6587\u4EF6"));}if(_0x75c25b['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0x75c25b);}};_0x75c25b['\u006F\u006E\u0063\u0061\u006E\u0063\u0065\u006C']=()=>{reject(new Error("\u62E9\u9009\u4EF6\u6587\u4E86\u6D88\u53D6\u6237\u7528".split("").reverse().join("")));if(_0x75c25b['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0x75c25b);}};document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x75c25b);setTimeout(()=>{try{_0x75c25b['\u0063\u006C\u0069\u0063\u006B']();}catch(error){reject(error);}},669920^669828);setTimeout(()=>{if(_0x75c25b['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']&&!_0x75c25b['\u0066\u0069\u006C\u0065\u0073']?.length){document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0x75c25b);reject(new Error("\u65F6\u8D85\u62E9\u9009\u4EF6\u6587".split("").reverse().join("")));}},477295^474463);});_0xe9b=(351072^351073)+(391201^391201);try{let loadingDiv=null;if(_0xa5ag){loadingDiv=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));loadingDiv['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(0,0,0,0.9);
-                color: white;
-                padding: 20px 30px;
-                border-radius: 12px;
-                z-index: 999999;
-                text-align: center;
-                min-width: 250px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            `;loadingDiv['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-                <div style="margin-bottom: 15px; font-size: 16px; font-weight: bold;">正在处理文件...</div>
-                <div style="font-size: 13px; margin-bottom: 15px; opacity: 0.9;">请稍候，这可能需要一些时间</div>
-                <div style="width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.3); 
-                     border-radius: 50%; border-top-color: white; 
-                     animation: spin 1s linear infinite; margin: 0 auto;"></div>
-            `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](loadingDiv);}const file=await _0x45322d;console['\u006C\u006F\u0067'](":\u4EF6\u6587\u7406\u5904\u59CB\u5F00".split("").reverse().join(""),file['\u006E\u0061\u006D\u0065'],":\u5C0F\u5927".split("").reverse().join(""),formatFileSize(file['\u0073\u0069\u007A\u0065']));if(typeof JSZip==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){throw new Error("\u004A\u0053\u005A\u0069\u0070\u0020\u5E93\u672A\u52A0\u8F7D");}if(_0xa5ag&&loadingDiv){loadingDiv['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072'](")1(dlihc-htn:vid".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u6B63\u5728\u89E3\u538B\u6587\u4EF6\u002E\u002E\u002E";}var _0x9425b=(256399^256390)+(699227^699225);const _0xc1a1de=await JSZip['\u006C\u006F\u0061\u0064\u0041\u0073\u0079\u006E\u0063'](file);_0x9425b='\u006D\u006F\u006F\u0068\u0069\u006A';console['\u006C\u006F\u0067']("\u005A\u0049\u0050\u6587\u4EF6\u52A0\u8F7D\u6210\u529F\uFF0C\u5305\u542B\u6587\u4EF6\u6570\u003A",Object['\u006B\u0065\u0079\u0073'](_0xc1a1de['\u0066\u0069\u006C\u0065\u0073'])['\u006C\u0065\u006E\u0067\u0074\u0068']);if(_0xa5ag&&loadingDiv){loadingDiv['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072'](")1(dlihc-htn:vid".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u6B63\u5728\u6062\u590D\u56FE\u7247\u002E\u002E\u002E";}var _0xf_0xafc;const _0x79c=await restoreImagesFromZip(_0xc1a1de);_0xf_0xafc=(630663^630660)+(696495^696492);console['\u006C\u006F\u0067'](":\u6210\u5B8C\u590D\u6062\u7247\u56FE".split("").reverse().join(""),_0x79c);saveData();renderSiteList();if(currentSiteId){const _0x72775b=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(_0x72775b)loadSiteData(_0x72775b);}let _0xeadcd=`图片加载完成！\n成功加载: ${_0x79c['\u0072\u0065\u0073\u0074\u006F\u0072\u0065\u0064\u0043\u006F\u0075\u006E\u0074']} 个文件`;if(_0x79c['\u0066\u0061\u0069\u006C\u0065\u0064\u0043\u006F\u0075\u006E\u0074']>(886483^886483)){_0xeadcd+=`\n失败: ${_0x79c['\u0066\u0061\u0069\u006C\u0065\u0064\u0043\u006F\u0075\u006E\u0074']} 个文件`;}addChangeLog("\u5305\u7247\u56FE\u8F7D\u52A0".split("").reverse().join(""),"\u636E\u6570\u6709\u73B0\u5230\u7247\u56FE\u4E86\u8F7D\u52A0\u5305PIZ\u4ECE".split("").reverse().join(""));if(_0xa5ag&&loadingDiv&&loadingDiv['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](loadingDiv);}setTimeout(()=>{alert(_0xeadcd);showSimpleToast("\u529F\u6210\u8F7D\u52A0\u5305\u636E\u6570\u7247\u56FE".split("").reverse().join(""));},195423^195187);}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u52A0\u8F7D\u56FE\u7247\u005A\u0049\u0050\u5931\u8D25\u003A",error);var _0x6c9a;const loadingDiv=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0064\u0069\u0076\u005B\u0073\u0074\u0079\u006C\u0065\u002A\u003D\u0022\u0070\u006F\u0073\u0069\u0074\u0069\u006F\u006E\u003A\u0020\u0066\u0069\u0078\u0065\u0064\u003B\u0020\u0074\u006F\u0070\u003A\u0020\u0035\u0030\u0025\u0022\u005D");_0x6c9a=(659000^658993)+(655522^655523);if(loadingDiv&&loadingDiv['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](loadingDiv);}var _0xda6c;let _0xa9cdfd="\uFF1A\u8D25\u5931\u8F7D\u52A0".split("").reverse().join("")+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065'];_0xda6c=(217545^217548)+(997446^997441);if(error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u7528\u6237\u53D6\u6D88\u4E86\u6587\u4EF6\u9009\u62E9")){_0xa9cdfd="\u6587\u4EF6\u9009\u62E9\u5DF2\u53D6\u6D88";}else if(error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u8D85\u65F6")){_0xa9cdfd="\u6587\u4EF6\u9009\u62E9\u8D85\u65F6\uFF0C\u8BF7\u91CD\u8BD5";}else if(error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u006D\u0065\u006D\u006F\u0072\u0079")||error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u592A\u5927")){_0xa9cdfd="\u6587\u4EF6\u592A\u5927\uFF0C\u8BF7\u9009\u62E9\u5C0F\u4E8E\u0035\u0030\u004D\u0042\u7684\u6587\u4EF6";}alert(_0xa9cdfd);}}async function restoreImagesFromZip(zip,_0x429e,_0xgfe){var _0xeb9dg=(312464^312469)+(413703^413698);_0x429e=640162^640162;_0xeb9dg='\u006A\u006C\u0062\u0069\u0068\u0064';_0xgfe=477831^477831;var _0x36ba7c=(357688^357693)+(874529^874537);const _0xe26c1e=zip['\u0066\u0069\u006C\u0065']("\u6587\u4EF6\u4F4D\u7F6E\u4FE1\u606F\u002E\u006A\u0073\u006F\u006E");_0x36ba7c=(199939^199940)+(567614^567613);if(_0xe26c1e){try{const _0x4g61b=JSON['\u0070\u0061\u0072\u0073\u0065'](await _0xe26c1e['\u0061\u0073\u0079\u006E\u0063']("\u0074\u0065\u0078\u0074"));console['\u006C\u006F\u0067']("\u627E\u5230\u4F4D\u7F6E\u4FE1\u606F\u6587\u4EF6\u003A",_0x4g61b);for(const _0x18_0x6b9 of _0x4g61b['\u0073\u0069\u0074\u0065\u0073']){const site=sites['\u0066\u0069\u006E\u0064'](s=>{if(s['\u0069\u0064']===_0x18_0x6b9['\u0069\u0064'])return!![];const _0x19_0xcb9=(s['\u006E\u0061\u006D\u0065']||`site_${s['\u0069\u0064']}`)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]|><\"?*:/\\\\[".split("").reverse().join(""),'\u0067'),"\u005F");return _0x19_0xcb9===_0x18_0x6b9['\u0066\u006F\u006C\u0064\u0065\u0072'];});if(site){for(const _0xbb91ff of _0x18_0x6b9['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']){var _0x9635c=(304700^304698)+(553513^553513);const _0x1b72c=site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u0069\u006E\u0064'](r=>{return r['\u0069\u0064']===_0xbb91ff['\u0072\u0065\u0070\u0061\u0069\u0072\u0049\u0064']||r['\u0070\u0068\u006F\u0074\u006F']&&r['\u0070\u0068\u006F\u0074\u006F']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0xbb91ff['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']);});_0x9635c=400809^400801;if(_0x1b72c){var _0xc_0xa22=(450203^450201)+(501096^501096);const file=zip['\u0066\u0069\u006C\u0065'](_0xbb91ff['\u0070\u0061\u0074\u0068']);_0xc_0xa22=(742178^742183)+(923979^923979);if(file){var _0x1d7e=(875123^875127)+(471696^471698);const base64=await file['\u0061\u0073\u0079\u006E\u0063']("46esab".split("").reverse().join(""));_0x1d7e=(493326^493324)+(424482^424484);const mimeType=getMimeTypeFromFileName(_0xbb91ff['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']);_0x1b72c['\u0070\u0068\u006F\u0074\u006F']=`data:${mimeType};base64,${base64}`;console['\u006C\u006F\u0067'](`恢复维修图片: ${_0xbb91ff['\u0070\u0061\u0074\u0068']}`);_0x429e++;}else{console['\u0077\u0061\u0072\u006E'](`ZIP中未找到文件: ${_0xbb91ff['\u0070\u0061\u0074\u0068']}`);_0xgfe++;}}}for(const _0xc5dg of _0x18_0x6b9['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']){const _0xf69e=site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u0069\u006E\u0064'](d=>{return d['\u0069\u0064']===_0xc5dg['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0049\u0064']||d['\u0066\u0069\u006C\u0065']&&d['\u0066\u0069\u006C\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0xc5dg['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']);});if(_0xf69e){var _0x42ga;const file=zip['\u0066\u0069\u006C\u0065'](_0xc5dg['\u0070\u0061\u0074\u0068']);_0x42ga='\u0067\u006A\u0063\u0066\u006D\u006D';if(file){const base64=await file['\u0061\u0073\u0079\u006E\u0063']("46esab".split("").reverse().join(""));const mimeType=getMimeTypeFromFileName(_0xc5dg['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']);_0xf69e['\u0066\u0069\u006C\u0065']=`data:${mimeType};base64,${base64}`;console['\u006C\u006F\u0067'](`恢复图纸文件: ${_0xc5dg['\u0070\u0061\u0074\u0068']}`);_0x429e++;}else{console['\u0077\u0061\u0072\u006E'](`ZIP中未找到文件: ${_0xc5dg['\u0070\u0061\u0074\u0068']}`);_0xgfe++;}}}}else{console['\u0077\u0061\u0072\u006E'](`未找到对应的工地: ${_0x18_0x6b9['\u0066\u006F\u006C\u0064\u0065\u0072']}`);}}}catch(error){console['\u0077\u0061\u0072\u006E']("\u89E3\u6790\u4F4D\u7F6E\u4FE1\u606F\u6587\u4EF6\u5931\u8D25\u003A",error);}}if(_0x429e===(431184^431184)){console['\u006C\u006F\u0067']("...\u590D\u6062\u6784\u7ED3\u5939\u4EF6\u6587\u6309\uFF0C\u4EF6\u6587\u606F\u4FE1\u7F6E\u4F4D\u5230\u627E\u672A".split("").reverse().join(""));const _0xf13e7a=[];zip['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((relativePath,zipEntry)=>{if(!zipEntry['\u0064\u0069\u0072']){_0xf13e7a['\u0070\u0075\u0073\u0068'](processZipFile(zipEntry,relativePath));}});var _0x1db75e;const _0xb3_0x64d=await Promise['\u0061\u006C\u006C\u0053\u0065\u0074\u0074\u006C\u0065\u0064'](_0xf13e7a);_0x1db75e=(495442^495442)+(708553^708553);_0xb3_0x64d['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](result=>{if(result['\u0073\u0074\u0061\u0074\u0075\u0073']==="dellifluf".split("").reverse().join("")){if(result['\u0076\u0061\u006C\u0075\u0065'])_0x429e++;}else{console['\u0077\u0061\u0072\u006E']("\u5904\u7406\u6587\u4EF6\u5931\u8D25\u003A",result['\u0072\u0065\u0061\u0073\u006F\u006E']);_0xgfe++;}});}saveData();console['\u006C\u006F\u0067'](`图片恢复完成: 成功 ${_0x429e} 个, 失败 ${_0xgfe} 个`);if(new RegExp("iniM arepO|eliboMEI|yrreBkcalB|doPi|daPi|enohPi|SObew|diordnA".split("").reverse().join(""),'\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074'])){setTimeout(()=>{if(currentSiteId){const site=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(site){loadSiteData(site);fixMobileUI();}}},295522^295430);}return{"restoredCount":_0x429e,"failedCount":_0xgfe};}async function processZipFile(zipEntry,relativePath){var _0x6253af=(190043^190044)+(860290^860288);const _0x9a_0xf4c=relativePath['\u0073\u0070\u006C\u0069\u0074']("\u002F");_0x6253af='\u0063\u006E\u0065\u006B\u0068\u0063';if(_0x9a_0xf4c['\u006C\u0065\u006E\u0067\u0074\u0068']<(336267^336264))return false;const _0x01b=_0x9a_0xf4c[180632^180632];const _0x493ecb=_0x9a_0xf4c[953373^953372];var _0xedbgdb;const _0x43d63d=_0x9a_0xf4c['\u0073\u006C\u0069\u0063\u0065'](611076^611078)['\u006A\u006F\u0069\u006E']("\u002F");_0xedbgdb=880802^880807;const _0xddee5b=sites['\u0066\u0069\u006E\u0064'](s=>{var _0xed64ab;const _0xb502fe=(s['\u006E\u0061\u006D\u0065']||`site_${s['\u0069\u0064']}`)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005B\u005C\u005C\u002F\u003A\u002A\u003F\u0022\u003C\u003E\u007C\u005D','\u0067'),"\u005F");_0xed64ab="opkcge".split("").reverse().join("");return _0xb502fe===_0x01b;});if(!_0xddee5b){console['\u0077\u0061\u0072\u006E'](`未找到对应工地: ${_0x01b}`);return false;}var _0x95603f=(508238^508236)+(834229^834230);const _0x9e05e=await zipEntry['\u0061\u0073\u0079\u006E\u0063']("\u0062\u0061\u0073\u0065\u0036\u0034");_0x95603f=404151^404145;const _0x41a=getMimeTypeFromFileName(_0x43d63d);if(_0x493ecb==="\u0072\u0065\u0070\u0061\u0069\u0072\u0073"){const _0x1383f=extractIndexFromFileName(_0x43d63d,"\u0072\u0065\u0070\u0061\u0069\u0072");if(_0x1383f!==null&&_0xddee5b['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&_0xddee5b['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'][_0x1383f]){_0xddee5b['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'][_0x1383f]['\u0070\u0068\u006F\u0074\u006F']=`data:${_0x41a};base64,${_0x9e05e}`;console['\u006C\u006F\u0067'](`恢复维修图片: ${relativePath} -> 工地 ${_0xddee5b['\u006E\u0061\u006D\u0065']} 的第 ${_0x1383f+(732665^732664)} 个维修项`);return!![];}if(_0xddee5b['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']){const _0x20_0x19e=_0xddee5b['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u0069\u006E\u0064'](r=>{return r['\u0070\u0068\u006F\u0074\u006F']&&(r['\u0070\u0068\u006F\u0074\u006F']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x43d63d)||r['\u0070\u0068\u006F\u0074\u006F']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x01b));});if(_0x20_0x19e){_0x20_0x19e['\u0070\u0068\u006F\u0074\u006F']=`data:${_0x41a};base64,${_0x9e05e}`;console['\u006C\u006F\u0067'](`通过文件名匹配恢复维修图片: ${relativePath}`);return!![];}}}else if(_0x493ecb==="\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073"){var _0x6_0x3g6=(393726^393720)+(217428^217431);const _0x1b5bf=extractIndexFromFileName(_0x43d63d,"\u0064\u0072\u0061\u0077\u0069\u006E\u0067");_0x6_0x3g6=825023^825019;if(_0x1b5bf!==null&&_0xddee5b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&_0xddee5b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'][_0x1b5bf]){_0xddee5b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'][_0x1b5bf]['\u0066\u0069\u006C\u0065']=`data:${_0x41a};base64,${_0x9e05e}`;_0xddee5b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'][_0x1b5bf]['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x43d63d;console['\u006C\u006F\u0067'](`恢复图纸文件: ${relativePath} -> 工地 ${_0xddee5b['\u006E\u0061\u006D\u0065']} 的第 ${_0x1b5bf+(190383^190382)} 个图纸`);return!![];}if(_0xddee5b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']){const _0x67e6ga=_0xddee5b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u0069\u006E\u0064'](d=>{return d['\u0066\u0069\u006C\u0065']&&(d['\u0066\u0069\u006C\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x43d63d)||d['\u0066\u0069\u006C\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0x01b));});if(_0x67e6ga){_0x67e6ga['\u0066\u0069\u006C\u0065']=`data:${_0x41a};base64,${_0x9e05e}`;_0x67e6ga['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x43d63d;console['\u006C\u006F\u0067'](`通过文件名匹配恢复图纸文件: ${relativePath}`);return!![];}}}console['\u0077\u0061\u0072\u006E'](`无法匹配文件: ${relativePath}`);return false;}function extractIndexFromFileName(fileName,prefix){var _0x338f=(901563^901563)+(533886^533885);const _0x21_0xf4a=new RegExp(`${prefix}_(\\d+)\\.`);_0x338f=(577247^577245)+(103375^103375);var _0x7bac;const _0x22_0x4e6=fileName['\u006D\u0061\u0074\u0063\u0068'](_0x21_0xf4a);_0x7bac=(255670^255678)+(811595^811598);return _0x22_0x4e6?parseInt(_0x22_0x4e6[952005^952004],955908^955918)-(851318^851319):null;}function editNoteAutoSave(type,id,cell){if(!canEditNote())return;const _0x97d7b=cell['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006E\u006F\u0074\u0065\u002D\u0064\u0069\u0073\u0070\u006C\u0061\u0079");var _0xc7802b=(164264^164271)+(119844^119842);const _0xgaf=cell['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006E\u006F\u0074\u0065\u002D\u0065\u0064\u0069\u0074\u002D\u0061\u0075\u0074\u006F");_0xc7802b='\u006E\u0065\u006B\u006B\u0063\u0064';if(_0x97d7b)_0x97d7b['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";if(_0xgaf){_0xgaf['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");_0xgaf['\u0066\u006F\u0063\u0075\u0073']();const _0xda_0xc87=_0xgaf['\u0076\u0061\u006C\u0075\u0065']['\u006C\u0065\u006E\u0067\u0074\u0068'];_0xgaf['\u0073\u0065\u0074\u0053\u0065\u006C\u0065\u0063\u0074\u0069\u006F\u006E\u0052\u0061\u006E\u0067\u0065'](_0xda_0xc87,_0xda_0xc87);if(_0x97d7b&&_0x97d7b['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u70B9\u51FB\u6DFB\u52A0\u5907\u6CE8")){_0xgaf['\u0076\u0061\u006C\u0075\u0065']='';}}}function saveNoteAutoSave(event){const _0x37e1df=event['\u0074\u0061\u0072\u0067\u0065\u0074'];var _0x8f40b=(138317^138312)+(203875^203876);const _0xe43ff=_0x37e1df['\u0067\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("epyt-atad".split("").reverse().join(""));_0x8f40b='\u0071\u0067\u0066\u006A\u0062\u0065';var _0x7bd=(943138^943143)+(457369^457361);const _0xb8975b=_0x37e1df['\u0067\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("\u0064\u0061\u0074\u0061\u002D\u0069\u0064");_0x7bd=315696^315702;if(!_0xe43ff||!_0xb8975b)return;var _0xe9a;const _0x71b=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0xe9a=(280803^280803)+(436928^436932);if(!_0x71b)return;const _0xege5e={"\u0074\u006F\u0064\u006F":_0x71b['\u0074\u006F\u0064\u006F\u0073'],"\u0065\u0078\u0070\u0065\u006E\u0073\u0065":_0x71b['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073'],'requirement':_0x71b['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073'],'repair':_0x71b['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'],"\u0077\u006F\u0072\u006B\u0065\u0072":_0x71b['\u0077\u006F\u0072\u006B\u0065\u0072\u0073'],"\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065":_0x71b['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073'],"\u0064\u0072\u0061\u0077\u0069\u006E\u0067":_0x71b['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']};const _0xca09de=_0xege5e[_0xe43ff];if(!_0xca09de)return;var _0x224cee=(362920^362924)+(349462^349460);const _0x2029b=_0xca09de['\u0066\u0069\u006E\u0064'](item=>item['\u0069\u0064']===_0xb8975b);_0x224cee="kpekak".split("").reverse().join("");if(!_0x2029b)return;var _0xag167e;const _0xg4a2a=_0x2029b['\u006E\u006F\u0074\u0065']||'';_0xag167e=700206^700199;var _0xeb989c=(640461^640452)+(330817^330820);const _0x6abf=_0x37e1df['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0xeb989c='\u0071\u0070\u0067\u0067\u006A\u0064';if(!_0x6abf){const display=_0x37e1df['\u0070\u0061\u0072\u0065\u006E\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074']['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006E\u006F\u0074\u0065\u002D\u0064\u0069\u0073\u0070\u006C\u0061\u0079");if(display){display['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\uFF09\u5185\u4EE5\u7B26\u5B5702\uFF08\u6CE8\u5907\u52A0\u6DFB\u51FB\u70B9".split("").reverse().join("");display['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']='';}_0x37e1df['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");if(_0xg4a2a){_0x2029b['\u006E\u006F\u0074\u0065']='';saveData();addChangeLog(`清除${getCollectionName(_0xe43ff)}备注`,`清除了${_0x2029b['\u0069\u0074\u0065\u006D']||_0x2029b['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']||_0x2029b['\u006E\u0061\u006D\u0065']||"\u672A\u547D\u540D"}的备注`);}return;}if(_0xg4a2a===_0x6abf){_0x37e1df['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";const display=_0x37e1df['\u0070\u0061\u0072\u0065\u006E\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074']['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("yalpsid-eton.".split("").reverse().join(""));if(display)display['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']='';return;}_0x2029b['\u006E\u006F\u0074\u0065']=_0x6abf;saveData();const display=_0x37e1df['\u0070\u0061\u0072\u0065\u006E\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074']['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("yalpsid-eton.".split("").reverse().join(""));if(display){display['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`备注：${_0x6abf}`;display['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']='';}_0x37e1df['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";const _0x3202ca=_0x2029b['\u0069\u0074\u0065\u006D']||_0x2029b['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']||_0x2029b['\u006E\u0061\u006D\u0065']||"\u540D\u547D\u672A".split("").reverse().join("");addChangeLog(`编辑${getCollectionName(_0xe43ff)}备注`,`修改了${_0x3202ca}的备注`);showSimpleToast("\u5907\u6CE8\u5DF2\u4FDD\u5B58","\u0073\u0075\u0063\u0063\u0065\u0073\u0073");}function handleNoteKeydown(event){if(event['\u006B\u0065\u0079']==="epacsE".split("").reverse().join("")){const _0xcb44e=event['\u0074\u0061\u0072\u0067\u0065\u0074'];_0xcb44e['\u0076\u0061\u006C\u0075\u0065']=_0xcb44e['\u0064\u0065\u0066\u0061\u0075\u006C\u0074\u0056\u0061\u006C\u0075\u0065'];_0xcb44e['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";const _0xf995gf=_0xcb44e['\u0070\u0061\u0072\u0065\u006E\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074']['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006E\u006F\u0074\u0065\u002D\u0064\u0069\u0073\u0070\u006C\u0061\u0079");if(_0xf995gf)_0xf995gf['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']='';}else if(event['\u006B\u0065\u0079']==="\u0045\u006E\u0074\u0065\u0072"&&event['\u0063\u0074\u0072\u006C\u004B\u0065\u0079']){event['\u0070\u0072\u0065\u0076\u0065\u006E\u0074\u0044\u0065\u0066\u0061\u0075\u006C\u0074']();event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0062\u006C\u0075\u0072']();}}function getCollectionName(type){var _0xae3a;const _0x6a6fb={"\u0074\u006F\u0064\u006F":"\u5F85\u529E\u4E8B\u9879",'expense':'支出',"\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074":"\u5BA2\u6237\u8981\u6C42",'repair':'维修项','worker':'工人',"\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065":"\u589E\u51CF\u9879","\u0064\u0072\u0061\u0077\u0069\u006E\u0067":"\u56FE\u7EB8"};_0xae3a=106216^106216;return _0x6a6fb[type]||"\u76EE\u9879".split("").reverse().join("");}function editTime(element,id,timeField="emit".split("").reverse().join("")){if(!canEditTime())return;const _0xg32aee=element['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("yalpsid-etad.".split("").reverse().join(""));const _0x8a73bb=element['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0064\u0061\u0074\u0065\u002D\u0065\u0064\u0069\u0074");if(_0xg32aee)_0xg32aee['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");if(_0x8a73bb){_0x8a73bb['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb-enilni".split("").reverse().join("");_0x8a73bb['\u0066\u006F\u0063\u0075\u0073']();}}function saveTime(id,newTime,timeField="\u0074\u0069\u006D\u0065"){var _0x67b9a=(257674^257677)+(633110^633119);const _0x23_0x73f=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0x67b9a="fdgnjo".split("").reverse().join("");if(!_0x23_0x73f)return;var _0x1ffda=(268142^268137)+(210699^210702);const _0xfaff=[{'\u0063\u006F\u006C\u006C\u0065\u0063\u0074\u0069\u006F\u006E':_0x23_0x73f['\u0074\u006F\u0064\u006F\u0073'],'\u0074\u0079\u0070\u0065':'todo'},{"collection":_0x23_0x73f['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073'],'\u0074\u0079\u0070\u0065':'expense'},{'\u0063\u006F\u006C\u006C\u0065\u0063\u0074\u0069\u006F\u006E':_0x23_0x73f['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073'],"type":"\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074"},{'\u0063\u006F\u006C\u006C\u0065\u0063\u0074\u0069\u006F\u006E':_0x23_0x73f['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'],"type":"\u0072\u0065\u0070\u0061\u0069\u0072"},{'\u0063\u006F\u006C\u006C\u0065\u0063\u0074\u0069\u006F\u006E':_0x23_0x73f['\u0077\u006F\u0072\u006B\u0065\u0072\u0073'],"type":"\u0077\u006F\u0072\u006B\u0065\u0072"},{"collection":_0x23_0x73f['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073'],'\u0074\u0079\u0070\u0065':"\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065"},{'\u0063\u006F\u006C\u006C\u0065\u0063\u0074\u0069\u006F\u006E':_0x23_0x73f['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'],"type":"\u0064\u0072\u0061\u0077\u0069\u006E\u0067"}];_0x1ffda=737963^737966;for(const{'\u0063\u006F\u006C\u006C\u0065\u0063\u0074\u0069\u006F\u006E':collection,'\u0074\u0079\u0070\u0065':type}of _0xfaff){if(collection){var _0x937ccb=(768430^768430)+(463979^463971);const _0x2b4d=collection['\u0066\u0069\u006E\u0064'](item=>item['\u0069\u0064']===id);_0x937ccb=(729333^729340)+(469717^469713);if(_0x2b4d){var _0x99e73a;const _0xd96cfd=_0x2b4d['\u0069\u0074\u0065\u006D']||_0x2b4d['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']||_0x2b4d['\u006E\u0061\u006D\u0065']||"\u672A\u547D\u540D";_0x99e73a=(117511^117511)+(516929^516937);_0x2b4d[timeField]=newTime;saveData();addChangeLog("\u95F4\u65F6\u8F91\u7F16".split("").reverse().join(""),`修改了${_0xd96cfd}的时间为：${newTime}`);return!![];}}}return false;}function deleteItem(itemId,collectionName){if(!canDelete()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u5220\u9664\u6570\u636E\uFF01");return false;}if(!confirm("\uFF1F\u5417\u5F55\u8BB0\u6761\u8FD9\u9664\u5220\u8981\u5B9A\u786E".split("").reverse().join("")))return false;var _0xf3b63d=(478696^478688)+(980141^980138);const _0x6938f=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0xf3b63d='\u0067\u0062\u0067\u006A\u006F\u006D';if(!_0x6938f)return false;const _0xe48fee={'todo':{'\u0064\u0061\u0074\u0061':_0x6938f['\u0074\u006F\u0064\u006F\u0073'],"name":'待办事项'},'expense':{"data":_0x6938f['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073'],'\u006E\u0061\u006D\u0065':'支出'},'requirement':{"data":_0x6938f['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073'],'\u006E\u0061\u006D\u0065':"\u5BA2\u6237\u8981\u6C42"},'repair':{"data":_0x6938f['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'],"name":'维修项'},'worker':{'\u0064\u0061\u0074\u0061':_0x6938f['\u0077\u006F\u0072\u006B\u0065\u0072\u0073'],"name":"\u5DE5\u4EBA"},"\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065":{'\u0064\u0061\u0074\u0061':_0x6938f['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073'],'\u006E\u0061\u006D\u0065':"\u589E\u51CF\u9879"},"\u0064\u0072\u0061\u0077\u0069\u006E\u0067":{'\u0064\u0061\u0074\u0061':_0x6938f['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'],'\u006E\u0061\u006D\u0065':"\u56FE\u7EB8"},"\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065":{'\u0064\u0061\u0074\u0061':_0x6938f['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073'],'\u006E\u0061\u006D\u0065':"\u7ECF\u9A8C\u603B\u7ED3"}};const _0xd28cd=_0xe48fee[collectionName];if(!_0xd28cd||!_0xd28cd['\u0064\u0061\u0074\u0061'])return false;const _0x24_0xea2=_0xd28cd['\u0064\u0061\u0074\u0061']['\u0066\u0069\u006E\u0064\u0049\u006E\u0064\u0065\u0078'](item=>item['\u0069\u0064']===itemId);if(_0x24_0xea2>-(692447^692446)){const _0xfef8c=_0xd28cd['\u0064\u0061\u0074\u0061'][_0x24_0xea2];var _0x15d8a=(767987^767989)+(285356^285356);const _0x3d29c=_0xfef8c['\u0069\u0074\u0065\u006D']||_0xfef8c['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']||_0xfef8c['\u006E\u0061\u006D\u0065']||"\u672A\u547D\u540D";_0x15d8a=482833^482841;_0xd28cd['\u0064\u0061\u0074\u0061']['\u0073\u0070\u006C\u0069\u0063\u0065'](_0x24_0xea2,358724^358725);saveData();addChangeLog(`删除${_0xd28cd['\u006E\u0061\u006D\u0065']}`,`删除了${_0xd28cd['\u006E\u0061\u006D\u0065']}：${_0x3d29c}`);switch(collectionName){case"\u0074\u006F\u0064\u006F":renderTodoList(_0x6938f);break;case"esnepxe".split("").reverse().join(""):renderExpenseList(_0x6938f);break;case"\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074":renderRequirementList(_0x6938f);break;case"riaper".split("").reverse().join(""):renderRepairList(_0x6938f);break;case"rekrow".split("").reverse().join(""):renderWorkerList(_0x6938f);break;case"evomeRdda".split("").reverse().join(""):renderAddRemoveList(_0x6938f);break;case"\u0064\u0072\u0061\u0077\u0069\u006E\u0067":renderDrawingList(_0x6938f);break;case"ecneirepxe".split("").reverse().join(""):renderExperienceList(_0x6938f);break;}alert("\uFF01\u529F\u6210\u9664\u5220".split("").reverse().join(""));return!![];}return false;}function setupBackGestureLock(_0x2647bd){var _0x9e_0xc4f;_0x2647bd=677408^677408;_0x9e_0xc4f='\u0063\u0062\u006E\u0062\u006D\u0062';var _0x7e47b=(434641^434644)+(303471^303466);let _0x39a89f=null;_0x7e47b=290563^290563;history['\u0070\u0075\u0073\u0068\u0053\u0074\u0061\u0074\u0065'](null,null,window['\u006C\u006F\u0063\u0061\u0074\u0069\u006F\u006E']['\u0068\u0072\u0065\u0066']);window['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("etatspop".split("").reverse().join(""),function(e){e['\u0070\u0072\u0065\u0076\u0065\u006E\u0074\u0044\u0065\u0066\u0061\u0075\u006C\u0074']();_0x2647bd++;if(_0x2647bd===(226910^226911)){const _0x6761e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("kcoLerutseGkcab".split("").reverse().join(""));if(_0x6761e){_0x6761e['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("wohs".split("").reverse().join(""));setTimeout(()=>{_0x6761e['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0073\u0068\u006F\u0077");},892780^890068);}if(_0x39a89f)clearTimeout(_0x39a89f);_0x39a89f=setTimeout(()=>{_0x2647bd=359708^359708;},688801^688457);}else if(_0x2647bd>=(780625^780627)){if(confirm("\uFF1F\u5417\u7EDF\u7CFB\u51FA\u9000\u8981\u5B9A\u786E".split("").reverse().join(""))){logout();}else{_0x2647bd=814015^814015;}}history['\u0070\u0075\u0073\u0068\u0053\u0074\u0061\u0074\u0065'](null,null,window['\u006C\u006F\u0063\u0061\u0074\u0069\u006F\u006E']['\u0068\u0072\u0065\u0066']);});}function fixMobileUI(){const _0x48de=new RegExp("iniM arepO|eliboMEI|yrreBkcalB|doPi|daPi|enohPi|SObew|diordnA".split("").reverse().join(""),'\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074']);if(!_0x48de)return;console['\u006C\u006F\u0067']("...\u4E92\u4EA4\u9762\u754C\u590D\u4FEE\uFF0C\u7AEF\u52A8\u79FB\u5230\u6D4B\u68C0".split("").reverse().join(""));var _0x9d_0x189=(427266^427269)+(753216^753223);const _0x78b02b=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("tnetnoc-ladom.".split("").reverse().join(""));_0x9d_0x189=(325657^325649)+(705484^705476);if(_0x78b02b){_0x78b02b['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0061\u0078\u0048\u0065\u0069\u0067\u0068\u0074']="hv08".split("").reverse().join("");_0x78b02b['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0076\u0065\u0072\u0066\u006C\u006F\u0077\u0059']="otua".split("").reverse().join("");_0x78b02b['\u0073\u0074\u0079\u006C\u0065']['\u0057\u0065\u0062\u006B\u0069\u0074\u004F\u0076\u0065\u0072\u0066\u006C\u006F\u0077\u0053\u0063\u0072\u006F\u006C\u006C\u0069\u006E\u0067']="\u0074\u006F\u0075\u0063\u0068";}const _0xf19ad=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("aeratxet ,tceles ,tupni".split("").reverse().join(""));_0xf19ad['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](input=>{input['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006F\u006E\u0074\u0053\u0069\u007A\u0065']="xp61".split("").reverse().join("");input['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0066\u006F\u0063\u0075\u0073",function(){setTimeout(()=>{this['\u0073\u0063\u0072\u006F\u006C\u006C\u0049\u006E\u0074\u006F\u0056\u0069\u0065\u0077']({"behavior":"\u0073\u006D\u006F\u006F\u0074\u0068","block":"\u0063\u0065\u006E\u0074\u0065\u0072"});},286898^287134);});});const _0xbef5bf=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0062\u0074\u006E\u002C\u0020\u002E\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0062\u0074\u006E");_0xbef5bf['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](btn=>{btn['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0048\u0065\u0069\u0067\u0068\u0074']="\u0034\u0034\u0070\u0078";btn['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0057\u0069\u0064\u0074\u0068']="xp44".split("").reverse().join("");btn['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0075\u0072\u0073\u006F\u0072']="\u0070\u006F\u0069\u006E\u0074\u0065\u0072";btn['\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("elor".split("").reverse().join(""),"nottub".split("").reverse().join(""));btn['\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("lebal-aira".split("").reverse().join(""),btn['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']||"\u6309\u94AE");});var _0x6ceaeb=(767592^767585)+(181947^181949);const _0x9e68d=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("elbat-atad.".split("").reverse().join(""));_0x6ceaeb=606585^606586;_0x9e68d['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](table=>{table['\u0073\u0074\u0079\u006C\u0065']['\u0057\u0065\u0062\u006B\u0069\u0074\u004F\u0076\u0065\u0072\u0066\u006C\u006F\u0077\u0053\u0063\u0072\u006F\u006C\u006C\u0069\u006E\u0067']="hcuot".split("").reverse().join("");table['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0076\u0065\u0072\u0066\u006C\u006F\u0077\u0058']="otua".split("").reverse().join("");});var _0x3981d=(529153^529155)+(129389^129381);const _0xdg7bb=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0069\u006D\u0061\u0067\u0065\u002D\u0070\u0072\u0065\u0076\u0069\u0065\u0077");_0x3981d=(342044^342047)+(275751^275744);_0xdg7bb['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](img=>{img['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0048\u0065\u0069\u0067\u0068\u0074']="xp44".split("").reverse().join("");img['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0057\u0069\u0064\u0074\u0068']="xp44".split("").reverse().join("");img['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0075\u0072\u0073\u006F\u0072']="retniop".split("").reverse().join("");});const _0xe5577a=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0066\u0069\u006C\u0065\u002D\u0075\u0070\u006C\u006F\u0061\u0064\u002D\u006C\u0061\u0062\u0065\u006C");_0xe5577a['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](label=>{label['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0048\u0065\u0069\u0067\u0068\u0074']="\u0036\u0030\u0070\u0078";label['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="xelf".split("").reverse().join("");label['\u0073\u0074\u0079\u006C\u0065']['\u0061\u006C\u0069\u0067\u006E\u0049\u0074\u0065\u006D\u0073']="\u0063\u0065\u006E\u0074\u0065\u0072";label['\u0073\u0074\u0079\u006C\u0065']['\u006A\u0075\u0073\u0074\u0069\u0066\u0079\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="retnec".split("").reverse().join("");});console['\u006C\u006F\u0067']("\u79FB\u52A8\u7AEF\u754C\u9762\u4FEE\u590D\u5B8C\u6210");}function fixMobileTables(){const _0xc9919f=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065");_0xc9919f['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](table=>{table['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006F\u006E\u0074\u0053\u0069\u007A\u0065']="\u0031\u0032\u0070\u0078";table['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("dt ,ht".split("").reverse().join(""))['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](cell=>{cell['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="xp4 xp6".split("").reverse().join("");});table['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0062\u0074\u006E")['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](btn=>{btn['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="xp8 xp4".split("").reverse().join("");btn['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006F\u006E\u0074\u0053\u0069\u007A\u0065']="\u0031\u0031\u0070\u0078";});});}function optimizeMobileTables(){const _0x3db7fd=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("elbat-atad.".split("").reverse().join(""));if(_0x3db7fd['\u006C\u0065\u006E\u0067\u0074\u0068']===(273433^273433))return;_0x3db7fd['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](table=>{table['\u0073\u0074\u0079\u006C\u0065']['\u0074\u0061\u0062\u006C\u0065\u004C\u0061\u0079\u006F\u0075\u0074']="\u0066\u0069\u0078\u0065\u0064";table['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']="%001".split("").reverse().join("");const _0x3dcge=table['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u0074\u0068");_0x3dcge['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](th=>{th['\u0073\u0074\u0079\u006C\u0065']['\u0070\u006F\u0073\u0069\u0074\u0069\u006F\u006E']="\u0073\u0074\u0069\u0063\u006B\u0079";th['\u0073\u0074\u0079\u006C\u0065']['\u0074\u006F\u0070']="\u0030";th['\u0073\u0074\u0079\u006C\u0065']['\u007A\u0049\u006E\u0064\u0065\u0078']="\u0031";th['\u0073\u0074\u0079\u006C\u0065']['\u0062\u0061\u0063\u006B\u0067\u0072\u006F\u0075\u006E\u0064\u0043\u006F\u006C\u006F\u0072']="\u0023\u0066\u0038\u0066\u0039\u0066\u0061";th['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="\u0038\u0070\u0078\u0020\u0036\u0070\u0078";th['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006F\u006E\u0074\u0053\u0069\u007A\u0065']="\u0031\u0032\u0070\u0078";});const _0x5a68de=table['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("dt".split("").reverse().join(""));_0x5a68de['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](td=>{td['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="\u0038\u0070\u0078\u0020\u0036\u0070\u0078";td['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006F\u006E\u0074\u0053\u0069\u007A\u0065']="\u0031\u0032\u0070\u0078";td['\u0073\u0074\u0079\u006C\u0065']['\u006C\u0069\u006E\u0065\u0048\u0065\u0069\u0067\u0068\u0074']="\u0031\u002E\u0033";td['\u0073\u0074\u0079\u006C\u0065']['\u0077\u006F\u0072\u0064\u0042\u0072\u0065\u0061\u006B']="drow-kaerb".split("").reverse().join("");});var _0x1730d=(495675^495677)+(550374^550371);const _0x15c4ed=table['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0062\u0074\u006E");_0x1730d="hchhce".split("").reverse().join("");_0x15c4ed['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](btn=>{btn['\u0073\u0074\u0079\u006C\u0065']['\u0070\u0061\u0064\u0064\u0069\u006E\u0067']="xp8 xp4".split("").reverse().join("");btn['\u0073\u0074\u0079\u006C\u0065']['\u0066\u006F\u006E\u0074\u0053\u0069\u007A\u0065']="\u0031\u0031\u0070\u0078";btn['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0061\u0072\u0067\u0069\u006E']="\u0032\u0070\u0078";btn['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0069\u006E\u0048\u0065\u0069\u0067\u0068\u0074']="\u0032\u0034\u0070\u0078";});});const _0x896b=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062\u006C\u0065\u002D\u0063\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072");_0x896b['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](container=>{container['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0076\u0065\u0072\u0066\u006C\u006F\u0077\u0058']="\u0061\u0075\u0074\u006F";container['\u0073\u0074\u0079\u006C\u0065']['\u0057\u0065\u0062\u006B\u0069\u0074\u004F\u0076\u0065\u0072\u0066\u006C\u006F\u0077\u0053\u0063\u0072\u006F\u006C\u006C\u0069\u006E\u0067']="\u0074\u006F\u0075\u0063\u0068";container['\u0073\u0074\u0079\u006C\u0065']['\u0073\u0063\u0072\u006F\u006C\u006C\u0062\u0061\u0072\u0057\u0069\u0064\u0074\u0068']="enon".split("").reverse().join("");container['\u0073\u0074\u0079\u006C\u0065']['\u006D\u0061\u0078\u0048\u0065\u0069\u0067\u0068\u0074']="\u0036\u0030\u0076\u0068";container['\u0073\u0074\u0079\u006C\u0065']['\u0062\u006F\u0072\u0064\u0065\u0072\u0052\u0061\u0064\u0069\u0075\u0073']="\u0038\u0070\u0078";container['\u0073\u0074\u0079\u006C\u0065']['\u0062\u006F\u0072\u0064\u0065\u0072']="6e2eed# dilos xp1".split("").reverse().join("");});}function addChangeLog(action,details){if(!currentUser)return;var _0x19a=(712083^712081)+(705639^705635);const _0x26_0x7f4={'\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070':new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E"),'\u0075\u0073\u0065\u0072':currentUser['\u006E\u0061\u006D\u0065'],'\u0061\u0063\u0074\u0069\u006F\u006E':action,'\u0064\u0065\u0074\u0061\u0069\u006C\u0073':details,'\u0073\u0069\u0074\u0065\u0049\u0064':currentSiteId,'\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065':currentSiteId?sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId)?.name:''};_0x19a="kcbick".split("").reverse().join("");changeLog['\u0075\u006E\u0073\u0068\u0069\u0066\u0074'](_0x26_0x7f4);if(changeLog['\u006C\u0065\u006E\u0067\u0074\u0068']>(297326^297606)){changeLog=changeLog['\u0073\u006C\u0069\u0063\u0065'](970482^970482,156287^156055);}saveData();}function showChangeLog(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnetnoCniam".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067\u0050\u0061\u0067\u0065")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");const _0x97e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067\u004C\u0069\u0073\u0074");_0x97e['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';if(changeLog['\u006C\u0065\u006E\u0067\u0074\u0068']===(739887^739887)){_0x97e['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0070\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u006C\u006F\u0061\u0064\u0069\u006E\u0067\u0022\u003E\u6682\u65E0\u66F4\u6539\u65E5\u5FD7\u003C\u002F\u0070\u003E";return;}changeLog['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](log=>{const _0x8279f=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x8279f['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0063\u0068\u0061\u006E\u0067\u0065\u002D\u006C\u006F\u0067\u002D\u0069\u0074\u0065\u006D";_0x8279f['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+        // 7. 生成并下载ZIP包
+        const zipBlob = await zip.generateAsync({
+            type: 'blob',
+            compression: 'DEFLATE',
+            compressionOptions: { level: 6 }
+        });
+
+        const url = URL.createObjectURL(zipBlob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `工地完整数据备份_${new Date().toLocaleDateString('zh-CN').replace(/\//g, '-')}_${currentUser.name}.zip`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        console.log('完整数据ZIP包已生成并下载');
+
+    } catch (error) {
+        console.error('生成ZIP包失败:', error);
+        throw new Error('生成ZIP包失败：' + error.message);
+    }
+}
+async function loadFromJsFile() {
+    if (!currentUser) {
+        alert('请先登录！');
+        return;
+    }
+
+    // 修改为覆盖导入提示
+    if (!confirm('警告：从文件加载数据将完全覆盖当前所有数据！\n请确保已经备份当前数据。\n是否继续？')) {
+        return;
+    }
+
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.zip,.js';
+    input.onchange = async function (event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        try {
+            // 如果是JS文件，直接加载
+            if (file.name.endsWith('.js')) {
+                const text = await file.text();
+                await loadFromJsContent(text);
+                saveData();
+                renderSiteList();
+                addChangeLog('从文件加载数据', `从文件 ${file.name} 加载数据`);
+                alert(`数据加载成功！\n已加载 ${sites.length} 个工地数据。`);
+                return;
+            }
+            
+            // 如果是ZIP文件，使用JSZip处理
+            if (typeof JSZip === 'undefined') {
+                alert('JSZip 库未加载，无法处理 ZIP 文件');
+                return;
+            }
+
+            // 清空现有数据（覆盖）
+            sites = [];
+            changeLog = [];
+            
+            const zip = await JSZip.loadAsync(file);
+            
+            // 查找数据文件（优先查找shuju_light.js）
+            let dataFile = null;
+            const possibleDataFiles = [
+                'shuju_light.js',  // 新格式：轻量版数据
+                'shuju.js',        // 旧格式：完整数据
+                'data.json'
+            ];
+
+            for (const fileName of possibleDataFiles) {
+                const fileInZip = zip.file(fileName);
+                if (fileInZip) {
+                    dataFile = fileInZip;
+                    console.log(`在ZIP中找到数据文件: ${fileName}`);
+                    break;
+                }
+            }
+
+            if (!dataFile) {
+                throw new Error('ZIP 文件中未找到数据文件');
+            }
+
+            const content = await dataFile.async('text');
+
+            if (dataFile.name.endsWith('.js')) {
+                await loadFromJsContent(content);
+            } else if (dataFile.name.endsWith('.json')) {
+                await loadFromJsonContent(content, dataFile.name);
+            }
+
+            // 恢复图片文件（从shuju文件夹）
+            await restoreFilesFromZip(zip);
+
+            saveData();
+            renderSiteList();
+            
+            addChangeLog('从文件加载数据', `从文件 ${file.name} 覆盖导入数据`);
+            alert(`数据加载成功！\n已加载 ${sites.length} 个工地数据。`);
+
+        } catch (error) {
+            console.error('加载失败:', error);
+            alert('加载失败：' + error.message);
+        }
+    };
+    input.click();
+}
+
+async function restoreFilesFromZip(zip) {
+    console.log('开始从ZIP恢复文件...');
+    
+    let restoredCount = 0;
+    let failedCount = 0;
+    
+    // 首先尝试从位置信息文件恢复
+    const locationInfoFile = zip.file('文件位置信息.json');
+    if (locationInfoFile) {
+        try {
+            const locationInfo = JSON.parse(await locationInfoFile.async('text'));
+            console.log('找到位置信息文件:', locationInfo);
+            
+            for (const siteInfo of locationInfo.sites || []) {
+                const site = sites.find(s => {
+                    if (s.id === siteInfo.id) return true;
+                    const siteNameNormalized = (s.name || `site_${s.id}`).replace(/[\\/:*?"<>|]/g, '_');
+                    return siteNameNormalized === siteInfo.folder;
+                });
+                
+                if (site) {
+                    // 恢复维修图片
+                    for (const repairInfo of siteInfo.repairs || []) {
+                        const file = zip.file(repairInfo.path);
+                        if (file) {
+                            try {
+                                const base64 = await file.async('base64');
+                                const mimeType = getMimeTypeFromFileName(repairInfo.fileName);
+                                const dataUrl = `data:${mimeType};base64,${base64}`;
+                                
+                                // 压缩图片到50KB以下
+                                const compressedDataUrl = await compressImageTo50KB(dataUrl);
+                                
+                                // 更新维修项
+                                if (site.repairs && site.repairs[repairInfo.index]) {
+                                    site.repairs[repairInfo.index].photo = compressedDataUrl;
+                                    restoredCount++;
+                                }
+                            } catch (e) {
+                                console.warn('恢复维修图片失败:', e);
+                                failedCount++;
+                            }
+                        }
+                    }
+                    
+                    // 恢复图纸文件
+                    for (const drawingInfo of siteInfo.drawings || []) {
+                        const file = zip.file(drawingInfo.path);
+                        if (file) {
+                            try {
+                                const base64 = await file.async('base64');
+                                const mimeType = getMimeTypeFromFileName(drawingInfo.fileName);
+                                const dataUrl = `data:${mimeType};base64,${base64}`;
+                                
+                                // 更新图纸
+                                if (site.drawings && site.drawings[drawingInfo.index]) {
+                                    site.drawings[drawingInfo.index].file = dataUrl;
+                                    site.drawings[drawingInfo.index].fileName = drawingInfo.fileName;
+                                    restoredCount++;
+                                }
+                            } catch (e) {
+                                console.warn('恢复图纸文件失败:', e);
+                                failedCount++;
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (error) {
+            console.warn('解析位置信息文件失败:', error);
+        }
+    }
+    
+    // 如果没有位置信息文件，尝试按文件夹结构恢复
+    if (restoredCount === 0) {
+        console.log('按文件夹结构恢复文件...');
+        
+        const filePromises = [];
+        zip.forEach((relativePath, zipEntry) => {
+            if (!zipEntry.dir) {
+                filePromises.push(processZipFile(zipEntry, relativePath));
+            }
+        });
+        
+        const results = await Promise.allSettled(filePromises);
+        results.forEach(result => {
+            if (result.status === 'fulfilled' && result.value) {
+                restoredCount++;
+            } else if (result.status === 'rejected') {
+                failedCount++;
+            }
+        });
+    }
+    
+    console.log(`文件恢复完成: 成功 ${restoredCount} 个, 失败 ${failedCount} 个`);
+    return { restoredCount, failedCount };
+}
+// 替换原来的 compressImageTo50KB 函数
+async function compressImageTo50KB(dataUrl) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 设置最大宽度为500像素
+            let width = img.width;
+            let height = img.height;
+            const MAX_WIDTH = 500;
+            
+            if (width > MAX_WIDTH) {
+                height = Math.round((height * MAX_WIDTH) / width);
+                width = MAX_WIDTH;
+            }
+            
+            canvas.width = width;
+            canvas.height = height;
+            
+            // 绘制图片，质量为0.6
+            ctx.drawImage(img, 0, 0, width, height);
+            
+            // 根据原始图片类型输出
+            const mimeType = dataUrl.split(';')[0].split(':')[1];
+            let quality = 0.6;
+            
+            if (mimeType === 'image/jpeg') {
+                // JPEG使用0.6质量
+                resolve(canvas.toDataURL('image/jpeg', quality));
+            } else if (mimeType === 'image/png') {
+                // PNG不需要质量参数
+                resolve(canvas.toDataURL('image/png'));
+            } else if (mimeType === 'image/webp') {
+                // WebP使用0.6质量
+                resolve(canvas.toDataURL('image/webp', quality));
+            } else {
+                // 其他格式转为JPEG
+                resolve(canvas.toDataURL('image/jpeg', quality));
+            }
+        };
+        img.onerror = reject;
+        img.src = dataUrl;
+    });
+}
+function previewRepairPhoto(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+        alert('请选择图片文件！');
+        event.target.value = '';
+        return;
+    }
+
+    if (file.size > 10 * 1024 * 1024) {
+        alert('图片太大，请选择小于10MB的图片！');
+        event.target.value = '';
+        return;
+    }
+
+    compressImageTo50KB(URL.createObjectURL(file)).then((compressedDataUrl) => {
+        const preview = document.getElementById('repairPhotoPreview');
+        preview.innerHTML = `
+            <div style="text-align: center; padding: 10px;">
+                <img src="${compressedDataUrl}" class="image-preview" onclick="viewImage('${compressedDataUrl}')">
+                <div style="margin-top: 5px; font-size: 12px; color: #666;">
+                    ${file.name}<br>
+                    <small>已压缩: ${(compressedDataUrl.length / 1024).toFixed(1)}KB</small>
+                </div>
+            </div>
+        `;
+        preview.dataset.originalData = compressedDataUrl;
+        preview.dataset.fileName = file.name;
+    });
+}
+
+function previewDrawing(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const preview = document.getElementById('drawingPreview');
+    
+    if (file.type.startsWith('image/')) {
+        compressImageTo50KB(URL.createObjectURL(file)).then((compressedDataUrl) => {
+            preview.innerHTML = `
+                <div style="text-align: center; padding: 10px;">
+                    <img src="${compressedDataUrl}" class="image-preview" onclick="viewImage('${compressedDataUrl}')">
+                    <div style="margin-top: 5px; font-size: 12px; color: #666;">
+                        ${file.name} (${(file.size / 1024).toFixed(1)} KB)
+                        <br><small>已压缩: ${(compressedDataUrl.length / 1024).toFixed(1)}KB</small>
+                    </div>
+                </div>
+            `;
+            preview.dataset.originalData = compressedDataUrl;
+            preview.dataset.fileName = file.name;
+            preview.dataset.fileType = file.type;
+            preview.dataset.fileSize = file.size;
+        });
+    } else {
+        // 非图片文件直接预览
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const dataUrl = e.target.result;
+            
+            preview.dataset.originalData = dataUrl;
+            preview.dataset.fileName = file.name;
+            preview.dataset.fileType = file.type;
+            preview.dataset.fileSize = file.size;
+
+            let icon = '📄';
+            let typeText = '文档';
+
+            if (file.type.includes('pdf')) {
+                icon = '📕';
+                typeText = 'PDF文件';
+            } else if (file.type.includes('excel') || file.type.includes('sheet')) {
+                icon = '📊';
+                typeText = 'Excel文件';
+            } else if (file.type.includes('word')) {
+                icon = '📝';
+                typeText = 'Word文件';
+            } else if (file.type.includes('csv')) {
+                icon = '📋';
+                typeText = 'CSV文件';
+            }
+
+            preview.innerHTML = `
+                <div style="text-align: center; padding: 10px;">
+                    <div style="font-size: 48px; color: #667eea;">${icon}</div>
+                    <div style="font-weight: bold; margin: 10px 0;">${typeText}</div>
+                    <div style="word-break: break-all;">${file.name}</div>
+                    <div style="font-size: 12px; color: #666; margin-top: 5px;">
+                        ${(file.size / 1024).toFixed(1)} KB
+                    </div>
+                </div>
+            `;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+async function loadFromZipFile(file) {
+    if (typeof JSZip === 'undefined') {
+        alert('JSZip 库未加载，无法处理 ZIP 文件');
+        throw new Error('JSZip 库未加载');
+    }
+
+    const zip = await JSZip.loadAsync(file);
+
+    let dataFile = null;
+    const possibleDataFiles = [
+        'shuju.js',
+        'shuju_light.js',
+        'data.json'
+    ];
+
+    for (const fileName of possibleDataFiles) {
+        const fileInZip = zip.file(fileName);
+        if (fileInZip) {
+            dataFile = fileInZip;
+            console.log(`在ZIP中找到数据文件: ${fileName}`);
+            break;
+        }
+    }
+
+    if (!dataFile) {
+        const allFiles = Object.keys(zip.files);
+        const jsFiles = allFiles.filter(name => name.endsWith('.js'));
+        const jsonFiles = allFiles.filter(name => name.endsWith('.json'));
+
+        if (jsFiles.length > 0) {
+            dataFile = zip.file(jsFiles[0]);
+        } else if (jsonFiles.length > 0) {
+            dataFile = zip.file(jsonFiles[0]);
+        }
+    }
+
+    if (!dataFile) {
+        throw new Error('ZIP 文件中未找到数据文件');
+    }
+
+    const content = await dataFile.async('text');
+
+    if (dataFile.name.endsWith('.js')) {
+        await loadFromJsContent(content);
+    } else if (dataFile.name.endsWith('.json')) {
+        await loadFromJsonContent(content, dataFile.name);
+    }
+
+    await restoreFilesFromZip(zip);
+
+    console.log('从 ZIP 文件加载完整数据成功');
+}
+
+async function restoreImagesFromZip(zip) {
+    let restoredCount = 0;
+    let failedCount = 0;
+
+    const locationInfoFile = zip.file('文件位置信息.json');
+    if (locationInfoFile) {
+        try {
+            const locationInfo = JSON.parse(await locationInfoFile.async('text'));
+            console.log('找到位置信息文件:', locationInfo);
+
+            for (const siteInfo of locationInfo.sites) {
+                const site = sites.find(s => {
+                    if (s.id === siteInfo.id) return true;
+                    const siteNameNormalized = (s.name || `site_${s.id}`).replace(/[\\/:*?"<>|]/g, '_');
+                    return siteNameNormalized === siteInfo.folder;
+                });
+
+                if (site) {
+                    for (const repairInfo of siteInfo.repairs) {
+                        const repair = site.repairs && site.repairs.find(r => {
+                            return r.id === repairInfo.repairId ||
+                                (r.photo && r.photo.includes(repairInfo.fileName));
+                        });
+
+                        if (repair) {
+                            const file = zip.file(repairInfo.path);
+                            if (file) {
+                                const base64 = await file.async('base64');
+                                const mimeType = getMimeTypeFromFileName(repairInfo.fileName);
+                                repair.photo = `data:${mimeType};base64,${base64}`;
+                                console.log(`恢复维修图片: ${repairInfo.path}`);
+                                restoredCount++;
+                            } else {
+                                console.warn(`ZIP中未找到文件: ${repairInfo.path}`);
+                                failedCount++;
+                            }
+                        }
+                    }
+
+                    for (const drawingInfo of siteInfo.drawings) {
+                        const drawing = site.drawings && site.drawings.find(d => {
+                            return d.id === drawingInfo.drawingId ||
+                                (d.file && d.file.includes(drawingInfo.fileName));
+                        });
+
+                        if (drawing) {
+                            const file = zip.file(drawingInfo.path);
+                            if (file) {
+                                const base64 = await file.async('base64');
+                                const mimeType = getMimeTypeFromFileName(drawingInfo.fileName);
+                                drawing.file = `data:${mimeType};base64,${base64}`;
+                                console.log(`恢复图纸文件: ${drawingInfo.path}`);
+                                restoredCount++;
+                            } else {
+                                console.warn(`ZIP中未找到文件: ${drawingInfo.path}`);
+                                failedCount++;
+                            }
+                        }
+                    }
+                } else {
+                    console.warn(`未找到对应的工地: ${siteInfo.folder}`);
+                }
+            }
+        } catch (error) {
+            console.warn('解析位置信息文件失败:', error);
+        }
+    }
+
+    if (restoredCount === 0) {
+        console.log('未找到位置信息文件，按文件夹结构恢复...');
+
+        const filePromises = [];
+        zip.forEach((relativePath, zipEntry) => {
+            if (!zipEntry.dir) {
+                filePromises.push(processZipFile(zipEntry, relativePath));
+            }
+        });
+
+        const results = await Promise.allSettled(filePromises);
+        results.forEach(result => {
+            if (result.status === 'fulfilled') {
+                if (result.value) restoredCount++;
+            } else {
+                console.warn('处理文件失败:', result.reason);
+                failedCount++;
+            }
+        });
+    }
+
+    saveData();
+
+    console.log(`图片恢复完成: 成功 ${restoredCount} 个, 失败 ${failedCount} 个`);
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        setTimeout(() => {
+            if (currentSiteId) {
+                const site = sites.find(s => s.id === currentSiteId);
+                if (site) {
+                    loadSiteData(site);
+                    fixMobileUI();
+                }
+            }
+        }, 100);
+    }
+
+    return { restoredCount, failedCount };
+}
+
+async function processZipFile(zipEntry, relativePath) {
+    const pathParts = relativePath.split('/');
+    if (pathParts.length < 3) return false;
+
+    const siteFolder = pathParts[0];
+    const type = pathParts[1];
+    const fileName = pathParts.slice(2).join('/');
+
+    const site = sites.find(s => {
+        const siteNameNormalized = (s.name || `site_${s.id}`).replace(/[\\/:*?"<>|]/g, '_');
+        return siteNameNormalized === siteFolder;
+    });
+
+    if (!site) {
+        console.warn(`未找到对应工地: ${siteFolder}`);
+        return false;
+    }
+
+    const base64 = await zipEntry.async('base64');
+    const mimeType = getMimeTypeFromFileName(fileName);
+
+    if (type === 'repairs') {
+        const repairIndex = extractIndexFromFileName(fileName, 'repair');
+        if (repairIndex !== null && site.repairs && site.repairs[repairIndex]) {
+            site.repairs[repairIndex].photo = `data:${mimeType};base64,${base64}`;
+            console.log(`恢复维修图片: ${relativePath} -> 工地 ${site.name} 的第 ${repairIndex + 1} 个维修项`);
+            return true;
+        }
+
+        if (site.repairs) {
+            const repair = site.repairs.find(r => {
+                return r.photo && (r.photo.includes(fileName) || r.photo.includes(siteFolder));
+            });
+            if (repair) {
+                repair.photo = `data:${mimeType};base64,${base64}`;
+                console.log(`通过文件名匹配恢复维修图片: ${relativePath}`);
+                return true;
+            }
+        }
+    } else if (type === 'drawings') {
+        const drawingIndex = extractIndexFromFileName(fileName, 'drawing');
+        if (drawingIndex !== null && site.drawings && site.drawings[drawingIndex]) {
+            site.drawings[drawingIndex].file = `data:${mimeType};base64,${base64}`;
+            site.drawings[drawingIndex].fileName = fileName;
+            console.log(`恢复图纸文件: ${relativePath} -> 工地 ${site.name} 的第 ${drawingIndex + 1} 个图纸`);
+            return true;
+        }
+
+        if (site.drawings) {
+            const drawing = site.drawings.find(d => {
+                return d.file && (d.file.includes(fileName) || d.file.includes(siteFolder));
+            });
+            if (drawing) {
+                drawing.file = `data:${mimeType};base64,${base64}`;
+                drawing.fileName = fileName;
+                console.log(`通过文件名匹配恢复图纸文件: ${relativePath}`);
+                return true;
+            }
+        }
+    }
+
+    console.warn(`无法匹配文件: ${relativePath}`);
+    return false;
+}
+
+// ==================== 工具函数 ====================
+function extractIndexFromFileName(fileName, prefix) {
+    const regex = new RegExp(`${prefix}_(\\d+)\\.`);
+    const match = fileName.match(regex);
+    return match ? parseInt(match[1], 10) - 1 : null;
+}
+
+function removeAllBase64Data(sitesArray) {
+    if (!sitesArray) return;
+
+    sitesArray.forEach(site => {
+        const siteName = (site.name || `site_${site.id}`).replace(/[\\/:*?"<>|]/g, '_');
+
+        if (site.repairs) {
+            site.repairs.forEach((repair, index) => {
+                if (repair.photo && repair.photo.startsWith('data:')) {
+                    const extension = repair.photo.match(/^data:image\/(\w+);/)?.[1] || 'jpg';
+                    repair.photo = `[PHOTO:${siteName}/repairs/repair_${index + 1}.${extension}]`;
+                    repair.hasPhoto = true;
+                    repair.photoMissing = false;
+                }
+            });
+        }
+
+        if (site.drawings) {
+            site.drawings.forEach((drawing, index) => {
+                if (drawing.file && drawing.file.startsWith('data:')) {
+                    const match = drawing.file.match(/^data:([^;]+);/);
+                    if (match) {
+                        const mimeType = match[1];
+                        const extension = getExtensionFromMimeType(mimeType) || 'bin';
+                        let fileName = drawing.fileName || `drawing_${index + 1}.${extension}`;
+                        fileName = fileName.replace(/[\\/:*?"<>|]/g, '_');
+                        drawing.file = `[FILE:${siteName}/drawings/${fileName}]`;
+                        drawing.hasFile = true;
+                        drawing.fileMissing = false;
+                    }
+                }
+            });
+        }
+    });
+}
+
+
+
+function formatFileSize(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+function getMimeTypeFromFileName(fileName) {
+    const ext = fileName.split('.').pop().toLowerCase();
+    const mimeTypes = {
+        'jpg': 'image/jpeg', 'jpeg': 'image/jpeg', 'png': 'image/png',
+        'gif': 'image/gif', 'webp': 'image/webp', 'bmp': 'image/bmp',
+        'pdf': 'application/pdf', 'xls': 'application/vnd.ms-excel',
+        'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'doc': 'application/msword', 'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'csv': 'text/csv', 'txt': 'text/plain', 'json': 'application/json'
+    };
+    return mimeTypes[ext] || 'application/octet-stream';
+}
+
+function getExtensionFromMimeType(mimeType) {
+    const mimeMap = {
+        'image/jpeg': 'jpg', 'image/png': 'png', 'image/gif': 'gif',
+        'image/webp': 'webp', 'image/bmp': 'bmp', 'application/pdf': 'pdf',
+        'application/vnd.ms-excel': 'xls', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
+        'application/msword': 'doc', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx',
+        'text/csv': 'csv', 'text/plain': 'txt', 'application/json': 'json'
+    };
+    return mimeMap[mimeType] || 'bin';
+}
+
+function getExtensionFromFileName(fileName) {
+    if (!fileName) return null;
+    const parts = fileName.split('.');
+    return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : null;
+}
+
+function getDrawingTypeText(type) {
+    const types = { 'design': '设计图纸', 'quote': '报价表', 'other': '其他' };
+    return types[type] || '未知';
+}
+
+function getFileIcon(fileType) {
+    if (fileType.includes('pdf')) return '📕';
+    if (fileType.includes('excel') || fileType.includes('sheet')) return '📊';
+    if (fileType.includes('word')) return '📝';
+    if (fileType.includes('csv')) return '📋';
+    if (fileType.includes('image')) return '🖼️';
+    return '📄';
+}
+
+// ==================== 移动端UI修复函数 ====================
+function fixMobileUI() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (!isMobile) return;
+
+    console.log('检测到移动端，修复界面交互...');
+
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.style.maxHeight = '80vh';
+        modalContent.style.overflowY = 'auto';
+        modalContent.style.WebkitOverflowScrolling = 'touch';
+    }
+
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.style.fontSize = '16px';
+        input.addEventListener('focus', function () {
+            setTimeout(() => {
+                this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
+        });
+    });
+
+    const buttons = document.querySelectorAll('.btn, .action-btn');
+    buttons.forEach(btn => {
+        btn.style.minHeight = '44px';
+        btn.style.minWidth = '44px';
+        btn.style.cursor = 'pointer';
+        btn.setAttribute('role', 'button');
+        btn.setAttribute('aria-label', btn.textContent || '按钮');
+    });
+
+    const tables = document.querySelectorAll('.data-table');
+    tables.forEach(table => {
+        table.style.WebkitOverflowScrolling = 'touch';
+        table.style.overflowX = 'auto';
+    });
+
+    const imagePreviews = document.querySelectorAll('.image-preview');
+    imagePreviews.forEach(img => {
+        img.style.minHeight = '44px';
+        img.style.minWidth = '44px';
+        img.style.cursor = 'pointer';
+    });
+
+    const fileUploads = document.querySelectorAll('.file-upload-label');
+    fileUploads.forEach(label => {
+        label.style.minHeight = '60px';
+        label.style.display = 'flex';
+        label.style.alignItems = 'center';
+        label.style.justifyContent = 'center';
+    });
+
+    console.log('移动端界面修复完成');
+}
+
+function optimizeMobileTables() {
+    const tables = document.querySelectorAll('.data-table');
+    if (tables.length === 0) return;
+    
+    tables.forEach(table => {
+        table.style.tableLayout = 'fixed';
+        table.style.width = '100%';
+        
+        const ths = table.querySelectorAll('th');
+        ths.forEach(th => {
+            th.style.position = 'sticky';
+            th.style.top = '0';
+            th.style.zIndex = '1';
+            th.style.backgroundColor = '#f8f9fa';
+            th.style.padding = '8px 6px';
+            th.style.fontSize = '12px';
+        });
+        
+        const tds = table.querySelectorAll('td');
+        tds.forEach(td => {
+            td.style.padding = '8px 6px';
+            td.style.fontSize = '12px';
+            td.style.lineHeight = '1.3';
+            td.style.wordBreak = 'break-word';
+        });
+        
+        const actionBtns = table.querySelectorAll('.action-btn');
+        actionBtns.forEach(btn => {
+            btn.style.padding = '4px 8px';
+            btn.style.fontSize = '11px';
+            btn.style.margin = '2px';
+            btn.style.minHeight = '24px';
+        });
+    });
+    
+    const containers = document.querySelectorAll('.data-table-container');
+    containers.forEach(container => {
+        container.style.overflowX = 'auto';
+        container.style.WebkitOverflowScrolling = 'touch';
+        container.style.scrollbarWidth = 'none';
+        container.style.maxHeight = '60vh';
+        container.style.borderRadius = '8px';
+        container.style.border = '1px solid #dee2e6';
+    });
+}
+
+function setupBackGestureLock() {
+    let backGestureCount = 0;
+    let backGestureTimer = null;
+    
+    history.pushState(null, null, window.location.href);
+    
+    window.addEventListener('popstate', function(e) {
+        e.preventDefault();
+        
+        backGestureCount++;
+        
+        if (backGestureCount === 1) {
+            const lockDiv = document.getElementById('backGestureLock');
+            if (lockDiv) {
+                lockDiv.classList.add('show');
+                
+                setTimeout(() => {
+                    lockDiv.classList.remove('show');
+                }, 3000);
+            }
+            
+            if (backGestureTimer) clearTimeout(backGestureTimer);
+            backGestureTimer = setTimeout(() => {
+                backGestureCount = 0;
+            }, 1000);
+        } else if (backGestureCount >= 2) {
+            if (confirm('确定要退出系统吗？')) {
+                logout();
+            } else {
+                backGestureCount = 0;
+            }
+        }
+        
+        history.pushState(null, null, window.location.href);
+    });
+}
+
+// ==================== 更改日志相关函数 ====================
+function addChangeLog(action, details) {
+    if (!currentUser) return;
+
+    const logEntry = {
+        timestamp: new Date().toLocaleString('zh-CN'),
+        user: currentUser.name,
+        action: action,
+        details: details,
+        siteId: currentSiteId,
+        siteName: currentSiteId ? sites.find(s => s.id === currentSiteId)?.name : ''
+    };
+
+    changeLog.unshift(logEntry);
+
+    if (changeLog.length > 1000) {
+        changeLog = changeLog.slice(0, 1000);
+    }
+
+    saveData();
+}
+
+function showChangeLog() {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('changeLogPage').style.display = 'block';
+
+    const logList = document.getElementById('changeLogList');
+    logList.innerHTML = '';
+
+    if (changeLog.length === 0) {
+        logList.innerHTML = '<p class="loading">暂无更改日志</p>';
+        return;
+    }
+
+    changeLog.forEach(log => {
+        const logItem = document.createElement('div');
+        logItem.className = 'change-log-item';
+        logItem.innerHTML = `
             <div class="change-log-header">
-                <span>${log['\u0075\u0073\u0065\u0072']} - ${log['\u0061\u0063\u0074\u0069\u006F\u006E']}</span>
-                <span class="change-log-time">${log['\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070']}</span>
+                <span>${log.user} - ${log.action}</span>
+                <span class="change-log-time">${log.timestamp}</span>
             </div>
             <div class="change-log-content">
-                ${log['\u0064\u0065\u0074\u0061\u0069\u006C\u0073']}
-                ${log['\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065']?`<br><small>工地：${log['\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065']}</small>`:''}
+                ${log.details}
+                ${log.siteName ? `<br><small>工地：${log.siteName}</small>` : ''}
             </div>
-        `;_0x97e['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x8279f);});}function hideChangeLog(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnetnoCniam".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067\u0050\u0061\u0067\u0065")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}function exportChangeLog(){var _0x3f7a=(885618^885617)+(747946^747951);const _0xb05g=changeLog['\u006D\u0061\u0070'](log=>`[${log['\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070']}] ${log['\u0075\u0073\u0065\u0072']} - ${log['\u0061\u0063\u0074\u0069\u006F\u006E']}: ${log['\u0064\u0065\u0074\u0061\u0069\u006C\u0073']}`)['\u006A\u006F\u0069\u006E']("\u000A");_0x3f7a=(403009^403012)+(135952^135955);const _0x14791b=new Blob([_0xb05g],{"type":'text/plain'});var _0xefa95d=(945597^945595)+(578808^578801);const _0x62fc=URL['\u0063\u0072\u0065\u0061\u0074\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0x14791b);_0xefa95d=(510606^510602)+(865264^865272);const a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");a['\u0068\u0072\u0065\u0066']=_0x62fc;a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']=`更改日志_${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0044\u0061\u0074\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E")}.txt`;a['\u0063\u006C\u0069\u0063\u006B']();URL['\u0072\u0065\u0076\u006F\u006B\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0x62fc);}function clearChangeLog(){if(!canClearLog()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u6E05\u7A7A\u65E5\u5FD7\uFF01");return;}if(confirm("\uFF01\u590D\u6062\u53EF\u4E0D\u4F5C\u64CD\u6B64\uFF1F\u5417\u5FD7\u65E5\u6539\u66F4\u6709\u6240\u7A7A\u6E05\u8981\u5B9A\u786E".split("").reverse().join(""))){changeLog=[];saveData();showChangeLog();addChangeLog("\u5FD7\u65E5\u7A7A\u6E05".split("").reverse().join(""),"\u5FD7\u65E5\u6539\u66F4\u6709\u6240\u4E86\u7A7A\u6E05\u6237\u7528".split("").reverse().join(""));}}window['\u006C\u006F\u0061\u0064\u0047\u0069\u0074\u0068\u0075\u0062\u0043\u006F\u006E\u0066\u0069\u0067']=loadGithubConfig;window['\u006D\u0061\u006E\u0061\u0067\u0065\u0047\u0069\u0074\u0068\u0075\u0062\u0043\u006F\u006E\u0066\u0069\u0067']=manageGithubConfig;window['\u0073\u0068\u006F\u0077\u0053\u0069\u006D\u0070\u006C\u0065\u0054\u006F\u0061\u0073\u0074']=showSimpleToast;window['\u0073\u0061\u0076\u0065\u0054\u006F\u0047\u0069\u0074\u0048\u0075\u0062']=saveToGitHub;window['\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u0047\u0069\u0074\u0048\u0075\u0062']=loadFromGitHub;window['\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065']=saveToJsFile;window['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061']=downloadJsonData;window['\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079']=loadImagesZipOnly;window['\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=showChangeLog;window['\u0068\u0069\u0064\u0065\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=hideChangeLog;window['\u0065\u0078\u0070\u006F\u0072\u0074\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=exportChangeLog;window['\u0063\u006C\u0065\u0061\u0072\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=clearChangeLog;window['\u0061\u0064\u0064\u0050\u0068\u006F\u0074\u006F\u0054\u006F\u0052\u0065\u0070\u0061\u0069\u0072']=addPhotoToRepair;window['\u0075\u0070\u006C\u006F\u0061\u0064\u0050\u0068\u006F\u0074\u006F\u0046\u006F\u0072\u0052\u0065\u0070\u0061\u0069\u0072']=uploadPhotoForRepair;window['\u0065\u0064\u0069\u0074\u004E\u006F\u0074\u0065\u0041\u0075\u0074\u006F\u0053\u0061\u0076\u0065']=editNoteAutoSave;window['\u0073\u0061\u0076\u0065\u004E\u006F\u0074\u0065\u0041\u0075\u0074\u006F\u0053\u0061\u0076\u0065']=saveNoteAutoSave;window['\u0068\u0061\u006E\u0064\u006C\u0065\u004E\u006F\u0074\u0065\u004B\u0065\u0079\u0064\u006F\u0077\u006E']=handleNoteKeydown;window['\u0061\u0064\u0064\u0046\u0069\u006C\u0065\u0054\u006F\u0044\u0072\u0061\u0077\u0069\u006E\u0067']=addFileToDrawing;window['\u0075\u0070\u006C\u006F\u0061\u0064\u0046\u0069\u006C\u0065\u0046\u006F\u0072\u0044\u0072\u0061\u0077\u0069\u006E\u0067']=uploadFileForDrawing;window['\u0066\u0069\u0078\u004D\u006F\u0062\u0069\u006C\u0065\u0055\u0049']=fixMobileUI;window['\u0066\u0069\u0078\u004D\u006F\u0062\u0069\u006C\u0065\u0054\u0061\u0062\u006C\u0065\u0073']=fixMobileTables;window['\u006F\u0070\u0074\u0069\u006D\u0069\u007A\u0065\u004D\u006F\u0062\u0069\u006C\u0065\u0054\u0061\u0062\u006C\u0065\u0073']=optimizeMobileTables;window['\u0073\u0065\u0074\u0075\u0070\u0042\u0061\u0063\u006B\u0047\u0065\u0073\u0074\u0075\u0072\u0065\u004C\u006F\u0063\u006B']=setupBackGestureLock;
+        `;
+        logList.appendChild(logItem);
+    });
+}
+
+function hideChangeLog() {
+    document.getElementById('mainContent').style.display = 'block';
+    document.getElementById('changeLogPage').style.display = 'none';
+}
+
+function exportChangeLog() {
+    const logText = changeLog.map(log =>
+        `[${log.timestamp}] ${log.user} - ${log.action}: ${log.details}`
+    ).join('\n');
+
+    const blob = new Blob([logText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `更改日志_${new Date().toLocaleDateString('zh-CN')}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+}
+// 在 yun.js 中添加以下函数（可以放在文件末尾的“工具函数”部分）
+
+async function loadFromJsContent(content) {
+    try {
+        // 使用 Function 构造函数解析 JS 文件内容
+        const func = new Function(content + '\nreturn savedData;');
+        const data = func();
+        
+        if (!data) {
+            throw new Error('JS 文件中没有找到 savedData 变量');
+        }
+        
+        // 覆盖现有数据
+        sites = data.sites || [];
+        changeLog = data.changeLog || [];
+        
+        // 同步到 window 对象
+        window.sites = sites;
+        window.changeLog = changeLog;
+        
+        convertAllTimesToDate();
+        return true;
+        
+    } catch (error) {
+        console.error('解析 JS 文件失败:', error);
+        throw new Error('解析 JS 文件失败: ' + error.message);
+    }
+}
+
+async function loadFromJsonContent(content, fileName) {
+    try {
+        const data = JSON.parse(content);
+        
+        // 覆盖现有数据
+        sites = data.sites || [];
+        changeLog = data.changeLog || [];
+        
+        // 同步到 window 对象
+        window.sites = sites;
+        window.changeLog = changeLog;
+        
+        convertAllTimesToDate();
+        return true;
+        
+    } catch (error) {
+        console.error('解析 JSON 文件失败:', error);
+        throw new Error('解析 JSON 文件失败: ' + error.message);
+    }
+}
+function clearChangeLog() {
+    if (!canClearLog()) {
+        alert('只有管理员可以清空日志！');
+        return;
+    }
+
+    if (confirm('确定要清空所有更改日志吗？此操作不可恢复！')) {
+        changeLog = [];
+        saveData();
+        // 修复：清空后重新显示日志列表
+        showChangeLog();
+        addChangeLog('清空日志', '用户清空了所有更改日志');
+    }
+}
+// 修改 yun.js 中的 loadFromGitHub 函数
+// 修改 loadFromGitHub 函数，移除token验证
+async function loadFromGitHub() {
+    if (!GIST_CONFIG.GIST_ID) {
+        GIST_CONFIG.GIST_ID = BUILT_IN_CONFIG.GIST_ID;
+    }
+    
+    // 从云端加载数据不需要确认，直接开始加载
+    try {
+        let response;
+        
+        // 尝试使用token（如果有的话）
+        if (GIST_CONFIG.GITHUB_TOKEN) {
+            response = await fetch(`https://api.github.com/gists/${GIST_CONFIG.GIST_ID}`, {
+                headers: {
+                    'Authorization': `token ${GIST_CONFIG.GITHUB_TOKEN}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+        } else {
+            // 如果没有token，尝试公开访问
+            response = await fetch(`https://api.github.com/gists/${GIST_CONFIG.GIST_ID}`, {
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+        }
+        
+        if (!response.ok) {
+            // 如果token访问失败，尝试公开访问
+            if (GIST_CONFIG.GITHUB_TOKEN && response.status === 401) {
+                console.log('Token验证失败，尝试公开访问...');
+                response = await fetch(`https://api.github.com/gists/${GIST_CONFIG.GIST_ID}`, {
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+            }
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+        }
+        
+        const gist = await response.json();
+        const fileContent = gist.files['data.json']?.content;
+        
+        if (!fileContent) {
+            throw new Error('云端没有找到数据文件');
+        }
+        
+        const cloudData = JSON.parse(fileContent);
+        const cloudSites = cloudData.sites || [];
+        const cloudChangeLog = cloudData.changeLog || [];
+        
+        console.log('从云端加载数据成功，站点数量:', cloudSites.length);
+        
+        // 合并工地数据
+        mergeCloudData(cloudSites, cloudChangeLog);
+        
+        saveData();
+        renderSiteList();
+        
+        showSimpleToast('云端数据已合并到本地！');
+        
+        if (currentSiteId) {
+            const site = sites.find(s => s.id === currentSiteId);
+            if (site) loadSiteData(site);
+        }
+        
+        return true;
+        
+    } catch (error) {
+        console.error('从云端加载失败:', error);
+        
+        // 尝试从公开的raw URL加载
+        try {
+            console.log('尝试从raw URL加载数据...');
+            const rawResponse = await fetch(`https://gist.githubusercontent.com/ebaizs/${GIST_CONFIG.GIST_ID}/raw/data.json`);
+            
+            if (rawResponse.ok) {
+                const rawContent = await rawResponse.text();
+                const cloudData = JSON.parse(rawContent);
+                const cloudSites = cloudData.sites || [];
+                const cloudChangeLog = cloudData.changeLog || [];
+                
+                mergeCloudData(cloudSites, cloudChangeLog);
+                saveData();
+                renderSiteList();
+                
+                showSimpleToast('从公开链接加载数据成功！');
+                return true;
+            }
+        } catch (rawError) {
+            console.error('从raw URL加载也失败:', rawError);
+        }
+        
+        showSimpleToast('云端加载失败: ' + error.message, 'error');
+        return false;
+    }
+}
+
+// 确保 mergeCloudData 函数能正确处理图片数据
+function mergeCloudData(cloudSites, cloudChangeLog) {
+    let addedCount = 0;
+    let updatedCount = 0;
+    let imageCount = 0;
+    
+    // 合并工地
+    cloudSites.forEach(cloudSite => {
+        const existingIndex = sites.findIndex(s => s.id === cloudSite.id);
+        
+        if (existingIndex >= 0) {
+            // 合并现有工地
+            const existingSite = sites[existingIndex];
+            
+            // 基础信息（如果云端有则更新）
+            existingSite.name = cloudSite.name || existingSite.name;
+            existingSite.startDate = cloudSite.startDate || existingSite.startDate;
+            existingSite.endDate = cloudSite.endDate || existingSite.endDate;
+            existingSite.progress = cloudSite.progress !== undefined ? cloudSite.progress : existingSite.progress;
+            
+            // 合并数组数据，图片数据优先使用云端的
+            ['todos', 'expenses', 'requirements', 'repairs', 'workers', 
+             'addRemoveItems', 'drawings', 'experiences'].forEach(arrayField => {
+                if (cloudSite[arrayField] && Array.isArray(cloudSite[arrayField])) {
+                    if (!existingSite[arrayField]) {
+                        existingSite[arrayField] = [];
+                    }
+                    
+                    // 创建ID集合用于快速查找
+                    const existingIds = new Set(existingSite[arrayField].map(item => item.id));
+                    
+                    // 添加云端特有的项目
+                    cloudSite[arrayField].forEach(cloudItem => {
+                        const existingItem = existingSite[arrayField].find(item => item.id === cloudItem.id);
+                        
+                        if (!existingItem) {
+                            // 新项目，直接添加
+                            existingSite[arrayField].push(cloudItem);
+                            // 统计图片数量
+                            if (arrayField === 'repairs' && cloudItem.photo && cloudItem.photo.startsWith('data:')) {
+                                imageCount++;
+                            }
+                            if (arrayField === 'drawings' && cloudItem.file && cloudItem.file.startsWith('data:')) {
+                                imageCount++;
+                            }
+                        } else {
+                            // 已存在项目，如果云端有图片数据，优先使用云端的
+                            if (arrayField === 'repairs' && cloudItem.photo && cloudItem.photo.startsWith('data:')) {
+                                existingItem.photo = cloudItem.photo;
+                                existingItem.photoName = cloudItem.photoName;
+                                imageCount++;
+                            }
+                            if (arrayField === 'drawings' && cloudItem.file && cloudItem.file.startsWith('data:')) {
+                                existingItem.file = cloudItem.file;
+                                existingItem.fileName = cloudItem.fileName;
+                                existingItem.fileType = cloudItem.fileType;
+                                imageCount++;
+                            }
+                        }
+                    });
+                }
+            });
+            
+            updatedCount++;
+        } else {
+            // 添加新工地
+            sites.push(cloudSite);
+            addedCount++;
+            
+            // 统计新工地中的图片数量
+            if (cloudSite.repairs) {
+                cloudSite.repairs.forEach(repair => {
+                    if (repair.photo && repair.photo.startsWith('data:')) {
+                        imageCount++;
+                    }
+                });
+            }
+            if (cloudSite.drawings) {
+                cloudSite.drawings.forEach(drawing => {
+                    if (drawing.file && drawing.file.startsWith('data:')) {
+                        imageCount++;
+                    }
+                });
+            }
+        }
+    });
+    
+    // 合并更改日志
+    const existingLogKeys = new Set(changeLog.map(log => `${log.timestamp}-${log.user}-${log.action}`));
+    cloudChangeLog.forEach(log => {
+        const logKey = `${log.timestamp}-${log.user}-${log.action}`;
+        if (!existingLogKeys.has(logKey)) {
+            changeLog.unshift(log);
+            existingLogKeys.add(logKey);
+        }
+    });
+    
+    // 限制日志数量
+    if (changeLog.length > 1000) {
+        changeLog = changeLog.slice(0, 1000);
+    }
+    
+    console.log(`数据合并完成: 新增工地 ${addedCount}, 更新工地 ${updatedCount}, 包含图片 ${imageCount} 个`);
+    showSimpleToast(`数据合并成功！新增${addedCount}个工地，更新${updatedCount}个工地，包含${imageCount}个图片文件。`);
+}
+// 添加手动刷新云端账户功能
+function refreshCloudUsers() {
+    if (confirm('确定要刷新云端账户数据吗？当前登录状态不会改变。')) {
+        const loadingDiv = document.createElement('div');
+        loadingDiv.innerHTML = '正在连接云端...';
+        loadingDiv.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            z-index: 9999;
+        `;
+        document.body.appendChild(loadingDiv);
+        
+        setTimeout(async () => {
+            try {
+                console.log('开始刷新云端账户数据...');
+                const loaded = await loadCloudUserData();
+                
+                if (loadingDiv.parentNode) {
+                    loadingDiv.remove();
+                }
+                
+                if (loaded) {
+                    const cloudUsers = window.builtInUsers.filter(u => !u.isLocal);
+                    localStorage.setItem('cloudUserData', JSON.stringify({
+                        builtInUsers: cloudUsers,
+                        PERMISSION_CONFIG: window.PERMISSION_CONFIG,
+                        timestamp: new Date().toISOString()
+                    }));
+                    
+                    const userList = cloudUsers.map(u => `• ${u.name} (${u.username})`).join('\n');
+                    alert(`✅ 云端账户数据刷新成功！已加载 ${cloudUsers.length}个账户 `);
+                    
+                    if (window.currentUser && window.currentUser.username === '1') {
+                        if (confirm('云端账户已加载，是否刷新页面使用云端账户登录？')) {
+                            location.reload();
+                        }
+                    }
+                } else {
+                    showSimpleToast('刷新失败，请检查网络连接或云端配置', 'error');
+                }
+            } catch (error) {
+                console.error('刷新失败:', error);
+                
+                if (loadingDiv.parentNode) {
+                    loadingDiv.remove();
+                }
+                
+                let errorMsg = '加载失败：';
+                if (error.message.includes('所有解析方法都失败')) {
+                    errorMsg = '云端数据格式不正确，请检查zhanghao.js文件格式';
+                } else if (error.message.includes('HTTP')) {
+                    errorMsg = '网络错误，请检查网络连接';
+                } else {
+                    errorMsg += error.message;
+                }
+                
+                alert(errorMsg);
+                showSimpleToast('刷新失败', 'error');
+            }
+        }, 100);
+    }
+}
+
+// 暴露函数到全局
+window.loadGithubConfig = loadGithubConfig;
+window.manageGithubConfig = manageGithubConfig;
+window.saveToGitHub = saveToGitHub;
+window.loadFromGitHub = loadFromGitHub;
+
+
+window.loadFromJsFile = loadFromJsFile;
+window.loadImagesZipOnly = loadImagesZipOnly;
+window.showChangeLog = showChangeLog;
+window.hideChangeLog = hideChangeLog;
+window.exportChangeLog = exportChangeLog;
+window.clearChangeLog = clearChangeLog;
+window.fixMobileUI = fixMobileUI;
+window.optimizeMobileTables = optimizeMobileTables;
+window.setupBackGestureLock = setupBackGestureLock;
+window.refreshCloudUsers = refreshCloudUsers;
+// 暴露到全局
+window.canManageGithubConfig = canManageGithubConfig;
+window.canShowPermissionManager = canShowPermissionManager;
+window.canShowChangeLog = canShowChangeLog;
+window.isAdmin = isAdmin;
+// 暴露到全局
+window.ensureGitHubToken = ensureGitHubToken;
+window.promptForGitHubToken = promptForGitHubToken;
+
+// 暴露到全局
+window.canManageGithubConfig = canManageGithubConfig;
+
+window.canShowChangeLog = canShowChangeLog;
+window.isAdmin = isAdmin;
+window.canDelete = canDelete;
+window.canEditTime = canEditTime;
+window.canEditStatus = canEditStatus;
+window.canEditQuote = canEditQuote;
+window.canClearLog = canClearLog;
+window.canAdd = canAdd;
+window.canEditWorkerRating = canEditWorkerRating;
+window.canEditWorkerTime = canEditWorkerTime;
+window.canEditNote = canEditNote;

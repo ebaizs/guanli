@@ -36,47 +36,42 @@
                 <h1>立诺装饰项目管理系统</h1>
                 <span>清扬 15662061321</span>
             </div>
-   <!-- 修改顶部按钮区域 -->
+  <!-- 在 index.html 的顶部按钮部分，确保配置管理按钮存在 -->
 <div class="header-top-buttons">
-    <button class="top-btn btn-info" onclick="saveToGitHub()" title="手动同步到GitHub">
-        保存至云端
+    <!-- 单一云端备份按钮 -->
+    <button class="top-btn btn-success" onclick="saveToGitHub()" title="备份完整数据到云端（包含图片）">
+        备份至云端
     </button>
-    <button class="top-btn btn-warning" onclick="loadFromGitHub()" title="从GitHub加载">
+    
+    <!-- 云端加载按钮 -->
+    <button class="top-btn btn-warning" onclick="loadFromGitHub()" title="从云端加载数据（合并）">
         从云端加载
     </button>
-    <button class="top-btn btn-secondary" onclick="manageGithubConfig()" title="管理GitHub配置">
-        配置管理
+    
+    <!-- 本地备份按钮 -->
+    <button class="top-btn btn-danger" onclick="saveToJsFile()" title="备份完整数据到本地ZIP文件">
+        备份数据至本地
     </button>
-    <!-- 添加权限管理按钮 -->
-    <button class="top-btn btn-danger" onclick="showPermissionManager()" title="权限管理">
+    
+    <!-- 本地加载按钮 -->
+    <button class="top-btn btn-info" onclick="loadFromJsFile()" title="从ZIP文件加载数据（覆盖）">
+        从文件加载
+    </button>
+    
+    
+    
+    <!-- 权限管理（仅管理员可见） -->
+    <button class="top-btn btn-danger permission-manager-btn" onclick="showPermissionManager()" title="权限管理">
         权限管理
     </button>
-    <button class="top-btn btn-primary" onclick="showChangeLog()">更改日志</button>
+    
+    <!-- 更改日志（仅管理员可见） -->
+    <button class="top-btn btn-primary change-log-btn" onclick="showChangeLog()">更改日志</button>
 </div>
-        </div>
-
         <!-- 主内容区 -->
         <div class="main-content" id="mainContent">
-            <!-- 导入导出 -->
-            <!-- 导入导出 -->
-<div class="import-export">
-    <h3>数据管理</h3>
-    <div class="button-grid">
-        <button class="btn btn-warning" onclick="saveToJsFile()" title="保存为可直接加载的shuju.js文件">
-            备份完整数据
-        </button>
-        <button class="btn btn-primary" onclick="downloadJsonData()" title="下载JSON格式数据">
-            下载JSON数据
-        </button>
-        <button class="btn btn-info" onclick="loadFromJsFile()" title="从JSON/JS/ZIP文件加载数据">
-            从文件加载
-        </button>
-        <button class="btn btn-success" onclick="loadImagesZipOnly()" 
-                title="仅加载图片数据包（不覆盖文本）">
-            加载图片包
-        </button>
-    </div>
-</div>
+           
+      
 
             <!-- 用户信息和退出按钮 -->
             <div class="user-info-section">
@@ -129,9 +124,11 @@
                             <label>当前进度: <span id="progressValue">0</span>%</label>
                             <input type="range" id="progress" min="0" max="100" value="0" oninput="updateProgressValue(this.value)">
                         </div>
+                        
                         <div class="progress-bar">
                             <div class="progress-fill" id="progressFill" style="width: 0%">0%</div>
                         </div>
+                       <br />
                         <button class="btn btn-primary" onclick="saveSiteInfo()">保存工地信息</button>
                     </div>
 
@@ -452,10 +449,15 @@
         </div>
     </div>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<!-- 简化脚本加载 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
-<script src="quanxian.js"></script>  <!-- 先加载权限文件，定义 builtInUsers -->
+<script>
+// 只在HTML中添加这个简单的检查，其他变量在各自的JS文件中定义
+console.log('开始加载脚本...');
+</script>
+
+<script src="quanxian.js"></script>  <!-- 先加载权限文件 -->
 <script src="yun.js"></script>      <!-- 再加载云功能文件 -->
-<script src="app.js"></script>          <!-- 最后加载主逻辑文件 -->
-</body>
+<script src="app.js"></script>      <!-- 最后加载主逻辑文件 -->
 </html>

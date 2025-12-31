@@ -1,65 +1,2859 @@
-var _0x8e_0x12d=(269144^269148)+(380651^380650);let currentUser=null;_0x8e_0x12d='\u006D\u0066\u006B\u0065\u0065\u0063';let currentSiteId=null;var _0xfba45c=(256275^256274)+(180358^180366);let sites=[];_0xfba45c='\u0062\u0067\u0064\u0064\u006B\u0066';var _0x38415e=(302234^302227)+(826194^826196);let changeLog=[];_0x38415e=(585111^585110)+(847416^847416);var _0xe7408c=(208344^208345)+(482522^482526);let isSyncing=false;_0xe7408c=(499786^499786)+(831414^831412);var _0x54e;let GIST_CONFIG={'\u0047\u0049\u0053\u0054\u005F\u0049\u0044':'','\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E':'','\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064':false};_0x54e='\u0070\u006F\u006F\u006B\u006A\u006E';function updateTopButtonsLayout(){var _0x3fff=(451079^451079)+(572056^572049);const _0x92gf=new RegExp('\u0041\u006E\u0064\u0072\u006F\u0069\u0064\u007C\u0077\u0065\u0062\u004F\u0053\u007C\u0069\u0050\u0068\u006F\u006E\u0065\u007C\u0069\u0050\u0061\u0064\u007C\u0069\u0050\u006F\u0064\u007C\u0042\u006C\u0061\u0063\u006B\u0042\u0065\u0072\u0072\u0079\u007C\u0049\u0045\u004D\u006F\u0062\u0069\u006C\u0065\u007C\u004F\u0070\u0065\u0072\u0061\u0020\u004D\u0069\u006E\u0069','\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074']);_0x3fff="klcalp".split("").reverse().join("");if(_0x92gf){const _0xaaf0fa=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0074\u006F\u0070\u002D\u0062\u0074\u006E");_0xaaf0fa['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](btn=>{const _0x31f=btn['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']['\u0074\u0072\u0069\u006D']();if(_0x31f==="\u4FDD\u5B58\u4E91\u7AEF")btn['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u4E91\u7AEF\u4FDD\u5B58";if(_0x31f==="\u7AEF\u4E91\u8F7D\u52A0".split("").reverse().join(""))btn['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u8F7D\u52A0\u7AEF\u4E91".split("").reverse().join("");if(_0x31f==="\u7406\u7BA1\u7F6E\u914D".split("").reverse().join(""))btn['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u914D\u7F6E";if(_0x31f==="\u66F4\u6539\u65E5\u5FD7")btn['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u65E5\u5FD7";});}}document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0044\u004F\u004D\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u004C\u006F\u0061\u0064\u0065\u0064",async function(){console['\u006C\u006F\u0067']("\u9875\u9762\u52A0\u8F7D\u5B8C\u6210\uFF0C\u5F00\u59CB\u521D\u59CB\u5316\u002E\u002E\u002E");var _0xf4edc=(930436^930438)+(412216^412209);const _0x042b=new RegExp("iniM arepO|eliboMEI|yrreBkcalB|doPi|daPi|enohPi|SObew|diordnA".split("").reverse().join(""),'\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074']);_0xf4edc="onqhea".split("").reverse().join("");if(_0x042b){console['\u006C\u006F\u0067']("\u79FB\u52A8\u7AEF\u8BBE\u5907\u68C0\u6D4B\u5230\uFF0C\u5E94\u7528\u79FB\u52A8\u7AEF\u4F18\u5316");document['\u0062\u006F\u0064\u0079']['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("ecived-elibom".split("").reverse().join(""));setTimeout(updateTopButtonsLayout,852965^852865);var _0x8a_0x319;const _0x1606d=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("elyts".split("").reverse().join(""));_0x8a_0x319=136225^136228;_0x1606d['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`
-            .mobile-device {
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                user-select: none;
+// ==================== 全局变量定义 ====================
+let currentUser = null;
+let currentSiteId = null;
+let sites = [];
+let changeLog = [];
+let isSyncing = false;
+
+// GitHub 配置
+let GIST_CONFIG = {
+    GIST_ID: '',
+    GITHUB_TOKEN: '',
+    configLoaded: false
+};
+
+// 确保变量暴露给全局
+window.currentUser = currentUser;
+window.currentSiteId = currentSiteId;
+window.sites = sites;
+window.changeLog = changeLog;
+window.isSyncing = isSyncing;
+window.GIST_CONFIG = GIST_CONFIG;
+// ==================== 页面初始化 ====================
+document.addEventListener('DOMContentLoaded', async function() {
+    console.log('页面加载完成，开始初始化...');
+    
+    // 初始化全局变量
+    if (!window.sites) {
+        window.sites = [];
+    }
+    
+    // 初始化标签页
+    initTabs();
+    
+    // 初始化权限系统
+    if (typeof initPermissionSystem === 'function') {
+        initPermissionSystem();
+    }
+    
+    // 设置移动端返回手势锁定
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        setupBackGestureLock();
+        updateTopButtonsLayout();
+    }
+    
+    // 修改登录事件处理
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+        
+        // 检查是否是本地测试账户
+        const isTestUser = username === '1' && password === '1234';
+        
+        let user = null;
+        
+        // 优先从当前可用的用户列表中查找
+        if (window.builtInUsers && Array.isArray(window.builtInUsers)) {
+            user = window.builtInUsers.find(u => u.username === username && u.password === password);
+        }
+        
+        // 如果没有找到，尝试检查是否是本地测试账户
+        if (!user && isTestUser) {
+            user = {
+                username: '1',
+                password: '1234',
+                name: '测试',
+                isLocal: true
+            };
+            
+            // 如果是测试用户登录，尝试加载云端配置
+            console.log('测试用户登录，自动加载云端配置...');
+            try {
+                await loadCloudUserData();
+                
+                // 重新查找用户
+                user = window.builtInUsers.find(u => u.username === username && u.password === password);
+                
+                if (user && !user.isLocal) {
+                    console.log('云端账户加载成功，使用云端账户登录:', user.name);
+                } else {
+                    // 保持测试用户登录
+                    console.log('保持测试用户登录');
+                }
+            } catch (error) {
+                console.warn('测试用户无法连接云端:', error);
+                showSimpleToast('无法连接到云端配置，请检查网络连接', 'warning');
             }
-            .mobile-device button,
-            .mobile-device input,
-            .mobile-device select,
-            .mobile-device textarea {
-                font-size: 16px !important;
+        }
+        
+        if (user) {
+        currentUser = user;
+        document.getElementById('currentUser').textContent = `当前用户：${user.name}${user.isLocal ? ' (本地测试)' : ''}`;
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('mainContainer').classList.remove('hidden');
+        
+        localStorage.setItem('lastUser', JSON.stringify({
+            username: user.username,
+            password: user.password,
+            name: user.name,
+            loginTime: new Date().toISOString(),
+            isLocal: user.isLocal || false
+        }));
+            
+            // 在这里添加：
+            updateTopButtonsByPermission();  // 更新顶部按钮权限
+            
+            // 加载并应用权限
+            if (typeof loadPermissionConfig === 'function') {
+                loadPermissionConfig();
             }
-            .mobile-device .data-table-container {
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
+            
+            if (typeof applyUserPermissions === 'function') {
+                applyUserPermissions();
             }
-            .mobile-device .data-table-container::-webkit-scrollbar {
-                display: none;
+            
+            autoLoadData();
+            renderSiteList();
+            addChangeLog('登录系统', '用户登录成功');
+            // 在 app.js 的登录事件处理中，登录成功后添加：
+            if (user) {
+                currentUser = user;
+                document.getElementById('currentUser').textContent = `当前用户：${user.name}${user.isLocal ? ' (本地测试)' : ''}`;
+                document.getElementById('loginPage').style.display = 'none';
+                document.getElementById('mainContainer').classList.remove('hidden');
+                
+                localStorage.setItem('lastUser', JSON.stringify({
+                    username: user.username,
+                    password: user.password,
+                    name: user.name,
+                    loginTime: new Date().toISOString(),
+                    isLocal: user.isLocal || false
+                }));
+                
+                // 应用用户权限
+                if (typeof applyUserPermissions === 'function') {
+                    applyUserPermissions();
+                }
+                
+                // 更新顶部按钮权限（这个函数会检查并显示/隐藏权限按钮）
+                updateTopButtonsByPermission();
+                
+                // 加载并应用权限
+                if (typeof loadPermissionConfig === 'function') {
+                    loadPermissionConfig();
+                }
+                
+                autoLoadData();
+                renderSiteList();
+                addChangeLog('登录系统', '用户登录成功');
+                
+                
+                // 移动端欢迎提示
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    setTimeout(() => {
+                        showSimpleToast(`欢迎回来，${user.name}！`);
+                    }, 500);
+                }
+                
+            } else {
+                // 登录失败处理
             }
-            .mobile-device .modal-content {
-                padding-bottom: env(safe-area-inset-bottom, 20px);
+            
+           
+            
+           
+        } else {
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = '用户名或密码错误！';
+            errorDiv.style.display = 'block';
+            
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && navigator.vibrate) {
+                navigator.vibrate(200);
             }
-        `;document['\u0068\u0065\u0061\u0064']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x1606d);setupBackGestureLock();}initTabs();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006C\u006F\u0067\u0069\u006E\u0046\u006F\u0072\u006D")['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0073\u0075\u0062\u006D\u0069\u0074",async function(e){e['\u0070\u0072\u0065\u0076\u0065\u006E\u0074\u0044\u0065\u0066\u0061\u0075\u006C\u0074']();var _0x294d;const _0xg0e0cb=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();_0x294d="ahpocf".split("").reverse().join("");var _0x78c51b=(105096^105103)+(713171^713172);const _0x6f897d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064")['\u0076\u0061\u006C\u0075\u0065'];_0x78c51b=106819^106823;var _0x1abcg=(633578^633571)+(141682^141685);const _0x3bc8fc=window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']?window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===_0xg0e0cb&&u['\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064']===_0x6f897d):null;_0x1abcg="ggjmdb".split("").reverse().join("");if(_0x3bc8fc){currentUser=_0x3bc8fc;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("resUtnerruc".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`当前用户：${_0x3bc8fc['\u006E\u0061\u006D\u0065']}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("egaPnigol".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u0069\u006E\u0043\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072")['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0068\u0069\u0064\u0064\u0065\u006E");localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("resUtsal".split("").reverse().join(""),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065':_0x3bc8fc['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065'],'\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064':_0x3bc8fc['\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064'],"name":_0x3bc8fc['\u006E\u0061\u006D\u0065'],'\u006C\u006F\u0067\u0069\u006E\u0054\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()}));await new Promise(resolve=>setTimeout(resolve,288755^288663));if(typeof loadPermissionConfig==="noitcnuf".split("").reverse().join("")){loadPermissionConfig();}if(typeof applyUserPermissions==="noitcnuf".split("").reverse().join("")){applyUserPermissions();}autoLoadData();renderSiteList();addChangeLog("\u767B\u5F55\u7CFB\u7EDF","\u529F\u6210\u5F55\u767B\u6237\u7528".split("").reverse().join(""));setTimeout(async()=>{const _0xcca6bf=await loadGithubConfig();if(!_0xcca6bf){console['\u006C\u006F\u0067']("\u0047\u0069\u0074\u0048\u0075\u0062\u914D\u7F6E\u672A\u5B8C\u6210\uFF0C\u540C\u6B65\u529F\u80FD\u4E0D\u53EF\u7528");}},745351^744559);if(new RegExp("iniM arepO|eliboMEI|yrreBkcalB|doPi|daPi|enohPi|SObew|diordnA".split("").reverse().join(""),'\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074'])){setTimeout(()=>{showSimpleToast(`欢迎回来，${_0x3bc8fc['\u006E\u0061\u006D\u0065']}！`);},642100^642496);}}else{var _0xd3d=(928675^928678)+(214072^214065);const _0x6c82c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006C\u006F\u0067\u0069\u006E\u0045\u0072\u0072\u006F\u0072");_0xd3d=465751^465748;_0x6c82c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u7528\u6237\u540D\u6216\u5BC6\u7801\u9519\u8BEF\uFF01";_0x6c82c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";if(new RegExp('\u0041\u006E\u0064\u0072\u006F\u0069\u0064\u007C\u0077\u0065\u0062\u004F\u0053\u007C\u0069\u0050\u0068\u006F\u006E\u0065\u007C\u0069\u0050\u0061\u0064\u007C\u0069\u0050\u006F\u0064\u007C\u0042\u006C\u0061\u0063\u006B\u0042\u0065\u0072\u0072\u0079\u007C\u0049\u0045\u004D\u006F\u0062\u0069\u006C\u0065\u007C\u004F\u0070\u0065\u0072\u0061\u0020\u004D\u0069\u006E\u0069','\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074'])&&navigator['\u0076\u0069\u0062\u0072\u0061\u0074\u0065']){navigator['\u0076\u0069\u0062\u0072\u0061\u0074\u0065'](618788^618988);}}});const _0x8_0x7g9=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u006C\u0061\u0073\u0074\u0055\u0073\u0065\u0072");if(_0x8_0x7g9){try{const _0x56f=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x8_0x7g9);const user=builtInUsers['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===_0x56f['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']&&u['\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064']===_0x56f['\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064']);if(user){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']=user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065'];}}catch(e){console['\u006C\u006F\u0067']("\u81EA\u52A8\u767B\u5F55\u4FE1\u606F\u65E0\u6548");}}});function initTabs(){var _0xd_0x759=(817287^817294)+(955180^955179);const _0x481dgg=[{'\u0069\u0064':"\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':'进度'},{'\u0069\u0064':'todoTab','\u006E\u0061\u006D\u0065':'待办'},{'\u0069\u0064':"\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0054\u0061\u0062","name":'支出'},{"id":"\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':"\u5BA2\u6237\u8981\u6C42"},{'\u0069\u0064':'repairTab','\u006E\u0061\u006D\u0065':"\u5F85\u7EF4\u4FEE"},{"id":'workerTab','\u006E\u0061\u006D\u0065':'工人'},{'\u0069\u0064':'quoteTab','\u006E\u0061\u006D\u0065':'报价'},{'\u0069\u0064':"\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u0061\u0062","name":'增减项'},{"id":'drawingTab',"name":'图纸'},{"id":"\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0054\u0061\u0062","name":'经验总结'}];_0xd_0x759=129726^129727;var _0xf5820e=(909807^909804)+(956564^956567);const _0xf1ad=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u0054\u0061\u0062\u0073");_0xf5820e=(593232^593237)+(795456^795463);if(!_0xf1ad){console['\u0065\u0072\u0072\u006F\u0072']("\u5668\u5BB9 sbaTetis \u5230\u4E0D\u627E".split("").reverse().join(""));return;}_0xf1ad['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';_0x481dgg['\u0066\u006F\u0072\u0045\u0061\u0063\u0068']((tab,index)=>{const _0x20137f=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x20137f['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']=`tab ${index===(677663^677663)?"\u0061\u0063\u0074\u0069\u0076\u0065":''}`;_0x20137f['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=tab['\u006E\u0061\u006D\u0065'];_0x20137f['\u0073\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062",tab['\u0069\u0064']);_0x20137f['\u006F\u006E\u0063\u006C\u0069\u0063\u006B']=e=>{e['\u0073\u0074\u006F\u0070\u0050\u0072\u006F\u0070\u0061\u0067\u0061\u0074\u0069\u006F\u006E']();console['\u006C\u006F\u0067']("\u5207\u6362\u6807\u7B7E\u9875\u003A",tab['\u0069\u0064']);switchTab(tab['\u0069\u0064']);};_0xf1ad['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x20137f);});var _0x7637c;const _0x4eca=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](_0x481dgg[909381^909381]['\u0069\u0064']);_0x7637c=(612952^612956)+(406444^406444);if(_0x4eca){_0x4eca['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");}}function switchTab(tabId){console['\u006C\u006F\u0067'](":\u9875\u7B7E\u6807\u5230\u6362\u5207".split("").reverse().join(""),tabId);document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("tnetnoc-bat.".split("").reverse().join(""))['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](content=>{content['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("evitca".split("").reverse().join(""));});document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("bat.".split("").reverse().join(""))['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](tab=>{tab['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0072\u0065\u006D\u006F\u0076\u0065']("\u0061\u0063\u0074\u0069\u0076\u0065");});var _0xgddbd;const _0xgd_0x43a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](tabId);_0xgddbd='\u006C\u0064\u0063\u0064\u0063\u0070';if(_0xgd_0x43a){_0xgd_0x43a['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");console['\u006C\u006F\u0067'](":\u5BB9\u5185\u7B7E\u6807\u6D3B\u6FC0\u5DF2".split("").reverse().join(""),tabId);}else{console['\u0065\u0072\u0072\u006F\u0072'](":\u5BB9\u5185\u7B7E\u6807\u5230\u4E0D\u627E".split("").reverse().join(""),tabId);}const _0x9907fc=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072'](`.tab[data-tab="${tabId}"]`);if(_0x9907fc){_0x9907fc['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0061\u0063\u0074\u0069\u0076\u0065");_0x9907fc['\u0073\u0063\u0072\u006F\u006C\u006C\u0049\u006E\u0074\u006F\u0056\u0069\u0065\u0077']({"behavior":'smooth',"inline":"\u0063\u0065\u006E\u0074\u0065\u0072",'\u0062\u006C\u006F\u0063\u006B':'nearest'});}}function renderSiteList(){const _0xe77a1c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLetis".split("").reverse().join(""));_0xe77a1c['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';if(sites['\u006C\u0065\u006E\u0067\u0074\u0068']===(251735^251735)){_0xe77a1c['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0070\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u006C\u006F\u0061\u0064\u0069\u006E\u0067\u0022\u003E\u6682\u65E0\u5DE5\u5730\u6570\u636E\uFF0C\u8BF7\u6DFB\u52A0\u5DE5\u5730\u003C\u002F\u0070\u003E";return;}var _0xec8b=(643575^643568)+(412199^412199);const _0xaffc=sites['\u0066\u0069\u006C\u0074\u0065\u0072'](site=>{return canViewSite?canViewSite(site['\u0069\u0064']):!![];});_0xec8b=(471599^471597)+(261682^261691);if(_0xaffc['\u006C\u0065\u006E\u0067\u0074\u0068']===(474806^474806)){_0xe77a1c['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="\u003C\u0070\u0020\u0063\u006C\u0061\u0073\u0073\u003D\u0022\u006C\u006F\u0061\u0064\u0069\u006E\u0067\u0022\u003E\u60A8\u6CA1\u6709\u53EF\u8BBF\u95EE\u7684\u5DE5\u5730\u003C\u002F\u0070\u003E";return;}_0xaffc['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](site=>{var _0xd1c9a;const _0x03d2ea=site['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073']||598488^598488;_0xd1c9a=(605071^605068)+(791215^791215);var _0x958c;const _0xee9g=calculateDaysLeft(site['\u0065\u006E\u0064\u0044\u0061\u0074\u0065']);_0x958c=(236145^236149)+(620254^620247);const _0x1d_0x4f5=getSiteStatus(_0x03d2ea,_0xee9g);var _0x3f_0x11e;const _0x4394cd=canDelete()?`<button class="site-delete-btn" onclick="event.stopPropagation(); deleteSite('${site['\u0069\u0064']}')" title="删除工地">×</button>`:'';_0x3f_0x11e='\u0069\u0063\u0071\u0066\u0064\u0069';const _0x728cca=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x728cca['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u0073\u0069\u0074\u0065\u002D\u0063\u0061\u0072\u0064";_0x728cca['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+        }
+    });
+    
+    // 自动填充上次登录用户
+    const lastUser = localStorage.getItem('lastUser');
+    if (lastUser) {
+        try {
+            const userData = JSON.parse(lastUser);
+            if (userData.username !== '1') {
+                document.getElementById('username').value = userData.username;
+            }
+        } catch (e) {
+            console.log('自动登录信息无效');
+        }
+    }
+});
+function testAdminPermissions() {
+    console.log('=== 管理员权限测试 ===');
+    console.log('当前用户:', currentUser);
+    console.log('isAdmin():', isAdmin ? isAdmin() : '函数未定义');
+    console.log('canShowPermissionManager():', canShowPermissionManager ? canShowPermissionManager() : '函数未定义');
+    console.log('canShowChangeLog():', canShowChangeLog ? canShowChangeLog() : '函数未定义');
+    console.log('canClearLog():', canClearLog ? canClearLog() : '函数未定义');
+    console.log('hasPermission:', typeof hasPermission);
+    
+    // 强制显示按钮用于测试
+    const permissionBtn = document.querySelector('.permission-manager-btn');
+    const changeLogBtn = document.querySelector('.change-log-btn');
+    
+    if (permissionBtn) {
+        console.log('权限管理按钮:', permissionBtn.style.display);
+        permissionBtn.style.display = '';
+    }
+    
+    if (changeLogBtn) {
+        console.log('更改日志按钮:', changeLogBtn.style.display);
+        changeLogBtn.style.display = '';
+    }
+}
+function updateTopButtonsLayout() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        const topButtons = document.querySelectorAll('.top-btn');
+        topButtons.forEach(btn => {
+            const text = btn.textContent.trim();
+            if (text === '保存云端') btn.textContent = '云端保存';
+            if (text === '加载云端') btn.textContent = '云端加载';
+            if (text === '配置管理') btn.textContent = '配置';
+            if (text === '更改日志') btn.textContent = '日志';
+        });
+    }
+}
+function debugPermissionButtons() {
+    console.log('=== 权限按钮调试信息 ===');
+    console.log('当前用户:', currentUser);
+    console.log('canShowPermissionManager:', typeof canShowPermissionManager, canShowPermissionManager ? canShowPermissionManager() : '函数未定义');
+    console.log('canShowChangeLog:', typeof canShowChangeLog, canShowChangeLog ? canShowChangeLog() : '函数未定义');
+    console.log('isAdmin:', typeof isAdmin, isAdmin ? isAdmin() : '函数未定义');
+    
+    const permissionBtn = document.querySelector('.permission-manager-btn');
+    const changeLogBtn = document.querySelector('.change-log-btn');
+    
+    console.log('权限按钮元素:', {
+        permissionBtn: permissionBtn,
+        changeLogBtn: changeLogBtn,
+        permissionBtnDisplay: permissionBtn ? permissionBtn.style.display : '未找到',
+        changeLogBtnDisplay: changeLogBtn ? changeLogBtn.style.display : '未找到'
+    });
+}
+function initTabs() {
+    const tabsContainer = document.getElementById('siteTabs');
+    if (!tabsContainer) {
+        console.error('找不到 siteTabs 容器');
+        return;
+    }
+    
+    // 获取允许的标签页
+    const allowedTabs = currentUser ? getAllowedTabs() : PERMISSION_CONFIG.availableTabs;
+    
+    tabsContainer.innerHTML = '';
+
+    allowedTabs.forEach((tab, index) => {
+        const tabElement = document.createElement('div');
+        tabElement.className = `tab ${index === 0 ? 'active' : ''}`;
+        tabElement.textContent = tab.name;
+        tabElement.setAttribute('data-tab', tab.id);
+        tabElement.onclick = (e) => {
+            e.stopPropagation();
+            console.log('切换标签页:', tab.id);
+            switchTab(tab.id);
+        };
+        tabsContainer.appendChild(tabElement);
+    });
+
+    const firstTabContent = document.getElementById(allowedTabs[0]?.id);
+    if (firstTabContent) {
+        firstTabContent.classList.add('active');
+    }
+}
+
+function switchTab(tabId) {
+    console.log('切换到标签页:', tabId);
+    
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    const targetTab = document.getElementById(tabId);
+    if (targetTab) {
+        targetTab.classList.add('active');
+        console.log('已激活标签内容:', tabId);
+    } else {
+        console.error('找不到标签内容:', tabId);
+    }
+
+    const targetTabButton = document.querySelector(`.tab[data-tab="${tabId}"]`);
+    if (targetTabButton) {
+        targetTabButton.classList.add('active');
+        targetTabButton.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+}
+
+// ==================== 工地列表相关函数 ====================
+function renderSiteList() {
+    const siteList = document.getElementById('siteList');
+    siteList.innerHTML = '';
+
+    if (sites.length === 0) {
+        siteList.innerHTML = '<p class="loading">暂无工地数据，请添加工地</p>';
+        return;
+    }
+
+    // 过滤可访问的工地
+    const accessibleSites = sites.filter(site => {
+        return canViewSite ? canViewSite(site.id) : true;
+    });
+
+    if (accessibleSites.length === 0) {
+        siteList.innerHTML = '<p class="loading">您没有可访问的工地</p>';
+        return;
+    }
+
+    accessibleSites.forEach(site => {
+        const progress = site.progress || 0;
+        const daysLeft = calculateDaysLeft(site.endDate);
+        const status = getSiteStatus(progress, daysLeft);
+
+        const deleteBtnHtml = canDelete() ?
+            `<button class="site-delete-btn" onclick="event.stopPropagation(); deleteSite('${site.id}')" title="删除工地">×</button>` :
+            '';
+
+        const siteCard = document.createElement('div');
+        siteCard.className = 'site-card';
+        siteCard.innerHTML = `
             <div class="site-card-header">
-                <div class="site-name">${site['\u006E\u0061\u006D\u0065']||"\u672A\u547D\u540D\u5DE5\u5730"}</div>
+                <div class="site-name">${site.name || '未命名工地'}</div>
                 <div class="site-card-actions">
-                    <div class="site-status status-${_0x1d_0x4f5['\u0063\u006C\u0061\u0073\u0073']}">${_0x1d_0x4f5['\u0074\u0065\u0078\u0074']}</div>
-                    ${_0x4394cd}
+                    <div class="site-status status-${status.class}">${status.text}</div>
+                    ${deleteBtnHtml}
                 </div>
             </div>
             <div class="site-info">
-                <div>开工：${formatDate(site['\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065'])||"\u7F6E\u8BBE\u672A".split("").reverse().join("")}</div>
-                <div>计划完工：${formatDate(site['\u0065\u006E\u0064\u0044\u0061\u0074\u0065'])||"\u672A\u8BBE\u7F6E"}</div>
-                <div>进度：${_0x03d2ea}%</div>
-                <div>剩余：${_0xee9g>(651388^651388)?_0xee9g+"\u5929":"\u671F\u903E\u5DF2".split("").reverse().join("")}</div>
+                <div>开工：${formatDate(site.startDate) || '未设置'}</div>
+                <div>计划完工：${formatDate(site.endDate) || '未设置'}</div>
+                <div>进度：${progress}%</div>
+                <div>剩余：${daysLeft > 0 ? daysLeft + '天' : '已逾期'}</div>
             </div>
             <div class="progress-bar" style="margin-top: 10px; height: 16px;">
-                <div class="progress-fill" style="width: ${_0x03d2ea}%; font-size: 10px; line-height: 16px;">${_0x03d2ea}%</div>
+                <div class="progress-fill" style="width: ${progress}%; font-size: 10px; line-height: 16px;">${progress}%</div>
             </div>
-        `;_0x728cca['\u006F\u006E\u0063\u006C\u0069\u0063\u006B']=()=>{if(canViewSite(site['\u0069\u0064'])){showSiteDetails(site['\u0069\u0064']);}else{alert("\u60A8\u6CA1\u6709\u6743\u9650\u67E5\u770B\u6B64\u5DE5\u5730");}};_0xe77a1c['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x728cca);});}function showAddSiteModal(){currentSiteId=null;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("eltiTladom".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u6DFB\u52A0\u5DE5\u5730";document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u004D\u006F\u0064\u0061\u006C")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");clearSiteForm();switchTab("baTssergorp".split("").reverse().join(""));clearAllLists();}function clearAllLists(){const _0xd48dc={"todos":[],'\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073':[],'\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073':[],'\u0072\u0065\u0070\u0061\u0069\u0072\u0073':[],'\u0077\u006F\u0072\u006B\u0065\u0072\u0073':[],"addRemoveItems":[],'\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073':[],'\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073':[]};renderTodoList(_0xd48dc);renderExpenseList(_0xd48dc);renderRequirementList(_0xd48dc);renderRepairList(_0xd48dc);renderWorkerList(_0xd48dc);renderAddRemoveList(_0xd48dc);renderDrawingList(_0xd48dc);renderExperienceList(_0xd48dc);updateQuoteSummary(_0xd48dc);updateAddRemoveSummary(_0xd48dc);}function showSiteDetails(siteId){currentSiteId=siteId;const _0x56e=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===siteId);if(!_0x56e){alert("\uFF01\u5728\u5B58\u4E0D\u5730\u5DE5".split("").reverse().join(""));return;}document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u006F\u0064\u0061\u006C\u0054\u0069\u0074\u006C\u0065")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`工地详情 - ${_0x56e['\u006E\u0061\u006D\u0065']}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u004D\u006F\u0064\u0061\u006C")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");document['\u0062\u006F\u0064\u0079']['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0076\u0065\u0072\u0066\u006C\u006F\u0077']="\u0068\u0069\u0064\u0064\u0065\u006E";loadSiteData(_0x56e);switchTab("\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0054\u0061\u0062");if(new RegExp('\u0041\u006E\u0064\u0072\u006F\u0069\u0064\u007C\u0077\u0065\u0062\u004F\u0053\u007C\u0069\u0050\u0068\u006F\u006E\u0065\u007C\u0069\u0050\u0061\u0064\u007C\u0069\u0050\u006F\u0064\u007C\u0042\u006C\u0061\u0063\u006B\u0042\u0065\u0072\u0072\u0079\u007C\u0049\u0045\u004D\u006F\u0062\u0069\u006C\u0065\u007C\u004F\u0070\u0065\u0072\u0061\u0020\u004D\u0069\u006E\u0069','\u0069')['\u0074\u0065\u0073\u0074'](navigator['\u0075\u0073\u0065\u0072\u0041\u0067\u0065\u006E\u0074'])){setTimeout(()=>{optimizeMobileTables();},341445^341409);}}function clearSiteForm(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etaDtrats".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etaDdne".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073")['\u0076\u0061\u006C\u0075\u0065']="\u0030";document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0046\u0069\u006C\u006C")['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']="%0".split("").reverse().join("");document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("lliFssergorp".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="%0".split("").reverse().join("");document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("metIodot".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etoNodot".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';}function loadSiteData(site){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']=site['\u006E\u0061\u006D\u0065']||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etaDtrats".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']=formatDate(site['\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065'])||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u006E\u0064\u0044\u0061\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']=formatDate(site['\u0065\u006E\u0064\u0044\u0061\u0074\u0065'])||'';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073")['\u0076\u0061\u006C\u0075\u0065']=site['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073']||774636^774636;updateProgressBar(site['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073']||376789^376789);document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etouQcisab".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']=site['\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065']||352781^352781;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u0074\u0065\u0072\u0069\u0061\u006C\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']=site['\u006D\u0061\u0074\u0065\u0072\u0069\u0061\u006C\u0051\u0075\u006F\u0074\u0065']||848661^848661;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']=site['\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065']||157337^157337;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']=site['\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065']||569032^569032;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etouQrehto".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']=site['\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065']||221431^221431;renderTodoList(site);renderExpenseList(site);renderRequirementList(site);renderRepairList(site);renderWorkerList(site);renderAddRemoveList(site);renderDrawingList(site);renderExperienceList(site);updateQuoteSummary(site);updateAddRemoveSummary(site);}function updateProgressValue(value){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("eulaVssergorp".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=value;updateProgressBar(value);}function updateProgressBar(progress){var _0xf3c=(724459^724461)+(398846^398841);const _0xa2_0x3ef=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0046\u0069\u006C\u006C");_0xf3c='\u0067\u0065\u006E\u0061\u0071\u0070';_0xa2_0x3ef['\u0073\u0074\u0079\u006C\u0065']['\u0077\u0069\u0064\u0074\u0068']=progress+"\u0025";_0xa2_0x3ef['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=progress+"\u0025";}function saveSiteInfo(){if(!currentSiteId){var _0x938e4a=(369211^369203)+(376831^376828);const _0x939e={'\u0069\u0064':generateId(),"name":document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']||"\u5730\u5DE5\u540D\u547D\u672A".split("").reverse().join(""),'\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065':document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'],"endDate":document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etaDdne".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'],'\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073':parseInt(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073")['\u0076\u0061\u006C\u0075\u0065'])||789101^789101,'\u0074\u006F\u0064\u006F\u0073':[],'\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073':[],'\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073':[],'\u0072\u0065\u0070\u0061\u0069\u0072\u0073':[],'\u0077\u006F\u0072\u006B\u0065\u0072\u0073':[],'\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073':[],'\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073':[],"experiences":[],"basicQuote":0,"materialQuote":0,"equipmentQuote":0,'\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065':0,'\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065':0,"addRemoveTotal":0,"totalQuote":0,'\u006D\u0061\u0078\u0049\u006D\u0061\u0067\u0065\u0044\u0069\u006D\u0065\u006E\u0073\u0069\u006F\u006E':800,"dataVersion":"\u0032\u002E\u0030"};_0x938e4a=(723240^723242)+(830023^830016);sites['\u0070\u0075\u0073\u0068'](_0x939e);currentSiteId=_0x939e['\u0069\u0064'];addChangeLog("\u5730\u5DE5\u5EFA\u521B".split("").reverse().join(""),`创建了工地：${_0x939e['\u006E\u0061\u006D\u0065']}`);}else{const _0x5467ea=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(_0x5467ea){var _0x815b6a;const _0x16ca=_0x5467ea['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073'];_0x815b6a=200371^200372;_0x5467ea['\u006E\u0061\u006D\u0065']=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']||_0x5467ea['\u006E\u0061\u006D\u0065'];_0x5467ea['\u0073\u0074\u0061\u0072\u0074\u0044\u0061\u0074\u0065']=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etaDtrats".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];_0x5467ea['\u0065\u006E\u0064\u0044\u0061\u0074\u0065']=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u006E\u0064\u0044\u0061\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];_0x5467ea['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073']=parseInt(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ssergorp".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||327971^327971;if(!_0x5467ea['\u006D\u0061\u0078\u0049\u006D\u0061\u0067\u0065\u0044\u0069\u006D\u0065\u006E\u0073\u0069\u006F\u006E']){_0x5467ea['\u006D\u0061\u0078\u0049\u006D\u0061\u0067\u0065\u0044\u0069\u006D\u0065\u006E\u0073\u0069\u006F\u006E']=921739^922539;}if(_0x16ca!==_0x5467ea['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073']){addChangeLog("\u5EA6\u8FDB\u65B0\u66F4".split("").reverse().join(""),`工地"${_0x5467ea['\u006E\u0061\u006D\u0065']}"进度从${_0x16ca}%更新到${_0x5467ea['\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073']}%`);}}}saveData();renderSiteList();alert("\uFF01\u529F\u6210\u5B58\u4FDD\u606F\u4FE1\u5730\u5DE5".split("").reverse().join(""));}function deleteSite(siteId){if(!canDelete()){alert("\uFF01\u5730\u5DE5\u9664\u5220\u4EE5\u53EF\u5458\u7406\u7BA1\u6709\u53EA".split("").reverse().join(""));return;}if(!confirm("\u786E\u5B9A\u8981\u5220\u9664\u8FD9\u4E2A\u5DE5\u5730\u5417\uFF1F\u6B64\u64CD\u4F5C\u5C06\u5220\u9664\u8BE5\u5DE5\u5730\u7684\u6240\u6709\u76F8\u5173\u6570\u636E\uFF08\u652F\u51FA\u3001\u5DE5\u4EBA\u3001\u7EF4\u4FEE\u9879\u7B49\uFF09\uFF0C\u4E14\u4E0D\u53EF\u6062\u590D\uFF01")){return;}const _0x624be=sites['\u0066\u0069\u006E\u0064\u0049\u006E\u0064\u0065\u0078'](s=>s['\u0069\u0064']===siteId);if(_0x624be===-(739751^739750)){alert("\uFF01\u5728\u5B58\u4E0D\u5730\u5DE5".split("").reverse().join(""));return;}var _0x51411a;const _0xffaf=sites[_0x624be]['\u006E\u0061\u006D\u0065'];_0x51411a=(589420^589413)+(201745^201750);sites['\u0073\u0070\u006C\u0069\u0063\u0065'](_0x624be,678858^678859);saveData();if(currentSiteId===siteId){closeSiteModal();currentSiteId=null;}renderSiteList();addChangeLog("\u5220\u9664\u5DE5\u5730",`删除了工地："${_0xffaf}"`);alert("\u5DE5\u5730\u5220\u9664\u6210\u529F\uFF01");}function addTodo(){if(!currentSiteId){alert("\uFF01\u606F\u4FE1\u672C\u57FA\u5730\u5DE5\u5B58\u4FDD\u5148\u8BF7".split("").reverse().join(""));return;}var _0x32g3b;const _0xbd8ee=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0x32g3b='\u006C\u0065\u006D\u0069\u0068\u006E';if(!_0xbd8ee)return;const _0xca8b3d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("metIodot".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];var _0xc9248b=(665809^665809)+(676168^676175);const _0xfg8ab=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u006F\u0064\u006F\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];_0xc9248b=(232628^232625)+(222449^222452);if(!_0xca8b3d){alert("\u8BF7\u586B\u5199\u4E8B\u9879\u540D\u79F0\uFF01");return;}var _0xb_0xg5a;const _0x9425e={"id":generateId(),"item":_0xca8b3d,"operator":currentUser['\u006E\u0061\u006D\u0065'],'\u0073\u0074\u0061\u0074\u0075\u0073':"\u0070\u0065\u006E\u0064\u0069\u006E\u0067","time":new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[253319^253319],'\u006E\u006F\u0074\u0065':_0xfg8ab};_0xb_0xg5a=901373^901365;if(!_0xbd8ee['\u0074\u006F\u0064\u006F\u0073'])_0xbd8ee['\u0074\u006F\u0064\u006F\u0073']=[];_0xbd8ee['\u0074\u006F\u0064\u006F\u0073']['\u0070\u0075\u0073\u0068'](_0x9425e);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u006F\u0064\u006F\u0049\u0074\u0065\u006D")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u006F\u0064\u006F\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']='';renderTodoList(_0xbd8ee);addChangeLog("\u6DFB\u52A0\u5F85\u529E\u4E8B\u9879",`添加了待办事项：${_0xca8b3d}`);alert("\u5F85\u529E\u4E8B\u9879\u6DFB\u52A0\u6210\u529F\uFF01");}function addExpense(_0x93f9c){if(!currentSiteId){alert("\u8BF7\u5148\u4FDD\u5B58\u5DE5\u5730\u57FA\u672C\u4FE1\u606F\uFF01");return;}const _0x1734f=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0x1734f)return;const _0xdcac=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0049\u0074\u0065\u006D")['\u0076\u0061\u006C\u0075\u0065'];const _0x55a3ff=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnuomAesnepxe".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||601170^601170;var _0x_0xf82=(960833^960834)+(174333^174330);_0x93f9c="\u9879";_0x_0xf82=(404695^404694)+(461853^461854);const _0x2778a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];if(!_0xdcac||_0x55a3ff<=(367331^367331)){alert("\u8BF7\u586B\u5199\u5B8C\u6574\u7684\u652F\u51FA\u4FE1\u606F\uFF01");return;}var _0x4g16f;const _0x491b={'\u0069\u0064':generateId(),'\u0069\u0074\u0065\u006D':_0xdcac,'\u0061\u006D\u006F\u0075\u006E\u0074':_0x55a3ff,'\u0075\u006E\u0069\u0074':_0x93f9c,'\u006E\u006F\u0074\u0065':_0x2778a,'\u0074\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[723046^723046],"operator":currentUser['\u006E\u0061\u006D\u0065']};_0x4g16f=160673^160678;_0x1734f['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']['\u0070\u0075\u0073\u0068'](_0x491b);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0049\u0074\u0065\u006D")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnuomAesnepxe".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']='';renderExpenseList(_0x1734f);addChangeLog("\u6DFB\u52A0\u652F\u51FA",`添加了支出项：${_0xdcac}，金额：¥${_0x55a3ff}`);alert("\u652F\u51FA\u6DFB\u52A0\u6210\u529F\uFF01");}function addRequirement(){if(!currentSiteId){alert("\u8BF7\u5148\u4FDD\u5B58\u5DE5\u5730\u57FA\u672C\u4FE1\u606F\uFF01");return;}const _0xac63a=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xac63a)return;var _0x2_0x602;const _0xcd_0x4b3=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074")['\u0076\u0061\u006C\u0075\u0065'];_0x2_0x602=(749690^749694)+(580264^580267);const _0xba5eca=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("epyTtnemeriuqer".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];const _0x66141d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etoNtnemeriuqer".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];if(!_0xcd_0x4b3){alert("\u8BF7\u586B\u5199\u8981\u6C42\u5185\u5BB9\uFF01");return;}const _0x76g65g={'\u0069\u0064':generateId(),"content":_0xcd_0x4b3,'\u0074\u0079\u0070\u0065':_0xba5eca,"note":_0x66141d,'\u0073\u0074\u0061\u0074\u0075\u0073':'pending','\u0074\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[671620^671620],'\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072':currentUser['\u006E\u0061\u006D\u0065']};if(!_0xac63a['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073'])_0xac63a['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']=[];_0xac63a['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']['\u0070\u0075\u0073\u0068'](_0x76g65g);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0054\u0079\u0070\u0065")['\u0076\u0061\u006C\u0075\u0065']="deen".split("").reverse().join("");renderRequirementList(_0xac63a);addChangeLog("\u6DFB\u52A0\u5BA2\u6237\u8981\u6C42",`添加了客户要求：${_0xcd_0x4b3['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](721054^721054,890776^890772)}...（类型：${_0xba5eca==="deen".split("").reverse().join("")?"\u8981\u9700".split("").reverse().join(""):"\u6392\u9664"}）`);alert("\u5BA2\u6237\u8981\u6C42\u6DFB\u52A0\u6210\u529F\uFF01");}function addRepair(){if(!currentSiteId){alert("\uFF01\u606F\u4FE1\u672C\u57FA\u5730\u5DE5\u5B58\u4FDD\u5148\u8BF7".split("").reverse().join(""));return;}var _0x7433ab;const _0x89ec=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0x7433ab=(963268^963266)+(492699^492691);if(!_0x89ec)return;var _0x228f=(892210^892213)+(165851^165843);const _0x42c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0070\u0061\u0069\u0072\u0043\u006F\u006E\u0074\u0065\u006E\u0074")['\u0076\u0061\u006C\u0075\u0065'];_0x228f=(562854^562854)+(352149^352157);const _0x1f1bf=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etoNriaper".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];const _0xf822e=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F\u0050\u0072\u0065\u0076\u0069\u0065\u0077");var _0x18a6a;const _0x58b9d=_0xf822e['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061'];_0x18a6a=(372417^372421)+(328565^328573);if(!_0x42c){alert("\uFF01\u5BB9\u5185\u4FEE\u7EF4\u5199\u586B\u8BF7".split("").reverse().join(""));return;}var _0x20d1g;const _0xe3fc={"id":generateId(),"content":_0x42c,"note":_0x1f1bf,'\u0070\u0068\u006F\u0074\u006F':_0x58b9d||'',"photoName":_0xf822e['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||'',"status":"\u0070\u0065\u006E\u0064\u0069\u006E\u0067",'\u0074\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[707910^707910],"operator":currentUser['\u006E\u0061\u006D\u0065']};_0x20d1g=(186534^186542)+(361381^361380);if(!_0x89ec['\u0072\u0065\u0070\u0061\u0069\u0072\u0073'])_0x89ec['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']=[];_0x89ec['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0070\u0075\u0073\u0068'](_0xe3fc);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnetnoCriaper".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0070\u0061\u0069\u0072\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0072\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F\u0050\u0072\u0065\u0076\u0069\u0065\u0077")['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';delete _0xf822e['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061'];delete _0xf822e['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'];renderRepairList(_0x89ec);addChangeLog("\u9879\u4FEE\u7EF4\u52A0\u6DFB".split("").reverse().join(""),`添加了维修项：${_0x42c['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](506961^506961,477170^477158)}...`);alert("\u7EF4\u4FEE\u9879\u6DFB\u52A0\u6210\u529F\uFF01");}function addWorker(){if(!currentSiteId){alert("\uFF01\u606F\u4FE1\u672C\u57FA\u5730\u5DE5\u5B58\u4FDD\u5148\u8BF7".split("").reverse().join(""));return;}const _0xd415bd=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xd415bd)return;const _0x0124d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u004E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065'];const _0x97d4ec=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u0054\u0079\u0070\u0065")['\u0076\u0061\u006C\u0075\u0065'];var _0x2954gb=(807187^807188)+(670762^670765);const _0x12_0x04a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("emiTtratSrekrow".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];_0x2954gb=254628^254624;const _0xcdf2ca=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u0045\u006E\u0064\u0054\u0069\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065'];var _0xce696c=(809830^809826)+(936667^936659);const _0x9fd9c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];_0xce696c='\u006A\u0067\u0068\u006B\u0062\u006D';if(!_0x0124d||!_0x97d4ec||!_0x12_0x04a){alert("\uFF01\u606F\u4FE1\u4EBA\u5DE5\u7684\u6574\u5B8C\u5199\u586B\u8BF7".split("").reverse().join(""));return;}var _0x6c519f=(402574^402574)+(160733^160730);const _0xff7cfd={"id":generateId(),'\u006E\u0061\u006D\u0065':_0x0124d,'\u0074\u0079\u0070\u0065':_0x97d4ec,'\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065':_0x12_0x04a,"endTime":_0xcdf2ca,"note":_0x9fd9c,'\u0072\u0061\u0074\u0069\u006E\u0067':1,'\u0074\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[626963^626963],'\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072':currentUser['\u006E\u0061\u006D\u0065']};_0x6c519f=(581144^581150)+(187348^187351);_0xd415bd['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']['\u0070\u0075\u0073\u0068'](_0xff7cfd);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("emaNrekrow".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u0054\u0079\u0070\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u0053\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u0045\u006E\u0064\u0054\u0069\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0077\u006F\u0072\u006B\u0065\u0072\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']='';renderWorkerList(_0xd415bd);addChangeLog("\u6DFB\u52A0\u5DE5\u4EBA",`添加了工人：${_0x0124d}（${_0x97d4ec}）`);alert("\u5DE5\u4EBA\u6DFB\u52A0\u6210\u529F\uFF01");}function addAddRemoveItem(_0xf2_0x2df){if(!currentSiteId){alert("\uFF01\u606F\u4FE1\u672C\u57FA\u5730\u5DE5\u5B58\u4FDD\u5148\u8BF7".split("").reverse().join(""));return;}var _0xd58ba;const _0x385ce=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0xd58ba='\u0069\u006A\u006E\u0067\u0062\u006E';if(!_0x385ce)return;const _0x69b=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D")['\u0076\u0061\u006C\u0075\u0065'];var _0x80568e;const _0x8ag=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("epyTevomeRdda".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];_0x80568e=315812^315809;var _0x24g3e=(411602^411610)+(446182^446178);const _0x33471b=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0041\u006D\u006F\u0075\u006E\u0074")['\u0076\u0061\u006C\u0075\u0065'])||788813^788813;_0x24g3e=(494192^494201)+(446803^446811);_0xf2_0x2df="\u9879";var _0xg_0xcd6;const _0x78f11c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];_0xg_0xcd6='\u006C\u0063\u0065\u0069\u006E\u006A';if(!_0x69b||_0x33471b<=(207392^207392)){alert("\u8BF7\u586B\u5199\u5B8C\u6574\u7684\u589E\u51CF\u9879\u4FE1\u606F\uFF01");return;}var _0x1dg=(672779^672776)+(511314^511315);const _0x6660ff={'\u0069\u0064':generateId(),"item":_0x69b,"type":_0x8ag,'\u0061\u006D\u006F\u0075\u006E\u0074':_0x33471b,"unit":_0xf2_0x2df,"note":_0x78f11c,"time":new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[370459^370459],'\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072':currentUser['\u006E\u0061\u006D\u0065']};_0x1dg=256800^256804;_0x385ce['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']['\u0070\u0075\u0073\u0068'](_0x6660ff);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnuomAevomeRdda".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etoNevomeRdda".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';renderAddRemoveList(_0x385ce);updateAddRemoveSummary(_0x385ce);updateQuoteSummary(_0x385ce);addChangeLog("\u6DFB\u52A0\u589E\u51CF\u9879",`添加了${_0x8ag==="dda".split("").reverse().join("")?"\u52A0\u589E".split("").reverse().join(""):"\u5C11\u51CF".split("").reverse().join("")}项：${_0x69b}，金额：¥${_0x33471b}`);alert("\uFF01\u529F\u6210\u52A0\u6DFB\u9879\u51CF\u589E".split("").reverse().join(""));}function uploadDrawing(){if(!currentSiteId){alert("\u8BF7\u5148\u4FDD\u5B58\u5DE5\u5730\u57FA\u672C\u4FE1\u606F\uFF01");return;}const _0x98bbab=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0x98bbab)return;const _0xd3f=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("epyTgniward".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'];const _0xe5594g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u004E\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];const _0xece=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("weiverPgniward".split("").reverse().join(""));const _0xbeff=_0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061'];const _0xe876b=_0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'];if(!_0xbeff){alert("\u8BF7\u4E0A\u4F20\u56FE\u7EB8\uFF01");return;}const _0x33999c={'\u0069\u0064':generateId(),"type":_0xd3f,"note":_0xe5594g,"file":_0xbeff,'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':_0xe876b||"\u4EF6\u6587\u540D\u547D\u672A".split("").reverse().join(""),"fileType":_0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']||"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006F\u0063\u0074\u0065\u0074\u002D\u0073\u0074\u0072\u0065\u0061\u006D","fileSize":_0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065']||340382^340382,'\u0074\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[289438^289438],'\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072':currentUser['\u006E\u0061\u006D\u0065'],"siteName":_0x98bbab['\u006E\u0061\u006D\u0065']};if(!_0x98bbab['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073'])_0x98bbab['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']=[];_0x98bbab['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0070\u0075\u0073\u0068'](_0x33999c);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0046\u0069\u006C\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("weiverPgniward".split("").reverse().join(""))['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';delete _0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061'];delete _0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'];delete _0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065'];delete _0xece['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065'];document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etoNgniward".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';renderDrawingList(_0x98bbab);addChangeLog("\u7EB8\u56FE\u4F20\u4E0A".split("").reverse().join(""),`上传了${getDrawingTypeText(_0xd3f)}图纸：${_0xe876b||"\u4EF6\u6587\u540D\u547D\u672A".split("").reverse().join("")}`);alert("\uFF01\u529F\u6210\u4F20\u4E0A\u7EB8\u56FE".split("").reverse().join(""));}function addExperience(){if(!currentSiteId){alert("\u8BF7\u5148\u4FDD\u5B58\u5DE5\u5730\u57FA\u672C\u4FE1\u606F\uFF01");return;}const _0xdf222c=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xdf222c)return;const _0x460cb=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0043\u006F\u006E\u0074\u0065\u006E\u0074")['\u0076\u0061\u006C\u0075\u0065'];if(!_0x460cb){alert("\u8BF7\u586B\u5199\u7ECF\u9A8C\u603B\u7ED3\u5185\u5BB9\uFF01");return;}const _0x26218b={"id":generateId(),"content":_0x460cb,'\u0074\u0069\u006D\u0065':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0073\u0070\u006C\u0069\u0074']("\u0054")[920266^920266],'\u006F\u0070\u0065\u0072\u0061\u0074\u006F\u0072':currentUser['\u006E\u0061\u006D\u0065']};if(!_0xdf222c['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073'])_0xdf222c['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']=[];_0xdf222c['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']['\u0070\u0075\u0073\u0068'](_0x26218b);saveData();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tnetnoCecneirepxe".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']='';renderExperienceList(_0xdf222c);addChangeLog("\u7ED3\u603B\u9A8C\u7ECF\u52A0\u6DFB".split("").reverse().join(""),`添加了经验总结`);alert("\u7ECF\u9A8C\u603B\u7ED3\u6DFB\u52A0\u6210\u529F\uFF01");}function updateTodoStatus(todoId,newStatus){if(!canEditStatus()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u66F4\u6539\u72B6\u6001\uFF01");return;}const _0xa3_0x127=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xa3_0x127)return;const _0x93163d=_0xa3_0x127['\u0074\u006F\u0064\u006F\u0073']['\u0066\u0069\u006E\u0064'](t=>t['\u0069\u0064']===todoId);if(_0x93163d){var _0xc43c;const _0x9297ac=_0x93163d['\u0073\u0074\u0061\u0074\u0075\u0073'];_0xc43c=(386384^386391)+(706081^706089);_0x93163d['\u0073\u0074\u0061\u0074\u0075\u0073']=newStatus;saveData();renderTodoList(_0xa3_0x127);addChangeLog("\u66F4\u65B0\u5F85\u529E\u72B6\u6001",`将待办事项"${_0x93163d['\u0069\u0074\u0065\u006D']}"从${_0x9297ac}改为${newStatus}`);}}function updateRequirementStatus(reqId,newStatus){if(!canEditStatus()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u66F4\u6539\u72B6\u6001\uFF01");return;}const _0x18729g=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0x18729g)return;const _0xb6g=_0x18729g['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']['\u0066\u0069\u006E\u0064'](r=>r['\u0069\u0064']===reqId);if(_0xb6g){var _0xf0g8a;const _0x8gcc=_0xb6g['\u0073\u0074\u0061\u0074\u0075\u0073'];_0xf0g8a=(146493^146492)+(758344^758344);_0xb6g['\u0073\u0074\u0061\u0074\u0075\u0073']=newStatus;saveData();renderRequirementList(_0x18729g);var _0x55fdb;const _0x9egd=_0xb6g['\u0074\u0079\u0070\u0065']==="\u006E\u0065\u0065\u0064"?"\u9700\u8981":"\u6392\u9664";_0x55fdb=885174^885175;addChangeLog("\u6001\u72B6\u6C42\u8981\u6237\u5BA2\u65B0\u66F4".split("").reverse().join(""),`将客户要求"${_0xb6g['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}"（${_0x9egd}）从${_0x8gcc}改为${newStatus}`);}}function completeRepair(repairId){const _0xdbcd9e=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xdbcd9e)return;var _0xga_0x553=(595638^595647)+(338326^338327);const _0xb48ef=_0xdbcd9e['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u0069\u006E\u0064'](r=>r['\u0069\u0064']===repairId);_0xga_0x553=(782667^782670)+(337783^337790);if(_0xb48ef){_0xb48ef['\u0073\u0074\u0061\u0074\u0075\u0073']="detelpmoc".split("").reverse().join("");saveData();renderRepairList(_0xdbcd9e);addChangeLog("\u5B8C\u6210\u7EF4\u4FEE",`完成了维修项：${_0xb48ef['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](329868^329868,120907^120927)}...`);alert("\u7EF4\u4FEE\u9879\u5DF2\u6807\u8BB0\u4E3A\u5B8C\u6210\uFF01");}}function updateRepairStatus(repairId,newStatus){if(!canEditStatus()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u66F4\u6539\u72B6\u6001\uFF01");return;}const _0xd2_0x511=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xd2_0x511)return;const _0xb86g=_0xd2_0x511['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u0069\u006E\u0064'](r=>r['\u0069\u0064']===repairId);if(_0xb86g){const _0xf6fge=_0xb86g['\u0073\u0074\u0061\u0074\u0075\u0073'];_0xb86g['\u0073\u0074\u0061\u0074\u0075\u0073']=newStatus;saveData();renderRepairList(_0xd2_0x511);addChangeLog("\u66F4\u65B0\u7EF4\u4FEE\u72B6\u6001",`将维修项"${_0xb86g['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}"从${_0xf6fge}改为${newStatus}`);}}function updateWorkerRating(workerId,rating){const _0x7g9ebf=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0x7g9ebf)return;const _0x115da=_0x7g9ebf['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']['\u0066\u0069\u006E\u0064'](w=>w['\u0069\u0064']===workerId);if(_0x115da){_0x115da['\u0072\u0061\u0074\u0069\u006E\u0067']=rating;saveData();renderWorkerList(_0x7g9ebf);addChangeLog("\u66F4\u65B0\u5DE5\u4EBA\u8BC4\u4EF7",`更新了工人"${_0x115da['\u006E\u0061\u006D\u0065']}"的评价为${rating}星`);}}function editWorkerTime(workerId,cell,type){var _0x6a7ff=(115876^115877)+(171261^171261);const _0x3a3a=cell['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0064\u0061\u0074\u0065\u002D\u0064\u0069\u0073\u0070\u006C\u0061\u0079");_0x6a7ff="pogegb".split("").reverse().join("");var _0x87c70b;const _0xd7ad=cell['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0064\u0061\u0074\u0065\u002D\u0065\u0064\u0069\u0074");_0x87c70b=(924841^924844)+(620969^620975);_0x3a3a['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="enon".split("").reverse().join("");_0xd7ad['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0069\u006E\u006C\u0069\u006E\u0065\u002D\u0062\u006C\u006F\u0063\u006B";_0xd7ad['\u0066\u006F\u0063\u0075\u0073']();}function saveWorkerTime(workerId,newTime,type){const _0xc13f=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xc13f)return;const _0x2028da=_0xc13f['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']['\u0066\u0069\u006E\u0064'](w=>w['\u0069\u0064']===workerId);if(_0x2028da){if(type==="\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065"){_0x2028da['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065']=newTime;addChangeLog("\u7F16\u8F91\u5DE5\u4EBA\u5F00\u59CB\u65F6\u95F4",`修改了工人"${_0x2028da['\u006E\u0061\u006D\u0065']}"的开始时间为：${newTime}`);}else if(type==="emiTdne".split("").reverse().join("")){_0x2028da['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']=newTime;addChangeLog("\u95F4\u65F6\u675F\u7ED3\u4EBA\u5DE5\u8F91\u7F16".split("").reverse().join(""),`修改了工人"${_0x2028da['\u006E\u0061\u006D\u0065']}"的结束时间为：${newTime}`);}saveData();renderWorkerList(_0xc13f);}}function previewRepairPhoto(event){const _0x9b6c1b=event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][207584^207584];if(!_0x9b6c1b)return;if(!_0x9b6c1b['\u0074\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0069\u006D\u0061\u0067\u0065\u002F")){alert("\uFF01\u4EF6\u6587\u7247\u56FE\u62E9\u9009\u8BF7".split("").reverse().join(""));event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0076\u0061\u006C\u0075\u0065']='';return;}if(_0x9b6c1b['\u0073\u0069\u007A\u0065']>(550541^550535)*(606644^607668)*(294817^293793)){alert("\uFF01\u7247\u56FE\u7684BM01\u4E8E\u5C0F\u62E9\u9009\u8BF7\uFF0C\u5927\u592A\u7247\u56FE".split("").reverse().join(""));event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0076\u0061\u006C\u0075\u0065']='';return;}resizeImage(_0x9b6c1b,868618^868606,function(resizedDataUrl){const _0x4a4a6a=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("weiverPotohPriaper".split("").reverse().join(""));_0x4a4a6a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-            <div style="text-align: center; padding: 10px;">
-                <img src="${resizedDataUrl}" class="image-preview" onclick="viewImage('${resizedDataUrl}')">
-                <div style="margin-top: 5px; font-size: 12px; color: #666;">
-                    ${_0x9b6c1b['\u006E\u0061\u006D\u0065']}<br>
-                    <small>已压缩: 最大边500px, 质量0.6</small>
+        `;
+siteCard.onclick = (e) => {
+    e.stopPropagation();
+    console.log('=== 工地卡片点击事件 ===');
+    console.log('工地ID:', site.id);
+    console.log('工地名称:', site.name);
+    console.log('所有工地:', sites.map(s => ({id: s.id, name: s.name})));
+    console.log('当前用户:', currentUser);
+    console.log('canViewSite函数:', typeof canViewSite);
+    
+    // 检查工地是否存在
+    const foundSite = sites.find(s => s.id === site.id);
+    if (!foundSite) {
+        console.error('错误：工地不存在于sites数组中');
+        alert('工地数据异常，请刷新页面重试');
+        return;
+    }
+    
+    // 检查权限
+    if (typeof canViewSite === 'function' && !canViewSite(site.id)) {
+        alert('您没有权限查看此工地');
+        return;
+    }
+    
+    // 检查模态框元素
+    const siteModal = document.getElementById('siteModal');
+    if (!siteModal) {
+        console.error('错误：siteModal元素不存在');
+        alert('页面加载异常，请刷新页面');
+        return;
+    }
+    
+    // 显示工地详情
+    showSiteDetails(site.id);
+};
+        // 修复：确保正确绑定点击事件
+        siteCard.onclick = (e) => {
+            e.stopPropagation();
+            console.log('点击工地卡片，ID:', site.id, '名称:', site.name);
+            
+            // 检查工地是否存在
+            const foundSite = sites.find(s => s.id === site.id);
+            if (!foundSite) {
+                console.error('工地不存在，ID:', site.id);
+                alert('工地不存在！');
+                return;
+            }
+            
+            if (canViewSite && !canViewSite(site.id)) {
+                alert('您没有权限查看此工地');
+                return;
+            }
+            
+            showSiteDetails(site.id);
+        };
+        siteList.appendChild(siteCard);
+    });
+}
+
+function showAddSiteModal() {
+    currentSiteId = null;
+    document.getElementById('modalTitle').textContent = '添加工地';
+    document.getElementById('siteModal').style.display = 'block';
+
+    clearSiteForm();
+    switchTab('progressTab');
+    clearAllLists();
+}
+
+function clearAllLists() {
+    const site = { 
+        todos: [], expenses: [], requirements: [], repairs: [], 
+        workers: [], addRemoveItems: [], drawings: [], experiences: [] 
+    };
+    
+    renderTodoList(site);
+    renderExpenseList(site);
+    renderRequirementList(site);
+    renderRepairList(site);
+    renderWorkerList(site);
+    renderAddRemoveList(site);
+    renderDrawingList(site);
+    renderExperienceList(site);
+    
+    updateQuoteSummary(site);
+    updateAddRemoveSummary(site);
+}
+function showSiteDetails(siteId) {
+    console.log('显示工地详情，ID:', siteId);
+    
+    // 先确保模态框元素存在
+    const siteModal = document.getElementById('siteModal');
+    if (!siteModal) {
+        console.error('siteModal 元素不存在');
+        alert('页面元素加载异常，请刷新页面重试');
+        return;
+    }
+    
+    currentSiteId = siteId;
+    const site = sites.find(s => s.id === siteId);
+
+    if (!site) {
+        console.error('工地不存在，ID:', siteId, '所有工地ID:', sites.map(s => s.id));
+        alert('工地不存在！');
+        return;
+    }
+
+    // 检查元素是否存在
+    const modalTitle = document.getElementById('modalTitle');
+    if (!modalTitle) {
+        console.error('modalTitle 元素不存在');
+        // 尝试通过其他方式查找
+        const modalHeader = siteModal.querySelector('.modal-header h3');
+        if (modalHeader) {
+            modalHeader.textContent = `工地详情 - ${site.name}`;
+        } else {
+            alert('页面元素加载异常，请刷新页面重试');
+            return;
+        }
+    } else {
+        modalTitle.textContent = `工地详情 - ${site.name}`;
+    }
+    
+    // 显示模态框
+    siteModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+
+    // 加载工地数据
+    loadSiteData(site);
+    switchTab('progressTab');
+    
+    // 移动端优化
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        setTimeout(() => {
+            optimizeMobileTables();
+        }, 100);
+    }
+    
+    console.log('工地详情已显示:', site.name);
+}
+function clearSiteForm() {
+    document.getElementById('siteName').value = '';
+    document.getElementById('startDate').value = '';
+    document.getElementById('endDate').value = '';
+    document.getElementById('progress').value = '0';
+    document.getElementById('progressFill').style.width = '0%';
+    document.getElementById('progressFill').textContent = '0%';
+
+    document.getElementById('todoItem').value = '';
+    document.getElementById('todoNote').value = '';
+}
+
+function loadSiteData(site) {
+    document.getElementById('siteName').value = site.name || '';
+    document.getElementById('startDate').value = formatDate(site.startDate) || '';
+    document.getElementById('endDate').value = formatDate(site.endDate) || '';
+    document.getElementById('progress').value = site.progress || 0;
+    updateProgressBar(site.progress || 0);
+
+    document.getElementById('basicQuote').value = site.basicQuote || 0;
+    document.getElementById('materialQuote').value = site.materialQuote || 0;
+    document.getElementById('equipmentQuote').value = site.equipmentQuote || 0;
+    document.getElementById('furnitureQuote').value = site.furnitureQuote || 0;
+    document.getElementById('otherQuote').value = site.otherQuote || 0;
+
+    renderTodoList(site);
+    renderExpenseList(site);
+    renderRequirementList(site);
+    renderRepairList(site);
+    renderWorkerList(site);
+    renderAddRemoveList(site);
+    renderDrawingList(site);
+    renderExperienceList(site);
+
+    updateQuoteSummary(site);
+    updateAddRemoveSummary(site);
+}
+
+function updateProgressValue(value) {
+    document.getElementById('progressValue').textContent = value;
+    updateProgressBar(value);
+}
+
+function updateProgressBar(progress) {
+    const progressFill = document.getElementById('progressFill');
+    progressFill.style.width = progress + '%';
+    progressFill.textContent = progress + '%';
+}
+
+// ==================== 工地管理函数 ====================
+function saveSiteInfo() {
+    if (!currentSiteId) {
+        const newSite = {
+            id: generateId(),
+            name: document.getElementById('siteName').value || '未命名工地',
+            startDate: document.getElementById('startDate').value,
+            endDate: document.getElementById('endDate').value,
+            progress: parseInt(document.getElementById('progress').value) || 0,
+            todos: [],
+            expenses: [],
+            requirements: [],
+            repairs: [],
+            workers: [],
+            addRemoveItems: [],
+            drawings: [],
+            experiences: [],
+            basicQuote: 0,
+            materialQuote: 0,
+            equipmentQuote: 0,
+            furnitureQuote: 0,
+            otherQuote: 0,
+            addRemoveTotal: 0,
+            totalQuote: 0,
+            maxImageDimension: 800,
+            dataVersion: '2.0'
+        };
+
+        sites.push(newSite);
+        currentSiteId = newSite.id;
+        addChangeLog('创建工地', `创建了工地：${newSite.name}`);
+    } else {
+        const site = sites.find(s => s.id === currentSiteId);
+        if (site) {
+            const oldProgress = site.progress;
+            site.name = document.getElementById('siteName').value || site.name;
+            site.startDate = document.getElementById('startDate').value;
+            site.endDate = document.getElementById('endDate').value;
+            site.progress = parseInt(document.getElementById('progress').value) || 0;
+
+            if (!site.maxImageDimension) {
+                site.maxImageDimension = 800;
+            }
+
+            if (oldProgress !== site.progress) {
+                addChangeLog('更新进度', `工地"${site.name}"进度从${oldProgress}%更新到${site.progress}%`);
+            }
+        }
+    }
+
+    saveData();
+    renderSiteList();
+    alert('工地信息保存成功！');
+}
+
+function deleteSite(siteId) {
+    if (!canDelete()) {
+        alert('只有管理员可以删除工地！');
+        return;
+    }
+
+    if (!confirm('确定要删除这个工地吗？此操作将删除该工地的所有相关数据（支出、工人、维修项等），且不可恢复！')) {
+        return;
+    }
+
+    const siteIndex = sites.findIndex(s => s.id === siteId);
+    if (siteIndex === -1) {
+        alert('工地不存在！');
+        return;
+    }
+
+    const siteName = sites[siteIndex].name;
+
+    sites.splice(siteIndex, 1);
+    saveData();
+
+    if (currentSiteId === siteId) {
+        closeSiteModal();
+        currentSiteId = null;
+    }
+
+    renderSiteList();
+    addChangeLog('删除工地', `删除了工地："${siteName}"`);
+    alert('工地删除成功！');
+}
+
+// ==================== 各模块添加函数 ====================
+function addTodo() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const item = document.getElementById('todoItem').value;
+    const note = document.getElementById('todoNote').value;
+
+    if (!item) {
+        alert('请填写事项名称！');
+        return;
+    }
+
+    const todo = {
+        id: generateId(),
+        item: item,
+        operator: currentUser.name,
+        status: 'pending',
+        time: new Date().toISOString().split('T')[0],
+        note: note
+    };
+
+    if (!site.todos) site.todos = [];
+    site.todos.push(todo);
+    saveData();
+
+    document.getElementById('todoItem').value = '';
+    document.getElementById('todoNote').value = '';
+
+    renderTodoList(site);
+    addChangeLog('添加待办事项', `添加了待办事项：${item}`);
+    alert('待办事项添加成功！');
+}
+
+function addExpense() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const item = document.getElementById('expenseItem').value;
+    const amount = parseFloat(document.getElementById('expenseAmount').value) || 0;
+    const unit = '项';
+    const note = document.getElementById('expenseNote').value;
+
+    if (!item || amount <= 0) {
+        alert('请填写完整的支出信息！');
+        return;
+    }
+
+    const expense = {
+        id: generateId(),
+        item: item,
+        amount: amount,
+        unit: unit,
+        note: note,
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name
+    };
+
+    site.expenses.push(expense);
+    saveData();
+
+    document.getElementById('expenseItem').value = '';
+    document.getElementById('expenseAmount').value = '';
+    document.getElementById('expenseNote').value = '';
+
+    renderExpenseList(site);
+    addChangeLog('添加支出', `添加了支出项：${item}，金额：¥${amount}`);
+    alert('支出添加成功！');
+}
+
+function addRequirement() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const content = document.getElementById('requirementContent').value;
+    const type = document.getElementById('requirementType').value;
+    const note = document.getElementById('requirementNote').value;
+
+    if (!content) {
+        alert('请填写要求内容！');
+        return;
+    }
+
+    const requirement = {
+        id: generateId(),
+        content: content,
+        type: type,
+        note: note,
+        status: 'pending',
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name
+    };
+
+    if (!site.requirements) site.requirements = [];
+    site.requirements.push(requirement);
+    saveData();
+
+    document.getElementById('requirementContent').value = '';
+    document.getElementById('requirementNote').value = '';
+    document.getElementById('requirementType').value = 'need';
+
+    renderRequirementList(site);
+    addChangeLog('添加客户要求', `添加了客户要求：${content.substring(0, 12)}...（类型：${type === 'need' ? '需要' : '排除'}）`);
+    alert('客户要求添加成功！');
+}
+function addRepair() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const content = document.getElementById('repairContent').value;
+    const note = document.getElementById('repairNote').value;
+    const preview = document.getElementById('repairPhotoPreview');
+    const photoData = preview.dataset.originalData;
+
+    if (!content) {
+        alert('请填写维修内容！');
+        return;
+    }
+
+    const repair = {
+        id: generateId(),
+        content: content,
+        note: note,
+        photo: photoData || '',
+        photoName: preview.dataset.fileName || '',
+        status: 'pending',
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name
+    };
+
+    if (!site.repairs) site.repairs = [];
+    site.repairs.push(repair);
+    saveData();
+
+    // 清空表单
+    document.getElementById('repairContent').value = '';
+    document.getElementById('repairNote').value = '';
+    document.getElementById('repairPhoto').value = '';
+    document.getElementById('repairPhotoPreview').innerHTML = '';
+    delete preview.dataset.originalData;
+    delete preview.dataset.fileName;
+
+    renderRepairList(site);
+    addChangeLog('添加维修项', `添加了维修项：${content.substring(0, 20)}...`);
+    alert('维修项添加成功！');
+}
+
+function addWorker() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const name = document.getElementById('workerName').value;
+    const type = document.getElementById('workerType').value;
+    const startTime = document.getElementById('workerStartTime').value;
+    const endTime = document.getElementById('workerEndTime').value;
+    const note = document.getElementById('workerNote').value;
+
+    if (!name || !type || !startTime) {
+        alert('请填写完整的工人信息！');
+        return;
+    }
+
+    const worker = {
+        id: generateId(),
+        name: name,
+        type: type,
+        startTime: startTime,
+        endTime: endTime,
+        note: note,
+        rating: 1,
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name
+    };
+
+    site.workers.push(worker);
+    saveData();
+
+    document.getElementById('workerName').value = '';
+    document.getElementById('workerType').value = '';
+    document.getElementById('workerStartTime').value = '';
+    document.getElementById('workerEndTime').value = '';
+    document.getElementById('workerNote').value = '';
+
+    renderWorkerList(site);
+    addChangeLog('添加工人', `添加了工人：${name}（${type}）`);
+    alert('工人添加成功！');
+}
+
+function addAddRemoveItem() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const item = document.getElementById('addRemoveItem').value;
+    const type = document.getElementById('addRemoveType').value;
+    const amount = parseFloat(document.getElementById('addRemoveAmount').value) || 0;
+    const unit = '项';
+    const note = document.getElementById('addRemoveNote').value;
+
+    if (!item || amount <= 0) {
+        alert('请填写完整的增减项信息！');
+        return;
+    }
+
+    const addRemoveItem = {
+        id: generateId(),
+        item: item,
+        type: type,
+        amount: amount,
+        unit: unit,
+        note: note,
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name
+    };
+
+    site.addRemoveItems.push(addRemoveItem);
+    saveData();
+
+    document.getElementById('addRemoveItem').value = '';
+    document.getElementById('addRemoveAmount').value = '';
+    document.getElementById('addRemoveNote').value = '';
+
+    renderAddRemoveList(site);
+    updateAddRemoveSummary(site);
+    updateQuoteSummary(site);
+    addChangeLog('添加增减项', `添加了${type === 'add' ? '增加' : '减少'}项：${item}，金额：¥${amount}`);
+    alert('增减项添加成功！');
+}
+
+function uploadDrawing() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const type = document.getElementById('drawingType').value;
+    const note = document.getElementById('drawingNote').value;
+    const preview = document.getElementById('drawingPreview');
+
+    const fileData = preview.dataset.originalData;
+    const fileName = preview.dataset.fileName;
+
+    if (!fileData) {
+        alert('请上传图纸！');
+        return;
+    }
+
+    const drawing = {
+        id: generateId(),
+        type: type,
+        note: note,
+        file: fileData,
+        fileName: fileName || '未命名文件',
+        fileType: preview.dataset.fileType || 'application/octet-stream',
+        fileSize: preview.dataset.fileSize || 0,
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name,
+        siteName: site.name
+    };
+
+    if (!site.drawings) site.drawings = [];
+    site.drawings.push(drawing);
+    saveData();
+
+    document.getElementById('drawingFile').value = '';
+    document.getElementById('drawingPreview').innerHTML = '';
+    delete preview.dataset.originalData;
+    delete preview.dataset.fileName;
+    delete preview.dataset.fileType;
+    delete preview.dataset.fileSize;
+    document.getElementById('drawingNote').value = '';
+
+    renderDrawingList(site);
+    addChangeLog('上传图纸', `上传了${getDrawingTypeText(type)}图纸：${fileName || '未命名文件'}`);
+    alert('图纸上传成功！');
+}
+
+function addExperience() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const content = document.getElementById('experienceContent').value;
+
+    if (!content) {
+        alert('请填写经验总结内容！');
+        return;
+    }
+
+    const experience = {
+        id: generateId(),
+        content: content,
+        time: new Date().toISOString().split('T')[0],
+        operator: currentUser.name
+    };
+
+    if (!site.experiences) site.experiences = [];
+    site.experiences.push(experience);
+    saveData();
+
+    document.getElementById('experienceContent').value = '';
+
+    renderExperienceList(site);
+    addChangeLog('添加经验总结', `添加了经验总结`);
+    alert('经验总结添加成功！');
+}
+
+// ==================== 状态更新函数 ====================
+function updateTodoStatus(todoId, newStatus) {
+    if (!canEditStatus()) {
+        alert('只有管理员可以更改状态！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const todo = site.todos.find(t => t.id === todoId);
+    if (todo) {
+        const oldStatus = todo.status;
+        todo.status = newStatus;
+        saveData();
+        renderTodoList(site);
+        addChangeLog('更新待办状态', `将待办事项"${todo.item}"从${oldStatus}改为${newStatus}`);
+    }
+}
+
+function updateRequirementStatus(reqId, newStatus) {
+    if (!canEditStatus()) {
+        alert('只有管理员可以更改状态！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const req = site.requirements.find(r => r.id === reqId);
+    if (req) {
+        const oldStatus = req.status;
+        req.status = newStatus;
+        saveData();
+        renderRequirementList(site);
+        const typeText = req.type === 'need' ? '需要' : '排除';
+        addChangeLog('更新客户要求状态', `将客户要求"${req.content}"（${typeText}）从${oldStatus}改为${newStatus}`);
+    }
+}
+
+function completeRepair(repairId) {
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const repair = site.repairs.find(r => r.id === repairId);
+    if (repair) {
+        repair.status = 'completed';
+        saveData();
+        renderRepairList(site);
+        addChangeLog('完成维修', `完成了维修项：${repair.content.substring(0, 20)}...`);
+        alert('维修项已标记为完成！');
+    }
+}
+
+function updateRepairStatus(repairId, newStatus) {
+    if (!canEditStatus()) {
+        alert('只有管理员可以更改状态！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const repair = site.repairs.find(r => r.id === repairId);
+    if (repair) {
+        const oldStatus = repair.status;
+        repair.status = newStatus;
+        saveData();
+        renderRepairList(site);
+        addChangeLog('更新维修状态', `将维修项"${repair.content}"从${oldStatus}改为${newStatus}`);
+    }
+}
+
+function updateWorkerRating(workerId, rating) {
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const worker = site.workers.find(w => w.id === workerId);
+    if (worker) {
+        worker.rating = rating;
+        saveData();
+        renderWorkerList(site);
+        addChangeLog('更新工人评价', `更新了工人"${worker.name}"的评价为${rating}星`);
+    }
+}
+
+function editWorkerTime(workerId, cell, type) {
+    const display = cell.querySelector('.date-display');
+    const input = cell.querySelector('.date-edit');
+
+    display.style.display = 'none';
+    input.style.display = 'inline-block';
+    input.focus();
+}
+
+function saveWorkerTime(workerId, newTime, type) {
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const worker = site.workers.find(w => w.id === workerId);
+    if (worker) {
+        if (type === 'startTime') {
+            worker.startTime = newTime;
+            addChangeLog('编辑工人开始时间', `修改了工人"${worker.name}"的开始时间为：${newTime}`);
+        } else if (type === 'endTime') {
+            worker.endTime = newTime;
+            addChangeLog('编辑工人结束时间', `修改了工人"${worker.name}"的结束时间为：${newTime}`);
+        }
+        saveData();
+        renderWorkerList(site);
+    }
+}
+
+function changeRepairPhoto(repairId, button) {
+    const fileInput = button.parentElement.querySelector('.repair-photo-input');
+    fileInput.click();
+}
+function uploadNewRepairPhoto(repairId, fileInput) {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+        alert('请选择图片文件！');
+        return;
+    }
+
+    // 使用宽度不超过500像素的压缩
+    resizeImage(file, 500, function(resizedDataUrl) {
+        const site = sites.find(s => s.id === currentSiteId);
+        if (!site) return;
+
+        const repair = site.repairs.find(r => r.id === repairId);
+        if (repair) {
+            const oldPhotoInfo = repair.photo ? '有图片' : '无图片';
+
+            repair.photo = resizedDataUrl;
+            repair.photoName = file.name;
+
+            saveData();
+            renderRepairList(site);
+            addChangeLog('更换维修图片', `更换了维修项"${repair.content}"的图片（旧：${oldPhotoInfo}）`);
+            alert('维修图片更换成功！');
+        }
+    });
+}
+
+function changeDrawingFile(drawingId, button) {
+    const fileInput = button.parentElement.querySelector('.drawing-file-input');
+    fileInput.click();
+}
+
+function uploadNewDrawingFile(drawingId, fileInput) {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    console.log('开始上传文件:', file.name, '类型:', file.type, '大小:', file.size);
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) {
+        console.error('未找到当前工地');
+        return;
+    }
+
+    const drawing = site.drawings.find(d => d.id === drawingId);
+    if (!drawing) {
+        console.error('未找到图纸');
+        return;
+    }
+
+    const oldFileName = drawing.fileName || '未命名';
+
+    if (file.type.startsWith('image/')) {
+    console.log('处理图片文件');
+    // 使用宽度不超过500像素的压缩
+    resizeImage(file, 500, function(resizedDataUrl) {
+        console.log('图片压缩完成，开始更新图纸数据');
+        
+        drawing.file = resizedDataUrl;
+        drawing.fileName = file.name;
+        drawing.fileType = file.type;
+        drawing.fileSize = file.size;
+
+        saveData();
+        renderDrawingList(site);
+        addChangeLog('更换图纸文件', `更换了${getDrawingTypeText(drawing.type)}图纸：${oldFileName} → ${file.name}`);
+        console.log('图纸文件更换成功！');
+        alert('图纸文件更换成功！');
+    });
+
+    } else {
+        console.log('处理非图片文件');
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            console.log('文件读取完成');
+            drawing.file = e.target.result;
+            drawing.fileName = file.name;
+            drawing.fileType = file.type;
+            drawing.fileSize = file.size;
+
+            saveData();
+            renderDrawingList(site);
+            addChangeLog('更换图纸文件', `更换了${getDrawingTypeText(drawing.type)}图纸：${oldFileName} → ${file.name}`);
+            console.log('图纸文件更换成功！');
+            alert('图纸文件更换成功！');
+        };
+
+        reader.onerror = function (e) {
+            console.error('文件读取失败:', e);
+            alert('文件读取失败，请重试');
+        };
+
+        reader.readAsDataURL(file);
+    }
+}
+// 替换原来的 resizeImage 函数
+function resizeImage(file, maxDimension, callback) {
+    if (!maxDimension) maxDimension = 500; // 默认最大宽度500像素
+    
+    const reader = new FileReader();
+    
+    reader.onload = function(e) {
+        const img = new Image();
+        img.onload = function() {
+            const originalWidth = img.width;
+            const originalHeight = img.height;
+            const scaleRatio = maxDimension / Math.max(originalWidth, originalHeight);
+            
+            // 如果图片小于最大尺寸，直接使用原图
+            if (scaleRatio >= 1) {
+                callback(e.target.result);
+                return;
+            }
+            
+            const newWidth = Math.round(originalWidth * scaleRatio);
+            const newHeight = Math.round(originalHeight * scaleRatio);
+            
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+            
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, newWidth, newHeight);
+            ctx.drawImage(img, 0, 0, newWidth, newHeight);
+            
+            let dataUrl;
+            const mimeType = file.type || 'image/jpeg';
+            
+            // 统一使用0.6的质量
+            if (mimeType === 'image/jpeg') {
+                dataUrl = canvas.toDataURL('image/jpeg', 0.6);
+            } else if (mimeType === 'image/png') {
+                dataUrl = canvas.toDataURL('image/png');
+            } else if (mimeType === 'image/webp') {
+                dataUrl = canvas.toDataURL('image/webp', 0.6);
+            } else {
+                dataUrl = canvas.toDataURL('image/jpeg', 0.6);
+            }
+            
+            callback(dataUrl);
+        };
+        
+        img.src = e.target.result;
+    };
+    
+    reader.readAsDataURL(file);
+}
+// ==================== 报价管理函数 ====================
+function saveQuote() {
+    if (!currentSiteId) {
+        alert('请先保存工地基本信息！');
+        return;
+    }
+
+    if (!canEditQuote()) {
+        alert('只有管理员可以填写报价！');
+        return;
+    }
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const basicQuote = parseFloat(document.getElementById('basicQuote').value) || 0;
+    const materialQuote = parseFloat(document.getElementById('materialQuote').value) || 0;
+    const equipmentQuote = parseFloat(document.getElementById('equipmentQuote').value) || 0;
+    const furnitureQuote = parseFloat(document.getElementById('furnitureQuote').value) || 0;
+    const otherQuote = parseFloat(document.getElementById('otherQuote').value) || 0;
+    const addRemoveTotal = parseFloat(document.getElementById('addRemoveTotalQuote').value) || 0;
+
+    site.basicQuote = basicQuote;
+    site.materialQuote = materialQuote;
+    site.equipmentQuote = equipmentQuote;
+    site.furnitureQuote = furnitureQuote;
+    site.otherQuote = otherQuote;
+    site.addRemoveTotal = addRemoveTotal;
+
+    site.totalQuote = basicQuote + materialQuote + equipmentQuote + furnitureQuote + otherQuote + addRemoveTotal;
+
+    saveData();
+    updateQuoteSummary(site);
+    addChangeLog('更新报价', `更新了工地"${site.name}"的报价信息`);
+    alert('报价保存成功！');
+}
+
+function updateQuoteSummary(site) {
+    if (!site) return;
+
+    const addRemoveTotal = site.addRemoveItems?.reduce((sum, item) => {
+        return sum + (item.type === 'add' ? item.amount : -item.amount);
+    }, 0) || 0;
+
+    site.addRemoveTotal = addRemoveTotal;
+
+    const basicQuote = site.basicQuote || 0;
+    const materialQuote = site.materialQuote || 0;
+    const equipmentQuote = site.equipmentQuote || 0;
+    const furnitureQuote = site.furnitureQuote || 0;
+    const otherQuote = site.otherQuote || 0;
+
+    const totalQuote = basicQuote + materialQuote + equipmentQuote + furnitureQuote + otherQuote + addRemoveTotal;
+    site.totalQuote = totalQuote;
+
+    document.getElementById('basicQuoteDisplay').textContent = `¥${basicQuote.toFixed(2)}`;
+    document.getElementById('materialQuoteDisplay').textContent = `¥${materialQuote.toFixed(2)}`;
+    document.getElementById('equipmentQuoteDisplay').textContent = `¥${equipmentQuote.toFixed(2)}`;
+    document.getElementById('furnitureQuoteDisplay').textContent = `¥${furnitureQuote.toFixed(2)}`;
+    document.getElementById('otherQuoteDisplay').textContent = `¥${otherQuote.toFixed(2)}`;
+    document.getElementById('addRemoveTotalQuoteDisplay').textContent = `${addRemoveTotal >= 0 ? '+' : ''}¥${addRemoveTotal.toFixed(2)}`;
+    document.getElementById('totalQuoteDisplay').textContent = `¥${totalQuote.toFixed(2)}`;
+
+    document.getElementById('addRemoveTotalQuote').value = addRemoveTotal;
+}
+
+function updateAddRemoveSummary(site) {
+    if (!site || !site.addRemoveItems) {
+        document.getElementById('addRemoveSummary').textContent = '¥0.00';
+        return;
+    }
+
+    const addTotal = site.addRemoveItems
+        .filter(item => item.type === 'add')
+        .reduce((sum, item) => sum + (item.amount || 0), 0);
+
+    const removeTotal = site.addRemoveItems
+        .filter(item => item.type === 'remove')
+        .reduce((sum, item) => sum + (item.amount || 0), 0);
+
+    const total = addTotal - removeTotal;
+
+    document.getElementById('addRemoveSummary').textContent = `¥${total.toFixed(2)}`;
+
+    site.addRemoveTotal = total;
+
+    document.getElementById('addRemoveTotalQuote').value = total;
+    document.getElementById('addRemoveTotalQuoteDisplay').textContent = `¥${total.toFixed(2)}`;
+}
+
+// ==================== 文件加载和导出函数 ====================
+async function autoLoadData() {
+    console.log('开始自动加载数据...');
+
+    try {
+        console.log('从 localStorage 加载...');
+        loadFromLocalStorage();
+
+        // 同步到 window 对象
+        window.sites = sites;
+        window.changeLog = changeLog;
+
+        if (sites.length > 0 || changeLog.length > 0) {
+            console.log(`从 localStorage 加载了 ${sites.length} 个工地数据`);
+            saveData();
+
+            if (currentUser) {
+                renderSiteList();
+            }
+
+            console.log('从 localStorage 加载完成');
+            return;
+        }
+
+        console.log('localStorage 中无数据，尝试从 shuju.js 加载...');
+        const jsLoaded = await tryLoadJsFile();
+
+        if (jsLoaded) {
+            console.log('从 shuju.js 文件加载成功！');
+            saveData();
+
+            if (currentUser) {
+                renderSiteList();
+            }
+        } else {
+            console.log('shuju.js 文件不存在，初始化空数据');
+            sites = [];
+            changeLog = [];
+            saveData();
+        }
+
+    } catch (error) {
+        console.error('自动加载失败:', error);
+        if (!Array.isArray(sites)) sites = [];
+        if (!Array.isArray(changeLog)) changeLog = [];
+        saveData();
+    }
+
+    console.log('自动加载完成');
+}
+
+async function tryLoadJsFile() {
+    return new Promise((resolve) => {
+        if (window.location.protocol === 'file:') {
+            console.log('在本地文件环境下运行，跳过 JS 文件加载');
+            resolve(false);
+            return;
+        }
+
+        const jsFilesToTry = ['shuju.js', 'shuju_light.js'];
+        let currentIndex = 0;
+
+        function tryNextFile() {
+            if (currentIndex >= jsFilesToTry.length) {
+                console.log('所有 JS 文件尝试加载失败');
+                resolve(false);
+                return;
+            }
+
+            const fileName = jsFilesToTry[currentIndex];
+            console.log(`尝试加载文件: ${fileName}`);
+
+            const script = document.createElement('script');
+            script.src = fileName;
+
+            script.onload = function () {
+                try {
+                    if (typeof savedData !== 'undefined') {
+                        console.log(`成功从 ${fileName} 加载数据`);
+
+                        const isLightVersion = fileName === 'shuju_light.js' ||
+                            (savedData.dataVersion && savedData.dataVersion.includes('light')) ||
+                            (savedData.note && savedData.note.includes('无base64'));
+
+                        sites = savedData.sites || [];
+                        changeLog = savedData.changeLog || [];
+
+                        convertAllTimesToDate();
+
+                        console.log(`从 ${fileName} 加载了 ${sites.length} 个工地数据`);
+                        console.log(`数据版本: ${savedData.dataVersion || '未知'}`);
+
+                        if (isLightVersion) {
+                            console.log('检测到轻量版数据（无base64图片）');
+                            setTimeout(() => {
+                                showSimpleToast('已加载文本数据，请加载图片ZIP包以恢复图片', 'warning');
+                            }, 1000);
+                        }
+
+                        delete window.savedData;
+
+                        resolve(true);
+                    } else {
+                        console.log(`${fileName} 中没有找到 savedData 变量`);
+                        currentIndex++;
+                        setTimeout(tryNextFile, 100);
+                    }
+                } catch (error) {
+                    console.error(`加载 ${fileName} 时出错:`, error);
+                    currentIndex++;
+                    setTimeout(tryNextFile, 100);
+                }
+            };
+
+            script.onerror = function () {
+                console.log(`${fileName} 文件不存在或加载失败`);
+                currentIndex++;
+                setTimeout(tryNextFile, 100);
+            };
+
+            setTimeout(() => {
+                if (script.parentNode) {
+                    document.head.removeChild(script);
+                    console.log(`加载 ${fileName} 超时`);
+                    currentIndex++;
+                    setTimeout(tryNextFile, 100);
+                }
+            }, 5000);
+
+            script.loaded = false;
+            const originalOnload = script.onload;
+            const originalOnerror = script.onerror;
+
+            script.onload = function () {
+                script.loaded = true;
+                originalOnload.call(this);
+            };
+
+            script.onerror = function () {
+                script.loaded = true;
+                originalOnerror.call(this);
+            };
+
+            document.head.appendChild(script);
+        }
+
+        tryNextFile();
+    });
+}
+
+function convertAllTimesToDate() {
+    sites.forEach(site => {
+        if (site.todos) {
+            site.todos.forEach(todo => {
+                if (todo.time && !todo.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    todo.time = formatDate(todo.time);
+                }
+            });
+        }
+
+        if (site.expenses) {
+            site.expenses.forEach(expense => {
+                if (expense.time && !expense.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    expense.time = formatDate(expense.time);
+                }
+            });
+        }
+
+        if (site.requirements) {
+            site.requirements.forEach(req => {
+                if (req.time && !req.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    req.time = formatDate(req.time);
+                }
+            });
+        }
+
+        if (site.repairs) {
+            site.repairs.forEach(repair => {
+                if (repair.time && !repair.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    repair.time = formatDate(repair.time);
+                }
+            });
+        }
+
+        if (site.workers) {
+            site.workers.forEach(worker => {
+                if (worker.time && !worker.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    worker.time = formatDate(worker.time);
+                }
+                if (worker.startTime && !worker.startTime.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    worker.startTime = formatDate(worker.startTime);
+                }
+                if (worker.endTime && !worker.endTime.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    worker.endTime = formatDate(worker.endTime);
+                }
+            });
+        }
+
+        if (site.addRemoveItems) {
+            site.addRemoveItems.forEach(item => {
+                if (item.time && !item.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    item.time = formatDate(item.time);
+                }
+            });
+        }
+
+        if (site.drawings) {
+            site.drawings.forEach(drawing => {
+                if (drawing.time && !drawing.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    drawing.time = formatDate(drawing.time);
+                }
+            });
+        }
+
+        if (site.experiences) {
+            site.experiences.forEach(exp => {
+                if (exp.time && !exp.time.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    exp.time = formatDate(exp.time);
+                }
+            });
+        }
+    });
+}
+
+// ==================== 图片和文件查看函数 ====================
+function viewImage(src) {
+    document.getElementById('viewerImage').src = src;
+    document.getElementById('imageViewer').style.display = 'block';
+}
+
+function hideImageViewer() {
+    document.getElementById('imageViewer').style.display = 'none';
+}
+
+function downloadDrawing(drawingId) {
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const drawing = site.drawings.find(d => d.id === drawingId);
+    if (drawing && drawing.file) {
+        const a = document.createElement('a');
+        a.href = drawing.file;
+
+        let fileName = drawing.fileName;
+        if (!fileName) {
+            const match = drawing.file.match(/^data:([^;]+);/);
+            if (match) {
+                const mimeType = match[1];
+                const extension = getExtensionFromMimeType(mimeType);
+                fileName = `${getDrawingTypeText(drawing.type)}_${drawing.time.replace(/[\/:]/g, '-')}.${extension}`;
+            } else {
+                fileName = `${getDrawingTypeText(drawing.type)}_${drawing.time.replace(/[\/:]/g, '-')}`;
+            }
+        }
+
+        a.download = fileName;
+        a.click();
+        addChangeLog('下载图纸', `下载了${getDrawingTypeText(drawing.type)}图纸：${fileName}`);
+    }
+}
+// 修改 app.js 中的 tryLoadMissingFile 函数
+function tryLoadMissingFile(filePath) {
+    const input = document.createElement('input');
+    input.type = 'file';
+    
+    // 根据文件路径判断接受什么类型的文件
+    if (filePath.includes('repairs')) {
+        input.accept = 'image/*';
+    } else if (filePath.includes('drawings')) {
+        input.accept = '.pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv,.txt,.json';
+    } else {
+        input.accept = '.jpg,.jpeg,.png,.gif,.pdf,.xls,.xlsx,.doc,.docx,.csv';
+    }
+    
+    input.onchange = async function (event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        try {
+            // 如果是图片文件，使用 resizeImage 压缩
+            if (file.type.startsWith('image/')) {
+                // 使用修改后的 resizeImage 函数，最大宽度500像素，质量0.6
+                resizeImage(file, 500, function (compressedDataUrl) {
+                    updateFileData(filePath, compressedDataUrl);
+                });
+            } else {
+                // 非图片文件直接读取
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    updateFileData(filePath, e.target.result);
+                };
+                reader.onerror = function (e) {
+                    console.error('文件读取失败:', e);
+                    alert('文件读取失败，请重试');
+                };
+                reader.readAsDataURL(file);
+            }
+        } catch (error) {
+            console.error('加载文件失败:', error);
+            alert('加载文件失败：' + error.message);
+        }
+    };
+    input.click();
+}
+
+// 确保 updateFileData 函数也能正确处理压缩后的图片
+function updateFileData(filePath, base64Data) {
+    let updated = false;
+    let siteUpdated = false;
+
+    sites.forEach(site => {
+        // 处理维修图片
+        if (site.repairs) {
+            site.repairs.forEach(repair => {
+                if (repair.photo && repair.photo.includes(filePath)) {
+                    // 确保图片已经压缩过
+                    if (base64Data.startsWith('data:image/')) {
+                        // 检查是否需要压缩（判断宽度是否超过500像素）
+                        const img = new Image();
+                        img.onload = function() {
+                            // 如果宽度超过500像素，进行压缩
+                            if (img.width > 500) {
+                                const canvas = document.createElement('canvas');
+                                const ctx = canvas.getContext('2d');
+                                
+                                // 计算新的尺寸
+                                const ratio = 500 / img.width;
+                                canvas.width = 500;
+                                canvas.height = img.height * ratio;
+                                
+                                // 绘制并压缩
+                                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                                const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.6);
+                                
+                                repair.photo = compressedDataUrl;
+                            } else {
+                                repair.photo = base64Data;
+                            }
+                            
+                            delete repair.photoMissing;
+                            updated = true;
+                            siteUpdated = true;
+                            console.log(`已更新维修图片: ${filePath}`);
+                            
+                            // 保存数据并刷新显示
+                            saveData();
+                            if (currentSiteId && siteUpdated) {
+                                const currentSite = sites.find(s => s.id === currentSiteId);
+                                if (currentSite) {
+                                    loadSiteData(currentSite);
+                                }
+                            }
+                        };
+                        img.src = base64Data;
+                    } else {
+                        repair.photo = base64Data;
+                        delete repair.photoMissing;
+                        updated = true;
+                        siteUpdated = true;
+                        console.log(`已更新维修图片: ${filePath}`);
+                    }
+                }
+            });
+        }
+
+        // 处理图纸文件
+        if (site.drawings) {
+            site.drawings.forEach(drawing => {
+                if (drawing.file && drawing.file.includes(filePath)) {
+                    drawing.file = base64Data;
+                    delete drawing.fileMissing;
+                    updated = true;
+                    siteUpdated = true;
+                    console.log(`已更新图纸文件: ${filePath}`);
+                }
+            });
+        }
+    });
+
+    if (updated) {
+        saveData();
+        if (currentSiteId && siteUpdated) {
+            const site = sites.find(s => s.id === currentSiteId);
+            if (site) loadSiteData(site);
+        }
+        showSimpleToast('文件已加载并更新');
+    } else {
+        showSimpleToast('未找到对应的文件路径', 'error');
+    }
+}
+// ==================== 退出和模态框管理 ====================
+function closeSiteModal() {
+    document.getElementById('siteModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    currentSiteId = null;
+    
+    const previews = ['repairPhotoPreview', 'drawingPreview'];
+    previews.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = '';
+            delete element.dataset.originalData;
+            delete element.dataset.fileName;
+        }
+    });
+}
+
+function logout() {
+    if (confirm('确定要退出登录吗？')) {    
+        addChangeLog('退出系统', '用户退出登录');
+        currentUser = null;
+        document.getElementById('loginPage').style.display = 'flex';
+        document.getElementById('mainContainer').classList.add('hidden');
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('loginError').style.display = 'none';
+    }
+}
+
+window.onclick = function (event) {
+    const modal = document.getElementById('siteModal');
+    if (event.target === modal) {
+        closeSiteModal();
+    }
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('siteModal');
+        if (modal.style.display === 'block') {
+            closeSiteModal();
+        }
+    }
+});
+
+// ==================== 工具函数 ====================
+function generateId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+function saveData() {
+    try {
+        localStorage.setItem('constructionSites', JSON.stringify(sites));
+        localStorage.setItem('changeLog', JSON.stringify(changeLog));
+    } catch (error) {
+        console.error('保存数据失败:', error);
+        alert('保存数据失败，请检查浏览器存储权限');
+    }
+}
+
+function loadFromLocalStorage() {
+    try {
+        const savedSites = localStorage.getItem('constructionSites');
+        const savedLog = localStorage.getItem('changeLog');
+
+        if (savedSites) {
+            sites = JSON.parse(savedSites);
+        }
+
+        if (savedLog) {
+            changeLog = JSON.parse(savedLog);
+        }
+    } catch (error) {
+        console.error('从 localStorage 加载数据失败:', error);
+        sites = [];
+        changeLog = [];
+    }
+}
+
+function formatDate(dateStr) {
+    if (!dateStr) return '';
+    if (dateStr.match(/^\d{4}-\d{2}-\d{2}$/)) {
+        return dateStr;
+    }
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return dateStr;
+    return date.toISOString().split('T')[0];
+}
+
+function calculateDaysLeft(endDate) {
+    if (!endDate) return 0;
+    const end = new Date(endDate);
+    const now = new Date();
+    end.setHours(0, 0, 0, 0);
+    now.setHours(0, 0, 0, 0);
+    const diff = end - now;
+    return Math.ceil(diff / (1000 * 60 * 60 * 24));
+}
+
+function getSiteStatus(progress, daysLeft) {
+    if (progress >= 100) {
+        return { class: 'completed', text: '已完成' };
+    } else if (daysLeft < 0) {
+        return { class: 'delayed', text: '已逾期' };
+    } else {
+        return { class: 'active', text: '进行中' };
+    }
+}
+
+// ==================== 表格渲染函数 ====================
+function renderTodoList(site) {
+    const list = document.getElementById('todoList');
+    
+    if (!site.todos || site.todos.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px; padding: 20px;">暂无待办事项</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th>事项名称</th>' +
+        '<th class="status-col">状态</th>' +
+        '<th>时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.todos.forEach(todo => {
+        let statusCell = '';
+        if (canEditStatus()) {
+            statusCell = `<td>
+                <select class="todo-status-select" data-id="${todo.id}" onchange="updateTodoStatus('${todo.id}', this.value)">
+                    <option value="pending" ${todo.status === 'pending' ? 'selected' : ''}>待办</option>
+                    <option value="in-progress" ${todo.status === 'in-progress' ? 'selected' : ''}>进行中</option>
+                    <option value="completed" ${todo.status === 'completed' ? 'selected' : ''}>已完成</option>
+                </select>
+            </td>`;
+        } else {
+           const statusText = { 'pending': '待办', 'in-progress': '进行中', 'completed': '已完成' };
+const statusColor = { 'pending': '#ff6b6b', 'in-progress': '#4caf50', 'completed': '#9e9e9e' };
+           statusCell = `<td><span style="color: ${statusColor[todo.status]} !important;">${statusText[todo.status]}</span></td>`;
+        }
+        
+        html += `<tr>
+            <td class="multi-line" title="${todo.item}">${todo.item}</td>
+            ${statusCell}
+            <td>${formatDate(todo.time)}</td>
+            <td class="multi-line">${todo.operator}</td>
+            <td>
+                <div class="action-btns compact">
+                    ${canDelete() ? `<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${todo.id}', 'todo')">删除</button>` : ''}
+                </div>
+            </td>
+        </tr>`;
+        
+        if (todo.note && todo.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="5" class="note-cell" onclick="editNoteAutoSave('todo', '${todo.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display multi-line">备注：${todo.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="todo" 
+                              data-id="${todo.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${todo.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+
+function renderExpenseList(site) {
+    const list = document.getElementById('expenseList');
+    
+    if (!site.expenses || site.expenses.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px; padding: 20px;">暂无支出记录</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th>项目名称</th>' +
+        '<th class="unit-col">单位</th>' +
+        '<th>金额</th>' +
+        '<th>时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.expenses.forEach(expense => {
+        let timeCell = '';
+        if (canEditTime()) {
+            timeCell = `<td onclick="editTime(this, '${expense.id}')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(expense.time)}</span>
+                <input type="date" class="date-edit" value="${formatDate(expense.time)}" 
+                       style="display: none;" 
+                       onblur="saveTime('${expense.id}', this.value, 'time')">
+            </td>`;
+        } else {
+            timeCell = `<td>${formatDate(expense.time)}</td>`;
+        }
+        
+        html += `<tr>
+            <td class="multi-line" title="${expense.item}">${expense.item}</td>
+            <td class="unit-col">${expense.unit || '项'}</td>
+            <td>¥${expense.amount.toFixed(2)}</td>
+            ${timeCell}
+            <td class="multi-line">${expense.operator || '-'}</td>
+            <td>
+                <div class="action-btns compact">
+                    ${canDelete() ? `<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${expense.id}', 'expense')">删除</button>` : ''}
+                </div>
+            </td>
+        </tr>`;
+        
+        if (expense.note && expense.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('expense', '${expense.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display multi-line">备注：${expense.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="expense" 
+                              data-id="${expense.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${expense.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+function renderRequirementList(site) {
+    const list = document.getElementById('requirementList');
+    
+    if (!site.requirements || site.requirements.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px; padding: 20px;">暂无客户要求</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th style="max-width: 80px;">要求内容</th>' +
+        '<th style="width: 60px;">类型</th>' +
+        '<th class="status-col">状态</th>' +
+        '<th>时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.requirements.forEach(req => {
+        const typeText = req.type === 'need' ? '需要' : '排除';
+        // 使用 CSS 变量，确保在深色模式下颜色不变
+        const typeStyle = `style="color: ${req.type === 'need' ? '#4caf50' : '#ff6b6b'} !important;"`;
+        
+        let statusCell = '';
+        if (canEditStatus()) {
+            statusCell = `<td>
+                <select class="requirement-status-select" data-id="${req.id}" onchange="updateRequirementStatus('${req.id}', this.value)">
+                    <option value="pending" ${req.status === 'pending' ? 'selected' : ''}>待完成</option>
+                    <option value="in-progress" ${req.status === 'in-progress' ? 'selected' : ''}>进行中</option>
+                    <option value="completed" ${req.status === 'completed' ? 'selected' : ''}>已完成</option>
+                </select>
+            </td>`;
+        } else {
+           const statusText = { 'pending': '待完成', 'in-progress': '进行中', 'completed': '已完成' };
+const statusColor = { 'pending': '#ff6b6b', 'in-progress': '#4caf50', 'completed': '#9e9e9e' };
+            statusCell = `<td><span style="color: ${statusColor[req.status]} !important;">${statusText[req.status]}</span></td>`;
+        }
+        
+        let timeCell = '';
+        if (canEditTime()) {
+            timeCell = `<td onclick="editTime(this, '${req.id}')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(req.time)}</span>
+                <input type="date" class="date-edit" value="${formatDate(req.time)}" 
+                       style="display: none;" 
+                       onblur="saveTime('${req.id}', this.value, 'time')">
+            </td>`;
+        } else {
+            timeCell = `<td>${formatDate(req.time)}</td>`;
+        }
+        
+        html += `<tr>
+            <td class="compact-text multi-line" title="${req.content}">${req.content}</td>
+            <td ${typeStyle} class="requirement-type-cell">${typeText}</td>
+            ${statusCell}
+            ${timeCell}
+            <td class="compact-text multi-line">${req.operator}</td>
+            <td>
+                <div class="action-btns compact">
+                    ${canDelete() ? `<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${req.id}', 'requirement')">删除</button>` : ''}
+                </div>
+            </td>
+        </tr>`;
+        
+        if (req.note && req.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('requirement', '${req.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display multi-line">备注：${req.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="requirement" 
+                              data-id="${req.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${req.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+
+function renderRepairList(site) {
+    const list = document.getElementById('repairList');
+    
+    if (!site.repairs || site.repairs.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px; padding: 20px;">暂无维修项</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th>图片信息</th>' +
+        '<th class="status-col">状态</th>' +
+        '<th>维修内容</th>' +
+        '<th>时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.repairs.forEach(repair => {
+        let photoHtml = '';
+        
+        if (!repair.photo) {
+            photoHtml = `<div class="photo-placeholder">
+                <div>📷</div>
+                <div>无图片</div>
+                <button onclick="addPhotoToRepair('${repair.id}')">添加图片</button>
+                <input type="file" accept="image/*" style="display: none;" id="addPhotoInput_${repair.id}" 
+                       onchange="uploadPhotoForRepair('${repair.id}', this)">
+            </div>`;
+        } else if (repair.photo.startsWith('[PHOTO:')) {
+            const fileName = repair.photo.match(/\[PHOTO:(.+?)\]/)[1];
+            photoHtml = `<div class="photo-missing">
+                <div>⚠️</div>
+                <div>图片缺失<br><small>需要单独加载</small></div>
+                <button onclick="tryLoadMissingFile('${fileName}')">加载图片</button>
+            </div>`;
+        } else {
+            photoHtml = `<div class="photo-container">
+                <img src="${repair.photo}" onclick="viewImage('${repair.photo}')">
+                <button onclick="changeRepairPhoto('${repair.id}', this)">↻</button>
+                <input type="file" accept="image/*" style="display: none;" 
+                       onchange="uploadNewRepairPhoto('${repair.id}', this)" class="repair-photo-input">
+            </div>`;
+        }
+        
+        let statusCell = '';
+        if (canEditStatus()) {
+            statusCell = `<td>
+                <select class="repair-status-select" data-id="${repair.id}" onchange="updateRepairStatus('${repair.id}', this.value)">
+                    <option value="pending" ${repair.status === 'pending' ? 'selected' : ''}>待维修</option>
+                    <option value="completed" ${repair.status === 'completed' ? 'selected' : ''}>已完成</option>
+                </select>
+            </td>`;
+        } else {
+          statusCell = `<td><span style="color: ${repair.status === 'completed' ? '#9e9e9e' : '#ff6b6b'} !important;">${repair.status === 'completed' ? '已完成' : '待维修'}</span></td>`;
+        }
+        
+        let timeCell = '';
+        if (canEditTime()) {
+            timeCell = `<td onclick="editTime(this, '${repair.id}')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(repair.time)}</span>
+                <input type="date" class="date-edit" value="${formatDate(repair.time)}" 
+                       style="display: none;" 
+                       onblur="saveTime('${repair.id}', this.value, 'time')">
+            </td>`;
+        } else {
+            timeCell = `<td>${formatDate(repair.time)}</td>`;
+        }
+        
+        const completeButton = repair.status === 'pending' ? 
+            `<button class="action-btn btn-success compact-btn" onclick="completeRepair('${repair.id}')">完成</button>` : '';
+        
+        html += `<tr>
+            <td>${photoHtml}</td>
+            ${statusCell}
+            <td class="multi-line" title="${repair.content}">${repair.content}</td>
+            ${timeCell}
+            <td class="multi-line">${repair.operator}</td>
+            <td>
+                <div class="action-btns compact">
+                    ${canDelete() ? `<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${repair.id}', 'repair')">删除</button>` : ''}
+                    ${completeButton}
+                </div>
+            </td>
+        </tr>`;
+        
+        if (repair.note && repair.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('repair', '${repair.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display multi-line">备注：${repair.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="repair" 
+                              data-id="${repair.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${repair.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+
+function addPhotoToRepair(repairId) {
+    const input = document.getElementById(`addPhotoInput_${repairId}`);
+    if (input) input.click();
+}
+// 修改 uploadPhotoForRepair 函数
+function uploadPhotoForRepair(repairId, fileInput) {
+    const file = fileInput.files[0];
+    if (!file) return;
+    
+    if (!file.type.startsWith('image/')) {
+        alert('请选择图片文件！');
+        return;
+    }
+    
+    // 使用修改后的 resizeImage 函数
+    resizeImage(file, 500, function(resizedDataUrl) {
+        const site = sites.find(s => s.id === currentSiteId);
+        if (!site) return;
+        
+        const repair = site.repairs.find(r => r.id === repairId);
+        if (repair) {
+            repair.photo = resizedDataUrl;
+            repair.photoName = file.name;
+            
+            saveData();
+            renderRepairList(site);
+            addChangeLog('添加维修图片', `为维修项"${repair.content}"添加了图片`);
+            alert('图片添加成功！');
+        }
+    });
+}
+
+function renderWorkerList(site) {
+    const list = document.getElementById('workerList');
+    
+    if (!site.workers || site.workers.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px;">暂无工人记录</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th>施工项目</th>' +
+        '<th>姓名</th>' +
+        '<th>开始时间</th>' +
+        '<th>结束时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.workers.forEach(worker => {
+        const startTimeCell = canEditWorkerTime() ? 
+            `<td onclick="editWorkerTime('${worker.id}', this, 'startTime')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(worker.startTime)}</span>
+                <input type="date" class="date-edit" value="${formatDate(worker.startTime)}" 
+                       style="display: none;" 
+                       onblur="saveWorkerTime('${worker.id}', this.value, 'startTime')">
+            </td>` :
+            `<td>${formatDate(worker.startTime)}</td>`;
+        
+        const endTimeCell = canEditWorkerTime() ? 
+            `<td onclick="editWorkerTime('${worker.id}', this, 'endTime')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(worker.endTime)}</span>
+                <input type="date" class="date-edit" value="${formatDate(worker.endTime)}" 
+                       style="display: none;" 
+                       onblur="saveWorkerTime('${worker.id}', this.value, 'endTime')">
+            </td>` :
+            `<td>${worker.endTime ? formatDate(worker.endTime) : '未结束'}</td>`;
+        
+        html += `<tr>
+            <td>${worker.type}</td>
+            <td>${worker.name}</td>
+            ${startTimeCell}
+            ${endTimeCell}
+            <td>${worker.operator}</td>
+            <td>
+                <div class="action-btns">
+                    ${canDelete() ? `<button class="action-btn delete-btn" onclick="deleteItem('${worker.id}', 'worker')">删除</button>` : ''}
+                </div>
+            </td>
+        </tr>`;
+        
+        if (worker.note && worker.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('worker', '${worker.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display">备注：${worker.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="worker" 
+                              data-id="${worker.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${worker.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+
+function renderAddRemoveList(site) {
+    const list = document.getElementById('addRemoveList');
+    
+    if (!site.addRemoveItems || site.addRemoveItems.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px; padding: 20px;">暂无增减项</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th>项目名称</th>' +
+        '<th>类型</th>' +
+        '<th>金额</th>' +
+        '<th>时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.addRemoveItems.forEach(item => {
+        let timeCell = '';
+        if (canEditTime()) {
+            timeCell = `<td onclick="editTime(this, '${item.id}')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(item.time)}</span>
+                <input type="date" class="date-edit" value="${formatDate(item.time)}" 
+                       style="display: none;" 
+                       onblur="saveTime('${item.id}', this.value, 'time')">
+            </td>`;
+        } else {
+            timeCell = `<td>${formatDate(item.time)}</td>`;
+        }
+        
+        html += `<tr>
+            <td class="multi-line" title="${item.item}">${item.item}</td>
+            <td><span style="color: ${item.type === 'add' ? '#4caf50' : '#ff6b6b'}">${item.type === 'add' ? '增加' : '减少'}</span></td>
+            <td>${item.type === 'add' ? '+' : '-'}¥${item.amount.toFixed(2)}</td>
+            ${timeCell}
+            <td class="multi-line">${item.operator || '-'}</td>
+            <td>
+                <div class="action-btns compact">
+                    ${canDelete() ? `<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${item.id}', 'addRemove')">删除</button>` : ''}
+                </div>
+            </td>
+        </tr>`;
+        
+        if (item.note && item.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('addRemove', '${item.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display multi-line">备注：${item.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="addRemove" 
+                              data-id="${item.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${item.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+
+function renderDrawingList(site) {
+    const list = document.getElementById('drawingList');
+    
+    if (!site.drawings || site.drawings.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px; padding: 20px;">暂无图纸</p>';
+        return;
+    }
+    
+    let html = '<table class="data-table"><thead><tr>' +
+        '<th style="min-height: 80px; width: 120px;">文件信息</th>' +
+        '<th>图纸类型</th>' +
+        '<th>文件名</th>' +
+        '<th>时间</th>' +
+        '<th>操作人</th>' +
+        '<th class="action-col">操作</th>' +
+        '</tr></thead><tbody>';
+    
+    site.drawings.forEach(drawing => {
+        let fileHtml = '';
+        
+        if (drawing.file) {
+            if (drawing.file.startsWith('[FILE:')) {
+                const fileName = drawing.file.match(/\[FILE:(.+?)\]/)[1];
+                fileHtml = `<div class="file-missing">
+                    <div>📄</div>
+                    <div>文件缺失<br><small>需单独加载</small></div>
+                    <button onclick="tryLoadMissingFile('${fileName}')">加载文件</button>
+                </div>`;
+            } else {
+                if (drawing.fileType && drawing.fileType.startsWith('image/')) {
+                    fileHtml = `<div class="file-container">
+                        <img src="${drawing.file}" onclick="viewImage('${drawing.file}')">
+                        <button class="image-change-btn" onclick="changeDrawingFile('${drawing.id}', this)" title="更换文件">↻</button>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv" 
+                               style="display: none;" onchange="uploadNewDrawingFile('${drawing.id}', this)" 
+                               class="drawing-file-input">
+                    </div>`;
+                } else {
+                    const fileIcon = getFileIcon(drawing.fileType);
+                    const fileNameDisplay = drawing.fileName || '未命名文件';
+                    const shortName = fileNameDisplay.length > 12 ? 
+                        fileNameDisplay.substring(0, 12) + '...' : fileNameDisplay;
+                    
+                    fileHtml = `<div class="file-container non-image">
+                        <div>${fileIcon}</div>
+                        <div>${shortName}</div>
+                        <button class="image-change-btn" onclick="changeDrawingFile('${drawing.id}', this)" title="更换文件">↻</button>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv" 
+                               style="display: none;" onchange="uploadNewDrawingFile('${drawing.id}', this)" 
+                               class="drawing-file-input">
+                    </div>`;
+                }
+            }
+        } else {
+            fileHtml = `<div class="file-placeholder">
+                <div>📄</div>
+                <div>无文件</div>
+                <button onclick="addFileToDrawing('${drawing.id}')">添加文件</button>
+                <input type="file" accept=".pdf,.jpg,.jpeg,.png,.xls,.xlsx,.doc,.docx,.csv" 
+                       style="display: none;" id="addDrawingFile_${drawing.id}" 
+                       onchange="uploadFileForDrawing('${drawing.id}', this)">
+            </div>`;
+        }
+        
+        let timeCell = '';
+        if (canEditTime()) {
+            timeCell = `<td onclick="editTime(this, '${drawing.id}')" title="点击编辑日期" style="cursor: pointer;">
+                <span class="date-display">${formatDate(drawing.time)}</span>
+                <input type="date" class="date-edit" value="${formatDate(drawing.time)}" 
+                       style="display: none;" 
+                       onblur="saveTime('${drawing.id}', this.value, 'time')">
+            </td>`;
+        } else {
+            timeCell = `<td>${formatDate(drawing.time)}</td>`;
+        }
+        
+        html += `<tr style="min-height: 80px;">`;
+        html += `<td>${fileHtml}</td>`;
+        html += `<td class="multi-line" title="${getDrawingTypeText(drawing.type)}">${getDrawingTypeText(drawing.type)}</td>`;
+        html += `<td class="multi-line" title="${drawing.fileName || '未命名'}">${drawing.fileName || '未命名'}</td>`;
+        html += `${timeCell}`;
+        html += `<td class="multi-line">${drawing.operator}</td>`;
+        html += `<td>
+            <div class="action-btns compact">
+                ${canDelete() ? `<button class="action-btn delete-btn compact-btn" onclick="deleteItem('${drawing.id}', 'drawing')">删除</button>` : ''}
+                <button class="action-btn btn-primary compact-btn" onclick="downloadDrawing('${drawing.id}')">下载</button>
+            </div>
+        </td>`;
+        html += `</tr>`;
+        
+        if (drawing.note && drawing.note.trim()) {
+            html += `<tr class="note-row">
+                <td colspan="6" class="note-cell" onclick="editNoteAutoSave('drawing', '${drawing.id}', this)" title="点击编辑备注" style="cursor: pointer;">
+                    <div class="note-display multi-line">备注：${drawing.note}</div>
+                    <textarea class="note-edit-auto" 
+                              style="display: none;"
+                              data-type="drawing" 
+                              data-id="${drawing.id}"
+                              onblur="saveNoteAutoSave(event)"
+                              onkeydown="handleNoteKeydown(event)">${drawing.note}</textarea>
+                </td>
+            </tr>`;
+        }
+    });
+    
+    html += '</tbody></table>';
+    list.innerHTML = html;
+}
+
+function addFileToDrawing(drawingId) {
+    const input = document.getElementById(`addDrawingFile_${drawingId}`);
+    if (input) input.click();
+}
+
+function uploadFileForDrawing(drawingId, fileInput) {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+
+    const drawing = site.drawings.find(d => d.id === drawingId);
+    if (!drawing) return;
+
+    if (file.type.startsWith('image/')) {
+    // 使用修改后的 resizeImage 函数
+    resizeImage(file, 500, function(resizedDataUrl) {
+        drawing.file = resizedDataUrl;
+        drawing.fileName = file.name;
+        drawing.fileType = file.type;
+        drawing.fileSize = file.size;
+        
+        saveData();
+        renderDrawingList(site);
+        addChangeLog('添加图纸文件', `为图纸"${drawing.fileName || '未命名'}"添加了文件`);
+        alert('文件添加成功！');
+    });
+    } else {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            drawing.file = e.target.result;
+            drawing.fileName = file.name;
+            drawing.fileType = file.type;
+            drawing.fileSize = file.size;
+
+            saveData();
+            renderDrawingList(site);
+            addChangeLog('添加图纸文件', `为图纸"${drawing.fileName || '未命名'}"添加了文件`);
+            alert('文件添加成功！');
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+function renderExperienceList(site) {
+    const list = document.getElementById('experienceList');
+
+    if (!site.experiences || site.experiences.length === 0) {
+        list.innerHTML = '<p style="color: #999; text-align: center; margin-top: 20px;">暂无经验总结</p>';
+        return;
+    }
+
+    list.innerHTML = '';
+
+    site.experiences.forEach(exp => {
+        const expItem = document.createElement('div');
+        expItem.className = 'experience-item';
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.style.flex = '1';
+        contentDiv.style.minWidth = '0';
+        
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'experience-header';
+        headerDiv.innerHTML = `
+            <span>${exp.operator} - 经验总结</span>
+            <span class="experience-time">${exp.time}</span>
+        `;
+        
+        const contentText = document.createElement('div');
+        contentText.className = 'experience-content';
+        contentText.textContent = exp.content;
+        contentText.title = exp.content;
+        
+        contentDiv.appendChild(headerDiv);
+        contentDiv.appendChild(contentText);
+        
+        const actionDiv = document.createElement('div');
+        if (canDelete()) {
+            actionDiv.innerHTML = `<button class="action-btn delete-btn" onclick="deleteItem('${exp.id}', 'experience')">删除</button>`;
+        }
+        
+        expItem.appendChild(contentDiv);
+        expItem.appendChild(actionDiv);
+        
+        list.appendChild(expItem);
+    });
+}
+
+// ==================== 备注实时保存相关函数 ====================
+function editNoteAutoSave(type, id, cell) {
+    if (!canEditNote()) return;
+    
+    const display = cell.querySelector('.note-display');
+    const input = cell.querySelector('.note-edit-auto');
+    
+    if (display) display.style.display = 'none';
+    if (input) {
+        input.style.display = 'block';
+        input.focus();
+        const length = input.value.length;
+        input.setSelectionRange(length, length);
+        
+        if (display && display.textContent.includes('点击添加备注')) {
+            input.value = '';
+        }
+    }
+}
+
+function saveNoteAutoSave(event) {
+    const input = event.target;
+    const type = input.getAttribute('data-type');
+    const id = input.getAttribute('data-id');
+    
+    if (!type || !id) return;
+    
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+    
+    const collections = {
+        'todo': site.todos,
+        'expense': site.expenses,
+        'requirement': site.requirements,
+        'repair': site.repairs,
+        'worker': site.workers,
+        'addRemove': site.addRemoveItems,
+        'drawing': site.drawings
+    };
+    
+    const collection = collections[type];
+    if (!collection) return;
+    
+    const item = collection.find(item => item.id === id);
+    if (!item) return;
+    
+    const oldNote = item.note || '';
+    const newNote = input.value.trim();
+    
+    if (!newNote) {
+        const display = input.parentElement.querySelector('.note-display');
+        if (display) {
+            display.textContent = '点击添加备注（20字符以内）';
+            display.style.display = '';
+        }
+        input.style.display = 'none';
+        
+        if (oldNote) {
+            item.note = '';
+            saveData();
+            addChangeLog(`清除${getCollectionName(type)}备注`, `清除了${item.item || item.content || item.name || '未命名'}的备注`);
+        }
+        return;
+    }
+    
+    if (oldNote === newNote) {
+        input.style.display = 'none';
+        const display = input.parentElement.querySelector('.note-display');
+        if (display) display.style.display = '';
+        return;
+    }
+    
+    item.note = newNote;
+    saveData();
+    
+    const display = input.parentElement.querySelector('.note-display');
+    if (display) {
+        display.textContent = `备注：${newNote}`;
+        display.style.display = '';
+    }
+    input.style.display = 'none';
+    
+    const itemName = item.item || item.content || item.name || '未命名';
+    addChangeLog(`编辑${getCollectionName(type)}备注`, `修改了${itemName}的备注`);
+    
+    showSimpleToast('备注已保存', 'success');
+}
+
+function handleNoteKeydown(event) {
+    if (event.key === 'Escape') {
+        const input = event.target;
+        input.value = input.defaultValue;
+        input.style.display = 'none';
+        const display = input.parentElement.querySelector('.note-display');
+        if (display) display.style.display = '';
+    } else if (event.key === 'Enter' && event.ctrlKey) {
+        event.preventDefault();
+        event.target.blur();
+    }
+}
+
+function getCollectionName(type) {
+    const names = {
+        'todo': '待办事项',
+        'expense': '支出',
+        'requirement': '客户要求',
+        'repair': '维修项',
+        'worker': '工人',
+        'addRemove': '增减项',
+        'drawing': '图纸'
+    };
+    return names[type] || '项目';
+}
+
+function editTime(element, id, timeField = 'time') {
+    if (!canEditTime()) return;
+    
+    const display = element.querySelector('.date-display');
+    const input = element.querySelector('.date-edit');
+    
+    if (display) display.style.display = 'none';
+    if (input) {
+        input.style.display = 'inline-block';
+        input.focus();
+    }
+}
+
+function saveTime(id, newTime, timeField = 'time') {
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return;
+    
+    const searchCollections = [
+        { collection: site.todos, type: 'todo' },
+        { collection: site.expenses, type: 'expense' },
+        { collection: site.requirements, type: 'requirement' },
+        { collection: site.repairs, type: 'repair' },
+        { collection: site.workers, type: 'worker' },
+        { collection: site.addRemoveItems, type: 'addRemove' },
+        { collection: site.drawings, type: 'drawing' }
+    ];
+    
+    for (const { collection, type } of searchCollections) {
+        if (collection) {
+            const found = collection.find(item => item.id === id);
+            if (found) {
+                const itemName = found.item || found.content || found.name || '未命名';
+                found[timeField] = newTime;
+                saveData();
+                addChangeLog('编辑时间', `修改了${itemName}的时间为：${newTime}`);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+// 确保管理员变量已初始化
+if (typeof window.ADMIN_USERS === 'undefined') {
+    window.ADMIN_USERS = ['admin', 'qiyu'];
+}
+
+// 如果当前登录的是管理员，确保 isAdmin 属性正确
+if (currentUser) {
+    if (window.ADMIN_USERS.includes(currentUser.username) && !currentUser.isAdmin) {
+        currentUser.isAdmin = true;
+    }
+}
+function deleteItem(itemId, collectionName) {
+    if (!canDelete()) {
+        alert('只有管理员可以删除数据！');
+        return false;
+    }
+    
+    if (!confirm('确定要删除这条记录吗？')) return false;
+    
+    const site = sites.find(s => s.id === currentSiteId);
+    if (!site) return false;
+    
+    const collections = {
+        'todo': { data: site.todos, name: '待办事项' },
+        'expense': { data: site.expenses, name: '支出' },
+        'requirement': { data: site.requirements, name: '客户要求' },
+        'repair': { data: site.repairs, name: '维修项' },
+        'worker': { data: site.workers, name: '工人' },
+        'addRemove': { data: site.addRemoveItems, name: '增减项' },
+        'drawing': { data: site.drawings, name: '图纸' },
+        'experience': { data: site.experiences, name: '经验总结' }
+    };
+    
+    const collection = collections[collectionName];
+    if (!collection || !collection.data) return false;
+    
+    const index = collection.data.findIndex(item => item.id === itemId);
+    if (index > -1) {
+        const item = collection.data[index];
+        const itemName = item.item || item.content || item.name || '未命名';
+        
+        collection.data.splice(index, 1);
+        saveData();
+        
+        addChangeLog(`删除${collection.name}`, `删除了${collection.name}：${itemName}`);
+        
+        switch (collectionName) {
+            case 'todo': renderTodoList(site); break;
+            case 'expense': renderExpenseList(site); break;
+            case 'requirement': renderRequirementList(site); break;
+            case 'repair': renderRepairList(site); break;
+            case 'worker': renderWorkerList(site); break;
+            case 'addRemove': renderAddRemoveList(site); break;
+            case 'drawing': renderDrawingList(site); break;
+            case 'experience': renderExperienceList(site); break;
+        }
+        
+        alert('删除成功！');
+        return true;
+    }
+    return false;
+}
+
+// ==================== 工地列表相关函数 ====================
+function renderSiteList() {
+    const siteList = document.getElementById('siteList');
+    siteList.innerHTML = '';
+
+    if (sites.length === 0) {
+        siteList.innerHTML = '<p class="loading">暂无工地数据，请添加工地</p>';
+        return;
+    }
+
+    // 过滤可访问的工地
+    const accessibleSites = sites.filter(site => {
+        return canViewSite ? canViewSite(site.id) : true;
+    });
+
+    if (accessibleSites.length === 0) {
+        siteList.innerHTML = '<p class="loading">您没有可访问的工地</p>';
+        return;
+    }
+
+    accessibleSites.forEach(site => {
+        const progress = site.progress || 0;
+        const daysLeft = calculateDaysLeft(site.endDate);
+        const status = getSiteStatus(progress, daysLeft);
+
+        const deleteBtnHtml = canDelete() ?
+            `<button class="site-delete-btn" onclick="event.stopPropagation(); deleteSite('${site.id}')" title="删除工地">×</button>` :
+            '';
+
+        const siteCard = document.createElement('div');
+        siteCard.className = 'site-card';
+        siteCard.innerHTML = `
+            <div class="site-card-header">
+                <div class="site-name">${site.name || '未命名工地'}</div>
+                <div class="site-card-actions">
+                    <div class="site-status status-${status.class}">${status.text}</div>
+                    ${deleteBtnHtml}
                 </div>
             </div>
-        `;_0x4a4a6a['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061']=resizedDataUrl;_0x4a4a6a['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x9b6c1b['\u006E\u0061\u006D\u0065'];});}function previewDrawing(event){var _0xa33b=(593377^593382)+(496632^496633);const _0x7f746b=event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][739576^739576];_0xa33b=105619^105627;if(!_0x7f746b)return;const _0x8b85df=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0050\u0072\u0065\u0076\u0069\u0065\u0077");var _0x4a5aa=(662903^662900)+(807732^807733);const _0xdbaa=new FileReader();_0x4a5aa='\u006B\u0067\u0071\u006A\u0070\u006C';_0xdbaa['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){var _0x2db22f=(173487^173480)+(329489^329490);const _0x3271fd=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074'];_0x2db22f=(268738^268737)+(689774^689770);_0x8b85df['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061']=_0x3271fd;_0x8b85df['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x7f746b['\u006E\u0061\u006D\u0065'];_0x8b85df['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']=_0x7f746b['\u0074\u0079\u0070\u0065'];_0x8b85df['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065']=_0x7f746b['\u0073\u0069\u007A\u0065'];if(_0x7f746b['\u0074\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0069\u006D\u0061\u0067\u0065\u002F")){resizeImage(_0x7f746b,527084^527128,function(resizedDataUrl){_0x8b85df['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-                    <div style="text-align: center; padding: 10px;">
-                        <img src="${resizedDataUrl}" class="image-preview" onclick="viewImage('${resizedDataUrl}')">
-                        <div style="margin-top: 5px; font-size: 12px; color: #666;">
-                            ${_0x7f746b['\u006E\u0061\u006D\u0065']} (${(_0x7f746b['\u0073\u0069\u007A\u0065']/(164736^165760))['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](854169^854168)} KB)
-                            <br><small>已压缩: 最大边500px, 质量0.6</small>
-                        </div>
-                    </div>
-                `;_0x8b85df['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061']=resizedDataUrl;});}else{let _0x6f71gd="\uDCC4\uD83D".split("").reverse().join("");var _0xe558bb;let _0xb840c="\u6587\u6863";_0xe558bb='\u0067\u0063\u0065\u0066\u006F\u006A';if(_0x7f746b['\u0074\u0079\u0070\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0070\u0064\u0066")){_0x6f71gd="\uD83D\uDCD5";_0xb840c="\u4EF6\u6587FDP".split("").reverse().join("");}else if(_0x7f746b['\u0074\u0079\u0070\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0065\u0078\u0063\u0065\u006C")||_0x7f746b['\u0074\u0079\u0070\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0073\u0068\u0065\u0065\u0074")){_0x6f71gd="\uDCCA\uD83D".split("").reverse().join("");_0xb840c="\u0045\u0078\u0063\u0065\u006C\u6587\u4EF6";}else if(_0x7f746b['\u0074\u0079\u0070\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0077\u006F\u0072\u0064")){_0x6f71gd="\uD83D\uDCDD";_0xb840c="\u0057\u006F\u0072\u0064\u6587\u4EF6";}else if(_0x7f746b['\u0074\u0079\u0070\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0063\u0073\u0076")){_0x6f71gd="\uD83D\uDCCB";_0xb840c="\u4EF6\u6587VSC".split("").reverse().join("");}_0x8b85df['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
-                <div style="text-align: center; padding: 10px;">
-                    <div style="font-size: 48px; color: #667eea;">${_0x6f71gd}</div>
-                    <div style="font-weight: bold; margin: 10px 0;">${_0xb840c}</div>
-                    <div style="word-break: break-all;">${_0x7f746b['\u006E\u0061\u006D\u0065']}</div>
-                    <div style="font-size: 12px; color: #666; margin-top: 5px;">
-                        ${(_0x7f746b['\u0073\u0069\u007A\u0065']/(733783^734807))['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](613586^613587)} KB
-                    </div>
-                </div>
-            `;}};_0xdbaa['\u0072\u0065\u0061\u0064\u0041\u0073\u0044\u0061\u0074\u0061\u0055\u0052\u004C'](_0x7f746b);}function changeRepairPhoto(repairId,button){const _0x9becad=button['\u0070\u0061\u0072\u0065\u006E\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074']['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0072\u0065\u0070\u0061\u0069\u0072\u002D\u0070\u0068\u006F\u0074\u006F\u002D\u0069\u006E\u0070\u0075\u0074");_0x9becad['\u0063\u006C\u0069\u0063\u006B']();}function uploadNewRepairPhoto(repairId,fileInput){var _0x738d1b=(310028^310028)+(903069^903064);const _0xf5569d=fileInput['\u0066\u0069\u006C\u0065\u0073'][880194^880194];_0x738d1b=(986457^986449)+(699703^699699);if(!_0xf5569d)return;if(!_0xf5569d['\u0074\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("/egami".split("").reverse().join(""))){alert("\u8BF7\u9009\u62E9\u56FE\u7247\u6587\u4EF6\uFF01");return;}resizeImage(_0xf5569d,718400^718772,function(resizedDataUrl){var _0xa_0xc4b=(566733^566724)+(398258^398262);const _0x4f4c5c=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0xa_0xc4b=(967214^967213)+(732230^732226);if(!_0x4f4c5c)return;var _0xb48gaf=(655397^655396)+(251824^251826);const _0xc38b=_0x4f4c5c['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u0069\u006E\u0064'](r=>r['\u0069\u0064']===repairId);_0xb48gaf=558948^558950;if(_0xc38b){const _0xgf479f=_0xc38b['\u0070\u0068\u006F\u0074\u006F']?"\u6709\u56FE\u7247":"\u65E0\u56FE\u7247";_0xc38b['\u0070\u0068\u006F\u0074\u006F']=resizedDataUrl;_0xc38b['\u0070\u0068\u006F\u0074\u006F\u004E\u0061\u006D\u0065']=_0xf5569d['\u006E\u0061\u006D\u0065'];saveData();renderRepairList(_0x4f4c5c);addChangeLog("\u66F4\u6362\u7EF4\u4FEE\u56FE\u7247",`更换了维修项"${_0xc38b['\u0063\u006F\u006E\u0074\u0065\u006E\u0074']}"的图片（旧：${_0xgf479f}）`);alert("\uFF01\u529F\u6210\u6362\u66F4\u7247\u56FE\u4FEE\u7EF4".split("").reverse().join(""));}});}function changeDrawingFile(drawingId,button){var _0xba4c=(813353^813359)+(302018^302023);const _0x446d=button['\u0070\u0061\u0072\u0065\u006E\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074']['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("tupni-elif-gniward.".split("").reverse().join(""));_0xba4c=(450755^450762)+(835483^835486);_0x446d['\u0063\u006C\u0069\u0063\u006B']();}function uploadNewDrawingFile(drawingId,fileInput){var _0x2e68g=(751313^751316)+(141819^141811);const _0x9fea=fileInput['\u0066\u0069\u006C\u0065\u0073'][895042^895042];_0x2e68g=(700854^700855)+(895346^895347);if(!_0x9fea)return;console['\u006C\u006F\u0067']("\u5F00\u59CB\u4E0A\u4F20\u6587\u4EF6\u003A",_0x9fea['\u006E\u0061\u006D\u0065'],"\u7C7B\u578B\u003A",_0x9fea['\u0074\u0079\u0070\u0065'],":\u5C0F\u5927".split("").reverse().join(""),_0x9fea['\u0073\u0069\u007A\u0065']);const _0xe3715d=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xe3715d){console['\u0065\u0072\u0072\u006F\u0072']("\u5730\u5DE5\u524D\u5F53\u5230\u627E\u672A".split("").reverse().join(""));return;}var _0x061a9d=(986428^986425)+(690679^690676);const _0xaf8b=_0xe3715d['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u0069\u006E\u0064'](d=>d['\u0069\u0064']===drawingId);_0x061a9d=(465377^465378)+(183150^183146);if(!_0xaf8b){console['\u0065\u0072\u0072\u006F\u0072']("\u672A\u627E\u5230\u56FE\u7EB8");return;}var _0x3_0xdc3=(438626^438627)+(840872^840865);const _0xa65c=_0xaf8b['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']||"\u672A\u547D\u540D";_0x3_0xdc3=100646^100654;if(_0x9fea['\u0074\u0079\u0070\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("/egami".split("").reverse().join(""))){console['\u006C\u006F\u0067']("\u4EF6\u6587\u7247\u56FE\u7406\u5904".split("").reverse().join(""));resizeImage(_0x9fea,385934^385658,function(resizedDataUrl){console['\u006C\u006F\u0067']("\u636E\u6570\u7EB8\u56FE\u65B0\u66F4\u59CB\u5F00\uFF0C\u6210\u5B8C\u7F29\u538B\u7247\u56FE".split("").reverse().join(""));_0xaf8b['\u0066\u0069\u006C\u0065']=resizedDataUrl;_0xaf8b['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x9fea['\u006E\u0061\u006D\u0065'];_0xaf8b['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']=_0x9fea['\u0074\u0079\u0070\u0065'];_0xaf8b['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065']=_0x9fea['\u0073\u0069\u007A\u0065'];saveData();renderDrawingList(_0xe3715d);addChangeLog("\u66F4\u6362\u56FE\u7EB8\u6587\u4EF6",`更换了${getDrawingTypeText(_0xaf8b['\u0074\u0079\u0070\u0065'])}图纸：${_0xa65c} → ${_0x9fea['\u006E\u0061\u006D\u0065']}`);console['\u006C\u006F\u0067']("\u56FE\u7EB8\u6587\u4EF6\u66F4\u6362\u6210\u529F\uFF01");alert("\uFF01\u529F\u6210\u6362\u66F4\u4EF6\u6587\u7EB8\u56FE".split("").reverse().join(""));});}else{console['\u006C\u006F\u0067']("\u5904\u7406\u975E\u56FE\u7247\u6587\u4EF6");var _0x3e_0x6dd=(721764^721761)+(110617^110608);const _0x49fc=new FileReader();_0x3e_0x6dd=824656^824662;_0x49fc['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){console['\u006C\u006F\u0067']("\u6587\u4EF6\u8BFB\u53D6\u5B8C\u6210");_0xaf8b['\u0066\u0069\u006C\u0065']=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074'];_0xaf8b['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065']=_0x9fea['\u006E\u0061\u006D\u0065'];_0xaf8b['\u0066\u0069\u006C\u0065\u0054\u0079\u0070\u0065']=_0x9fea['\u0074\u0079\u0070\u0065'];_0xaf8b['\u0066\u0069\u006C\u0065\u0053\u0069\u007A\u0065']=_0x9fea['\u0073\u0069\u007A\u0065'];saveData();renderDrawingList(_0xe3715d);addChangeLog("\u66F4\u6362\u56FE\u7EB8\u6587\u4EF6",`更换了${getDrawingTypeText(_0xaf8b['\u0074\u0079\u0070\u0065'])}图纸：${_0xa65c} → ${_0x9fea['\u006E\u0061\u006D\u0065']}`);console['\u006C\u006F\u0067']("\uFF01\u529F\u6210\u6362\u66F4\u4EF6\u6587\u7EB8\u56FE".split("").reverse().join(""));alert("\uFF01\u529F\u6210\u6362\u66F4\u4EF6\u6587\u7EB8\u56FE".split("").reverse().join(""));};_0x49fc['\u006F\u006E\u0065\u0072\u0072\u006F\u0072']=function(e){console['\u0065\u0072\u0072\u006F\u0072']("\u6587\u4EF6\u8BFB\u53D6\u5931\u8D25\u003A",e);alert("\u8BD5\u91CD\u8BF7\uFF0C\u8D25\u5931\u53D6\u8BFB\u4EF6\u6587".split("").reverse().join(""));};_0x49fc['\u0072\u0065\u0061\u0064\u0041\u0073\u0044\u0061\u0074\u0061\u0055\u0052\u004C'](_0x9fea);}}function saveQuote(){if(!currentSiteId){alert("\u8BF7\u5148\u4FDD\u5B58\u5DE5\u5730\u57FA\u672C\u4FE1\u606F\uFF01");return;}if(!canEditQuote()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u586B\u5199\u62A5\u4EF7\uFF01");return;}const _0xccdfb=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(!_0xccdfb)return;const _0xd8ae=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etouQcisab".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||977724^977724;var _0xgd5fd;const _0xdcfd8d=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etouQlairetam".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||108797^108797;_0xgd5fd=959040^959044;const _0xe04ed=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'])||596339^596339;var _0x6cg2a=(613070^613062)+(305990^305988);const _0x10086c=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etouQerutinruf".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||392005^392005;_0x6cg2a='\u0064\u0070\u0069\u0066\u006F\u0064';var _0x3f26fe=(123851^123848)+(838552^838553);const _0xb0ge=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'])||971640^971640;_0x3f26fe=(890384^890393)+(585930^585933);var _0x325dab=(649402^649400)+(107479^107479);const _0x29eb=parseFloat(document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etouQlatoTevomeRdda".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065'])||945908^945908;_0x325dab='\u0070\u006C\u006C\u006E\u0068\u0071';_0xccdfb['\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065']=_0xd8ae;_0xccdfb['\u006D\u0061\u0074\u0065\u0072\u0069\u0061\u006C\u0051\u0075\u006F\u0074\u0065']=_0xdcfd8d;_0xccdfb['\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065']=_0xe04ed;_0xccdfb['\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065']=_0x10086c;_0xccdfb['\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065']=_0xb0ge;_0xccdfb['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C']=_0x29eb;_0xccdfb['\u0074\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065']=_0xd8ae+_0xdcfd8d+_0xe04ed+_0x10086c+_0xb0ge+_0x29eb;saveData();updateQuoteSummary(_0xccdfb);addChangeLog("\u4EF7\u62A5\u65B0\u66F4".split("").reverse().join(""),`更新了工地"${_0xccdfb['\u006E\u0061\u006D\u0065']}"的报价信息`);alert("\u62A5\u4EF7\u4FDD\u5B58\u6210\u529F\uFF01");}function updateQuoteSummary(site){if(!site)return;const _0x5c2eb=site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']?.reduce((sum,item)=>{return sum+(item['\u0074\u0079\u0070\u0065']==="\u0061\u0064\u0064"?item['\u0061\u006D\u006F\u0075\u006E\u0074']:-item['\u0061\u006D\u006F\u0075\u006E\u0074']);},553631^553631)||290312^290312;site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C']=_0x5c2eb;var _0xf_0xbda=(556063^556062)+(674727^674725);const _0xg5b3aa=site['\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065']||936760^936760;_0xf_0xbda=413959^413953;var _0x4_0x9be=(682284^682286)+(262237^262229);const _0x2cdbc=site['\u006D\u0061\u0074\u0065\u0072\u0069\u0061\u006C\u0051\u0075\u006F\u0074\u0065']||761704^761704;_0x4_0x9be=(542716^542717)+(916606^916599);var _0xaec2db=(230541^230538)+(734195^734194);const _0x493cc=site['\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065']||419362^419362;_0xaec2db="nknofb".split("").reverse().join("");var _0xdce;const _0x9f8aab=site['\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065']||496077^496077;_0xdce=(641271^641271)+(766299^766297);var _0xfc_0xf61;const _0x86d11f=site['\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065']||294697^294697;_0xfc_0xf61='\u0068\u0067\u0065\u0063\u006A\u0068';const _0x607e=_0xg5b3aa+_0x2cdbc+_0x493cc+_0x9f8aab+_0x86d11f+_0x5c2eb;site['\u0074\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065']=_0x607e;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0062\u0061\u0073\u0069\u0063\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0xg5b3aa['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](822913^822915)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("yalpsiDetouQlairetam".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x2cdbc['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](177125^177127)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0071\u0075\u0069\u0070\u006D\u0065\u006E\u0074\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x493cc['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](730667^730665)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0066\u0075\u0072\u006E\u0069\u0074\u0075\u0072\u0065\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x9f8aab['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](649282^649280)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006F\u0074\u0068\u0065\u0072\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x86d11f['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](489217^489219)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`${_0x5c2eb>=(335128^335128)?"\u002B":''}¥${_0x5c2eb['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](584194^584192)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x607e['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](718115^718113)}`;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']=_0x5c2eb;}function updateAddRemoveSummary(site){if(!site||!site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("yrammuSevomeRdda".split("").reverse().join(""))['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u00A5\u0030\u002E\u0030\u0030";return;}const _0xf5eg=site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']['\u0066\u0069\u006C\u0074\u0065\u0072'](item=>item['\u0074\u0079\u0070\u0065']==="\u0061\u0064\u0064")['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+(item['\u0061\u006D\u006F\u0075\u006E\u0074']||310696^310696),914140^914140);const _0x04b3ab=site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']['\u0066\u0069\u006C\u0074\u0065\u0072'](item=>item['\u0074\u0079\u0070\u0065']==="evomer".split("").reverse().join(""))['\u0072\u0065\u0064\u0075\u0063\u0065']((sum,item)=>sum+(item['\u0061\u006D\u006F\u0075\u006E\u0074']||798675^798675),764149^764149);const _0x2de79a=_0xf5eg-_0x04b3ab;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0053\u0075\u006D\u006D\u0061\u0072\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x2de79a['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](234290^234288)}`;site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C']=_0x2de79a;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065']=_0x2de79a;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u006F\u0074\u0061\u006C\u0051\u0075\u006F\u0074\u0065\u0044\u0069\u0073\u0070\u006C\u0061\u0079")['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']=`¥${_0x2de79a['\u0074\u006F\u0046\u0069\u0078\u0065\u0064'](965181^965183)}`;}async function loadFromJsFile(){if(!currentUser){alert("\uFF01\u5F55\u767B\u5148\u8BF7".split("").reverse().join(""));return;}if(!confirm("\uFF1F\u7EED\u7EE7\u5426\u662F\n\u3002\u636E\u6570\u524D\u5F53\u4EFD\u5907\u7ECF\u5DF2\u4FDD\u786E\u8BF7\n\uFF01\u636E\u6570\u6709\u6240\u524D\u5F53\u76D6\u8986\u5168\u5B8C\u5C06\u636E\u6570\u8F7D\u52A0\u4EF6\u6587\u4ECE\uFF1A\u544A\u8B66".split("").reverse().join(""))){return;}const _0xb2_0x1f7=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("tupni".split("").reverse().join(""));_0xb2_0x1f7['\u0074\u0079\u0070\u0065']="\u0066\u0069\u006C\u0065";_0xb2_0x1f7['\u0061\u0063\u0063\u0065\u0070\u0074']="nosj.,sj.,piz.".split("").reverse().join("");_0xb2_0x1f7['\u006F\u006E\u0063\u0068\u0061\u006E\u0067\u0065']=async function(event){const _0x49d9d=event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][566981^566981];if(!_0x49d9d)return;try{var _0x5_0x7b0=(221951^221951)+(285822^285820);const _0x6bb=new FileReader();_0x5_0x7b0=(998752^998759)+(306543^306539);_0x6bb['\u006F\u006E\u006C\u006F\u0061\u0064']=async function(e){try{var _0x483aa;const _0xac23af=e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074'];_0x483aa='\u006D\u0070\u0064\u0071\u006C\u0063';if(_0x49d9d['\u006E\u0061\u006D\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("\u002E\u007A\u0069\u0070")){await loadFromZipFile(_0x49d9d);showSimpleToast("\u590D\u6062\u5DF2\u4EF6\u6587\u6709\u6240\uFF0C\u529F\u6210\u8F7D\u52A0\u5305\u636E\u6570\u6574\u5B8C".split("").reverse().join(""));}else if(_0x49d9d['\u006E\u0061\u006D\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("nosj.".split("").reverse().join(""))){await loadFromJsonContent(_0xac23af,_0x49d9d['\u006E\u0061\u006D\u0065']);showSimpleToast("\u004A\u0053\u004F\u004E\u6570\u636E\u52A0\u8F7D\u6210\u529F\uFF0C\u56FE\u7247\u9700\u8981\u5355\u72EC\u6062\u590D","gninraw".split("").reverse().join(""));}else if(_0x49d9d['\u006E\u0061\u006D\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("sj.".split("").reverse().join(""))){await loadFromJsContent(_0xac23af);showSimpleToast("\u590D\u6062\u72EC\u5355\u8981\u9700\u7247\u56FE\uFF0C\u529F\u6210\u8F7D\u52A0\u636E\u6570SJ".split("").reverse().join(""),"gninraw".split("").reverse().join(""));}else{alert("\u8BF7\u9009\u62E9\u0020\u005A\u0049\u0050\u3001\u004A\u0053\u0020\u6216\u0020\u004A\u0053\u004F\u004E\u0020\u6587\u4EF6\uFF01");return;}saveData();renderSiteList();addChangeLog("\u52A0\u8F7D\u6570\u636E",`从文件 ${_0x49d9d['\u006E\u0061\u006D\u0065']} 加载数据`);alert(`数据加载成功！\n已加载 ${sites['\u006C\u0065\u006E\u0067\u0074\u0068']} 个工地数据。`);}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u52A0\u8F7D\u5931\u8D25\u003A",error);alert("\u52A0\u8F7D\u5931\u8D25\uFF1A"+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']);}};if(_0x49d9d['\u006E\u0061\u006D\u0065']['\u0074\u006F\u004C\u006F\u0077\u0065\u0072\u0043\u0061\u0073\u0065']()['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("\u002E\u007A\u0069\u0070")){_0x6bb['\u0072\u0065\u0061\u0064\u0041\u0073\u0041\u0072\u0072\u0061\u0079\u0042\u0075\u0066\u0066\u0065\u0072'](_0x49d9d);}else{_0x6bb['\u0072\u0065\u0061\u0064\u0041\u0073\u0054\u0065\u0078\u0074'](_0x49d9d);}}catch(error){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u53D6\u8BFB\u4EF6\u6587".split("").reverse().join(""),error);alert("\u6587\u4EF6\u8BFB\u53D6\u5931\u8D25\uFF1A"+error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']);}};_0xb2_0x1f7['\u0063\u006C\u0069\u0063\u006B']();}async function loadFromZipFile(file){if(typeof JSZip==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){alert("\u4EF6\u6587 PIZ \u7406\u5904\u6CD5\u65E0\uFF0C\u8F7D\u52A0\u672A\u5E93 piZSJ".split("").reverse().join(""));throw new Error("\u004A\u0053\u005A\u0069\u0070\u0020\u5E93\u672A\u52A0\u8F7D");}const _0x82db7f=await JSZip['\u006C\u006F\u0061\u0064\u0041\u0073\u0079\u006E\u0063'](file);let _0x4a51f=null;var _0xfec=(153686^153687)+(913450^913442);const _0x0a61ee=["\u0073\u0068\u0075\u006A\u0075\u002E\u006A\u0073","\u0073\u0068\u0075\u006A\u0075\u005F\u006C\u0069\u0067\u0068\u0074\u002E\u006A\u0073","\u0063\u006F\u006E\u0073\u0074\u0072\u0075\u0063\u0074\u0069\u006F\u006E\u005F\u0064\u0061\u0074\u0061\u002E\u006A\u0073\u006F\u006E"];_0xfec='\u0062\u0067\u0061\u0071\u0069\u0068';for(const _0x56963b of _0x0a61ee){const _0x14_0xd44=_0x82db7f['\u0066\u0069\u006C\u0065'](_0x56963b);if(_0x14_0xd44){_0x4a51f=_0x14_0xd44;console['\u006C\u006F\u0067'](`在ZIP中找到数据文件: ${_0x56963b}`);break;}}if(!_0x4a51f){var _0xdaadc;const _0x6cb4d=Object['\u006B\u0065\u0079\u0073'](_0x82db7f['\u0066\u0069\u006C\u0065\u0073']);_0xdaadc=(382581^382589)+(872835^872839);var _0x51b7ff;const _0xf81g=_0x6cb4d['\u0066\u0069\u006C\u0074\u0065\u0072'](name=>name['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("\u002E\u006A\u0073"));_0x51b7ff="fceqec".split("").reverse().join("");const _0x365g=_0x6cb4d['\u0066\u0069\u006C\u0074\u0065\u0072'](name=>name['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("nosj.".split("").reverse().join("")));if(_0xf81g['\u006C\u0065\u006E\u0067\u0074\u0068']>(842654^842654)){_0x4a51f=_0x82db7f['\u0066\u0069\u006C\u0065'](_0xf81g[605182^605182]);}else if(_0x365g['\u006C\u0065\u006E\u0067\u0074\u0068']>(375620^375620)){_0x4a51f=_0x82db7f['\u0066\u0069\u006C\u0065'](_0x365g[985248^985248]);}}if(!_0x4a51f){throw new Error("\u005A\u0049\u0050\u0020\u6587\u4EF6\u4E2D\u672A\u627E\u5230\u6570\u636E\u6587\u4EF6");}const _0xcb62e=await _0x4a51f['\u0061\u0073\u0079\u006E\u0063']("txet".split("").reverse().join(""));if(_0x4a51f['\u006E\u0061\u006D\u0065']['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("\u002E\u006A\u0073")){await loadFromJsContent(_0xcb62e);}else if(_0x4a51f['\u006E\u0061\u006D\u0065']['\u0065\u006E\u0064\u0073\u0057\u0069\u0074\u0068']("nosj.".split("").reverse().join(""))){await loadFromJsonContent(_0xcb62e,_0x4a51f['\u006E\u0061\u006D\u0065']);}await restoreFilesFromZip(_0x82db7f);console['\u006C\u006F\u0067']("\u529F\u6210\u636E\u6570\u6574\u5B8C\u8F7D\u52A0\u4EF6\u6587 PIZ \u4ECE".split("").reverse().join(""));}async function autoLoadData(){console['\u006C\u006F\u0067']("...\u636E\u6570\u8F7D\u52A0\u52A8\u81EA\u59CB\u5F00".split("").reverse().join(""));try{console['\u006C\u006F\u0067']("...\u8F7D\u52A0 egarotSlacol \u4ECE".split("").reverse().join(""));loadFromLocalStorage();if(sites['\u006C\u0065\u006E\u0067\u0074\u0068']>(760395^760395)||changeLog['\u006C\u0065\u006E\u0067\u0074\u0068']>(965679^965679)){console['\u006C\u006F\u0067'](`从 localStorage 加载了 ${sites['\u006C\u0065\u006E\u0067\u0074\u0068']} 个工地数据`);saveData();if(currentUser){renderSiteList();}console['\u006C\u006F\u0067']("\u4ECE\u0020\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065\u0020\u52A0\u8F7D\u5B8C\u6210");return;}console['\u006C\u006F\u0067']("\u006C\u006F\u0063\u0061\u006C\u0053\u0074\u006F\u0072\u0061\u0067\u0065\u0020\u4E2D\u65E0\u6570\u636E\uFF0C\u5C1D\u8BD5\u4ECE\u0020\u0073\u0068\u0075\u006A\u0075\u002E\u006A\u0073\u0020\u52A0\u8F7D\u002E\u002E\u002E");const _0xae15ea=await tryLoadJsFile();if(_0xae15ea){console['\u006C\u006F\u0067']("\u4ECE\u0020\u0073\u0068\u0075\u006A\u0075\u002E\u006A\u0073\u0020\u6587\u4EF6\u52A0\u8F7D\u6210\u529F\uFF01");saveData();if(currentUser){renderSiteList();}}else{console['\u006C\u006F\u0067']("\u0073\u0068\u0075\u006A\u0075\u002E\u006A\u0073\u0020\u6587\u4EF6\u4E0D\u5B58\u5728\uFF0C\u521D\u59CB\u5316\u7A7A\u6570\u636E");sites=[];changeLog=[];saveData();}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u81EA\u52A8\u52A0\u8F7D\u5931\u8D25\u003A",error);if(!Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](sites))sites=[];if(!Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](changeLog))changeLog=[];saveData();}console['\u006C\u006F\u0067']("\u81EA\u52A8\u52A0\u8F7D\u5B8C\u6210");}async function tryLoadJsFile(){return new Promise(resolve=>{if(window['\u006C\u006F\u0063\u0061\u0074\u0069\u006F\u006E']['\u0070\u0072\u006F\u0074\u006F\u0063\u006F\u006C']===":elif".split("").reverse().join("")){console['\u006C\u006F\u0067']("\u5728\u672C\u5730\u6587\u4EF6\u73AF\u5883\u4E0B\u8FD0\u884C\uFF0C\u8DF3\u8FC7\u0020\u004A\u0053\u0020\u6587\u4EF6\u52A0\u8F7D");resolve(false);return;}var _0x170c;const _0x16_0xdaf=["\u0073\u0068\u0075\u006A\u0075\u002E\u006A\u0073","sj.thgil_ujuhs".split("").reverse().join("")];_0x170c=457395^457393;var _0x6_0x78f=(951627^951627)+(622113^622117);let _0x76f49a=533989^533989;_0x6_0x78f=(258115^258123)+(266352^266359);function _0xd6gb7a(){if(_0x76f49a>=_0x16_0xdaf['\u006C\u0065\u006E\u0067\u0074\u0068']){console['\u006C\u006F\u0067']("\u8D25\u5931\u8F7D\u52A0\u8BD5\u5C1D\u4EF6\u6587 SJ \u6709\u6240".split("").reverse().join(""));resolve(false);return;}const _0xf1296e=_0x16_0xdaf[_0x76f49a];console['\u006C\u006F\u0067'](`尝试加载文件: ${_0xf1296e}`);const _0xeb8c2e=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0073\u0063\u0072\u0069\u0070\u0074");_0xeb8c2e['\u0073\u0072\u0063']=_0xf1296e;_0xeb8c2e['\u006F\u006E\u006C\u006F\u0061\u0064']=function(){try{if(typeof savedData!=="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){console['\u006C\u006F\u0067'](`成功从 ${_0xf1296e} 加载数据`);const _0xf7765c=_0xf1296e==="sj.thgil_ujuhs".split("").reverse().join("")||savedData['\u0064\u0061\u0074\u0061\u0056\u0065\u0072\u0073\u0069\u006F\u006E']&&savedData['\u0064\u0061\u0074\u0061\u0056\u0065\u0072\u0073\u0069\u006F\u006E']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u006C\u0069\u0067\u0068\u0074")||savedData['\u006E\u006F\u0074\u0065']&&savedData['\u006E\u006F\u0074\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("46esab\u65E0".split("").reverse().join(""));sites=savedData['\u0073\u0069\u0074\u0065\u0073']||[];changeLog=savedData['\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']||[];convertAllTimesToDate();console['\u006C\u006F\u0067'](`从 ${_0xf1296e} 加载了 ${sites['\u006C\u0065\u006E\u0067\u0074\u0068']} 个工地数据`);console['\u006C\u006F\u0067'](`数据版本: ${savedData['\u0064\u0061\u0074\u0061\u0056\u0065\u0072\u0073\u0069\u006F\u006E']||"\u77E5\u672A".split("").reverse().join("")}`);if(_0xf7765c){console['\u006C\u006F\u0067']("\uFF09\u7247\u56FE46esab\u65E0\uFF08\u636E\u6570\u7248\u91CF\u8F7B\u5230\u6D4B\u68C0".split("").reverse().join(""));setTimeout(()=>{showSimpleToast("\u5DF2\u52A0\u8F7D\u6587\u672C\u6570\u636E\uFF0C\u8BF7\u52A0\u8F7D\u56FE\u7247\u005A\u0049\u0050\u5305\u4EE5\u6062\u590D\u56FE\u7247","gninraw".split("").reverse().join(""));},681301^681661);}delete window['\u0073\u0061\u0076\u0065\u0064\u0044\u0061\u0074\u0061'];resolve(!![]);}else{console['\u006C\u006F\u0067'](`${_0xf1296e} 中没有找到 savedData 变量`);_0x76f49a++;setTimeout(_0xd6gb7a,253299^253207);}}catch(error){console['\u0065\u0072\u0072\u006F\u0072'](`加载 ${_0xf1296e} 时出错:`,error);_0x76f49a++;setTimeout(_0xd6gb7a,297965^297865);}};_0xeb8c2e['\u006F\u006E\u0065\u0072\u0072\u006F\u0072']=function(){console['\u006C\u006F\u0067'](`${_0xf1296e} 文件不存在或加载失败`);_0x76f49a++;setTimeout(_0xd6gb7a,693125^693217);};setTimeout(()=>{if(_0xeb8c2e['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){document['\u0068\u0065\u0061\u0064']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](_0xeb8c2e);console['\u006C\u006F\u0067'](`加载 ${_0xf1296e} 超时`);_0x76f49a++;setTimeout(_0xd6gb7a,804497^804597);}},970261^974237);_0xeb8c2e['\u006C\u006F\u0061\u0064\u0065\u0064']=false;const _0x9e1fa=_0xeb8c2e['\u006F\u006E\u006C\u006F\u0061\u0064'];const _0xb96a=_0xeb8c2e['\u006F\u006E\u0065\u0072\u0072\u006F\u0072'];_0xeb8c2e['\u006F\u006E\u006C\u006F\u0061\u0064']=function(){_0xeb8c2e['\u006C\u006F\u0061\u0064\u0065\u0064']=!![];_0x9e1fa['\u0063\u0061\u006C\u006C'](this);};_0xeb8c2e['\u006F\u006E\u0065\u0072\u0072\u006F\u0072']=function(){_0xeb8c2e['\u006C\u006F\u0061\u0064\u0065\u0064']=!![];_0xb96a['\u0063\u0061\u006C\u006C'](this);};document['\u0068\u0065\u0061\u0064']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xeb8c2e);}_0xd6gb7a();});}function convertAllTimesToDate(){sites['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](site=>{if(site['\u0074\u006F\u0064\u006F\u0073']){site['\u0074\u006F\u0064\u006F\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](todo=>{if(todo['\u0074\u0069\u006D\u0065']&&!todo['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){todo['\u0074\u0069\u006D\u0065']=formatDate(todo['\u0074\u0069\u006D\u0065']);}});}if(site['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']){site['\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](expense=>{if(expense['\u0074\u0069\u006D\u0065']&&!expense['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){expense['\u0074\u0069\u006D\u0065']=formatDate(expense['\u0074\u0069\u006D\u0065']);}});}if(site['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']){site['\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](req=>{if(req['\u0074\u0069\u006D\u0065']&&!req['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$}2{d\\-}2{d\\-}4{d\\^".split("").reverse().join(""),""))){req['\u0074\u0069\u006D\u0065']=formatDate(req['\u0074\u0069\u006D\u0065']);}});}if(site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']){site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](repair=>{if(repair['\u0074\u0069\u006D\u0065']&&!repair['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){repair['\u0074\u0069\u006D\u0065']=formatDate(repair['\u0074\u0069\u006D\u0065']);}});}if(site['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']){site['\u0077\u006F\u0072\u006B\u0065\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](worker=>{if(worker['\u0074\u0069\u006D\u0065']&&!worker['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$}2{d\\-}2{d\\-}4{d\\^".split("").reverse().join(""),""))){worker['\u0074\u0069\u006D\u0065']=formatDate(worker['\u0074\u0069\u006D\u0065']);}if(worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065']&&!worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065']=formatDate(worker['\u0073\u0074\u0061\u0072\u0074\u0054\u0069\u006D\u0065']);}if(worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']&&!worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']=formatDate(worker['\u0065\u006E\u0064\u0054\u0069\u006D\u0065']);}});}if(site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']){site['\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](item=>{if(item['\u0074\u0069\u006D\u0065']&&!item['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){item['\u0074\u0069\u006D\u0065']=formatDate(item['\u0074\u0069\u006D\u0065']);}});}if(site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']){site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](drawing=>{if(drawing['\u0074\u0069\u006D\u0065']&&!drawing['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u005C\u0064\u007B\u0034\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u002D\u005C\u0064\u007B\u0032\u007D\u0024',""))){drawing['\u0074\u0069\u006D\u0065']=formatDate(drawing['\u0074\u0069\u006D\u0065']);}});}if(site['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']){site['\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](exp=>{if(exp['\u0074\u0069\u006D\u0065']&&!exp['\u0074\u0069\u006D\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$}2{d\\-}2{d\\-}4{d\\^".split("").reverse().join(""),""))){exp['\u0074\u0069\u006D\u0065']=formatDate(exp['\u0074\u0069\u006D\u0065']);}});}});}async function loadFromJsonContent(content,fileName){try{var _0xea37g=(177917^177913)+(471413^471421);const _0x7g6c=JSON['\u0070\u0061\u0072\u0073\u0065'](content);_0xea37g=(848965^848961)+(296638^296632);if(!_0x7g6c['\u0073\u0069\u0074\u0065\u0073']){throw new Error("\u004A\u0053\u004F\u004E\u0020\u6587\u4EF6\u683C\u5F0F\u4E0D\u6B63\u786E");}sites=_0x7g6c['\u0073\u0069\u0074\u0065\u0073']||[];changeLog=_0x7g6c['\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']||[];convertAllTimesToDate();console['\u006C\u006F\u0067'](`从 JSON 文件 ${fileName} 加载了 ${sites['\u006C\u0065\u006E\u0067\u0074\u0068']} 个工地数据`);}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u52A0\u8F7D\u0020\u004A\u0053\u004F\u004E\u0020\u5931\u8D25\u003A",error);throw new Error("\u5F0F\u683C\u4EF6\u6587 NOSJ \u6790\u89E3\u6CD5\u65E0".split("").reverse().join(""));}}async function loadFromJsContent(content){try{var _0x9d914b=(356013^356011)+(272648^272655);const _0x354d=content['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u0063\u006F\u006E\u0073\u0074\u0020\u0073\u0061\u0076\u0065\u0064\u0044\u0061\u0074\u0061\u005C\u0073\u002A\u003D\u005C\u0073\u002A\u0028\u005C\u007B\u005B\u005C\u0073\u005C\u0053\u005D\u002A\u003F\u005C\u007D\u0029\u003B','\u0073'));_0x9d914b=962674^962674;if(_0x354d&&_0x354d[366505^366504]){var _0x9712d=(345705^345710)+(120723^120731);const data=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x354d[557457^557456]);_0x9712d=882799^882792;sites=data['\u0073\u0069\u0074\u0065\u0073']||[];changeLog=data['\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']||[];}else{var _0x3915g;const data=JSON['\u0070\u0061\u0072\u0073\u0065'](content);_0x3915g=404389^404384;if(data['\u0073\u0069\u0074\u0065\u0073']){sites=data['\u0073\u0069\u0074\u0065\u0073']||[];changeLog=data['\u0063\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']||[];}else{throw new Error("\u65E0\u6CD5\u89E3\u6790\u6570\u636E\u683C\u5F0F");}}const _0xeba=sites['\u0073\u006F\u006D\u0065'](site=>site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0073\u006F\u006D\u0065'](r=>r['\u0070\u0068\u006F\u0074\u006F']&&r['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A"))||site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0073\u006F\u006D\u0065'](d=>d['\u0066\u0069\u006C\u0065']&&d['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u0064\u0061\u0074\u0061\u003A")));convertAllTimesToDate();console['\u006C\u006F\u0067'](`从 JS 文件加载了 ${sites['\u006C\u0065\u006E\u0067\u0074\u0068']} 个工地数据`);console['\u006C\u006F\u0067'](`是否包含Base64图片: ${_0xeba?"\u662F":"\u5426"}`);if(!_0xeba){showSimpleToast("\u5DF2\u52A0\u8F7D\u6587\u672C\u6570\u636E\uFF0C\u5982\u9700\u56FE\u7247\u8BF7\u52A0\u8F7D\u56FE\u7247\u005A\u0049\u0050\u5305","\u0077\u0061\u0072\u006E\u0069\u006E\u0067");}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u52A0\u8F7D\u0020\u004A\u0053\u0020\u6587\u4EF6\u5931\u8D25\u003A",error);throw new Error("\u65E0\u6CD5\u89E3\u6790\u6570\u636E\u6587\u4EF6\u683C\u5F0F");}}async function restoreFilesFromZip(zip){try{var _0x98db7a=(736313^736313)+(496881^496887);const _0xdc64a=zip['\u0066\u006F\u006C\u0064\u0065\u0072']("\u0073\u0068\u0075\u006A\u0075");_0x98db7a=(637045^637046)+(495399^495407);if(!_0xdc64a){console['\u006C\u006F\u0067']("\u5939\u4EF6\u6587 ujuhs \u6709\u6CA1\u4E2D PIZ".split("").reverse().join(""));return;}for(const _0x87474d of sites){var _0xd7gd9g;const _0xa4_0xf44=(_0x87474d['\u006E\u0061\u006D\u0065']||`工地_${_0x87474d['\u0069\u0064']}`)['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]|><\"?*:/\\\\[".split("").reverse().join(""),'\u0067'),"\u005F");_0xd7gd9g=(375617^375617)+(157835^157839);const _0xffc9b=_0xdc64a['\u0066\u006F\u006C\u0064\u0065\u0072'](_0xa4_0xf44);if(!_0xffc9b)continue;var _0xgdc=(454270^454267)+(172631^172629);const _0x1e6d0f=_0xffc9b['\u0066\u006F\u006C\u0064\u0065\u0072']("sriaper".split("").reverse().join(""));_0xgdc=(711758^711759)+(569717^569715);if(_0x87474d['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']&&_0x1e6d0f){for(const _0xa283db of _0x87474d['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']){if(_0xa283db['\u0070\u0068\u006F\u0074\u006F']&&_0xa283db['\u0070\u0068\u006F\u0074\u006F']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u005B\u0050\u0048\u004F\u0054\u004F\u003A")){const fileName=_0xa283db['\u0070\u0068\u006F\u0074\u006F']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005C\u005B\u0050\u0048\u004F\u0054\u004F\u003A\u0028\u002E\u002B\u003F\u0029\u005C\u005D',""))[515268^515269];const filePath=fileName['\u0073\u0070\u006C\u0069\u0074']("\u002F")['\u0070\u006F\u0070']();var _0x414a=(719589^719591)+(689416^689423);const file=_0x1e6d0f['\u0066\u0069\u006C\u0065'](filePath);_0x414a=(137381^137378)+(734925^734923);if(file){const base64=await file['\u0061\u0073\u0079\u006E\u0063']("46esab".split("").reverse().join(""));var _0x1de=(666450^666450)+(899109^899111);const mimeType=getMimeTypeFromFileName(filePath);_0x1de="dcqlll".split("").reverse().join("");_0xa283db['\u0070\u0068\u006F\u0074\u006F']=`data:${mimeType};base64,${base64}`;}}}}var _0xca8c7f=(983430^983428)+(104351^104346);const _0xefc71c=_0xffc9b['\u0066\u006F\u006C\u0064\u0065\u0072']("sgniward".split("").reverse().join(""));_0xca8c7f=(664952^664957)+(236575^236570);if(_0x87474d['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']&&_0xefc71c){for(const _0x63849d of _0x87474d['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']){if(_0x63849d['\u0066\u0069\u006C\u0065']&&_0x63849d['\u0066\u0069\u006C\u0065']['\u0073\u0074\u0061\u0072\u0074\u0073\u0057\u0069\u0074\u0068']("\u005B\u0046\u0049\u004C\u0045\u003A")){const fileName=_0x63849d['\u0066\u0069\u006C\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp("]\\)?+.(:ELIF[\\".split("").reverse().join(""),""))[622623^622622];const filePath=fileName['\u0073\u0070\u006C\u0069\u0074']("\u002F")['\u0070\u006F\u0070']();const file=_0xefc71c['\u0066\u0069\u006C\u0065'](filePath);if(file){const base64=await file['\u0061\u0073\u0079\u006E\u0063']("\u0062\u0061\u0073\u0065\u0036\u0034");var _0x9ce;const mimeType=getMimeTypeFromFileName(filePath);_0x9ce='\u0068\u0064\u006E\u006F\u0070\u006D';_0x63849d['\u0066\u0069\u006C\u0065']=`data:${mimeType};base64,${base64}`;}}}}}console['\u006C\u006F\u0067']("\u4ECE\u0020\u005A\u0049\u0050\u0020\u6062\u590D\u6587\u4EF6\u6570\u636E\u6210\u529F");}catch(error){console['\u0077\u0061\u0072\u006E'](":\u8D25\u5931\u4EF6\u6587\u590D\u6062 PIZ \u4ECE".split("").reverse().join(""),error);}}function viewImage(src){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0076\u0069\u0065\u0077\u0065\u0072\u0049\u006D\u0061\u0067\u0065")['\u0073\u0072\u0063']=src;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("reweiVegami".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";}function hideImageViewer(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0069\u006D\u0061\u0067\u0065\u0056\u0069\u0065\u0077\u0065\u0072")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}function downloadDrawing(drawingId){var _0x49dd=(111138^111137)+(262299^262297);const _0x11f3cd=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);_0x49dd="bbffda".split("").reverse().join("");if(!_0x11f3cd)return;const _0x4d90ee=_0x11f3cd['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u0069\u006E\u0064'](d=>d['\u0069\u0064']===drawingId);if(_0x4d90ee&&_0x4d90ee['\u0066\u0069\u006C\u0065']){var _0x91293f=(571331^571338)+(358990^358990);const a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");_0x91293f=(160265^160269)+(163649^163649);a['\u0068\u0072\u0065\u0066']=_0x4d90ee['\u0066\u0069\u006C\u0065'];let _0x34c=_0x4d90ee['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'];if(!_0x34c){var _0xe2e;const _0xd7d5d=_0x4d90ee['\u0066\u0069\u006C\u0065']['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u005E\u0064\u0061\u0074\u0061\u003A\u0028\u005B\u005E\u003B\u005D\u002B\u0029\u003B',""));_0xe2e=(668378^668381)+(302670^302668);if(_0xd7d5d){var _0x62ea;const _0x43cc=_0xd7d5d[400112^400113];_0x62ea=218454^218449;var _0x0f345b=(210664^210666)+(856188^856184);const _0xa5_0xabg=getExtensionFromMimeType(_0x43cc);_0x0f345b='\u0066\u006D\u006B\u0068\u006F\u006A';_0x34c=`${getDrawingTypeText(_0x4d90ee['\u0074\u0079\u0070\u0065'])}_${_0x4d90ee['\u0074\u0069\u006D\u0065']['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005B\u005C\u002F\u003A\u005D','\u0067'),"\u002D")}.${_0xa5_0xabg}`;}else{_0x34c=`${getDrawingTypeText(_0x4d90ee['\u0074\u0079\u0070\u0065'])}_${_0x4d90ee['\u0074\u0069\u006D\u0065']['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]:/\\[".split("").reverse().join(""),'\u0067'),"\u002D")}`;}}a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']=_0x34c;a['\u0063\u006C\u0069\u0063\u006B']();addChangeLog("\u4E0B\u8F7D\u56FE\u7EB8",`下载了${getDrawingTypeText(_0x4d90ee['\u0074\u0079\u0070\u0065'])}图纸：${_0x34c}`);}}async function tryLoadMissingFile(filePath){const _0x39b0db=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("tupni".split("").reverse().join(""));_0x39b0db['\u0074\u0079\u0070\u0065']="\u0066\u0069\u006C\u0065";_0x39b0db['\u0061\u0063\u0063\u0065\u0070\u0074']="\u002E\u006A\u0070\u0067\u002C\u002E\u006A\u0070\u0065\u0067\u002C\u002E\u0070\u006E\u0067\u002C\u002E\u0067\u0069\u0066\u002C\u002E\u0070\u0064\u0066\u002C\u002E\u0078\u006C\u0073\u002C\u002E\u0078\u006C\u0073\u0078\u002C\u002E\u0064\u006F\u0063\u002C\u002E\u0064\u006F\u0063\u0078\u002C\u002E\u0063\u0073\u0076";_0x39b0db['\u006F\u006E\u0063\u0068\u0061\u006E\u0067\u0065']=async function(event){const _0xcb44fd=event['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0066\u0069\u006C\u0065\u0073'][368888^368888];if(!_0xcb44fd)return;const _0xad7b=new FileReader();_0xad7b['\u006F\u006E\u006C\u006F\u0061\u0064']=function(e){updateFileData(filePath,e['\u0074\u0061\u0072\u0067\u0065\u0074']['\u0072\u0065\u0073\u0075\u006C\u0074']);};_0xad7b['\u0072\u0065\u0061\u0064\u0041\u0073\u0044\u0061\u0074\u0061\u0055\u0052\u004C'](_0xcb44fd);};_0x39b0db['\u0063\u006C\u0069\u0063\u006B']();}function updateFileData(filePath,base64Data){var _0xbec4f=(318020^318021)+(375966^375963);let _0x1d2=false;_0xbec4f=214821^214817;sites['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](site=>{if(site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']){site['\u0072\u0065\u0070\u0061\u0069\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](repair=>{if(repair['\u0070\u0068\u006F\u0074\u006F']&&repair['\u0070\u0068\u006F\u0074\u006F']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](filePath)){repair['\u0070\u0068\u006F\u0074\u006F']=base64Data;delete repair['\u0070\u0068\u006F\u0074\u006F\u004D\u0069\u0073\u0073\u0069\u006E\u0067'];_0x1d2=!![];console['\u006C\u006F\u0067'](`已更新维修图片: ${filePath}`);}});}if(site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']){site['\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](drawing=>{if(drawing['\u0066\u0069\u006C\u0065']&&drawing['\u0066\u0069\u006C\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](filePath)){drawing['\u0066\u0069\u006C\u0065']=base64Data;delete drawing['\u0066\u0069\u006C\u0065\u004D\u0069\u0073\u0073\u0069\u006E\u0067'];_0x1d2=!![];console['\u006C\u006F\u0067'](`已更新图纸文件: ${filePath}`);}});}});if(_0x1d2){saveData();if(currentSiteId){const _0x3126dg=sites['\u0066\u0069\u006E\u0064'](s=>s['\u0069\u0064']===currentSiteId);if(_0x3126dg)loadSiteData(_0x3126dg);}showSimpleToast("\u65B0\u66F4\u5E76\u8F7D\u52A0\u5DF2\u4EF6\u6587".split("").reverse().join(""));}else{showSimpleToast("\u5F84\u8DEF\u4EF6\u6587\u7684\u5E94\u5BF9\u5230\u627E\u672A".split("").reverse().join(""),"rorre".split("").reverse().join(""));}}function closeSiteModal(){document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMetis".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";document['\u0062\u006F\u0064\u0079']['\u0073\u0074\u0079\u006C\u0065']['\u006F\u0076\u0065\u0072\u0066\u006C\u006F\u0077']="\u0061\u0075\u0074\u006F";currentSiteId=null;var _0xc855dc=(821449^821454)+(629537^629536);const _0x23be3d=["\u0072\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F\u0050\u0072\u0065\u0076\u0069\u0065\u0077","weiverPgniward".split("").reverse().join("")];_0xc855dc='\u006F\u006E\u0065\u0062\u0063\u006D';_0x23be3d['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](id=>{const _0xabe0b=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064'](id);if(_0xabe0b){_0xabe0b['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']='';delete _0xabe0b['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u006F\u0072\u0069\u0067\u0069\u006E\u0061\u006C\u0044\u0061\u0074\u0061'];delete _0xabe0b['\u0064\u0061\u0074\u0061\u0073\u0065\u0074']['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'];}});}function logout(){if(confirm("\uFF1F\u5417\u5F55\u767B\u51FA\u9000\u8981\u5B9A\u786E".split("").reverse().join(""))){addChangeLog("\u7EDF\u7CFB\u51FA\u9000".split("").reverse().join(""),"\u5F55\u767B\u51FA\u9000\u6237\u7528".split("").reverse().join(""));currentUser=null;document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("egaPnigol".split("").reverse().join(""))['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0066\u006C\u0065\u0078";document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006D\u0061\u0069\u006E\u0043\u006F\u006E\u0074\u0061\u0069\u006E\u0065\u0072")['\u0063\u006C\u0061\u0073\u0073\u004C\u0069\u0073\u0074']['\u0061\u0064\u0064']("\u0068\u0069\u0064\u0064\u0065\u006E");document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064")['\u0076\u0061\u006C\u0075\u0065']='';document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006C\u006F\u0067\u0069\u006E\u0045\u0072\u0072\u006F\u0072")['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}}window['\u006F\u006E\u0063\u006C\u0069\u0063\u006B']=function(event){var _0xa7b9gd;const _0xce84c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMetis".split("").reverse().join(""));_0xa7b9gd=(345630^345623)+(966012^966005);if(event['\u0074\u0061\u0072\u0067\u0065\u0074']===_0xce84c){closeSiteModal();}};document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u006B\u0065\u0079\u0064\u006F\u0077\u006E",function(event){if(event['\u006B\u0065\u0079']==="\u0045\u0073\u0063\u0061\u0070\u0065"){const _0x01af5d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ladoMetis".split("").reverse().join(""));if(_0x01af5d['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']==="\u0062\u006C\u006F\u0063\u006B"){closeSiteModal();}}});document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0044\u004F\u004D\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u004C\u006F\u0061\u0064\u0065\u0064",function(){const _0x0db23g=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("piTseliFgnissim".split("").reverse().join(""));if(_0x0db23g)_0x0db23g['\u0072\u0065\u006D\u006F\u0076\u0065']();});window['\u0073\u0061\u0076\u0065\u0054\u006F\u0047\u0069\u0074\u0048\u0075\u0062']=saveToGitHub;window['\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u0047\u0069\u0074\u0048\u0075\u0062']=loadFromGitHub;window['\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065']=saveToJsFile;window['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061']=downloadJsonData;window['\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065']=loadFromJsFile;window['\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079']=loadImagesZipOnly;window['\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=showChangeLog;window['\u0068\u0069\u0064\u0065\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=hideChangeLog;window['\u0065\u0078\u0070\u006F\u0072\u0074\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=exportChangeLog;window['\u0063\u006C\u0065\u0061\u0072\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=clearChangeLog;window['\u006C\u006F\u0067\u006F\u0075\u0074']=logout;window['\u0073\u0068\u006F\u0077\u0041\u0064\u0064\u0053\u0069\u0074\u0065\u004D\u006F\u0064\u0061\u006C']=showAddSiteModal;window['\u0073\u0068\u006F\u0077\u0053\u0069\u0074\u0065\u0044\u0065\u0074\u0061\u0069\u006C\u0073']=showSiteDetails;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0050\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0056\u0061\u006C\u0075\u0065']=updateProgressValue;window['\u0073\u0061\u0076\u0065\u0053\u0069\u0074\u0065\u0049\u006E\u0066\u006F']=saveSiteInfo;window['\u0061\u0064\u0064\u0054\u006F\u0064\u006F']=addTodo;window['\u0061\u0064\u0064\u0045\u0078\u0070\u0065\u006E\u0073\u0065']=addExpense;window['\u0061\u0064\u0064\u0052\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074']=addRequirement;window['\u0061\u0064\u0064\u0052\u0065\u0070\u0061\u0069\u0072']=addRepair;window['\u0061\u0064\u0064\u0057\u006F\u0072\u006B\u0065\u0072']=addWorker;window['\u0061\u0064\u0064\u0041\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']=addAddRemoveItem;window['\u0075\u0070\u006C\u006F\u0061\u0064\u0044\u0072\u0061\u0077\u0069\u006E\u0067']=uploadDrawing;window['\u0061\u0064\u0064\u0045\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065']=addExperience;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0054\u006F\u0064\u006F\u0053\u0074\u0061\u0074\u0075\u0073']=updateTodoStatus;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0052\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0053\u0074\u0061\u0074\u0075\u0073']=updateRequirementStatus;window['\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0052\u0065\u0070\u0061\u0069\u0072']=completeRepair;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0052\u0065\u0070\u0061\u0069\u0072\u0053\u0074\u0061\u0074\u0075\u0073']=updateRepairStatus;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0057\u006F\u0072\u006B\u0065\u0072\u0052\u0061\u0074\u0069\u006E\u0067']=updateWorkerRating;window['\u0065\u0064\u0069\u0074\u0057\u006F\u0072\u006B\u0065\u0072\u0054\u0069\u006D\u0065']=editWorkerTime;window['\u0073\u0061\u0076\u0065\u0057\u006F\u0072\u006B\u0065\u0072\u0054\u0069\u006D\u0065']=saveWorkerTime;window['\u0070\u0072\u0065\u0076\u0069\u0065\u0077\u0052\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F']=previewRepairPhoto;window['\u0070\u0072\u0065\u0076\u0069\u0065\u0077\u0044\u0072\u0061\u0077\u0069\u006E\u0067']=previewDrawing;window['\u0063\u0068\u0061\u006E\u0067\u0065\u0052\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F']=changeRepairPhoto;window['\u0075\u0070\u006C\u006F\u0061\u0064\u004E\u0065\u0077\u0052\u0065\u0070\u0061\u0069\u0072\u0050\u0068\u006F\u0074\u006F']=uploadNewRepairPhoto;window['\u0063\u0068\u0061\u006E\u0067\u0065\u0044\u0072\u0061\u0077\u0069\u006E\u0067\u0046\u0069\u006C\u0065']=changeDrawingFile;window['\u0075\u0070\u006C\u006F\u0061\u0064\u004E\u0065\u0077\u0044\u0072\u0061\u0077\u0069\u006E\u0067\u0046\u0069\u006C\u0065']=uploadNewDrawingFile;window['\u0073\u0061\u0076\u0065\u0051\u0075\u006F\u0074\u0065']=saveQuote;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0051\u0075\u006F\u0074\u0065\u0053\u0075\u006D\u006D\u0061\u0072\u0079']=updateQuoteSummary;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0041\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0053\u0075\u006D\u006D\u0061\u0072\u0079']=updateAddRemoveSummary;window['\u0076\u0069\u0065\u0077\u0049\u006D\u0061\u0067\u0065']=viewImage;window['\u0068\u0069\u0064\u0065\u0049\u006D\u0061\u0067\u0065\u0056\u0069\u0065\u0077\u0065\u0072']=hideImageViewer;window['\u0063\u006C\u006F\u0073\u0065\u0053\u0069\u0074\u0065\u004D\u006F\u0064\u0061\u006C']=closeSiteModal;window['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u0044\u0072\u0061\u0077\u0069\u006E\u0067']=downloadDrawing;window['\u0074\u0072\u0079\u004C\u006F\u0061\u0064\u004D\u0069\u0073\u0073\u0069\u006E\u0067\u0046\u0069\u006C\u0065']=tryLoadMissingFile;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0046\u0069\u006C\u0065\u0044\u0061\u0074\u0061']=updateFileData;window['\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065']=deleteSite;window['\u0073\u0077\u0069\u0074\u0063\u0068\u0054\u0061\u0062']=switchTab;
+            <div class="site-info">
+                <div>开工：${formatDate(site.startDate) || '未设置'}</div>
+                <div>计划完工：${formatDate(site.endDate) || '未设置'}</div>
+                <div>进度：${progress}%</div>
+                <div>剩余：${daysLeft > 0 ? daysLeft + '天' : '已逾期'}</div>
+            </div>
+            <div class="progress-bar" style="margin-top: 10px; height: 16px;">
+                <div class="progress-fill" style="width: ${progress}%; font-size: 10px; line-height: 16px;">${progress}%</div>
+            </div>
+        `;
+
+        siteCard.onclick = () => {
+            if (canViewSite(site.id)) {
+                showSiteDetails(site.id);
+            } else {
+                alert('您没有权限查看此工地');
+            }
+        };
+        siteList.appendChild(siteCard);
+    });
+}
+
+function updateTopButtonsByPermission() {
+    const topButtons = document.querySelector('.header-top-buttons');
+    if (!topButtons) return;
+    
+    // 查找或创建权限管理按钮
+    let permissionBtn = topButtons.querySelector('.permission-manager-btn');
+    if (!permissionBtn) {
+        permissionBtn = document.createElement('button');
+        permissionBtn.className = 'top-btn btn-danger permission-manager-btn';
+        permissionBtn.onclick = showPermissionManager;
+        permissionBtn.textContent = '权限管理';
+        permissionBtn.title = '权限管理';
+        topButtons.appendChild(permissionBtn);
+    }
+    
+    // 查找或创建更改日志按钮
+    let changeLogBtn = topButtons.querySelector('.change-log-btn');
+    if (!changeLogBtn) {
+        changeLogBtn = document.createElement('button');
+        changeLogBtn.className = 'top-btn btn-primary change-log-btn';
+        changeLogBtn.onclick = showChangeLog;
+        changeLogBtn.textContent = '更改日志';
+        topButtons.appendChild(changeLogBtn);
+    }
+    
+    // 根据权限显示/隐藏按钮
+    if (typeof window.canShowPermissionManager === 'function') {
+        permissionBtn.style.display = window.canShowPermissionManager() ? '' : 'none';
+    }
+    
+    if (typeof window.canShowChangeLog === 'function') {
+        changeLogBtn.style.display = window.canShowChangeLog() ? '' : 'none';
+    }
+    
+    console.log('按钮状态更新完成:', {
+        permissionBtnVisible: permissionBtn.style.display !== 'none',
+        changeLogBtnVisible: changeLogBtn.style.display !== 'none'
+    });
+}
+// 然后在登录成功后调用这个函数
+// 在 app.js 的登录事件处理中，登录成功后添加：
+// updateTopButtonsByPermission();
+// 暴露到全局
+// 暴露函数到全局
+window.saveToJsFile = saveToJsFile;
+window.loadFromJsFile = loadFromJsFile;
+window.restoreFilesFromZip = restoreFilesFromZip;
+
+window.saveSiteInfo = saveSiteInfo;
+window.addTodo = addTodo;
+window.addExpense = addExpense;
+window.addRequirement = addRequirement;
+window.addRepair = addRepair;
+window.addWorker = addWorker;
+window.addAddRemoveItem = addAddRemoveItem;
+window.uploadDrawing = uploadDrawing;
+window.addExperience = addExperience;
+window.updateTodoStatus = updateTodoStatus;
+window.updateRequirementStatus = updateRequirementStatus;
+window.completeRepair = completeRepair;
+window.updateRepairStatus = updateRepairStatus;
+window.updateWorkerRating = updateWorkerRating;
+window.editWorkerTime = editWorkerTime;
+window.saveWorkerTime = saveWorkerTime;
+window.previewRepairPhoto = previewRepairPhoto;
+window.previewDrawing = previewDrawing;
+window.changeRepairPhoto = changeRepairPhoto;
+window.uploadNewRepairPhoto = uploadNewRepairPhoto;
+window.changeDrawingFile = changeDrawingFile;
+window.uploadNewDrawingFile = uploadNewDrawingFile;
+window.saveQuote = saveQuote;
+window.updateQuoteSummary = updateQuoteSummary;
+window.updateAddRemoveSummary = updateAddRemoveSummary;
+window.viewImage = viewImage;
+window.hideImageViewer = hideImageViewer;
+window.closeSiteModal = closeSiteModal;
+window.downloadDrawing = downloadDrawing;
+window.tryLoadMissingFile = tryLoadMissingFile;
+window.updateFileData = updateFileData;
+window.deleteSite = deleteSite;
+window.switchTab = switchTab;
+window.showAddSiteModal = showAddSiteModal;
+window.showSiteDetails = showSiteDetails;
+window.updateProgressValue = updateProgressValue;
+window.logout = logout;
+window.initTabs = initTabs;

@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-:root {
+:root {    
     --primary-color: #4361ee;
     --primary-dark: #3a56d4;
     --secondary-color: #7209b7;
@@ -29,7 +28,68 @@
     
     --progress-bg: #e9ecef;
     --progress-fill: linear-gradient(90deg, #2ecc71, #27ae60);
+    
+    /* 表格文字颜色 */
+    --table-text: #333333;
+    --note-text: #444444;
+    --button-text: #333333;
 }
+
+
+/* 数据管理按钮强制一行显示 */
+.import-export .button-grid {
+    display: flex;
+    flex-wrap: nowrap !important; /* 强制不换行 */
+    gap: 5px !important; /* 缩小间距 */
+    overflow-x: auto; /* 允许横向滚动 */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.import-export .button-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.import-export .button-row {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    gap: 5px !important;
+}
+
+.import-export .button-row .btn {
+    flex: 1;
+    min-width: 0;
+    min-height: 36px !important; /* 减小高度 */
+    font-size: 12px !important; /* 缩小字体 */
+    padding: 8px 4px !important; /* 减小内边距 */
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    border-radius: 4px !important;
+}
+
+/* 移动端进一步优化 */
+@media (max-width: 768px) {
+    .import-export .button-row .btn {
+        font-size: 11px !important;
+        padding: 6px 2px !important;
+        min-height: 32px !important;
+    }
+}
+
+/* 隐藏特定的按钮 */
+.header-top-buttons [onclick*="refreshCloudUsers"],
+.header-top-buttons [onclick*="manageGithubConfig"] {
+    display: none !important;
+}
+
 
 /* 基础布局 */
 html, body {
@@ -142,6 +202,8 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%; /* 确保宽度100% */
+    box-sizing: border-box; /* 确保内边距包含在宽度内 */
 }
 
 .header-left {
@@ -169,11 +231,12 @@ body {
 .header-top-buttons {
     display: flex;
     gap: 8px;
-    width: 100%;
+    width: 100%; /* 确保宽度100% */
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2px;
     scrollbar-width: none;
+    box-sizing: border-box; /* 确保内边距包含在宽度内 */
 }
 
 .header-top-buttons::-webkit-scrollbar {
@@ -200,15 +263,22 @@ body {
     opacity: 0.9;
     transform: translateY(-1px);
 }
-
+/* 隐藏特定的按钮 */
+.header-top-buttons [onclick*="refreshCloudUsers"],
+.header-top-buttons [onclick*="manageGithubConfig"] {
+    display: none !important;
+}
 .top-btn.btn-info { background: var(--info-color) !important; color: white !important; }
 .top-btn.btn-warning { background: var(--warning-color) !important; color: white !important; }
 .top-btn.btn-secondary { background: var(--text-light) !important; color: white !important; }
 .top-btn.btn-primary { background: var(--primary-color) !important; color: white !important; }
+.top-btn.btn-danger { background: var(--danger-color) !important; color: white !important; }
 
 /* 主内容区 */
 .main-content {
-    padding: 16px;
+    padding: 6x;
+    width: 100%; /* 确保宽度100% */
+    box-sizing: border-box; /* 确保内边距包含在宽度内 */
 }
 
 /* 导入导出区域 */
@@ -230,33 +300,27 @@ body {
     font-size: 16px;
 }
 
-/* 按钮网格布局 - 强制一行显示四个按钮 */
+/* 按钮网格布局 */
 .button-grid {
     display: flex;
-    flex-wrap: nowrap; /* 防止换行 */
+    flex-wrap: wrap;
     gap: 10px;
     width: 100%;
-    overflow-x: auto; /* 如果内容超出允许横向滚动 */
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 5px;
-    scrollbar-width: none; /* 隐藏滚动条 */
 }
 
-.button-grid::-webkit-scrollbar {
-    display: none; /* 隐藏滚动条 */
-}
-
+/* 按钮行 - 修改：移除 display: none */
 .button-row {
-    display: none; /* 隐藏原来的按钮行 */
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
 
-/* 直接处理按钮 */
-.import-export .btn {
-    flex: 1 0 calc(25% - 8px); /* 强制每个按钮占25%宽度，减去间隔 */
-    min-width: 0; /* 允许按钮缩小 */
+.button-row .btn {
+    flex: 1;
+    min-width: 0;
     min-height: 44px;
-    font-size: 13px; /* 稍微减小字体以适应一行 */
-    padding: 12px 6px; /* 减小内边距 */
+    font-size: 14px;
+    padding: 12px 8px;
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
@@ -265,43 +329,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    word-break: break-all;
     line-height: 1.2;
-}
-
-/* 移动端优化 */
-@media (max-width: 768px) {
-    .import-export .btn {
-        flex: 1 0 calc(25% - 8px); /* 移动端也保持四个按钮 */
-        font-size: 12px; /* 移动端字体更小 */
-        padding: 10px 4px; /* 移动端内边距更小 */
-        min-height: 40px;
-    }
-    
-    .button-grid {
-        gap: 8px; /* 移动端间隔更小 */
-    }
-}
-
-/* 超小屏幕优化 */
-@media (max-width: 480px) {
-    .import-export .btn {
-        font-size: 11px;
-        padding: 8px 3px;
-        min-height: 38px;
-    }
-    
-    .button-grid {
-        gap: 6px;
-    }
-}
-
-/* 桌面端优化 */
-@media (min-width: 1025px) {
-    .import-export .btn {
-        font-size: 14px;
-        padding: 12px 8px;
-    }
 }
 
 /* 按钮样式 */
@@ -350,20 +378,14 @@ body {
     border-radius: 8px;
     margin-bottom: 16px;
     border: 1px solid var(--border-color);
+    width: 100%; /* 添加宽度100% */
+    box-sizing: border-box; /* 确保内边距包含在宽度内 */
 }
 
 #currentUser {
     font-weight: 500;
     font-size: 14px;
     color: var(--text-primary);
-}
-
-.compact-text {
-    max-width: 80px;
-    white-space: normal;
-    word-break: break-word;
-    line-height: 1.2;
-    font-size: 11px;
 }
 
 .logout-btn {
@@ -389,7 +411,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 20px;
-    width: 100%;
+    width: 100%; /* 确保宽度100% */
     transition: all 0.3s;
     min-height: 50px;
     display: block;
@@ -403,6 +425,7 @@ body {
 /* 工地卡片 */
 .site-list {
     margin-bottom: 20px;
+    width: 100%; /* 确保宽度100% */
 }
 
 .site-card {
@@ -416,6 +439,8 @@ body {
     box-shadow: 0 2px 8px var(--shadow-color);
     position: relative;
     display: block;
+    width: 100%; /* 确保宽度100% */
+    box-sizing: border-box; /* 确保内边距包含在宽度内 */
 }
 
 .site-card:active {
@@ -686,22 +711,6 @@ body {
     min-height: 100px;
 }
 
-/* 支出页面布局 */
-.expense-row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    align-items: flex-end;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.expense-row .form-group {
-    flex: 1;
-    min-width: 0;
-    margin-bottom: 0;
-}
-
 /* 表格优化 */
 .data-table-container {
     width: 100%;
@@ -734,6 +743,7 @@ body {
     height: auto !important;
     min-height: 36px !important;
     max-width: 120px;
+    color: var(--table-text);  /* 使用变量 */
 }
 
 .data-table th {
@@ -761,6 +771,7 @@ body {
     line-height: 1.4 !important;
     max-height: 60px;
     overflow-y: auto;
+    color: var(--table-text);  /* 使用变量 */
 }
 
 /* 操作按钮组 */
@@ -920,12 +931,13 @@ body {
     cursor: pointer;
     padding: 6px;
     border-radius: 6px;
-    color: var(--text-secondary);
-    font-size: 13px;
+        font-size: 13px;
     white-space: normal;
     word-break: break-word;
     background: var(--bg-primary);
     border: 1px solid transparent;
+    color: var(--note-text);  /* 使用变量 */
+   
     display: block;
 }
 
@@ -947,11 +959,110 @@ body {
     display: block;
     box-sizing: border-box;
 }
+/* 加载图片按钮文字 */
+.photo-placeholder button,
+.photo-missing button,
+.file-placeholder button,
+.file-missing button {
+    color: var(--button-text);  /* 使用变量 */
+    background-color: var(--bg-tertiary);  /* 使用变量 */
+    border: 1px solid var(--border-color);  /* 使用变量 */
+}
 
+.photo-placeholder button:hover,
+.photo-missing button:hover,
+.file-placeholder button:hover,
+.file-missing button:hover {
+    background-color: var(--border-color);  /* 使用变量 */
+}
+
+/* 经验总结内容 */
+.experience-content {
+    color: var(--table-text);  /* 使用变量 */
+}
+
+/* 进度条填充色 - 深色模式下调整 */
+@media (prefers-color-scheme: dark) {
+    .progress-fill {
+        color: #ffffff;  /* 深色模式下进度文字改为白色 */
+    }
+}
+/* 确保深色模式下所有文字都能正常显示 */
+@media (prefers-color-scheme: dark) {
+    /* 表格相关文字 */
+    .data-table th,
+    .data-table td,
+    .multi-line,
+    .note-display,
+    .date-display,
+    .experience-content,
+    .change-log-content,
+    .summary-value,
+    .total-quote-display div:last-child,
+    .addremove-summary div {
+        color: #ffffff !important;
+    }
+    
+    /* 按钮文字 */
+    .photo-placeholder button,
+    .photo-missing button,
+    .file-placeholder button,
+    .file-missing button {
+        color: #ffffff !important;
+        background-color: #555555 !important;
+    }
+    
+    /* 标签页文字 */
+    .tab {
+        color: #cccccc !important;
+    }
+    
+    .tab.active {
+        color: #ffffff !important;
+        border-bottom-color: #4361ee !important;
+    }
+    
+    /* 表单标签文字 */
+    .form-group label {
+        color: #cccccc !important;
+    }
+    
+    /* 工地卡片文字 */
+    .site-name,
+    .site-info > div {
+        color: #ffffff !important;
+    }
+    
+    .site-info > div {
+        background-color: #444444 !important;
+    }
+    
+    /* 头部文字 */
+    .header-left h1 {
+        color: #ffffff !important;
+    }
+}
+
+
+/* 确保配置管理按钮在需要时显示 */
+.header-top-buttons [onclick*="manageGithubConfig"] {
+    display: inline-flex !important;
+}
+
+
+
+
+
+/* 只有在有权限时才显示 */
+.has-permission .permission-manager-btn,
+.has-permission .change-log-btn {
+    display: inline-flex !important;
+}
 /* 日期显示 */
 .date-display {
     cursor: pointer;
     padding: 4px 8px;
+    color: var(--table-text);  /* 使用变量 */
     border-radius: 4px;
     transition: background-color 0.2s;
     display: inline-block;
@@ -962,7 +1073,21 @@ body {
 .date-display:hover {
     background-color: var(--bg-secondary);
 }
+/* GitHub Token 输入框样式 */
+#githubTokenInput {
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+}
 
+/* 模态框样式 */
+.modal {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 .date-edit {
     width: 100%;
     padding: 6px 8px;
@@ -1016,12 +1141,6 @@ body {
     color: var(--text-light);
     font-size: 11px;
     font-weight: 500;
-}
-
-.change-log-content {
-    color: var(--text-secondary);
-    line-height: 1.5;
-    font-size: 13px;
 }
 
 /* 经验总结项 */
@@ -1214,7 +1333,7 @@ body {
 /* 表单行布局 */
 .form-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: flex-end;
     margin-bottom: 15px;
@@ -1227,9 +1346,9 @@ body {
     margin-bottom: 0;
 }
 
-.form-row-3 {
+.quote-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 8px;
     align-items: flex-end;
     margin-bottom: 15px;
@@ -1348,6 +1467,7 @@ body {
     .data-table td {
         padding: 3px 2px !important;
         min-height: 32px !important;
+        color: var(--table-text);  /* 使用变量 */
     }
     
     .image-preview {
@@ -1394,33 +1514,14 @@ body {
         flex: 0 0 calc(50% - 4px) !important;
     }
     
-    .expense-row .form-group:nth-child(1) { order: 1; }
-    .expense-row .form-group:nth-child(2) { order: 3; }
-    .expense-row .form-group:nth-child(3) { order: 2; }
-    .expense-row .form-group:nth-child(4) { order: 4; }
-    
-    #requirementType {
-        font-size: 14px;
-        min-height: 44px;
-    }
-    
     /* 表单行响应式 */
     .form-row,
-    .form-row-3 {
+    .quote-row {
         flex-wrap: wrap;
     }
     
     .form-row .form-group {
         flex: 0 0 calc(50% - 5px);
-    }
-    
-    .form-row-3 .form-group:not(:last-child) {
-        flex: 0 0 calc(50% - 4px);
-    }
-    
-    .form-row-3 .form-group:last-child {
-        flex: 0 0 100%;
-        margin-top: 10px;
     }
     
     .quote-row .form-group {
@@ -1477,15 +1578,6 @@ body {
         padding: 10px 14px !important;
         font-size: 13px !important;
     }
-    
-    /* 支出页面桌面布局 */
-    .expense-row {
-        flex-wrap: nowrap;
-    }
-    
-    .expense-row .form-group {
-        flex: 1;
-    }
 }
 
 /* 桌面优化 */
@@ -1535,25 +1627,6 @@ body {
 /* 防止点击高亮 */
 button, a, input, select, textarea {
     -webkit-tap-highlight-color: transparent;
-}
-
-/* 打印样式 */
-@media print {
-    .header, .import-export, .action-btns, .btn, .close-btn {
-        display: none !important;
-    }
-    
-    .modal {
-        position: static;
-        display: block !important;
-        background: white;
-    }
-    
-    .modal-content {
-        box-shadow: none;
-        border: 1px solid #ccc;
-        max-height: none;
-    }
 }
 
 /* 添加旋转动画 */
