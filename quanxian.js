@@ -738,7 +738,7 @@ function showPermissionManager() {
                     </div>
                     <p style="color: #666; font-size: 14px; margin-top: 10px;">
                         <strong>导出/上传权限配置：</strong>
-                        - 可选择上传到云端直接替换 yonghu.js<br>
+                        - 可选择上传到云端直接替换 账号密码.js<br>
                         - 或下载到本地备份<br>
                         - 文件包含所有用户和权限配置
                     </p>
@@ -1390,8 +1390,8 @@ async function uploadToCloudDirectly(content) {
             },
             body: JSON.stringify({
                 description: `权限配置文件更新 - ${new Date().toLocaleString()}`,
-                files: {
-                    'yonghu.js': {
+                  files: {
+                    [CLOUD_CONFIG.DATA_FILES.CLOUD_JS]: {  // 使用变量
                         content: content
                     }
                 }

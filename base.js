@@ -1,14 +1,14 @@
 // ==================== 全局配置和常量定义 ====================
 const CLOUD_CONFIG = {
-    // 要更改的云端配置（只需要修改这里）
+    // 要更改的内容如下：------------------------------------------
     GIST_ID: '2769a9e28995f23cf9be60dd8f2891ca',
     RAW_DATA_URL: 'https://gist.githubusercontent.com/ebaizs/2769a9e28995f23cf9be60dd8f2891ca/raw/my-data.json',
     RAW_USER_URL: 'https://gist.githubusercontent.com/ebaizs/2769a9e28995f23cf9be60dd8f2891ca/raw/zhanghao.js',
     
     // 文件命名约定（不要修改）
     DATA_FILES: {
-        CLOUD_JSON: 'my-data.json',
-        CLOUD_JS: 'zhanghao.js',
+        CLOUD_JSON: 'my-data.json',      // 工地数据文件
+        CLOUD_JS: 'zhanghao.js',         // 权限账户文件
         LOCAL_JS: 'shuju.js',
         LOCAL_LIGHT_JS: 'shuju_light.js',
         LOCAL_ZIP_IMAGES_FOLDER: 'shuju',

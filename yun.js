@@ -258,7 +258,7 @@ checkAndWrapFunction('canShowChangeLog', function() {
 // ==================== 内置GitHub配置 ====================
 const BUILT_IN_CONFIG = {
     //要更改的内容如下：------------------------------------------
-    GIST_ID: '2769a9e28995f23cf9be60dd8f2891ca', // Gist ID 保持内置
+    GIST_ID: CLOUD_CONFIG.GIST_ID, // 使用base.js中的GIST_ID
     GITHUB_TOKEN: '', // Token 改为空，需要用户输入
     configLoaded: false // 初始状态为未加载
 };
@@ -872,7 +872,7 @@ async function fetchCloudData() {
         
         const gist = await response.json();
         //要更改的内容如下：------------------------------------------
-        const fileContent = gist.files['my-data.json']?.content;
+        const fileContent = gist.files[CLOUD_CONFIG.DATA_FILES.CLOUD_JSON]?.content;
         
         if (!fileContent) {
             return { sites: [], changeLog: [] };
@@ -1039,9 +1039,8 @@ async function saveToGitHub() {
             },
             body: JSON.stringify({
                 description: `工地装饰管理系统完整数据备份 - ${new Date().toLocaleString()} (${dataSizeCheck.humanSize})`,
-                files: {
-                    //要更改的内容如下：------------------------------------------
-                    'my-data.json': {
+              files: {
+                    [CLOUD_CONFIG.DATA_FILES.CLOUD_JSON]: {  // 使用变量
                         content: dataString
                     }
                 }
@@ -1173,8 +1172,7 @@ async function loadFromJsFile() {
             const possibleDataFiles = [
                 'shuju_light.js',  // 新格式：轻量版数据
                 'shuju.js',        // 旧格式：完整数据
-                //要更改的内容如下：------------------------------------------
-                'my-data.json'
+                CLOUD_CONFIG.DATA_FILES.CLOUD_JSON
             ];
 
             for (const fileName of possibleDataFiles) {
@@ -1324,8 +1322,7 @@ async function loadFromZipFile(file) {
     const possibleDataFiles = [
         'shuju.js',
         'shuju_light.js',
-        //要更改的内容如下：------------------------------------------
-        'my-data.json'
+        CLOUD_CONFIG.DATA_FILES.CLOUD_JSON
     ];
 
     for (const fileName of possibleDataFiles) {
@@ -1748,8 +1745,7 @@ async function loadFromGitHub() {
     // 直接使用 raw URL 加载数据
     try {
         console.log('直接从 raw URL 加载数据...');
-        const rawUrl = 'https://gist.githubusercontent.com/ebaizs/2769a9e28995f23cf9be60dd8f2891ca/raw/my-data.json';
-        
+         const rawUrl = CLOUD_CONFIG.RAW_DATA_URL;
         console.log('加载URL:', rawUrl);
         
         const rawResponse = await fetch(rawUrl, {
