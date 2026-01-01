@@ -1,715 +1,4 @@
-// 声明依赖 yun.js 中的函数（如果还没加载，稍后会有）
-if (typeof window.ensureGitHubToken === 'undefined') {
-    console.warn('ensureGitHubToken 函数未定义，yun.js 可能未加载');
-    // 临时定义，实际会被 yun.js 中的覆盖
-    window.ensureGitHubToken = async function() {
-        alert('yun.js 未正确加载，请刷新页面');
-        return null;
-    };
-}
-// ==================== 管理员配置 ====================
-// 管理员用户名列表（可以根据需要扩展）
-if (typeof window.ADMIN_USERS === 'undefined') {
-    window.ADMIN_USERS = ['admin', 'qiyu'];
-}
-
-// 本地内置管理员账户
-const localAdminUser = {
-    "username": "qiyu",
-    "password": "8418", // 建议设置强密码
-    "name": "系统管理员",
-    "isLocal": true,
-    "isAdmin": true
-};
-// ==================== 全局变量定义 ====================
-// 确保这些变量只在全局声明一次
-if (typeof window.builtInUsers === 'undefined') {
-    window.builtInUsers = [];
-}
-if (typeof window.PERMISSION_CONFIG === 'undefined') {
-    window.PERMISSION_CONFIG = {
-        userPermissions: {},
-        availableTabs: []
-    };
-}
-if (typeof window.currentUser === 'undefined') {
-    window.currentUser = null;
-}
-
-
-// ==================== 内置测试账户 ====================
-const localBuiltInUsers = [
-    {
-        "username": "1",
-        "password": "1234",
-        "name": "测试",
-        "isLocal": true,
-        "isAdmin": false
-    },
-    localAdminUser  // 添加本地管理员
-];
-// 云端管理员账户（会在加载云端时自动添加）
-window.adminUser = null;
-
-// 初始化内置用户列表
-window.builtInUsers = [...localBuiltInUsers];
-
-// 初始化权限配置
- window.PERMISSION_CONFIG.userPermissions['1'] = {
-    name: '测试',
-    description: '默认权限',
-    permissions: {
-        refreshCloudUsers: false,
-        showPermissionManager: false,
-        showChangeLog: false,  
-        viewAllSites: true,  // 改为 true 查看所有工地
-        addSite: true,       // 允许添加工地
-        deleteSite: false,
-        editAll: true,
-        exportData: false,
-        importData: false,
-        viewLogs: false,
-        cloudSync: true,
-        editQuote: true,
-        deleteItems: false,
-        viewAllTabs: true,   // 改为 true 查看所有标签页
-        addItems: true,
-        allowedSites: [],    // 空数组表示所有工地
-        allowedTabs: []      // 空数组表示所有标签页
-    }
-};
-
-window.PERMISSION_CONFIG.availableTabs = [
-    { id: "progressTab", name: "进度" },
-    { id: "todoTab", name: "待办" },
-    { id: "expenseTab", name: "支出" },
-    { id: "requirementTab", name: "客户要求" },
-    { id: "repairTab", name: "待维修" },
-    { id: "workerTab", name: "工人" },
-    { id: "quoteTab", name: "报价" },
-    { id: "addRemoveTab", name: "增减项" },
-    { id: "drawingTab", name: "图纸" },
-    { id: "experienceTab", name: "经验总结" }
-];
-
-// 添加简单的提示函数
-if (typeof showSimpleToast === 'undefined') {
-    window.showSimpleToast = function(message, type = 'info') {
-        console.log(`${type}: ${message}`);
-        alert(message);
-    };
-}
-
-
-
-// ==================== 权限系统初始化 ====================
-function initPermissionSystem() {
-    // 先加载本地权限配置
-    loadPermissionConfig();
-    
-    // 尝试从本地存储加载缓存的云端数据
-try {
-    const cachedData = localStorage.getItem('cloudUserData');
-    if (cachedData) {
-        const data = JSON.parse(cachedData);
-        const cacheTime = new Date(data.timestamp);
-        const now = new Date();
-        const hoursDiff = (now - cacheTime) / (1000 * 60 * 60);
-        
-        // 如果缓存是12小时内的，使用缓存
-        if (hoursDiff < 12) {
-            console.log('使用缓存的云端用户数据（12小时内）');
-            
-            // 只接受完整的yonghu.js格式数据
-            if (data.builtInUsers && data.PERMISSION_CONFIG) {
-                const cloudUsers = data.builtInUsers;
-                const localUsers = window.builtInUsers.filter(u => u.isLocal);
-                window.builtInUsers = [...localUsers, ...cloudUsers];
-                
-                window.PERMISSION_CONFIG = {
-                    ...data.PERMISSION_CONFIG,
-                    userPermissions: {
-                        ...data.PERMISSION_CONFIG.userPermissions
-                    }
-                };
-            }
-        } else {
-            console.log('缓存过期，需要重新加载云端数据');
-            localStorage.removeItem('cloudUserData');
-        }
-    }
-} catch (e) {
-    console.warn('加载缓存用户数据失败:', e);
-    localStorage.removeItem('cloudUserData');
-}
-    
- 
-
-
-
-// 异步尝试从云端加载最新数据
-   setTimeout(async () => {
-        try {
-            console.log('开始刷新云端账户数据...');
-            const loaded = await window.loadCloudUserData();
-            
-            if (loaded) {
-                console.log('云端账户数据已加载，可用账户:', window.builtInUsers.map(u => u.name));
-                
-                // 保存到本地存储
-                const cloudUsers = window.builtInUsers.filter(u => !u.isLocal);
-                localStorage.setItem('cloudUserData', JSON.stringify({
-                    builtInUsers: cloudUsers,
-                    PERMISSION_CONFIG: window.PERMISSION_CONFIG,
-                    timestamp: new Date().toISOString()
-                }));
-                
-                // 如果当前是测试用户登录，提示刷新
-                if (window.currentUser && window.currentUser.username === '1') {
-                    setTimeout(() => {
-                        if (confirm('云端账户数据已加载成功！\n\n是否刷新页面使用云端账户登录？')) {
-                            location.reload();
-                        }
-                    }, 2000);
-                }
-            } else {
-                console.log('云端数据加载失败，继续使用本地账户');
-            }
-        } catch (e) {
-            console.warn('异步加载云端数据失败:', e);
-        }
-    }, 3000);
-}
-
-// 确保管理员有所有权限
-function ensureAdminPermissions() {
-    // 从 ADMIN_USERS 获取管理员列表
-    adminUsernames.forEach(username => {
-        if (PERMISSION_CONFIG.userPermissions[username]) {
-            const perms = PERMISSION_CONFIG.userPermissions[username].permissions;
-            // 确保管理员有所有权限
-            perms.refreshCloudUsers = true;
-            perms.showPermissionManager = true;
-            perms.viewLogs = true;
-            perms.showChangeLog = true;
-            perms.saveToJsFile = true;
-            perms.downloadJsonData = true;
-            perms.loadFromJsFile = true;
-            perms.loadImagesZipOnly = true;
-            perms.viewAllSites = true;
-            perms.deleteSite = true;
-            perms.addSite = true;
-            perms.addItems = true;
-            perms.deleteItems = true;
-            perms.editAll = true;
-            perms.editQuote = true;
-            perms.editTime = true;
-            perms.editStatus = true;
-            perms.exportData = true;
-            perms.importData = true;
-            perms.cloudSync = true;
-            // 添加管理员标志
-            perms.isAdmin = true;
-        }
-    });
-    // 另外检查所有 isAdmin 属性为 true 的用户
-    Object.keys(PERMISSION_CONFIG.userPermissions).forEach(username => {
-        const userPerms = PERMISSION_CONFIG.userPermissions[username];
-        if (userPerms && userPerms.permissions && userPerms.permissions.isAdmin === true) {
-            // 确保这些用户也有所有权限
-            const perms = userPerms.permissions;
-            perms.refreshCloudUsers = true;
-            perms.showPermissionManager = true;
-            // ... 设置所有权限为 true ...
-        }
-    });
-}
-// 修改 hasPermission 函数，确保它能在所有地方正确工作
-function hasPermission(permissionName) {
-    if (!currentUser) {
-        console.log('hasPermission: 没有当前用户');
-        return false;
-    }
-    
-    // 确保 currentUser 对象存在
-    if (!currentUser.username) {
-        console.log('hasPermission: 当前用户没有用户名');
-        return false;
-    }
-    
-    // 使用新的 isAdmin 函数检查是否为管理员
-    if (isAdmin()) {
-        console.log(`hasPermission: ${currentUser.username} 是管理员，直接返回true`);
-        return true;
-    }
-    
-    // 获取用户权限
-    const userPerms = PERMISSION_CONFIG.userPermissions[currentUser.username];
-    if (!userPerms) {
-        console.warn(`用户 ${currentUser.username} 没有权限配置`);
-        return false;
-    }
-    
-    const result = userPerms.permissions[permissionName] || false;
-    console.log(`hasPermission: ${currentUser.username} 的 ${permissionName} 权限: ${result}`);
-    return result;
-}
-
-// 确保 canShowPermissionManager 函数正确
-function canShowPermissionManager() {
-    const result = hasPermission('showPermissionManager');
-    console.log(`canShowPermissionManager: ${result} (用户: ${currentUser ? currentUser.username : '无'})`);
-    return result;
-}
-// 在DOMContentLoaded事件中调用
-document.addEventListener('DOMContentLoaded', function() {
-    // 等待主应用初始化完成后再初始化权限系统
-    setTimeout(function() {
-        if (typeof initPermissionSystem === 'function') {
-            initPermissionSystem();
-            // 确保管理员权限
-            setTimeout(ensureAdminPermissions, 1000);
-        }
-    }, 300);
-});
-// 添加 isAdmin 函数到全局
-function isAdmin() {
-    if (!currentUser) return false;
-    
-    // 方法1：检查用户对象的 isAdmin 属性
-    if (currentUser.isAdmin === true) {
-        return true;
-    }
-    
-    // 方法2：检查用户名是否在管理员列表中（向后兼容）
-    if (window.ADMIN_USERS && window.ADMIN_USERS.includes(currentUser.username)) {
-        return true;
-    }
-    
-    // 方法3：检查权限配置中的管理员标志
-    const userPerms = PERMISSION_CONFIG.userPermissions[currentUser.username];
-    if (userPerms && userPerms.permissions && userPerms.permissions.isAdmin === true) {
-        return true;
-    }
-    
-    return false;
-}
-// ==================== 新增权限检查函数 ====================
-function canRefreshCloudUsers() {
-    return hasPermission('refreshCloudUsers');
-}
-
-
-
-function canSaveToJsFile() {
-    return hasPermission('saveToJsFile');
-}
-
-function canDownloadJsonData() {
-    return hasPermission('downloadJsonData');
-}
-
-function canLoadFromJsFile() {
-    return hasPermission('loadFromJsFile');
-}
-
-function canLoadImagesZipOnly() {
-    return hasPermission('loadImagesZipOnly');
-}
-
-// 暴露到全局
-window.canRefreshCloudUsers = canRefreshCloudUsers;
-window.canShowPermissionManager = canShowPermissionManager;
-window.canSaveToJsFile = canSaveToJsFile;
-window.canDownloadJsonData = canDownloadJsonData;
-window.canLoadFromJsFile = canLoadFromJsFile;
-window.canLoadImagesZipOnly = canLoadImagesZipOnly;
-
-// 检查工地访问权限
-function canViewSite(siteId) {
-    if (!currentUser) return false;
-    
-    if (hasPermission('viewAllSites')) {
-        return true;
-    }
-    
-    const userPerms = PERMISSION_CONFIG.userPermissions[currentUser.username];
-    if (!userPerms) return false;
-    
-    return userPerms.permissions.allowedSites?.includes(siteId) || false;
-}
-
-// 检查标签页访问权限
-function canViewTab(tabId) {
-    if (!currentUser) return false;
-    
-    if (hasPermission('viewAllTabs')) {
-        return true;
-    }
-    
-    const userPerms = PERMISSION_CONFIG.userPermissions[currentUser.username];
-    if (!userPerms) return false;
-    
-    return userPerms.permissions.allowedTabs?.includes(tabId) || false;
-}
-
-// 获取用户可访问的标签页
-function getAllowedTabs() {
-    if (!currentUser) return [];
-    
-    if (hasPermission('viewAllTabs')) {
-        return PERMISSION_CONFIG.availableTabs;
-    }
-    
-    const userPerms = PERMISSION_CONFIG.userPermissions[currentUser.username];
-    if (!userPerms || !userPerms.permissions.allowedTabs) {
-        return [];
-    }
-    
-    return PERMISSION_CONFIG.availableTabs.filter(tab => 
-        userPerms.permissions.allowedTabs.includes(tab.id)
-    );
-}
-
-// ==================== 权限配置管理 ====================
-function loadPermissionConfig() {
-    try {
-        const savedConfig = localStorage.getItem('permission_config');
-        if (savedConfig) {
-            const config = JSON.parse(savedConfig);
-            PERMISSION_CONFIG.userPermissions = config.userPermissions || {};
-            console.log('权限配置已加载');
-        }
-    } catch (e) {
-        console.warn('加载权限配置失败:', e);
-    }
-}
-
-function savePermissionConfig() {
-    try {
-        localStorage.setItem('permission_config', JSON.stringify({
-            userPermissions: PERMISSION_CONFIG.userPermissions,
-            lastModified: new Date().toISOString()
-        }));
-    } catch (e) {
-        console.error('保存权限配置失败:', e);
-    }
-}
-// ==================== 权限模板 ====================
-function getTemplateByType(templateType, username) {
-    const templates = {
-        // 超级管理员：全部权限
-        'admin': {
-            name: '超级管理员',
-            description: '所有权限',
-            permissions: {
-                // 1. 刷新云端账户，权限管理，更改日志
-                isAdmin: true,  // 添加这一行
-                refreshCloudUsers: true,
-                showPermissionManager: true,
-                showChangeLog: true,
-                
-                // 2. 备份完整数据，下载json数据
-                saveToJsFile: true,
-                downloadJsonData: true,
-                
-                // 3. 从文件加载，加载图片包
-                loadFromJsFile: true,
-                loadImagesZipOnly: true,
-                
-                // 4. 所有工地删除
-                deleteSite: true,
-                deleteItems: true,
-                
-                // 5. 所有工地增加
-                addSite: true,
-                
-                // 6. 所有项目的添加
-                addItems: true,
-                
-                // 7. 所有项目的删除和状态变更
-                deleteItems: true,
-                editAll: true,
-                
-                // 8. 指定页面的打开权限 (通过allowedTabs控制)
-                viewAllSites: true,
-                viewAllTabs: true,
-                
-                // 10. 导入数据
-                importData: true,
-                
-                // 11. 导出数据
-                exportData: true,
-                
-                // 12. 云端同步
-                cloudSync: true,
-                
-                allowedSites: [],
-                allowedTabs: ['progressTab', 'todoTab', 'expenseTab', 'requirementTab', 'repairTab', 
-                             'workerTab', 'quoteTab', 'addRemoveTab', 'drawingTab', 'experienceTab']
-            }
-        },
-        
-        // 项目经理/监理
-        'manager': {
-            name: '项目经理',
-            description: '项目管理权限',
-            permissions: {
-                // 1. 刷新云端账户，权限管理，更改日志
-                refreshCloudUsers: false,
-                showPermissionManager: false,
-                showChangeLog: false,
-                
-                // 2. 备份完整数据，下载json数据
-                saveToJsFile: false,
-                downloadJsonData: false,
-                
-                // 3. 从文件加载，加载图片包
-                loadFromJsFile: true,
-                loadImagesZipOnly: true,
-                
-                // 4. 所有工地删除
-                deleteSite: false,
-                deleteItems: false,
-                
-                // 5. 所有工地增加
-                addSite: true,
-                
-                // 6. 所有项目的添加
-                addItems: true,
-                
-                // 7. 所有项目的删除和状态变更
-                deleteItems: false,
-                editAll: false,
-                
-                // 8. 指定页面的打开权限
-                viewAllSites: false,
-                viewAllTabs: false,
-                allowedSites: [],
-                allowedTabs: ['progressTab', 'todoTab', 'expenseTab', 'requirementTab', 'repairTab', 
-                             'workerTab', 'addRemoveTab', 'drawingTab', 'experienceTab'],
-                
-                // 10. 导入数据
-                importData: true,
-                
-                // 11. 导出数据
-                exportData: false,
-                
-                // 12. 云端同步
-                cloudSync: true
-            }
-        },
-        
-        // 财务
-        'accountant': {
-            name: '财务',
-            description: '财务权限',
-            permissions: {
-                // 1. 刷新云端账户，权限管理，更改日志
-                refreshCloudUsers: false,
-                showPermissionManager: false,
-                showChangeLog: false,
-                
-                // 2. 备份完整数据，下载json数据
-                saveToJsFile: false,
-                downloadJsonData: false,
-                
-                // 3. 从文件加载，加载图片包
-                loadFromJsFile: true,
-                loadImagesZipOnly: true,
-                
-                // 4. 所有工地删除
-                deleteSite: false,
-                deleteItems: false,
-                
-                // 5. 所有工地增加
-                addSite: false,
-                
-                // 6. 所有项目的添加
-                addItems: true,
-                
-                // 7. 所有项目的删除和状态变更
-                deleteItems: false,
-                editAll: false,
-                
-                // 8. 指定页面的打开权限
-                viewAllSites: false,
-                viewAllTabs: false,
-                allowedSites: [],
-                allowedTabs: ['progressTab', 'expenseTab', 'workerTab', 'quoteTab', 'addRemoveTab', 'drawingTab'],
-                
-                // 10. 导入数据
-                importData: true,
-                
-                // 11. 导出数据
-                exportData: false,
-                
-                // 12. 云端同步
-                cloudSync: true
-            }
-        },
-        
-        // 工人代表
-        'worker': {
-            name: '工人',
-            description: '工人权限',
-            permissions: {
-                // 1. 刷新云端账户，权限管理，更改日志
-                refreshCloudUsers: false,
-                showPermissionManager: false,
-                showChangeLog: false,
-                
-                // 2. 备份完整数据，下载json数据
-                saveToJsFile: false,
-                downloadJsonData: false,
-                
-                // 3. 从文件加载，加载图片包
-                loadFromJsFile: true,
-                loadImagesZipOnly: true,
-                
-                // 4. 所有工地删除
-                deleteSite: false,
-                deleteItems: false,
-                
-                // 5. 所有工地增加
-                addSite: false,
-                
-                // 6. 所有项目的添加
-                addItems: false,
-                
-                // 7. 所有项目的删除和状态变更
-                deleteItems: false,
-                editAll: false,
-                
-                // 8. 指定页面的打开权限
-                viewAllSites: false,
-                viewAllTabs: false,
-                allowedSites: [],
-                allowedTabs: ['progressTab', 'requirementTab','todoTab', 'drawingTab'],
-                
-                // 10. 导入数据
-                importData: true,
-                
-                // 11. 导出数据
-                exportData: false,
-                
-                // 12. 云端同步
-                cloudSync: true
-            }
-        },
-        
-        // 客户
-        'kehu': {
-            name: '客户',
-            description: '客户查看权限',
-            permissions: {
-                // 1. 刷新云端账户，权限管理，更改日志
-                refreshCloudUsers: false,
-                showPermissionManager: false,
-                showChangeLog: false,
-                
-                // 2. 备份完整数据，下载json数据
-                saveToJsFile: false,
-                downloadJsonData: false,
-                
-                // 3. 从文件加载，加载图片包
-                loadFromJsFile: true,
-                loadImagesZipOnly: true,
-                
-                // 4. 所有工地删除
-                deleteSite: false,
-                deleteItems: false,
-                
-                // 5. 所有工地增加
-                addSite: false,
-                
-                // 6. 所有项目的添加
-                addItems: true,
-                
-                // 7. 所有项目的删除和状态变更
-                deleteItems: false,
-                editAll: false,
-                
-                // 8. 指定页面的打开权限
-                viewAllSites: false,
-                viewAllTabs: false,
-                allowedSites: [],
-                allowedTabs: ['progressTab','todoTab', 'requirementTab','repairTab', 'drawingTab'],
-                
-                // 10. 导入数据
-                importData: true,
-                
-                // 11. 导出数据
-                exportData: false,
-                
-                // 12. 云端同步
-                cloudSync: true
-            }
-        },
-        
-        // 测试用户/默认用户
-        'test': {
-            name: '测试用户',
-            description: '测试权限',
-            permissions: {
-                // 1. 刷新云端账户，权限管理，更改日志
-                refreshCloudUsers: false,
-                showPermissionManager: false,
-                showChangeLog: false,
-                
-                // 2. 备份完整数据，下载json数据
-                saveToJsFile: false,
-                downloadJsonData: false,
-                
-                // 3. 从文件加载，加载图片包
-                loadFromJsFile: true,
-                loadImagesZipOnly: true,
-                
-                // 4. 所有工地删除
-                deleteSite: false,
-                deleteItems: false,
-                
-                // 5. 所有工地增加
-                addSite: false,
-                
-                // 6. 所有项目的添加
-                addItems: true,
-                
-                // 7. 所有项目的删除和状态变更
-                deleteItems: false,
-                editAll: false,
-                
-                // 8. 指定页面的打开权限（只能访问site001）
-                viewAllSites: false,
-                viewAllTabs: false,
-                allowedSites: ['site001'],
-                allowedTabs: ['progressTab', 'todoTab', 'expenseTab', 'requirementTab', 'repairTab', 
-                             'workerTab', 'quoteTab', 'addRemoveTab', 'drawingTab', 'experienceTab'],
-                
-                // 10. 导入数据
-                importData: true,
-                
-                // 11. 导出数据
-                exportData: false,
-                
-                // 12. 云端同步
-                cloudSync: false
-            }
-        }
-    };
-    
-    return templates[templateType] || templates['test']; // 默认使用测试用户权限
-}
-// ==================== 权限管理界面 ====================
-function showPermissionManager() {
-    if (!isAdmin()) {
-        alert('只有管理员可以管理权限！');
-        return;
-    }
-    
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.style.cssText = `
+if(typeof window['\u0065\u006E\u0073\u0075\u0072\u0065\u0047\u0069\u0074\u0048\u0075\u0062\u0054\u006F\u006B\u0065\u006E']==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){console['\u0077\u0061\u0072\u006E']("\u8F7D\u52A0\u672A\u80FD\u53EF sj.nuy\uFF0C\u4E49\u5B9A\u672A\u6570\u51FD nekoTbuHtiGerusne".split("").reverse().join(""));window['\u0065\u006E\u0073\u0075\u0072\u0065\u0047\u0069\u0074\u0048\u0075\u0062\u0054\u006F\u006B\u0065\u006E']=async function(){alert("\u0079\u0075\u006E\u002E\u006A\u0073\u0020\u672A\u6B63\u786E\u52A0\u8F7D\uFF0C\u8BF7\u5237\u65B0\u9875\u9762");return null;};}if(typeof window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']=["\u0061\u0064\u006D\u0069\u006E","\u0071\u0069\u0079\u0075"];}var _0x6d_0x738=(189985^189988)+(887312^887316);const localAdminUser={"\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065":"\u0071\u0069\u0079\u0075","\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064":"\u0038\u0034\u0031\u0038","\u006E\u0061\u006D\u0065":"\u7CFB\u7EDF\u7BA1\u7406\u5458","\u0069\u0073\u004C\u006F\u0063\u0061\u006C":!![],"\u0069\u0073\u0041\u0064\u006D\u0069\u006E":!![]};_0x6d_0x738=(336148^336145)+(723553^723554);if(typeof window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']=[];}if(typeof window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']={'\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{},"availableTabs":[]};}if(typeof window['\u0063\u0075\u0072\u0072\u0065\u006E\u0074\u0055\u0073\u0065\u0072']==="\u0075\u006E\u0064\u0065\u0066\u0069\u006E\u0065\u0064"){window['\u0063\u0075\u0072\u0072\u0065\u006E\u0074\u0055\u0073\u0065\u0072']=null;}const localBuiltInUsers=[{"\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065":"\u0031","\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064":"1234","name":"\u6D4B\u8BD5","isLocal":!![],"isAdmin":false},localAdminUser];window['\u0061\u0064\u006D\u0069\u006E\u0055\u0073\u0065\u0072']=null;window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']=[...localBuiltInUsers];window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']["\u0031"]={'\u006E\u0061\u006D\u0065':"\u6D4B\u8BD5",'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':"\u9ED8\u8BA4\u6743\u9650","permissions":{"refreshCloudUsers":false,'\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072':false,'\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':!![],"addSite":!![],"deleteSite":false,'\u0065\u0064\u0069\u0074\u0041\u006C\u006C':!![],'\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':false,"importData":false,"viewLogs":false,'\u0063\u006C\u006F\u0075\u0064\u0053\u0079\u006E\u0063':!![],"editQuote":!![],"deleteItems":false,"viewAllTabs":!![],'\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073':!![],"allowedSites":[],'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073':[]}};window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']['\u0061\u0076\u0061\u0069\u006C\u0061\u0062\u006C\u0065\u0054\u0061\u0062\u0073']=[{'\u0069\u0064':"\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':"\u8FDB\u5EA6"},{'\u0069\u0064':"todoTab",'\u006E\u0061\u006D\u0065':"待办"},{'\u0069\u0064':"\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':"\u652F\u51FA"},{"id":"requirementTab",'\u006E\u0061\u006D\u0065':"客户要求"},{"id":"dailyLogTab","name":"\u65E5\u5E38\u8BB0\u5F55"},{"id":"repairTab",'\u006E\u0061\u006D\u0065':"\u5F85\u7EF4\u4FEE"},{'\u0069\u0064':"\u0077\u006F\u0072\u006B\u0065\u0072\u0054\u0061\u0062","name":"\u5DE5\u4EBA"},{'\u0069\u0064':"\u0071\u0075\u006F\u0074\u0065\u0054\u0061\u0062","name":"\u62A5\u4EF7"},{'\u0069\u0064':"\u0061\u0064\u0064\u0052\u0065\u006D\u006F\u0076\u0065\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':"\u589E\u51CF\u9879"},{'\u0069\u0064':"\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':"\u56FE\u7EB8"},{"id":"\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0054\u0061\u0062",'\u006E\u0061\u006D\u0065':"\u7ECF\u9A8C\u603B\u7ED3"}];if(typeof showSimpleToast==="denifednu".split("").reverse().join("")){window['\u0073\u0068\u006F\u0077\u0053\u0069\u006D\u0070\u006C\u0065\u0054\u006F\u0061\u0073\u0074']=function(message,type="\u0069\u006E\u0066\u006F"){console['\u006C\u006F\u0067'](`${type}: ${message}`);alert(message);};}function initPermissionSystem(){loadPermissionConfig();try{var _0xd_0x374;const _0x7g7c6g=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("ataDresUduolc".split("").reverse().join(""));_0xd_0x374=449315^449315;if(_0x7g7c6g){var _0x67fe5g=(225496^225499)+(790196^790194);const _0xb_0x927=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x7g7c6g);_0x67fe5g=(495211^495212)+(468897^468903);var _0x64ca=(316284^316277)+(109127^109122);const _0x85c6bc=new Date(_0xb_0x927['\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070']);_0x64ca=(274100^274098)+(798838^798836);var _0x212c;const _0x0143b=new Date();_0x212c=(123695^123695)+(419081^419082);const _0x87beg=(_0x0143b-_0x85c6bc)/((264472^264944)*(145418^145462)*(259260^259200));if(_0x87beg<(457214^457202)){console['\u006C\u006F\u0067']("\u4F7F\u7528\u7F13\u5B58\u7684\u4E91\u7AEF\u7528\u6237\u6570\u636E\uFF08\u0031\u0032\u5C0F\u65F6\u5185\uFF09");if(_0xb_0x927['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']&&_0xb_0x927['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']){const cloudUsers=_0xb_0x927['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073'];var _0x085c;const _0x7c6fbe=window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']['\u0066\u0069\u006C\u0074\u0065\u0072'](u=>u['\u0069\u0073\u004C\u006F\u0063\u0061\u006C']);_0x085c=(191755^191759)+(622693^622689);window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']=[..._0x7c6fbe,...cloudUsers];window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']={..._0xb_0x927['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047'],"userPermissions":{..._0xb_0x927['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']}};}}else{console['\u006C\u006F\u0067']("\u7F13\u5B58\u8FC7\u671F\uFF0C\u9700\u8981\u91CD\u65B0\u52A0\u8F7D\u4E91\u7AEF\u6570\u636E");localStorage['\u0072\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']("\u0063\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0044\u0061\u0074\u0061");}}}catch(e){console['\u0077\u0061\u0072\u006E']("\u52A0\u8F7D\u7F13\u5B58\u7528\u6237\u6570\u636E\u5931\u8D25\u003A",e);localStorage['\u0072\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']("ataDresUduolc".split("").reverse().join(""));}setTimeout(async()=>{try{console['\u006C\u006F\u0067']("\u5F00\u59CB\u5237\u65B0\u4E91\u7AEF\u8D26\u6237\u6570\u636E\u002E\u002E\u002E");var _0x6e_0x6d5=(583274^583272)+(463748^463746);const _0x55aa7a=await window['\u006C\u006F\u0061\u0064\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0044\u0061\u0074\u0061']();_0x6e_0x6d5='\u006D\u006C\u006A\u0063\u006B\u0063';if(_0x55aa7a){console['\u006C\u006F\u0067']("\u4E91\u7AEF\u8D26\u6237\u6570\u636E\u5DF2\u52A0\u8F7D\uFF0C\u53EF\u7528\u8D26\u6237\u003A",window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']['\u006D\u0061\u0070'](u=>u['\u006E\u0061\u006D\u0065']));var _0x4334af=(609494^609502)+(697116^697113);const cloudUsers=window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']['\u0066\u0069\u006C\u0074\u0065\u0072'](u=>!u['\u0069\u0073\u004C\u006F\u0063\u0061\u006C']);_0x4334af="hjdnld".split("").reverse().join("");localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0063\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0044\u0061\u0074\u0061",JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073':cloudUsers,"PERMISSION_CONFIG":window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047'],'\u0074\u0069\u006D\u0065\u0073\u0074\u0061\u006D\u0070':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()}));if(window['\u0063\u0075\u0072\u0072\u0065\u006E\u0074\u0055\u0073\u0065\u0072']&&window['\u0063\u0075\u0072\u0072\u0065\u006E\u0074\u0055\u0073\u0065\u0072']['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']==="\u0031"){setTimeout(()=>{if(confirm("\uFF1F\u5F55\u767B\u6237\u8D26\u7AEF\u4E91\u7528\u4F7F\u9762\u9875\u65B0\u5237\u5426\u662F\n\n\uFF01\u529F\u6210\u8F7D\u52A0\u5DF2\u636E\u6570\u6237\u8D26\u7AEF\u4E91".split("").reverse().join(""))){location['\u0072\u0065\u006C\u006F\u0061\u0064']();}},140521^140089);}}else{console['\u006C\u006F\u0067']("\u4E91\u7AEF\u6570\u636E\u52A0\u8F7D\u5931\u8D25\uFF0C\u7EE7\u7EED\u4F7F\u7528\u672C\u5730\u8D26\u6237");}}catch(e){console['\u0077\u0061\u0072\u006E']("\u5F02\u6B65\u52A0\u8F7D\u4E91\u7AEF\u6570\u636E\u5931\u8D25\u003A",e);}},672780^675764);}function ensureAdminPermissions(){adminUsernames['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](username=>{if(PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]){const perms=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'];perms['\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073']=!![];perms['\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072']=!![];perms['\u0076\u0069\u0065\u0077\u004C\u006F\u0067\u0073']=!![];perms['\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067']=!![];perms['\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065']=!![];perms['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061']=!![];perms['\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065']=!![];perms['\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079']=!![];perms['\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073']=!![];perms['\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065']=!![];perms['\u0061\u0064\u0064\u0053\u0069\u0074\u0065']=!![];perms['\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073']=!![];perms['\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073']=!![];perms['\u0065\u0064\u0069\u0074\u0041\u006C\u006C']=!![];perms['\u0065\u0064\u0069\u0074\u0051\u0075\u006F\u0074\u0065']=!![];perms['\u0065\u0064\u0069\u0074\u0054\u0069\u006D\u0065']=!![];perms['\u0065\u0064\u0069\u0074\u0053\u0074\u0061\u0074\u0075\u0073']=!![];perms['\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061']=!![];perms['\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061']=!![];perms['\u0063\u006C\u006F\u0075\u0064\u0053\u0079\u006E\u0063']=!![];perms['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']=!![];}});Object['\u006B\u0065\u0079\u0073'](PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'])['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](username=>{const _0xf5550b=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username];if(_0xf5550b&&_0xf5550b['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']&&_0xf5550b['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']===!![]){var _0x4be22d;const perms=_0xf5550b['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'];_0x4be22d='\u0065\u0068\u0070\u0069\u006E\u006D';perms['\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073']=!![];perms['\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072']=!![];}});}function hasPermission(permissionName){if(!currentUser){console['\u006C\u006F\u0067']("\u0068\u0061\u0073\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u003A\u0020\u6CA1\u6709\u5F53\u524D\u7528\u6237");return false;}if(!currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']){console['\u006C\u006F\u0067']("\u540D\u6237\u7528\u6709\u6CA1\u6237\u7528\u524D\u5F53 :noissimrePsah".split("").reverse().join(""));return false;}if(isAdmin()){console['\u006C\u006F\u0067'](`hasPermission: ${currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']} 是管理员，直接返回true`);return!![];}const _0x4d1a2f=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']];if(!_0x4d1a2f){console['\u0077\u0061\u0072\u006E'](`用户 ${currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']} 没有权限配置`);return false;}var _0x375d;const _0x3605d=_0x4d1a2f['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][permissionName]||false;_0x375d=731160^731160;console['\u006C\u006F\u0067'](`hasPermission: ${currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']} 的 ${permissionName} 权限: ${_0x3605d}`);return _0x3605d;}function canShowPermissionManager(){var _0xd52b9c=(405956^405958)+(540754^540753);const _0x8c7c=hasPermission("reganaMnoissimrePwohs".split("").reverse().join(""));_0xd52b9c=(972735^972734)+(112289^112293);console['\u006C\u006F\u0067'](`canShowPermissionManager: ${_0x8c7c} (用户: ${currentUser?currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']:"\u65E0"})`);return _0x8c7c;}document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0044\u004F\u004D\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u004C\u006F\u0061\u0064\u0065\u0064",function(){setTimeout(function(){if(typeof initPermissionSystem==="\u0066\u0075\u006E\u0063\u0074\u0069\u006F\u006E"){initPermissionSystem();setTimeout(ensureAdminPermissions,366001^366169);}},570601^570821);});function isAdmin(){if(!currentUser)return false;if(currentUser['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']===!![]){return!![];}if(window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']&&window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065'])){return!![];}const _0x1dfe9b=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']];if(_0x1dfe9b&&_0x1dfe9b['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']&&_0x1dfe9b['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']===!![]){return!![];}return false;}function canRefreshCloudUsers(){return hasPermission("\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073");}function canSaveToJsFile(){return hasPermission("\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065");}function canDownloadJsonData(){return hasPermission("ataDnosJdaolnwod".split("").reverse().join(""));}function canLoadFromJsFile(){return hasPermission("\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065");}function canLoadImagesZipOnly(){return hasPermission("\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079");}window['\u0063\u0061\u006E\u0052\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073']=canRefreshCloudUsers;window['\u0063\u0061\u006E\u0053\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072']=canShowPermissionManager;window['\u0063\u0061\u006E\u0053\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065']=canSaveToJsFile;window['\u0063\u0061\u006E\u0044\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061']=canDownloadJsonData;window['\u0063\u0061\u006E\u004C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065']=canLoadFromJsFile;window['\u0063\u0061\u006E\u004C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079']=canLoadImagesZipOnly;function canViewSite(siteId){if(!currentUser)return false;if(hasPermission("setiSllAweiv".split("").reverse().join(""))){return!![];}var _0x36164g=(863510^863508)+(374732^374732);const _0xf_0x7gb=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']];_0x36164g=(448617^448608)+(164938^164939);if(!_0xf_0x7gb)return false;return _0xf_0x7gb['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']?.includes(siteId)||false;}function canViewTab(tabId){if(!currentUser)return false;if(hasPermission("\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073")){return!![];}var _0xb5c2c;const _0xce32a=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']];_0xb5c2c=(802196^802195)+(935641^935645);if(!_0xce32a)return false;return _0xce32a['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073']?.includes(tabId)||false;}function getAllowedTabs(){if(!currentUser)return[];if(hasPermission("\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073")){return PERMISSION_CONFIG['\u0061\u0076\u0061\u0069\u006C\u0061\u0062\u006C\u0065\u0054\u0061\u0062\u0073'];}var _0x_0x8gg=(437187^437187)+(681812^681820);const _0x4_0x667=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']];_0x_0x8gg=(377480^377481)+(897070^897062);if(!_0x4_0x667||!_0x4_0x667['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073']){return[];}return PERMISSION_CONFIG['\u0061\u0076\u0061\u0069\u006C\u0061\u0062\u006C\u0065\u0054\u0061\u0062\u0073']['\u0066\u0069\u006C\u0074\u0065\u0072'](tab=>_0x4_0x667['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](tab['\u0069\u0064']));}function loadPermissionConfig(){try{const _0x278c4d=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u005F\u0063\u006F\u006E\u0066\u0069\u0067");if(_0x278c4d){const _0x5_0x2fa=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x278c4d);PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']=_0x5_0x2fa['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']||{};console['\u006C\u006F\u0067']("\u6743\u9650\u914D\u7F6E\u5DF2\u52A0\u8F7D");}}catch(e){console['\u0077\u0061\u0072\u006E'](":\u8D25\u5931\u7F6E\u914D\u9650\u6743\u8F7D\u52A0".split("").reverse().join(""),e);}}function savePermissionConfig(){try{localStorage['\u0073\u0065\u0074\u0049\u0074\u0065\u006D']("\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u005F\u0063\u006F\u006E\u0066\u0069\u0067",JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'],'\u006C\u0061\u0073\u0074\u004D\u006F\u0064\u0069\u0066\u0069\u0065\u0064':new Date()['\u0074\u006F\u0049\u0053\u004F\u0053\u0074\u0072\u0069\u006E\u0067']()}));}catch(e){console['\u0065\u0072\u0072\u006F\u0072'](":\u8D25\u5931\u7F6E\u914D\u9650\u6743\u5B58\u4FDD".split("").reverse().join(""),e);}}function getTemplateByType(templateType,username){var _0xb6a2d=(781738^781740)+(982759^982754);const _0xc2478e={"\u0061\u0064\u006D\u0069\u006E":{"name":'超级管理员',"description":'所有权限',"permissions":{"isAdmin":!![],"refreshCloudUsers":!![],'\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072':!![],"showChangeLog":!![],'\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065':!![],'\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061':!![],"loadFromJsFile":!![],'\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079':!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065':!![],"deleteItems":!![],'\u0061\u0064\u0064\u0053\u0069\u0074\u0065':!![],"addItems":!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':!![],'\u0065\u0064\u0069\u0074\u0041\u006C\u006C':!![],'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':!![],'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073':!![],'\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],'\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],"cloudSync":!![],'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073':[],"allowedTabs":["baTssergorp".split("").reverse().join(""),"\u0074\u006F\u0064\u006F\u0054\u0061\u0062","\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0054\u0061\u0062","\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0054\u0061\u0062","baTriaper".split("").reverse().join(""),"\u0077\u006F\u0072\u006B\u0065\u0072\u0054\u0061\u0062","\u0064\u0061\u0069\u006C\u0079\u004C\u006F\u0067\u0054\u0061\u0062","\u0071\u0075\u006F\u0074\u0065\u0054\u0061\u0062","baTevomeRdda".split("").reverse().join(""),"\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0054\u0061\u0062","\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0054\u0061\u0062"]}},"\u006D\u0061\u006E\u0061\u0067\u0065\u0072":{"name":"\u9879\u76EE\u7ECF\u7406",'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':"\u9879\u76EE\u7BA1\u7406\u6743\u9650",'\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{'\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073':false,"showPermissionManager":false,'\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':false,'\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065':false,"downloadJsonData":false,'\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065':!![],"loadImagesZipOnly":!![],"deleteSite":false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,'\u0061\u0064\u0064\u0053\u0069\u0074\u0065':!![],"addItems":!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,"editAll":false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073':false,'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073':[],'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073':["baTodot".split("").reverse().join(""),"\u0065\u0078\u0070\u0065\u006E\u0073\u0065\u0054\u0061\u0062","\u0072\u0065\u0071\u0075\u0069\u0072\u0065\u006D\u0065\u006E\u0074\u0054\u0061\u0062","baTriaper".split("").reverse().join(""),"baTrekrow".split("").reverse().join(""),"\u0064\u0061\u0069\u006C\u0079\u004C\u006F\u0067\u0054\u0061\u0062","baTevomeRdda".split("").reverse().join(""),"\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0054\u0061\u0062","\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0054\u0061\u0062"],'\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],'\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':false,'\u0063\u006C\u006F\u0075\u0064\u0053\u0079\u006E\u0063':!![]}},'accountant':{"name":'财务',"description":'财务权限','\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{"refreshCloudUsers":false,'\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072':false,'\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':false,'\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065':false,'\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061':false,'\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065':!![],"loadImagesZipOnly":!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065':false,"deleteItems":false,'\u0061\u0064\u0064\u0053\u0069\u0074\u0065':false,"addItems":!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,'\u0065\u0064\u0069\u0074\u0041\u006C\u006C':false,"viewAllSites":false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073':false,"allowedSites":[],'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073':["\u0070\u0072\u006F\u0067\u0072\u0065\u0073\u0073\u0054\u0061\u0062","\u0064\u0061\u0069\u006C\u0079\u004C\u006F\u0067\u0054\u0061\u0062","baTesnepxe".split("").reverse().join(""),"\u0077\u006F\u0072\u006B\u0065\u0072\u0054\u0061\u0062","baTetouq".split("").reverse().join(""),"baTevomeRdda".split("").reverse().join(""),"\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0054\u0061\u0062"],'\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],'\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':false,'\u0063\u006C\u006F\u0075\u0064\u0053\u0079\u006E\u0063':!![]}},'worker':{'\u006E\u0061\u006D\u0065':'工人','\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':"\u5DE5\u4EBA\u6743\u9650",'\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{'\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073':false,'\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072':false,"showChangeLog":false,'\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065':false,'\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061':false,"loadFromJsFile":!![],'\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079':!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065':false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,'\u0061\u0064\u0064\u0053\u0069\u0074\u0065':false,'\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073':false,"deleteItems":false,"editAll":false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':false,"viewAllTabs":false,"allowedSites":[],'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073':["baTriaper".split("").reverse().join(""),"baTgoLyliad".split("").reverse().join(""),"baTtnemeriuqer".split("").reverse().join(""),"\u0074\u006F\u0064\u006F\u0054\u0061\u0062","baTgniward".split("").reverse().join("")],'\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],"exportData":false,'\u0063\u006C\u006F\u0075\u0064\u0053\u0079\u006E\u0063':!![]}},"\u006B\u0065\u0068\u0075":{'\u006E\u0061\u006D\u0065':"\u5BA2\u6237","description":"\u5BA2\u6237\u67E5\u770B\u6743\u9650","permissions":{'\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073':false,"showPermissionManager":false,'\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':false,"saveToJsFile":false,'\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061':false,'\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065':!![],'\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079':!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065':false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,'\u0061\u0064\u0064\u0053\u0069\u0074\u0065':false,'\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073':!![],'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,"editAll":false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073':false,"allowedSites":[],"allowedTabs":["\u0074\u006F\u0064\u006F\u0054\u0061\u0062","\u0064\u0061\u0069\u006C\u0079\u004C\u006F\u0067\u0054\u0061\u0062","baTtnemeriuqer".split("").reverse().join(""),"baTriaper".split("").reverse().join(""),"baTgniward".split("").reverse().join("")],'\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],"exportData":false,"cloudSync":!![]}},"\u0074\u0065\u0073\u0074":{"name":"\u6D4B\u8BD5\u7528\u6237","description":"\u6D4B\u8BD5\u6743\u9650","permissions":{'\u0072\u0065\u0066\u0072\u0065\u0073\u0068\u0043\u006C\u006F\u0075\u0064\u0055\u0073\u0065\u0072\u0073':false,'\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072':false,'\u0073\u0068\u006F\u0077\u0043\u0068\u0061\u006E\u0067\u0065\u004C\u006F\u0067':false,'\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065':false,"downloadJsonData":false,"loadFromJsFile":!![],"loadImagesZipOnly":!![],"deleteSite":false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,'\u0061\u0064\u0064\u0053\u0069\u0074\u0065':false,"addItems":!![],"deleteItems":false,"editAll":false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073':false,'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073':["100etis".split("").reverse().join("")],"allowedTabs":["\u0074\u006F\u0064\u006F\u0054\u0061\u0062","baTesnepxe".split("").reverse().join(""),"baTtnemeriuqer".split("").reverse().join(""),"\u0072\u0065\u0070\u0061\u0069\u0072\u0054\u0061\u0062","baTrekrow".split("").reverse().join(""),"\u0071\u0075\u006F\u0074\u0065\u0054\u0061\u0062","\u0064\u0061\u0069\u006C\u0079\u004C\u006F\u0067\u0054\u0061\u0062","baTevomeRdda".split("").reverse().join(""),"\u0064\u0072\u0061\u0077\u0069\u006E\u0067\u0054\u0061\u0062","\u0065\u0078\u0070\u0065\u0072\u0069\u0065\u006E\u0063\u0065\u0054\u0061\u0062"],'\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':!![],'\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':false,'\u0063\u006C\u006F\u0075\u0064\u0053\u0079\u006E\u0063':false}}};_0xb6a2d=(166145^166145)+(118465^118465);return _0xc2478e[templateType]||_0xc2478e['test'];}function showPermissionManager(){if(!isAdmin()){alert("\u53EA\u6709\u7BA1\u7406\u5458\u53EF\u4EE5\u7BA1\u7406\u6743\u9650\uFF01");return;}const _0x7ad=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0x7ad['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u006D\u006F\u0064\u0061\u006C";_0x7ad['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
         display: flex;
         position: fixed;
         z-index: 2000;
@@ -720,92 +9,49 @@ function showPermissionManager() {
         background: rgba(0,0,0,0.7);
         justify-content: center;
         align-items: center;
-    `;
-    
-    modal.innerHTML = `
-        <div class="modal-content" style="width: 900px; max-height: 90vh; overflow-y: auto;">
-            <div class="modal-header">
-                <h3>用户权限管理</h3>
-                <button class="close-btn" onclick="this.closest('.modal').remove()">&times;</button>
+    `;_0x7ad['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+    <div class="modal-content" style="width: 900px; max-height: 90vh; overflow-y: auto; font-size: 12px;">
+        <div class="modal-header">
+            <h3 style="font-size: 16px; margin: 0;">用户权限管理</h3>
+            <button class="close-btn" onclick="this.closest('.modal').remove()" style="font-size: 20px; padding: 0 5px;">&times;</button>
+        </div>
+        <div style="padding: 15px;">
+            <div style="margin-bottom: 15px;">
+                <h4 style="font-size: 14px; margin: 0 0 10px 0;">权限配置操作</h4>
+               <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+    <div style="display: flex; gap: 8px; width: 100%; margin-bottom: 5px;">
+    <button class="btn btn-success" id="addUserBtn">添加用户</button>
+        <button class="btn btn-primary" id="exportPermissionBtn">上传权限配置至云端</button>
+        
+    </div>
+    <div style="width: 100%;">
+        <button class="btn btn-info" onclick="refreshCloudUsers()" style="width: 100%;">载入云端账户</button>
+    </div>
+</div>
+            
+            <div id="permissionUserList" style="margin-bottom: 15px;">
+                <!-- 用户列表会动态生成 -->
             </div>
-            <div style="padding: 20px;">
-                <div style="margin-bottom: 20px;">
-                    <h4>权限配置操作</h4>
-                    <div style="display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
-                        <button class="btn btn-primary" id="exportPermissionBtn">导出/上传权限配置</button>
-                        <button class="btn btn-success" id="addUserBtn">添加用户</button>
-                        <button class="btn btn-info" onclick="refreshCloudUsers()">刷新云端账户</button>
-                    </div>
-                    <p style="color: #666; font-size: 14px; margin-top: 10px;">
-                        <strong>导出/上传权限配置：</strong>
-                        - 可选择上传到云端直接替换 账号密码.js<br>
-                        - 或下载到本地备份<br>
-                        - 文件包含所有用户和权限配置
-                    </p>
-                </div>
-                
-                <div id="permissionUserList" style="margin-bottom: 20px;">
-                    <!-- 用户列表会动态生成 -->
-                </div>
-                
-                <div style="text-align: right;">
-                    <button class="btn btn-secondary" id="closePermissionManager">关闭</button>
-                </div>
+            
+            <div style="text-align: right;">
+                <button class="btn btn-secondary" id="closePermissionManager" style="padding: 5px 10px; font-size: 12px;">关闭</button>
             </div>
         </div>
-    `;
-    
-    document.body.appendChild(modal);
-    renderPermissionUserList();
-    
-    // 绑定按钮事件
-    document.getElementById('exportPermissionBtn').addEventListener('click', exportPermissionConfig);
-    document.getElementById('addUserBtn').addEventListener('click', showAddUserModal);
-    document.getElementById('closePermissionManager').addEventListener('click', () => {
-        modal.remove();
-    });
-}
-
-function renderPermissionUserList() {
-    const container = document.getElementById('permissionUserList');
-    if (!container) return;
-    
-    let html = '<h4>用户权限配置</h4>';
-    html += '<div style="overflow-x: auto;">';
-    html += '<table style="width: 100%; border-collapse: collapse;">';
-    html += '<thead><tr>';
-    html += '<th style="padding: 10px; border: 1px solid #ddd;">用户名</th>';
-    html += '<th style="padding: 10px; border: 1px solid #ddd;">姓名</th>';
-    html += '<th style="padding: 10px; border: 1px solid #ddd;">权限模板</th>';
-    html += '<th style="padding: 10px; border: 1px solid #ddd;">可访问工地</th>';
-    html += '<th style="padding: 10px; border: 1px solid #ddd;">操作</th>';
-    html += '</tr></thead><tbody>';
-    
-    window.builtInUsers.forEach(user => {
-        const userPerms = window.PERMISSION_CONFIG.userPermissions[user.username] || getDefaultTemplate(user.username);
-        
-        html += `<tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">${user.username}</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">${user.name}</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">${userPerms.name || '自定义'}</td>
-            <td style="padding: 10px; border: 1px solid #ddd;">
-                ${userPerms.permissions.allowedSites ? userPerms.permissions.allowedSites.length + '个限制工地' : '所有工地'}
+    </div>
+`;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x7ad);renderPermissionUserList();document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0065\u0078\u0070\u006F\u0072\u0074\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0042\u0074\u006E")['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("kcilc".split("").reverse().join(""),exportPermissionConfig);document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("ntBresUdda".split("").reverse().join(""))['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0063\u006C\u0069\u0063\u006B",showAddUserModal);document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0063\u006C\u006F\u0073\u0065\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072")['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("kcilc".split("").reverse().join(""),()=>{_0x7ad['\u0072\u0065\u006D\u006F\u0076\u0065']();});}function renderPermissionUserList(_0xf2d){var _0xdf9fa=(310256^310259)+(624524^624527);const _0x6011c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("tsiLresUnoissimrep".split("").reverse().join(""));_0xdf9fa="baeeha".split("").reverse().join("");if(!_0x6011c)return;_0xf2d=">4h/<\u7F6E\u914D\u9650\u6743\u6237\u7528>\";0 xp01 0 0 :nigram ;xp41 :ezis-tnof\"=elyts 4h<".split("").reverse().join("");_0xf2d+=">\";otua :x-wolfrevo\"=elyts vid<".split("").reverse().join("");_0xf2d+=">\";xp11 :ezis-tnof ;espalloc :espalloc-redrob ;%001 :htdiw\"=elyts elbat<".split("").reverse().join("");_0xf2d+="\u003C\u0074\u0068\u0065\u0061\u0064\u003E\u003C\u0074\u0072\u003E";_0xf2d+="\u003C\u0074\u0068\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0036\u0070\u0078\u003B\u0020\u0062\u006F\u0072\u0064\u0065\u0072\u003A\u0020\u0031\u0070\u0078\u0020\u0073\u006F\u006C\u0069\u0064\u0020\u0023\u0064\u0064\u0064\u003B\u0020\u0062\u0061\u0063\u006B\u0067\u0072\u006F\u0075\u006E\u0064\u003A\u0020\u0023\u0066\u0035\u0066\u0035\u0066\u0035\u003B\u0022\u003E\u7528\u6237\u540D\u003C\u002F\u0074\u0068\u003E";_0xf2d+=">ht/<\u540D\u59D3>\";5f5f5f# :dnuorgkcab ;ddd# dilos xp1 :redrob ;xp6 :gniddap\"=elyts ht<".split("").reverse().join("");_0xf2d+="\u003C\u0074\u0068\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0036\u0070\u0078\u003B\u0020\u0062\u006F\u0072\u0064\u0065\u0072\u003A\u0020\u0031\u0070\u0078\u0020\u0073\u006F\u006C\u0069\u0064\u0020\u0023\u0064\u0064\u0064\u003B\u0020\u0062\u0061\u0063\u006B\u0067\u0072\u006F\u0075\u006E\u0064\u003A\u0020\u0023\u0066\u0035\u0066\u0035\u0066\u0035\u003B\u0022\u003E\u6743\u9650\u6A21\u677F\u003C\u002F\u0074\u0068\u003E";_0xf2d+="\u003C\u0074\u0068\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0036\u0070\u0078\u003B\u0020\u0062\u006F\u0072\u0064\u0065\u0072\u003A\u0020\u0031\u0070\u0078\u0020\u0073\u006F\u006C\u0069\u0064\u0020\u0023\u0064\u0064\u0064\u003B\u0020\u0062\u0061\u0063\u006B\u0067\u0072\u006F\u0075\u006E\u0064\u003A\u0020\u0023\u0066\u0035\u0066\u0035\u0066\u0035\u003B\u0022\u003E\u53EF\u8BBF\u95EE\u5DE5\u5730\u003C\u002F\u0074\u0068\u003E";_0xf2d+="\u003C\u0074\u0068\u0020\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0070\u0061\u0064\u0064\u0069\u006E\u0067\u003A\u0020\u0036\u0070\u0078\u003B\u0020\u0062\u006F\u0072\u0064\u0065\u0072\u003A\u0020\u0031\u0070\u0078\u0020\u0073\u006F\u006C\u0069\u0064\u0020\u0023\u0064\u0064\u0064\u003B\u0020\u0062\u0061\u0063\u006B\u0067\u0072\u006F\u0075\u006E\u0064\u003A\u0020\u0023\u0066\u0035\u0066\u0035\u0066\u0035\u003B\u0022\u003E\u64CD\u4F5C\u003C\u002F\u0074\u0068\u003E";_0xf2d+=">ydobt<>daeht/<>rt/<".split("").reverse().join("");window['\u0062\u0075\u0069\u006C\u0074\u0049\u006E\u0055\u0073\u0065\u0072\u0073']['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](user=>{const _0x7ed=window['\u0050\u0045\u0052\u004D\u0049\u0053\u0053\u0049\u004F\u004E\u005F\u0043\u004F\u004E\u0046\u0049\u0047']['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']]||getDefaultTemplate(user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']);_0xf2d+=`<tr>
+            <td style="padding: 6px; border: 1px solid #ddd;">${user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']}</td>
+            <td style="padding: 6px; border: 1px solid #ddd;">${user['\u006E\u0061\u006D\u0065']}</td>
+            <td style="padding: 6px; border: 1px solid #ddd;">${_0x7ed['\u006E\u0061\u006D\u0065']||"\u4E49\u5B9A\u81EA".split("").reverse().join("")}</td>
+            <td style="padding: 6px; border: 1px solid #ddd;">
+                ${_0x7ed['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']?_0x7ed['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']['\u006C\u0065\u006E\u0067\u0074\u0068']+"\u5730\u5DE5\u5236\u9650\u4E2A".split("").reverse().join(""):"\u5730\u5DE5\u6709\u6240".split("").reverse().join("")}
             </td>
-            <td style="padding: 10px; border: 1px solid #ddd;">
-                <button class="btn btn-sm btn-primary" onclick="editUserPermissions('${user.username}')" style="margin-left: 0px;margin-left: 1px;">编辑</button>
-                ${user.username !== 'qiyu' ? `<button class="btn btn-sm btn-danger" onclick="deleteUser('${user.username}')" style="margin-left: 1px;">删除</button>` : ''}
+            <td style="padding: 6px; border: 1px solid #ddd; white-space: nowrap;">
+                <button class="btn btn-sm btn-primary" onclick="editUserPermissions('${user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']}')" 
+                        style="padding: 2px 6px; font-size: 10px; margin-right: 3px;">编辑</button>
+                ${user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']!=="\u0071\u0069\u0079\u0075"?`<button class="btn btn-sm btn-danger" onclick="deleteUser('${user['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']}')" 
+                            style="padding: 2px 6px; font-size: 10px;">删除</button>`:''}
             </td>
-        </tr>`;
-    });
-    
-    html += '</tbody></table></div>';
-    container.innerHTML = html;
-}
-
-function showAddUserModal() {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.style.cssText = `
+        </tr>`;});_0xf2d+=">vid/<>elbat/<>ydobt/<".split("").reverse().join("");_0x6011c['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xf2d;}function showAddUserModal(){var _0x12f=(901224^901227)+(526640^526642);const _0x9f8g=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0x12f=(766860^766861)+(149288^149290);_0x9f8g['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="ladom".split("").reverse().join("");_0x9f8g['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
         display: flex;
         position: fixed;
         z-index: 2002;
@@ -816,15 +62,13 @@ function showAddUserModal() {
         background: rgba(0,0,0,0.7);
         justify-content: center;
         align-items: center;
-    `;
-    
-    modal.innerHTML = `
-        <div class="modal-content" style="width: 500px; max-height: 90vh; overflow-y: auto;">
-            <div class="modal-header">
-                <h3>添加新用户</h3>
-                <button class="close-btn" onclick="this.closest('.modal').remove()">&times;</button>
-            </div>
-            <div style="padding: 20px;">
+    `;_0x9f8g['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
+    <div class="modal-content" style="width: 500px; max-height: 90vh; overflow-y: auto; font-size: 12px;">
+        <div class="modal-header">
+            <h3 style="font-size: 16px; margin: 0;">添加新用户</h3>
+            <button class="close-btn" onclick="this.closest('.modal').remove()" style="font-size: 20px; padding: 0 5px;">&times;</button>
+        </div>
+        <div style="padding: 15px;">
                 <div style="margin-bottom: 15px;">
                     <label style="display: block; margin-bottom: 5px; font-weight: bold;">用户名：</label>
                     <input type="text" id="newUsername" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" 
@@ -915,175 +159,18 @@ function showAddUserModal() {
                     </div>
                 </div>
                 
-                <div style="margin-top: 20px; text-align: right;">
-                    <button class="btn btn-primary" onclick="saveNewUser()">保存用户</button>
-                    <button class="btn btn-secondary" onclick="this.closest('.modal').remove()">取消</button>
+                 
+                <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <button class="btn btn-primary" onclick="saveNewUser()" 
+                            style="padding: 6px 12px; font-size: 12px;">保存用户</button>
+                    <button class="btn btn-secondary" onclick="this.closest('.modal').remove()" 
+                            style="padding: 6px 12px; font-size: 12px;">取消</button>
                 </div>
                 
-                <div id="addUserError" style="color: #dc3545; margin-top: 10px; display: none;"></div>
+                <div id="addUserError" style="color: #dc3545; margin-top: 10px; display: none; font-size: 11px;"></div>
             </div>
         </div>
-    `;
-    
-    document.body.appendChild(modal);
-    
-    document.getElementById('userTemplate').addEventListener('change', function() {
-        const customDiv = document.getElementById('customPermissions');
-        if (this.value === 'custom') {
-            customDiv.style.display = 'block';
-        } else {
-            customDiv.style.display = 'none';
-        }
-    });
-}
-
-function saveNewUser() {
-    const username = document.getElementById('newUsername').value.trim();
-    const name = document.getElementById('newName').value.trim();
-    const password = document.getElementById('newPassword').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const template = document.getElementById('userTemplate').value;
-    const errorDiv = document.getElementById('addUserError');
-    
-    // 验证输入
-    if (!username || !name || !password) {
-        errorDiv.textContent = '请填写所有必填项！';
-        errorDiv.style.display = 'block';
-        return;
-    }
-    
-    if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-        errorDiv.textContent = '用户名只能包含字母、数字和下划线！';
-        errorDiv.style.display = 'block';
-        return;
-    }
-    
-    if (builtInUsers.find(u => u.username === username)) {
-        errorDiv.textContent = '用户名已存在！';
-        errorDiv.style.display = 'block';
-        return;
-    }
-    
-    if (password.length < 4) {
-        errorDiv.textContent = '密码最少需要4位！';
-        errorDiv.style.display = 'block';
-        return;
-    }
-    
-    if (password !== confirmPassword) {
-        errorDiv.textContent = '两次输入的密码不一致！';
-        errorDiv.style.display = 'block';
-        return;
-    }
-    
-    // 添加用户到 builtInUsers
-    builtInUsers.push({
-        username: username,
-        password: password,
-        name: name
-    });
-    
-    // 设置权限配置
-    if (template === 'custom') {
-        // 自定义权限...
-    } else {
-        const templatePermissions = getTemplateByType(template, username);
-        PERMISSION_CONFIG.userPermissions[username] = {
-            name: name,
-            description: templatePermissions.description,
-            permissions: { ...templatePermissions.permissions }
-        };
-    }
-    
-    savePermissionConfig();
-    document.querySelector('.modal').remove();
-    
-    const userListModal = document.querySelector('.modal');
-    if (userListModal) {
-        renderPermissionUserList();
-    }
-    
-    showSimpleToast('用户添加成功！');
-}
-
-function deleteUser(username) {
-    if (!isAdmin()) {
-        alert('只有管理员可以删除用户！');
-        return;
-    }
-    
-    if (username === 'qiyu') {
-        alert('不能删除管理员账户！');
-        return;
-    }
-    
-    const user = builtInUsers.find(u => u.username === username);
-    if (!user) return;
-    
-    if (!confirm(`确定要删除用户 "${user.name} (${username})" 吗？此操作不可恢复！`)) {
-        return;
-    }
-    
-    // 从 builtInUsers 中删除
-    const userIndex = builtInUsers.findIndex(u => u.username === username);
-    if (userIndex > -1) {
-        builtInUsers.splice(userIndex, 1);
-    }
-    
-    // 从权限配置中删除
-    if (PERMISSION_CONFIG.userPermissions[username]) {
-        delete PERMISSION_CONFIG.userPermissions[username];
-    }
-    
-    // 如果当前用户被删除，强制登出
-    if (currentUser && currentUser.username === username) {
-        logout();
-    }
-    
-    savePermissionConfig();
-    
-    const modal = document.querySelector('.modal');
-    if (modal) {
-        renderPermissionUserList();
-    }
-    
-    showSimpleToast('用户删除成功！');
-}
-// ==================== 权限管理界面 ====================
-function editUserPermissions(username) {
-    const user = builtInUsers.find(u => u.username === username);
-    if (!user) return;
-    
-    const userPerms = PERMISSION_CONFIG.userPermissions[username] || getDefaultTemplate(username);
-    
-    // 删除或注释掉这行代码
-    // loadSitesFromStorage(); // 这行有问题，直接删除或注释掉
-    
-    // 直接使用已有的工地数据逻辑
-    // 尝试从多个来源获取工地数据
-    let siteList = [];
-    
-    // 来源1：全局变量 window.sites
-    if (window.sites && Array.isArray(window.sites)) {
-        siteList = window.sites;
-    } 
-    // 来源2：从 localStorage 加载
-    else {
-        try {
-            const savedSites = localStorage.getItem('constructionSites');
-            if (savedSites) {
-                siteList = JSON.parse(savedSites);
-            }
-        } catch (e) {
-            console.warn('从localStorage加载工地数据失败:', e);
-        }
-    }
-    
-    // 如果有工地数据，继续显示模态框
-    const modal = document.createElement('div');
-    
-    modal.className = 'modal';
-    modal.style.cssText = `
+    `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x9f8g);document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("etalpmeTresu".split("").reverse().join(""))['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("egnahc".split("").reverse().join(""),function(){const _0x8c_0x685=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0063\u0075\u0073\u0074\u006F\u006D\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073");if(this['\u0076\u0061\u006C\u0075\u0065']==="\u0063\u0075\u0073\u0074\u006F\u006D"){_0x8c_0x685['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";}else{_0x8c_0x685['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u006E\u006F\u006E\u0065";}});}function saveNewUser(){const _0x668c9d=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006E\u0065\u0077\u0055\u0073\u0065\u0072\u006E\u0061\u006D\u0065")['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();const _0x79fdd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("emaNwen".split("").reverse().join(""))['\u0076\u0061\u006C\u0075\u0065']['\u0074\u0072\u0069\u006D']();var _0xed58a;const _0x5e327c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u006E\u0065\u0077\u0050\u0061\u0073\u0073\u0077\u006F\u0072\u0064")['\u0076\u0061\u006C\u0075\u0065'];_0xed58a=919981^919981;const _0x6ffacd=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0063\u006F\u006E\u0066\u0069\u0072\u006D\u0050\u0061\u0073\u0073\u0077\u006F\u0072\u0064")['\u0076\u0061\u006C\u0075\u0065'];var _0x75b77g=(140776^140780)+(243093^243090);const _0x25163c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0075\u0073\u0065\u0072\u0054\u0065\u006D\u0070\u006C\u0061\u0074\u0065")['\u0076\u0061\u006C\u0075\u0065'];_0x75b77g=554396^554392;var _0x70g9f;const _0x5c7c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("rorrEresUdda".split("").reverse().join(""));_0x70g9f=(844939^844941)+(940695^940702);if(!_0x668c9d||!_0x79fdd||!_0x5e327c){_0x5c7c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\uFF01\u9879\u586B\u5FC5\u6709\u6240\u5199\u586B\u8BF7".split("").reverse().join("");_0x5c7c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";return;}if(!new RegExp('\u005E\u005B\u0061\u002D\u007A\u0041\u002D\u005A\u0030\u002D\u0039\u005F\u005D\u002B\u0024',"")['\u0074\u0065\u0073\u0074'](_0x668c9d)){_0x5c7c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u7528\u6237\u540D\u53EA\u80FD\u5305\u542B\u5B57\u6BCD\u3001\u6570\u5B57\u548C\u4E0B\u5212\u7EBF\uFF01";_0x5c7c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";return;}if(builtInUsers['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===_0x668c9d)){_0x5c7c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u7528\u6237\u540D\u5DF2\u5B58\u5728\uFF01";_0x5c7c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";return;}if(_0x5e327c['\u006C\u0065\u006E\u0067\u0074\u0068']<(456657^456658)){_0x5c7c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\uFF01\u4F4D3\u8981\u9700\u5C11\u6700\u7801\u5BC6".split("").reverse().join("");_0x5c7c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="kcolb".split("").reverse().join("");return;}if(_0x5e327c!==_0x6ffacd){_0x5c7c['\u0074\u0065\u0078\u0074\u0043\u006F\u006E\u0074\u0065\u006E\u0074']="\u4E24\u6B21\u8F93\u5165\u7684\u5BC6\u7801\u4E0D\u4E00\u81F4\uFF01";_0x5c7c['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']="\u0062\u006C\u006F\u0063\u006B";return;}builtInUsers['\u0070\u0075\u0073\u0068']({'\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065':_0x668c9d,'\u0070\u0061\u0073\u0073\u0077\u006F\u0072\u0064':_0x5e327c,'\u006E\u0061\u006D\u0065':_0x79fdd});if(_0x25163c==="\u0063\u0075\u0073\u0074\u006F\u006D"){}else{var _0x9f7a7c;const _0xgc9c=getTemplateByType(_0x25163c,_0x668c9d);_0x9f7a7c=(361835^361835)+(924983^924982);PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][_0x668c9d]={'\u006E\u0061\u006D\u0065':_0x79fdd,"description":_0xgc9c['\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E'],'\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{..._0xgc9c['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']}};}savePermissionConfig();document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006D\u006F\u0064\u0061\u006C")['\u0072\u0065\u006D\u006F\u0076\u0065']();var _0x91fbfc;const _0x93a=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("ladom.".split("").reverse().join(""));_0x91fbfc=549055^549051;if(_0x93a){renderPermissionUserList();}showSimpleToast("\u7528\u6237\u6DFB\u52A0\u6210\u529F\uFF01");}function deleteUser(username){if(!isAdmin()){alert("\uFF01\u6237\u7528\u9664\u5220\u4EE5\u53EF\u5458\u7406\u7BA1\u6709\u53EA".split("").reverse().join(""));return;}if(username==="uyiq".split("").reverse().join("")){alert("\u4E0D\u80FD\u5220\u9664\u7BA1\u7406\u5458\u8D26\u6237\uFF01");return;}const _0x57a44d=builtInUsers['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===username);if(!_0x57a44d)return;if(!confirm(`确定要删除用户 "${_0x57a44d['\u006E\u0061\u006D\u0065']} (${username})" 吗？此操作不可恢复！`)){return;}var _0x741ceb=(693376^693382)+(248231^248227);const _0xb7106e=builtInUsers['\u0066\u0069\u006E\u0064\u0049\u006E\u0064\u0065\u0078'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===username);_0x741ceb=(648122^648121)+(775387^775387);if(_0xb7106e>-(937997^937996)){builtInUsers['\u0073\u0070\u006C\u0069\u0063\u0065'](_0xb7106e,552689^552688);}if(PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]){delete PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username];}if(currentUser&&currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===username){logout();}savePermissionConfig();var _0xa1418c=(470365^470356)+(268358^268366);const _0x9d512a=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006D\u006F\u0064\u0061\u006C");_0xa1418c=553392^553401;if(_0x9d512a){renderPermissionUserList();}showSimpleToast("\uFF01\u529F\u6210\u9664\u5220\u6237\u7528".split("").reverse().join(""));}function editUserPermissions(username){var _0x1365b=(322306^322315)+(499924^499923);const _0xdc5f7d=builtInUsers['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===username);_0x1365b=(792878^792875)+(954777^954783);if(!_0xdc5f7d)return;const _0xgcf=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]||getDefaultTemplate(username);var _0x10ec6e;let _0x49f4b=[];_0x10ec6e=(627793^627793)+(586497^586503);if(window['\u0073\u0069\u0074\u0065\u0073']&&Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](window['\u0073\u0069\u0074\u0065\u0073'])){_0x49f4b=window['\u0073\u0069\u0074\u0065\u0073'];}else{try{const _0xc6629c=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("setiSnoitcurtsnoc".split("").reverse().join(""));if(_0xc6629c){_0x49f4b=JSON['\u0070\u0061\u0072\u0073\u0065'](_0xc6629c);}}catch(e){console['\u0077\u0061\u0072\u006E'](":\u8D25\u5931\u636E\u6570\u5730\u5DE5\u8F7D\u52A0egarotSlacol\u4ECE".split("").reverse().join(""),e);}}var _0xd2_0x8g2;const _0x8_0xffa=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0064\u0069\u0076");_0xd2_0x8g2=(586577^586580)+(222663^222659);_0x8_0xffa['\u0063\u006C\u0061\u0073\u0073\u004E\u0061\u006D\u0065']="\u006D\u006F\u0064\u0061\u006C";_0x8_0xffa['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
         display: flex;
         position: fixed;
         z-index: 2001;
@@ -1094,26 +181,24 @@ function editUserPermissions(username) {
         background: rgba(0,0,0,0.7);
         justify-content: center;
         align-items: center;
-    `;
-    
-    modal.innerHTML = `
+    `;_0x8_0xffa['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
         <div class="modal-content" style="width: 800px; max-height: 90vh; overflow-y: auto;">
             <div class="modal-header">
-                <h3>编辑权限 - ${user.name} (${username})</h3>
+                <h3>编辑权限 - ${_0xdc5f7d['\u006E\u0061\u006D\u0065']} (${username})</h3>
                 <button class="close-btn" onclick="this.closest('.modal').remove()">&times;</button>
             </div>
             <div style="padding: 20px;">
                 <div style="margin-bottom: 20px;">
                     <h4>用户权限配置</h4>
                     <p style="color: #666; font-size: 14px; margin-top: 5px;">
-                        当前用户：${user.name} (${username})<br>
+                        当前用户：${_0xdc5f7d['\u006E\u0061\u006D\u0065']} (${username})<br>
                         每个用户都有独立的权限配置
                     </p>
                 </div>
                 
                 <div id="permissionControls" style="margin-bottom: 20px;"></div>
                 
-                <div id="siteSelection" style="margin-bottom: 20px; display: ${userPerms.permissions.viewAllSites ? 'none' : 'block'}">
+                <div id="siteSelection" style="margin-bottom: 20px; display: ${_0xgcf['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073']?"\u006E\u006F\u006E\u0065":"kcolb".split("").reverse().join("")}">
                     <h4>选择可访问工地</h4>
                     <p style="color: #666; font-size: 12px; margin-bottom: 10px;">
                         选择该用户可以访问的工地。如果未选中任何工地，则无法查看任何工地。
@@ -1123,16 +208,16 @@ function editUserPermissions(username) {
                     </div>
                 </div>
                 
-                <div id="tabSelection" style="margin-bottom: 20px; display: ${userPerms.permissions.viewAllTabs ? 'none' : 'block'}">
+                <div id="tabSelection" style="margin-bottom: 20px; display: ${_0xgcf['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073']?"enon".split("").reverse().join(""):"\u0062\u006C\u006F\u0063\u006B"}">
                     <h4>选择可访问标签页</h4>
                     <div style="display: flex; flex-wrap: wrap; gap: 10px; border: 1px solid #ddd; padding: 10px; border-radius: 5px;">
-                        ${PERMISSION_CONFIG.availableTabs.map(tab => `
+                        ${PERMISSION_CONFIG['\u0061\u0076\u0061\u0069\u006C\u0061\u0062\u006C\u0065\u0054\u0061\u0062\u0073']['\u006D\u0061\u0070'](tab=>`
                             <label style="display: flex; align-items: center; gap: 5px; padding: 5px 10px; background: #f5f5f5; border-radius: 4px;">
-                                <input type="checkbox" name="allowedTabs" value="${tab.id}" 
-                                    ${userPerms.permissions.allowedTabs?.includes(tab.id) ? 'checked' : ''}>
-                                ${tab.name}
+                                <input type="checkbox" name="allowedTabs" value="${tab['\u0069\u0064']}" 
+                                    ${_0xgcf['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073']?.includes(tab['\u0069\u0064'])?"\u0063\u0068\u0065\u0063\u006B\u0065\u0064":''}>
+                                ${tab['\u006E\u0061\u006D\u0065']}
                             </label>
-                        `).join('')}
+                        `)['\u006A\u006F\u0069\u006E']('')}
                     </div>
                 </div>
                 
@@ -1142,231 +227,42 @@ function editUserPermissions(username) {
                 </div>
             </div>
         </div>
-    `;
-    
-    document.body.appendChild(modal);
-    
-    // 等待DOM渲染完成后渲染控件
-    setTimeout(() => {
-        renderPermissionControls(username, userPerms);
-        renderSiteCheckboxes(username, userPerms);
-    }, 50);
-}
-
-function renderPermissionControls(username, permissions) {
-    const container = document.getElementById('permissionControls');
-    if (!container) return;
-    
-    const controls = [
-        { id: 'viewAllSites', label: '查看所有工地' },
-        { id: 'addSite', label: '添加工地' },
-        { id: 'deleteSite', label: '删除工地' },
-        { id: 'editAll', label: '编辑所有内容' },
-        { id: 'exportData', label: '导出数据' },
-        { id: 'importData', label: '导入数据' },
-        { id: 'viewLogs', label: '查看日志' },
-        { id: 'cloudSync', label: '云端同步' },
-        { id: 'editQuote', label: '编辑报价' },
-        { id: 'deleteItems', label: '删除项目' },
-        { id: 'viewAllTabs', label: '查看所有标签页' },
-        { id: 'addItems', label: '添加项目' }
-    ];
-    
-   let html = '<h4>详细权限设置</h4>';
-    html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">';
-     // 添加管理员选项
-    html += `
+    `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0x8_0xffa);setTimeout(()=>{renderPermissionControls(username,_0xgcf);renderSiteCheckboxes(username,_0xgcf);},697803^697849);}function renderPermissionControls(username,permissions,_0x9d_0x3fb){var _0xb916c;const _0x9de6b=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0043\u006F\u006E\u0074\u0072\u006F\u006C\u0073");_0xb916c=(260989^260986)+(838341^838339);if(!_0x9de6b)return;const _0xd9ff=[{'\u0069\u0064':"\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073","label":"\u67E5\u770B\u6240\u6709\u5DE5\u5730"},{"id":"\u0061\u0064\u0064\u0053\u0069\u0074\u0065","label":'添加工地'},{'\u0069\u0064':"\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065",'\u006C\u0061\u0062\u0065\u006C':'删除工地'},{'\u0069\u0064':"\u0065\u0064\u0069\u0074\u0041\u006C\u006C",'\u006C\u0061\u0062\u0065\u006C':'编辑所有内容'},{'\u0069\u0064':'exportData','\u006C\u0061\u0062\u0065\u006C':"\u5BFC\u51FA\u6570\u636E"},{'\u0069\u0064':"\u0069\u006D\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061",'\u006C\u0061\u0062\u0065\u006C':'导入数据'},{"id":"\u0076\u0069\u0065\u0077\u004C\u006F\u0067\u0073","label":'查看日志'},{'\u0069\u0064':'cloudSync','\u006C\u0061\u0062\u0065\u006C':'云端同步'},{'\u0069\u0064':"\u0065\u0064\u0069\u0074\u0051\u0075\u006F\u0074\u0065","label":"\u7F16\u8F91\u62A5\u4EF7"},{"id":"\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073","label":"\u5220\u9664\u9879\u76EE"},{'\u0069\u0064':"\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073","label":"\u67E5\u770B\u6240\u6709\u6807\u7B7E\u9875"},{'\u0069\u0064':"\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073",'\u006C\u0061\u0062\u0065\u006C':'添加项目'}];_0x9d_0x3fb="\u003C\u0068\u0034\u003E\u8BE6\u7EC6\u6743\u9650\u8BBE\u7F6E\u003C\u002F\u0068\u0034\u003E";_0x9d_0x3fb+=">\";xp01 :pag ;))rf1 ,xp002(xamnim ,llif-otua(taeper :snmuloc-etalpmet-dirg ;dirg :yalpsid\"=elyts vid<".split("").reverse().join("");_0x9d_0x3fb+=`
         <label style="display: flex; align-items: center; gap: 5px; padding: 5px; background: #f5f5f5; border-radius: 4px; color: #d32f2f; font-weight: bold;">
             <input type="checkbox" name="isAdmin" 
-                ${permissions.permissions.isAdmin ? 'checked' : ''}
+                ${permissions['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']?"\u0063\u0068\u0065\u0063\u006B\u0065\u0064":''}
                 onchange="updatePermissionValue('${username}', 'isAdmin', this.checked)">
             设为系统管理员
         </label>
-    `;
-    controls.forEach(control => {
-        html += `
+    `;_0xd9ff['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](control=>{_0x9d_0x3fb+=`
             <label style="display: flex; align-items: center; gap: 5px; padding: 5px; background: #f5f5f5; border-radius: 4px;">
-                <input type="checkbox" name="${control.id}" 
-                    ${permissions.permissions[control.id] ? 'checked' : ''}
-                    onchange="updatePermissionValue('${username}', '${control.id}', this.checked)">
-                ${control.label}
+                <input type="checkbox" name="${control['\u0069\u0064']}" 
+                    ${permissions['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][control['\u0069\u0064']]?"dekcehc".split("").reverse().join(""):''}
+                    onchange="updatePermissionValue('${username}', '${control['\u0069\u0064']}', this.checked)">
+                ${control['\u006C\u0061\u0062\u0065\u006C']}
             </label>
-        `;
-    });
-    
-    html += '</div>';
-    container.innerHTML = html;
-}
-
-function updatePermissionValue(username, permission, value) {
-    if (!PERMISSION_CONFIG.userPermissions[username]) {
-        PERMISSION_CONFIG.userPermissions[username] = JSON.parse(JSON.stringify(getDefaultTemplate(username)));
-    }
-    
-    PERMISSION_CONFIG.userPermissions[username].permissions[permission] = value;
-    
-    const siteSelection = document.getElementById('siteSelection');
-    const tabSelection = document.getElementById('tabSelection');
-    
-    if (permission === 'viewAllSites' && siteSelection) {
-        siteSelection.style.display = value ? 'none' : 'block';
-    }
-    
-    if (permission === 'viewAllTabs' && tabSelection) {
-        tabSelection.style.display = value ? 'none' : 'block';
-    }
-}
-function renderSiteCheckboxes(username, permissions) {
-    const container = document.getElementById('siteCheckboxes');
-    if (!container) return;
-    
-    // 尝试从多个来源获取工地数据
-    let siteList = [];
-    
-    // 来源1：全局变量 window.sites
-    if (window.sites && Array.isArray(window.sites)) {
-        siteList = window.sites;
-    } 
-    // 来源2：从 localStorage 加载
-    else {
-        try {
-            const savedSites = localStorage.getItem('constructionSites');
-            if (savedSites) {
-                siteList = JSON.parse(savedSites);
-            }
-        } catch (e) {
-            console.warn('从localStorage加载工地数据失败:', e);
-        }
-    }
-    
-    // 如果还是没有数据，显示提示
-    if (siteList.length === 0) {
-        container.innerHTML = `
+        `;});_0x9d_0x3fb+=">vid/<".split("").reverse().join("");_0x9de6b['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0x9d_0x3fb;}function updatePermissionValue(username,permission,value){if(!PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]){PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]=JSON['\u0070\u0061\u0072\u0073\u0065'](JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](getDefaultTemplate(username)));}PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][permission]=value;var _0x46958g=(678740^678739)+(339217^339222);const _0xg76dab=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u0053\u0065\u006C\u0065\u0063\u0074\u0069\u006F\u006E");_0x46958g=(222390^222398)+(710153^710156);const _0xa25ae=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0074\u0061\u0062\u0053\u0065\u006C\u0065\u0063\u0074\u0069\u006F\u006E");if(permission==="\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073"&&_0xg76dab){_0xg76dab['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=value?"\u006E\u006F\u006E\u0065":"\u0062\u006C\u006F\u0063\u006B";}if(permission==="\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073"&&_0xa25ae){_0xa25ae['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=value?"\u006E\u006F\u006E\u0065":"\u0062\u006C\u006F\u0063\u006B";}}function renderSiteCheckboxes(username,permissions,_0xa1f3bc){var _0xg4cf2c=(715773^715769)+(482714^482717);const _0xe1fcgf=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("\u0073\u0069\u0074\u0065\u0043\u0068\u0065\u0063\u006B\u0062\u006F\u0078\u0065\u0073");_0xg4cf2c=(226742^226741)+(845398^845395);if(!_0xe1fcgf)return;var _0xc94f=(100093^100091)+(251186^251191);let _0x954c=[];_0xc94f=(750532^750534)+(480619^480620);if(window['\u0073\u0069\u0074\u0065\u0073']&&Array['\u0069\u0073\u0041\u0072\u0072\u0061\u0079'](window['\u0073\u0069\u0074\u0065\u0073'])){_0x954c=window['\u0073\u0069\u0074\u0065\u0073'];}else{try{const _0x47e68a=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0063\u006F\u006E\u0073\u0074\u0072\u0075\u0063\u0074\u0069\u006F\u006E\u0053\u0069\u0074\u0065\u0073");if(_0x47e68a){_0x954c=JSON['\u0070\u0061\u0072\u0073\u0065'](_0x47e68a);}}catch(e){console['\u0077\u0061\u0072\u006E'](":\u8D25\u5931\u636E\u6570\u5730\u5DE5\u8F7D\u52A0egarotSlacol\u4ECE".split("").reverse().join(""),e);}}if(_0x954c['\u006C\u0065\u006E\u0067\u0074\u0068']===(591453^591453)){_0xe1fcgf['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=`
             <div style="text-align: center; padding: 20px; color: #666;">
                 <div style="margin-bottom: 10px;">暂无工地数据</div>
                 <small style="font-size: 12px;">
                     请先添加工地，或刷新页面后重试
                 </small>
             </div>
-        `;
-        return;
-    }
-    
-    // 渲染工地复选框
-    let html = '<div style="display: flex; flex-direction: column; gap: 5px;">';
-    
-    siteList.forEach(site => {
-        const isChecked = permissions.permissions.allowedSites?.includes(site.id) || false;
-        const siteName = site.name || `未命名工地 (${site.id})`;
-        
-        html += `
+        `;return;}var _0xd657e;_0xa1f3bc=">\";xp5 :pag ;nmuloc :noitcerid-xelf ;xelf :yalpsid\"=elyts vid<".split("").reverse().join("");_0xd657e='\u006D\u006E\u0063\u0065\u0069\u006D';_0x954c['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](site=>{const _0xee_0x5ad=permissions['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']?.includes(site['\u0069\u0064'])||false;var _0x65d=(804921^804923)+(714544^714551);const _0x9_0xc45=site['\u006E\u0061\u006D\u0065']||`未命名工地 (${site['\u0069\u0064']})`;_0x65d=(694495^694494)+(114113^114118);_0xa1f3bc+=`
             <label style="display: flex; align-items: center; gap: 8px; padding: 5px 10px; border: 1px solid #eee; border-radius: 4px; cursor: pointer;">
-                <input type="checkbox" name="allowedSites" value="${site.id}" 
-                    ${isChecked ? 'checked' : ''}
+                <input type="checkbox" name="allowedSites" value="${site['\u0069\u0064']}" 
+                    ${_0xee_0x5ad?"dekcehc".split("").reverse().join(""):''}
                     style="margin: 0;">
-                <span style="flex: 1; font-size: 14px;">${siteName}</span>
-                <span style="font-size: 12px; color: #666;">${site.id}</span>
+                <span style="flex: 1; font-size: 14px;">${_0x9_0xc45}</span>
+                <span style="font-size: 12px; color: #666;">${site['\u0069\u0064']}</span>
             </label>
-        `;
-    });
-    
-    html += '</div>';
-    container.innerHTML = html;
-}
-
-function saveUserPermissions(username) {
-    if (!PERMISSION_CONFIG.userPermissions[username]) {
-        PERMISSION_CONFIG.userPermissions[username] = {
-            name: builtInUsers.find(u => u.username === username)?.name || username,
-            description: '独立权限配置',
-            permissions: {
-                viewAllSites: false,
-                addSite: false,
-                deleteSite: false,
-                editAll: false,
-                exportData: false,
-                importData: false,
-                viewLogs: false,
-                cloudSync: false,
-                editQuote: false,
-                deleteItems: false,
-                viewAllTabs: false,
-                addItems: false,
-                allowedSites: [],
-                allowedTabs: []
-            }
-        };
-    }
-    
-    const siteCheckboxes = document.querySelectorAll('input[name="allowedSites"]:checked');
-    PERMISSION_CONFIG.userPermissions[username].permissions.allowedSites = Array.from(siteCheckboxes).map(cb => cb.value);
-    
-    const tabCheckboxes = document.querySelectorAll('input[name="allowedTabs"]:checked');
-    PERMISSION_CONFIG.userPermissions[username].permissions.allowedTabs = Array.from(tabCheckboxes).map(cb => cb.value);
-    
-    savePermissionConfig();
-    document.querySelector('.modal').remove();
-    
-    setTimeout(() => {
-        const userListModal = document.querySelector('.modal');
-        if (userListModal) {
-            renderPermissionUserList();
-        }
-    }, 100);
-    
-    showSimpleToast('权限已保存');
-}
-
-// ==================== 权限导出 ====================
-function exportPermissionConfig() {
-    if (!isAdmin()) {
-        alert('只有管理员可以导出权限配置！');
-        return;
-    }
-    
-    const yonghuJsContent = `// 权限配置数据结构
-const PERMISSION_CONFIG = ${JSON.stringify(PERMISSION_CONFIG, null, 4)};
+        `;});_0xa1f3bc+="\u003C\u002F\u0064\u0069\u0076\u003E";_0xe1fcgf['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']=_0xa1f3bc;}function saveUserPermissions(username){if(!PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]){PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]={'\u006E\u0061\u006D\u0065':builtInUsers['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===username)?.name||username,'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':'独立权限配置','\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073':false,"addSite":false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065':false,'\u0065\u0064\u0069\u0074\u0041\u006C\u006C':false,"exportData":false,"importData":false,'\u0076\u0069\u0065\u0077\u004C\u006F\u0067\u0073':false,"cloudSync":false,"editQuote":false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,"viewAllTabs":false,"addItems":false,"allowedSites":[],"allowedTabs":[]}};}const _0xc4fg3b=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u0069\u006E\u0070\u0075\u0074\u005B\u006E\u0061\u006D\u0065\u003D\u0022\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073\u0022\u005D\u003A\u0063\u0068\u0065\u0063\u006B\u0065\u0064");PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']=Array['\u0066\u0072\u006F\u006D'](_0xc4fg3b)['\u006D\u0061\u0070'](cb=>cb['\u0076\u0061\u006C\u0075\u0065']);const _0x5869aa=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("dekcehc:]\"sbaTdewolla\"=eman[tupni".split("").reverse().join(""));PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073']=Array['\u0066\u0072\u006F\u006D'](_0x5869aa)['\u006D\u0061\u0070'](cb=>cb['\u0076\u0061\u006C\u0075\u0065']);savePermissionConfig();document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u006D\u006F\u0064\u0061\u006C")['\u0072\u0065\u006D\u006F\u0076\u0065']();setTimeout(()=>{var _0xg38d=(508792^508795)+(346920^346920);const _0x58f=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("ladom.".split("").reverse().join(""));_0xg38d=152674^152683;if(_0x58f){renderPermissionUserList();}},150645^150545);showSimpleToast("\u5B58\u4FDD\u5DF2\u9650\u6743".split("").reverse().join(""));}function exportPermissionConfig(){if(!isAdmin()){alert("\uFF01\u7F6E\u914D\u9650\u6743\u51FA\u5BFC\u4EE5\u53EF\u5458\u7406\u7BA1\u6709\u53EA".split("").reverse().join(""));return;}const _0xb120e=`// 权限配置数据结构
+const PERMISSION_CONFIG = ${JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](PERMISSION_CONFIG,null,188099^188103)};
 
 // ==================== 权限管理系统 ====================
 // 内置用户列表
-const builtInUsers = ${JSON.stringify(builtInUsers, null, 2)};
-`;
-    
-    // 只保留导出到云端功能
-    uploadToCloudDirectly(yonghuJsContent);
-}
-// 修改 quanxian.js 中的 uploadToCloudDirectly 函数
-async function uploadToCloudDirectly(content) {
-    try {
-        // 使用统一的 Token 管理函数
-        const token = await ensureGitHubToken({
-            checkDataSize: false,  // 权限配置不需要检查数据大小
-            purpose: 'permission',
-            showWarning: true
-        });
-        
-        if (!token) {
-            alert('上传权限配置需要 GitHub Token，请先配置！');
-            return;
-        }
-        
-        // 获取 GIST_ID（从 localStorage 或内置配置）
-        let gistId = BUILT_IN_CONFIG.GIST_ID;
-        const savedConfig = localStorage.getItem('github_config');
-        if (savedConfig) {
-            try {
-                const config = JSON.parse(savedConfig);
-                if (config.GIST_ID) {
-                    gistId = config.GIST_ID;
-                }
-            } catch (e) {
-                console.warn('解析配置失败，使用内置 GIST_ID:', e);
-            }
-        }
-        
-        const uploadingDiv = document.createElement('div');
-        uploadingDiv.innerHTML = '正在上传权限配置到云端...';
-        uploadingDiv.style.cssText = `
+const builtInUsers = ${JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](builtInUsers,null,539870^539868)};
+`;uploadToCloudDirectly(_0xb120e);}async function uploadToCloudDirectly(content){try{var _0xa6cd=(630270^630266)+(322138^322140);let _0x89b=GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E'];_0xa6cd=(830117^830117)+(612270^612262);if(!_0x89b||_0x89b['\u006C\u0065\u006E\u0067\u0074\u0068']<(783300^783310)){_0x89b=await ensureGitHubToken({'\u0063\u0068\u0065\u0063\u006B\u0044\u0061\u0074\u0061\u0053\u0069\u007A\u0065':false,"purpose":"\u0063\u006F\u006E\u0066\u0069\u0067","showWarning":false});if(!_0x89b){alert("\u6D88\u53D6\u5DF2\uFF0CnekoT buHtiG \u8981\u9700\u7F6E\u914D\u9650\u6743\u4F20\u4E0A".split("").reverse().join(""));return;}}var _0x2_0x92g=(533657^533660)+(369561^369566);let _0xg89b=BUILT_IN_CONFIG['\u0047\u0049\u0053\u0054\u005F\u0049\u0044'];_0x2_0x92g=(935332^935341)+(357029^357027);const _0xb5c6b=localStorage['\u0067\u0065\u0074\u0049\u0074\u0065\u006D']("\u0067\u0069\u0074\u0068\u0075\u0062\u005F\u0063\u006F\u006E\u0066\u0069\u0067");if(_0xb5c6b){try{const _0x7g553f=JSON['\u0070\u0061\u0072\u0073\u0065'](_0xb5c6b);if(_0x7g553f['\u0047\u0049\u0053\u0054\u005F\u0049\u0044']){_0xg89b=_0x7g553f['\u0047\u0049\u0053\u0054\u005F\u0049\u0044'];}}catch(e){console['\u0077\u0061\u0072\u006E'](":DI_TSIG \u7F6E\u5185\u7528\u4F7F\uFF0C\u8D25\u5931\u7F6E\u914D\u6790\u89E3".split("").reverse().join(""),e);}}const _0xbddb7a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("vid".split("").reverse().join(""));_0xbddb7a['\u0069\u006E\u006E\u0065\u0072\u0048\u0054\u004D\u004C']="...\u7AEF\u4E91\u5230\u7F6E\u914D\u9650\u6743\u4F20\u4E0A\u5728\u6B63".split("").reverse().join("");_0xbddb7a['\u0073\u0074\u0079\u006C\u0065']['\u0063\u0073\u0073\u0054\u0065\u0078\u0074']=`
             position: fixed;
             top: 50%;
             left: 50%;
@@ -1378,341 +274,4 @@ async function uploadToCloudDirectly(content) {
             z-index: 9999;
             text-align: center;
             min-width: 200px;
-        `;
-        document.body.appendChild(uploadingDiv);
-        
-        const response = await fetch(`https://api.github.com/gists/${gistId}`, {
-            method: 'PATCH',
-            headers: {
-                'Authorization': `token ${token}`,
-                'Content-Type': 'application/json',
-                'Accept': 'application/vnd.github.v3+json'
-            },
-            body: JSON.stringify({
-                description: `权限配置文件更新 - ${new Date().toLocaleString()}`,
-                  files: {
-                    [CLOUD_CONFIG.DATA_FILES.CLOUD_JS]: {  // 使用变量
-                        content: content
-                    }
-                }
-            })
-        });
-        
-        if (uploadingDiv.parentNode) {
-            uploadingDiv.remove();
-        }
-        
-        if (response.ok) {
-            alert('✅ 权限配置已成功上传到云端！');
-        } else {
-            const error = await response.text();
-            console.error('上传失败:', error);
-            
-            if (response.status === 401) {
-                alert('GitHub Token 已过期或无效！\n\n请重新配置 GitHub Token。');
-                localStorage.removeItem('github_config');
-                GIST_CONFIG.GITHUB_TOKEN = '';
-                GIST_CONFIG.configLoaded = false;
-            } else {
-                alert(`上传失败：${response.status} ${response.statusText}`);
-            }
-        }
-        
-    } catch (error) {
-        console.error('上传异常:', error);
-        let errorMsg = '上传失败：';
-        if (error.message.includes('Failed to fetch')) {
-            errorMsg = '网络连接失败，请检查网络连接。';
-        } else if (error.message.includes('token')) {
-            errorMsg = 'GitHub Token 无效，请重新配置。';
-        } else {
-            errorMsg += error.message;
-        }
-        alert(errorMsg);
-    }
-}
-
-function downloadToLocal(content) {
-    const blob = new Blob([content], { type: 'application/javascript;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `yonghu_${new Date().toLocaleDateString('zh-CN').replace(/\//g, '-')}.js`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    
-    alert(`权限配置文件已下载！\n\n文件名：${a.download}\n\n您可以将此文件上传到云端替换原来的 yonghu.js 文件。`);
-    
-    try {
-        navigator.clipboard.writeText(content).then(() => {
-            showSimpleToast('权限配置已复制到剪贴板');
-        }).catch(e => {
-            console.log('复制失败:', e);
-        });
-    } catch (e) {
-        console.log('剪贴板API不可用');
-    }
-}
-
-// ==================== 权限应用 ====================
-function applyUserPermissions() {
-    if (!currentUser) return;
-    
-    console.log('应用用户权限:', currentUser.username);
-    
-    updateTopButtonsByPermission();
-    updateTabsByPermission();
-    updateSiteListByPermission();
-    updateAddButtonByPermission();
-    updateDataManagementByPermission();
-    updateModalPermissions();
-    
-    // 应用新的权限检查
-    applyNewPermissions();
-}
-
-function applyNewPermissions() {
-    // 应用数据管理按钮权限
-    updateDataManagementButtons();
-    
-    // 应用顶部按钮权限
-    updateTopButtonsVisibility();
-}
-
-function updateDataManagementButtons() {
-    const dataManagement = document.querySelector('.import-export');
-    if (!dataManagement) return;
-    
-    // 备份完整数据
-    const saveToJsFileBtn = dataManagement.querySelector('[onclick*="saveToJsFile"]');
-    if (saveToJsFileBtn) {
-        saveToJsFileBtn.style.display = canSaveToJsFile() ? '' : 'none';
-    }
-    
-    // 下载JSON数据
-    const downloadJsonDataBtn = dataManagement.querySelector('[onclick*="downloadJsonData"]');
-    if (downloadJsonDataBtn) {
-        downloadJsonDataBtn.style.display = canDownloadJsonData() ? '' : 'none';
-    }
-    
-    // 从文件加载
-    const loadFromJsFileBtn = dataManagement.querySelector('[onclick*="loadFromJsFile"]');
-    if (loadFromJsFileBtn) {
-        loadFromJsFileBtn.style.display = canLoadFromJsFile() ? '' : 'none';
-    }
-    
-    // 加载图片包
-    const loadImagesBtn = dataManagement.querySelector('[onclick*="loadImagesZipOnly"]');
-    if (loadImagesBtn) {
-        loadImagesBtn.style.display = canLoadImagesZipOnly() ? '' : 'none';
-    }
-}
-
-function updateTopButtonsVisibility() {
-    // 权限管理按钮
-    const permissionBtn = document.querySelector('.permission-manager-btn');
-    if (permissionBtn) {
-        permissionBtn.style.display = canShowPermissionManager() ? '' : 'none';
-    }
-    
-    // 更改日志按钮
-    const changeLogBtn = document.querySelector('.change-log-btn');
-    if (changeLogBtn) {
-        changeLogBtn.style.display = hasPermission('viewLogs') ? '' : 'none';
-    }
-}
-
-function updateTabsByPermission() {
-    const tabsContainer = document.getElementById('siteTabs');
-    if (!tabsContainer) return;
-    
-    const allowedTabs = getAllowedTabs();
-    const currentTabs = Array.from(tabsContainer.querySelectorAll('.tab'));
-    
-    currentTabs.forEach(tab => {
-        const tabId = tab.getAttribute('data-tab');
-        const isAllowed = allowedTabs.some(allowed => allowed.id === tabId);
-        tab.style.display = isAllowed ? '' : 'none';
-    });
-    
-    const activeTab = tabsContainer.querySelector('.tab.active');
-    if (activeTab && activeTab.style.display === 'none') {
-        const firstVisibleTab = tabsContainer.querySelector('.tab[style=""]');
-        if (firstVisibleTab) {
-            switchTab(firstVisibleTab.getAttribute('data-tab'));
-        }
-    }
-}
-
-function updateSiteListByPermission() {
-    if (!hasPermission('viewAllSites')) {
-        const userPerms = PERMISSION_CONFIG.userPermissions[currentUser.username];
-        if (userPerms && userPerms.permissions.allowedSites) {
-            const siteCards = document.querySelectorAll('.site-card');
-            siteCards.forEach(card => {
-                const siteElement = card.closest('.site-card');
-                if (siteElement && siteElement.onclick) {
-                    const match = siteElement.onclick.toString().match(/showSiteDetails\('([^']+)'\)/);
-                    if (match) {
-                        const siteId = match[1];
-                        const canView = userPerms.permissions.allowedSites.includes(siteId);
-                        card.style.display = canView ? '' : 'none';
-                    }
-                }
-            });
-        }
-    }
-}
-
-function updateAddButtonByPermission() {
-    const addButton = document.querySelector('.add-site-btn');
-    if (addButton) {
-        addButton.style.display = hasPermission('addSite') ? '' : 'none';
-    }
-}
-
-function updateDataManagementByPermission() {
-    const dataManagement = document.querySelector('.import-export');
-    if (!dataManagement) return;
-    
-    const buttons = {
-        saveToJsFile: dataManagement.querySelector('[onclick*="saveToJsFile"]'),
-        downloadJsonData: dataManagement.querySelector('[onclick*="downloadJsonData"]'),
-        loadFromJsFile: dataManagement.querySelector('[onclick*="loadFromJsFile"]'),
-        loadImagesZipOnly: dataManagement.querySelector('[onclick*="loadImagesZipOnly"]')
-    };
-    
-    if (buttons.saveToJsFile) {
-        buttons.saveToJsFile.style.display = hasPermission('exportData') ? '' : 'none';
-    }
-    if (buttons.downloadJsonData) {
-        buttons.downloadJsonData.style.display = hasPermission('exportData') ? '' : 'none';
-    }
-    if (buttons.loadFromJsFile) {
-        buttons.loadFromJsFile.style.display = hasPermission('importData') ? '' : 'none';
-    }
-    if (buttons.loadImagesZipOnly) {
-        buttons.loadImagesZipOnly.style.display = hasPermission('importData') ? '' : 'none';
-    }
-}
-
-function updateModalPermissions() {
-    const quoteInputs = document.querySelectorAll('#quoteTab input[type="number"]');
-    quoteInputs.forEach(input => {
-        input.readOnly = !hasPermission('editQuote');
-    });
-    
-    const saveQuoteBtn = document.querySelector('#quoteTab button[onclick="saveQuote()"]');
-    if (saveQuoteBtn) {
-        saveQuoteBtn.disabled = !hasPermission('editQuote');
-    }
-    
-    const deleteButtons = document.querySelectorAll('.action-btn.delete-btn');
-    deleteButtons.forEach(btn => {
-        btn.style.display = hasPermission('deleteItems') ? '' : 'none';
-    });
-    
-    const addButtons = document.querySelectorAll('.tab-content button[onclick*="add"]');
-    addButtons.forEach(btn => {
-        const tabContent = btn.closest('.tab-content');
-        if (tabContent) {
-            const tabId = tabContent.id;
-            const canView = canViewTab(tabId);
-            btn.style.display = (canView && hasPermission('addItems')) ? '' : 'none';
-        }
-    });
-}
-
-// ==================== 工具函数 ====================
-function getDefaultTemplate(username) {
-    return {
-        name: '默认权限',
-        description: '默认权限配置',
-        permissions: {
-            viewAllSites: false,
-            addSite: false,
-            deleteSite: false,
-            editAll: false,
-            exportData: false,
-            importData: true,
-            viewLogs: false,
-            cloudSync: true,
-            editQuote: false,
-            deleteItems: false,
-            viewAllTabs: false,
-            addItems: true,
-            allowedSites: [],
-            allowedTabs: []
-        }
-    };
-}
-// ==================== 管理员管理函数 ====================
-function addToAdminList(username) {
-    if (!window.ADMIN_USERS.includes(username)) {
-        window.ADMIN_USERS.push(username);
-        console.log(`已将用户 ${username} 添加到管理员列表`);
-    }
-}
-
-function removeFromAdminList(username) {
-    const index = window.ADMIN_USERS.indexOf(username);
-    if (index > -1) {
-        window.ADMIN_USERS.splice(index, 1);
-        console.log(`已将用户 ${username} 从管理员列表移除`);
-    }
-}
-
-function setUserAsAdmin(username, isAdmin = true) {
-    const user = builtInUsers.find(u => u.username === username);
-    if (user) {
-        user.isAdmin = isAdmin;
-        
-        // 更新权限配置
-        if (PERMISSION_CONFIG.userPermissions[username]) {
-            PERMISSION_CONFIG.userPermissions[username].permissions.isAdmin = isAdmin;
-        }
-        
-        // 更新管理员列表
-        if (isAdmin && !window.ADMIN_USERS.includes(username)) {
-            window.ADMIN_USERS.push(username);
-        } else if (!isAdmin) {
-            removeFromAdminList(username);
-        }
-        
-        savePermissionConfig();
-        console.log(`已将用户 ${username} 设置为管理员: ${isAdmin}`);
-    }
-}
-
-// 暴露到全局
-window.addToAdminList = addToAdminList;
-window.removeFromAdminList = removeFromAdminList;
-window.setUserAsAdmin = setUserAsAdmin;
-// 暴露函数到全局
-window.showPermissionManager = showPermissionManager;
-window.exportPermissionConfig = exportPermissionConfig;
-window.editUserPermissions = editUserPermissions;
-window.saveUserPermissions = saveUserPermissions;
-window.updatePermissionValue = updatePermissionValue;
-window.hasPermission = hasPermission;
-window.canViewSite = canViewSite;
-window.canViewTab = canViewTab;
-window.showAddUserModal = showAddUserModal;
-window.deleteUser = deleteUser;
-window.getAllowedTabs = getAllowedTabs;
-window.applyUserPermissions = applyUserPermissions;
-window.initPermissionSystem = initPermissionSystem;
-window.loadPermissionConfig = loadPermissionConfig;
-window.savePermissionConfig = savePermissionConfig;
-
-// 初始化
-document.addEventListener('DOMContentLoaded', function() {
-    // 等待主应用初始化完成后再初始化权限系统
-    setTimeout(function() {
-        if (typeof initPermissionSystem === 'function') {
-            initPermissionSystem();
-        }
-    }, 300); // 增加延迟，确保 app.js 先初始化
-});
+        `;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](_0xbddb7a);const _0xd3_0x3c2=await fetch(`https://api.github.com/gists/${_0xg89b}`,{'\u006D\u0065\u0074\u0068\u006F\u0064':"\u0050\u0041\u0054\u0043\u0048",'\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{'Authorization':`token ${_0x89b}`,"\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u002D\u0054\u0079\u0070\u0065":'application/json',"\u0041\u0063\u0063\u0065\u0070\u0074":"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u0076\u006E\u0064\u002E\u0067\u0069\u0074\u0068\u0075\u0062\u002E\u0076\u0033\u002B\u006A\u0073\u006F\u006E"},"body":JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u0064\u0065\u0073\u0063\u0072\u0069\u0070\u0074\u0069\u006F\u006E':`权限配置文件更新 - ${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0053\u0074\u0072\u0069\u006E\u0067']()}`,"files":{"zhanghao.js":{'\u0063\u006F\u006E\u0074\u0065\u006E\u0074':content}}})});if(_0xbddb7a['\u0070\u0061\u0072\u0065\u006E\u0074\u004E\u006F\u0064\u0065']){_0xbddb7a['\u0072\u0065\u006D\u006F\u0076\u0065']();}if(_0xd3_0x3c2['\u006F\u006B']){alert("sj.oahgnahz\uFF1A\u4E3A\u540D\u4EF6\u6587\n\uFF01\u7AEF\u4E91\u5230\u4F20\u4E0A\u529F\u6210\u5DF2\u7F6E\u914D\u9650\u6743 \u2705".split("").reverse().join(""));}else{var _0x62ec2d;const _0x92fac=await _0xd3_0x3c2['\u0074\u0065\u0078\u0074']();_0x62ec2d=(907046^907046)+(594602^594594);console['\u0065\u0072\u0072\u006F\u0072']("\u4E0A\u4F20\u5931\u8D25\u003A",_0x92fac);if(_0xd3_0x3c2['\u0073\u0074\u0061\u0074\u0075\u0073']===(632136^632025)){alert("\u0047\u0069\u0074\u0048\u0075\u0062\u0020\u0054\u006F\u006B\u0065\u006E\u0020\u5DF2\u8FC7\u671F\u6216\u65E0\u6548\uFF01\u000A\u000A\u8BF7\u91CD\u65B0\u914D\u7F6E\u0020\u0047\u0069\u0074\u0048\u0075\u0062\u0020\u0054\u006F\u006B\u0065\u006E\u3002");localStorage['\u0072\u0065\u006D\u006F\u0076\u0065\u0049\u0074\u0065\u006D']("\u0067\u0069\u0074\u0068\u0075\u0062\u005F\u0063\u006F\u006E\u0066\u0069\u0067");GIST_CONFIG['\u0047\u0049\u0054\u0048\u0055\u0042\u005F\u0054\u004F\u004B\u0045\u004E']='';GIST_CONFIG['\u0063\u006F\u006E\u0066\u0069\u0067\u004C\u006F\u0061\u0064\u0065\u0064']=false;}else{alert(`上传失败：${_0xd3_0x3c2['\u0073\u0074\u0061\u0074\u0075\u0073']} ${_0xd3_0x3c2['\u0073\u0074\u0061\u0074\u0075\u0073\u0054\u0065\u0078\u0074']}`);}}}catch(error){console['\u0065\u0072\u0072\u006F\u0072']("\u4E0A\u4F20\u5F02\u5E38\u003A",error);var _0x7dge=(164368^164370)+(296373^296373);let _0x2be="\uFF1A\u8D25\u5931\u4F20\u4E0A".split("").reverse().join("");_0x7dge=(658097^658101)+(497970^497978);if(error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0046\u0061\u0069\u006C\u0065\u0064\u0020\u0074\u006F\u0020\u0066\u0065\u0074\u0063\u0068")){_0x2be="\u3002\u63A5\u8FDE\u7EDC\u7F51\u67E5\u68C0\u8BF7\uFF0C\u8D25\u5931\u63A5\u8FDE\u7EDC\u7F51".split("").reverse().join("");}else if(error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("nekot".split("").reverse().join(""))){_0x2be="\u3002\u7F6E\u914D\u65B0\u91CD\u8BF7\uFF0C\u6548\u65E0 nekoT buHtiG".split("").reverse().join("");}else{_0x2be+=error['\u006D\u0065\u0073\u0073\u0061\u0067\u0065'];}alert(_0x2be);}}function downloadToLocal(content){var _0x7faa;const _0xdb755e=new Blob([content],{'\u0074\u0079\u0070\u0065':"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0061\u0076\u0061\u0073\u0063\u0072\u0069\u0070\u0074\u003B\u0063\u0068\u0061\u0072\u0073\u0065\u0074\u003D\u0075\u0074\u0066\u002D\u0038"});_0x7faa=(495949^495948)+(384338^384339);var _0x81bfgc=(956723^956726)+(823969^823974);const _0x3d_0x329=URL['\u0063\u0072\u0065\u0061\u0074\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0xdb755e);_0x81bfgc=408734^408727;var _0x6e19b=(961655^961654)+(909133^909131);const a=document['\u0063\u0072\u0065\u0061\u0074\u0065\u0045\u006C\u0065\u006D\u0065\u006E\u0074']("\u0061");_0x6e19b=(597491^597499)+(182018^182019);a['\u0068\u0072\u0065\u0066']=_0x3d_0x329;a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']=`yonghu_${new Date()['\u0074\u006F\u004C\u006F\u0063\u0061\u006C\u0065\u0044\u0061\u0074\u0065\u0053\u0074\u0072\u0069\u006E\u0067']("\u007A\u0068\u002D\u0043\u004E")['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005C\u002F','\u0067'),"\u002D")}.js`;document['\u0062\u006F\u0064\u0079']['\u0061\u0070\u0070\u0065\u006E\u0064\u0043\u0068\u0069\u006C\u0064'](a);a['\u0063\u006C\u0069\u0063\u006B']();document['\u0062\u006F\u0064\u0079']['\u0072\u0065\u006D\u006F\u0076\u0065\u0043\u0068\u0069\u006C\u0064'](a);URL['\u0072\u0065\u0076\u006F\u006B\u0065\u004F\u0062\u006A\u0065\u0063\u0074\u0055\u0052\u004C'](_0x3d_0x329);alert(`权限配置文件已下载！\n\n文件名：${a['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064']}\n\n您可以将此文件上传到云端替换原来的 yonghu.js 文件。`);try{navigator['\u0063\u006C\u0069\u0070\u0062\u006F\u0061\u0072\u0064']['\u0077\u0072\u0069\u0074\u0065\u0054\u0065\u0078\u0074'](content)['\u0074\u0068\u0065\u006E'](()=>{showSimpleToast("\u677F\u8D34\u526A\u5230\u5236\u590D\u5DF2\u7F6E\u914D\u9650\u6743".split("").reverse().join(""));})['\u0063\u0061\u0074\u0063\u0068'](e=>{console['\u006C\u006F\u0067'](":\u8D25\u5931\u5236\u590D".split("").reverse().join(""),e);});}catch(e){console['\u006C\u006F\u0067']("\u7528\u53EF\u4E0DIPA\u677F\u8D34\u526A".split("").reverse().join(""));}}function applyUserPermissions(){if(!currentUser)return;console['\u006C\u006F\u0067']("\u5E94\u7528\u7528\u6237\u6743\u9650\u003A",currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']);updateTopButtonsByPermission();updateTabsByPermission();updateSiteListByPermission();updateAddButtonByPermission();updateDataManagementByPermission();updateModalPermissions();applyNewPermissions();}function applyNewPermissions(){updateDataManagementButtons();updateTopButtonsVisibility();}function updateDataManagementButtons(){var _0xaa12b=(548570^548568)+(627193^627194);const _0x9bfgeb=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0069\u006D\u0070\u006F\u0072\u0074\u002D\u0065\u0078\u0070\u006F\u0072\u0074");_0xaa12b=291042^291047;if(!_0x9bfgeb)return;var _0x3e6a9c;const _0x73fd=_0x9bfgeb['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("]\"eliFsJoTevas\"=*kcilcno[".split("").reverse().join(""));_0x3e6a9c=878995^879003;if(_0x73fd){_0x73fd['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=canSaveToJsFile()?'':"\u006E\u006F\u006E\u0065";}var _0x1b832f=(855530^855531)+(466235^466237);const _0x184be=_0x9bfgeb['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("]\"ataDnosJdaolnwod\"=*kcilcno[".split("").reverse().join(""));_0x1b832f=832407^832402;if(_0x184be){_0x184be['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=canDownloadJsonData()?'':"\u006E\u006F\u006E\u0065";}const _0x75b=_0x9bfgeb['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u002A\u003D\u0022\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065\u0022\u005D");if(_0x75b){_0x75b['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=canLoadFromJsFile()?'':"\u006E\u006F\u006E\u0065";}const _0xe28b3e=_0x9bfgeb['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u002A\u003D\u0022\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079\u0022\u005D");if(_0xe28b3e){_0xe28b3e['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=canLoadImagesZipOnly()?'':"enon".split("").reverse().join("");}}function updateTopButtonsVisibility(){var _0xf5208b=(591432^591425)+(989403^989407);const _0xa32a=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u002D\u006D\u0061\u006E\u0061\u0067\u0065\u0072\u002D\u0062\u0074\u006E");_0xf5208b=(577986^577986)+(987381^987379);if(_0xa32a){_0xa32a['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=canShowPermissionManager()?'':"\u006E\u006F\u006E\u0065";}var _0x6078b=(971815^971808)+(852625^852625);const _0xabffe=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0063\u0068\u0061\u006E\u0067\u0065\u002D\u006C\u006F\u0067\u002D\u0062\u0074\u006E");_0x6078b='\u0064\u0068\u0063\u006C\u0064\u0067';if(_0xabffe){_0xabffe['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("sgoLweiv".split("").reverse().join(""))?'':"enon".split("").reverse().join("");}}function updateTabsByPermission(){var _0x34f=(856953^856953)+(840214^840210);const _0x1b076c=document['\u0067\u0065\u0074\u0045\u006C\u0065\u006D\u0065\u006E\u0074\u0042\u0079\u0049\u0064']("sbaTetis".split("").reverse().join(""));_0x34f=523331^523329;if(!_0x1b076c)return;const _0x6eebc=getAllowedTabs();var _0xc4aa=(977958^977958)+(207284^207287);const _0xb2gdce=Array['\u0066\u0072\u006F\u006D'](_0x1b076c['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("bat.".split("").reverse().join("")));_0xc4aa=(525379^525387)+(867163^867162);_0xb2gdce['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](tab=>{const _0x3a54a=tab['\u0067\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062");var _0xe03fb=(122938^122939)+(215744^215748);const _0x7fgb4c=_0x6eebc['\u0073\u006F\u006D\u0065'](allowed=>allowed['\u0069\u0064']===_0x3a54a);_0xe03fb=401865^401857;tab['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=_0x7fgb4c?'':"\u006E\u006F\u006E\u0065";});var _0x3_0xc86;const _0x6d7fb=_0x1b076c['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0074\u0061\u0062\u002E\u0061\u0063\u0074\u0069\u0076\u0065");_0x3_0xc86=643424^643432;if(_0x6d7fb&&_0x6d7fb['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']==="\u006E\u006F\u006E\u0065"){const _0x7d54c=_0x1b076c['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0074\u0061\u0062\u005B\u0073\u0074\u0079\u006C\u0065\u003D\u0022\u0022\u005D");if(_0x7d54c){switchTab(_0x7d54c['\u0067\u0065\u0074\u0041\u0074\u0074\u0072\u0069\u0062\u0075\u0074\u0065']("\u0064\u0061\u0074\u0061\u002D\u0074\u0061\u0062"));}}}function updateSiteListByPermission(){if(!hasPermission("\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0053\u0069\u0074\u0065\u0073")){const _0xdf2bba=PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][currentUser['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']];if(_0xdf2bba&&_0xdf2bba['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']){var _0x53afb=(977491^977495)+(730439^730433);const _0x10_0x2ab=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("drac-etis.".split("").reverse().join(""));_0x53afb=380323^380321;_0x10_0x2ab['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](card=>{var _0xa6cega;const _0x11_0x550=card['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u002E\u0073\u0069\u0074\u0065\u002D\u0063\u0061\u0072\u0064");_0xa6cega=505481^505472;if(_0x11_0x550&&_0x11_0x550['\u006F\u006E\u0063\u006C\u0069\u0063\u006B']){const _0x13ecae=_0x11_0x550['\u006F\u006E\u0063\u006C\u0069\u0063\u006B']['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u0073\u0068\u006F\u0077\u0053\u0069\u0074\u0065\u0044\u0065\u0074\u0061\u0069\u006C\u0073\u005C\u0028\u0027\u0028\u005B\u005E\u0027\u005D\u002B\u0029\u0027\u005C\u0029',""));if(_0x13ecae){var _0x9725a;const _0xgb211a=_0x13ecae[813512^813513];_0x9725a=683366^683375;const _0xacbcbb=_0xdf2bba['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](_0xgb211a);card['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=_0xacbcbb?'':"\u006E\u006F\u006E\u0065";}}});}}}function updateAddButtonByPermission(){var _0xfdc;const _0x5cagd=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("ntb-etis-dda.".split("").reverse().join(""));_0xfdc='\u0069\u0066\u0069\u0064\u006B\u006C';if(_0x5cagd){_0x5cagd['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("\u0061\u0064\u0064\u0053\u0069\u0074\u0065")?'':"enon".split("").reverse().join("");}}function updateDataManagementByPermission(){var _0xf42f;const _0xagb2de=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u002E\u0069\u006D\u0070\u006F\u0072\u0074\u002D\u0065\u0078\u0070\u006F\u0072\u0074");_0xf42f=(868681^868672)+(696177^696185);if(!_0xagb2de)return;const _0x79aed={'\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065':_0xagb2de['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u002A\u003D\u0022\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065\u0022\u005D"),'\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061':_0xagb2de['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u002A\u003D\u0022\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061\u0022\u005D"),'\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065':_0xagb2de['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u002A\u003D\u0022\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065\u0022\u005D"),'\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079':_0xagb2de['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u002A\u003D\u0022\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079\u0022\u005D")};if(_0x79aed['\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065']){_0x79aed['\u0073\u0061\u0076\u0065\u0054\u006F\u004A\u0073\u0046\u0069\u006C\u0065']['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061")?'':"\u006E\u006F\u006E\u0065";}if(_0x79aed['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061']){_0x79aed['\u0064\u006F\u0077\u006E\u006C\u006F\u0061\u0064\u004A\u0073\u006F\u006E\u0044\u0061\u0074\u0061']['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061")?'':"\u006E\u006F\u006E\u0065";}if(_0x79aed['\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065']){_0x79aed['\u006C\u006F\u0061\u0064\u0046\u0072\u006F\u006D\u004A\u0073\u0046\u0069\u006C\u0065']['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("ataDtropmi".split("").reverse().join(""))?'':"\u006E\u006F\u006E\u0065";}if(_0x79aed['\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079']){_0x79aed['\u006C\u006F\u0061\u0064\u0049\u006D\u0061\u0067\u0065\u0073\u005A\u0069\u0070\u004F\u006E\u006C\u0079']['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("ataDtropmi".split("").reverse().join(""))?'':"enon".split("").reverse().join("");}}function updateModalPermissions(){var _0x6c10d=(781432^781425)+(318967^318962);const _0xb39b5c=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("]\"rebmun\"=epyt[tupni baTetouq#".split("").reverse().join(""));_0x6c10d="iaedbi".split("").reverse().join("");_0xb39b5c['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](input=>{input['\u0072\u0065\u0061\u0064\u004F\u006E\u006C\u0079']=!hasPermission("\u0065\u0064\u0069\u0074\u0051\u0075\u006F\u0074\u0065");});const _0xbcfd=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072']("\u0023\u0071\u0075\u006F\u0074\u0065\u0054\u0061\u0062\u0020\u0062\u0075\u0074\u0074\u006F\u006E\u005B\u006F\u006E\u0063\u006C\u0069\u0063\u006B\u003D\u0022\u0073\u0061\u0076\u0065\u0051\u0075\u006F\u0074\u0065\u0028\u0029\u0022\u005D");if(_0xbcfd){_0xbcfd['\u0064\u0069\u0073\u0061\u0062\u006C\u0065\u0064']=!hasPermission("\u0065\u0064\u0069\u0074\u0051\u0075\u006F\u0074\u0065");}const _0xb2003f=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("\u002E\u0061\u0063\u0074\u0069\u006F\u006E\u002D\u0062\u0074\u006E\u002E\u0064\u0065\u006C\u0065\u0074\u0065\u002D\u0062\u0074\u006E");_0xb2003f['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](btn=>{btn['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=hasPermission("\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073")?'':"\u006E\u006F\u006E\u0065";});var _0xdb712g=(738132^738140)+(569504^569509);const _0x82cbc=document['\u0071\u0075\u0065\u0072\u0079\u0053\u0065\u006C\u0065\u0063\u0074\u006F\u0072\u0041\u006C\u006C']("]\"dda\"=*kcilcno[nottub tnetnoc-bat.".split("").reverse().join(""));_0xdb712g=(941951^941949)+(603980^603983);_0x82cbc['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](btn=>{const _0xd4_0x49e=btn['\u0063\u006C\u006F\u0073\u0065\u0073\u0074']("\u002E\u0074\u0061\u0062\u002D\u0063\u006F\u006E\u0074\u0065\u006E\u0074");if(_0xd4_0x49e){var _0x3a6e;const _0xe379g=_0xd4_0x49e['\u0069\u0064'];_0x3a6e=617629^617621;var _0x2fee1c=(996648^996650)+(297581^297577);const _0x897e6b=canViewTab(_0xe379g);_0x2fee1c='\u0070\u006B\u0068\u0066\u0063\u0069';btn['\u0073\u0074\u0079\u006C\u0065']['\u0064\u0069\u0073\u0070\u006C\u0061\u0079']=_0x897e6b&&hasPermission("\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073")?'':"\u006E\u006F\u006E\u0065";}});}function getDefaultTemplate(username){return{'\u006E\u0061\u006D\u0065':'默认权限',"description":"\u9ED8\u8BA4\u6743\u9650\u914D\u7F6E",'\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073':{"viewAllSites":false,"addSite":false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0053\u0069\u0074\u0065':false,"editAll":false,'\u0065\u0078\u0070\u006F\u0072\u0074\u0044\u0061\u0074\u0061':false,"importData":!![],'\u0076\u0069\u0065\u0077\u004C\u006F\u0067\u0073':false,"cloudSync":!![],'\u0065\u0064\u0069\u0074\u0051\u0075\u006F\u0074\u0065':false,'\u0064\u0065\u006C\u0065\u0074\u0065\u0049\u0074\u0065\u006D\u0073':false,'\u0076\u0069\u0065\u0077\u0041\u006C\u006C\u0054\u0061\u0062\u0073':false,'\u0061\u0064\u0064\u0049\u0074\u0065\u006D\u0073':!![],'\u0061\u006C\u006C\u006F\u0077\u0065\u0064\u0053\u0069\u0074\u0065\u0073':[],"allowedTabs":[]}};}function addToAdminList(username){if(!window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](username)){window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0070\u0075\u0073\u0068'](username);console['\u006C\u006F\u0067'](`已将用户 ${username} 添加到管理员列表`);}}function removeFromAdminList(username){var _0xf8cgd=(178017^178022)+(992807^992814);const _0x2316bf=window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0069\u006E\u0064\u0065\u0078\u004F\u0066'](username);_0xf8cgd="mnghho".split("").reverse().join("");if(_0x2316bf>-(699069^699068)){window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0073\u0070\u006C\u0069\u0063\u0065'](_0x2316bf,109094^109095);console['\u006C\u006F\u0067'](`已将用户 ${username} 从管理员列表移除`);}}function setUserAsAdmin(username,isAdmin=!![]){const _0xe108a=builtInUsers['\u0066\u0069\u006E\u0064'](u=>u['\u0075\u0073\u0065\u0072\u006E\u0061\u006D\u0065']===username);if(_0xe108a){_0xe108a['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']=isAdmin;if(PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]){PERMISSION_CONFIG['\u0075\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073'][username]['\u0070\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']['\u0069\u0073\u0041\u0064\u006D\u0069\u006E']=isAdmin;}if(isAdmin&&!window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](username)){window['\u0041\u0044\u004D\u0049\u004E\u005F\u0055\u0053\u0045\u0052\u0053']['\u0070\u0075\u0073\u0068'](username);}else if(!isAdmin){removeFromAdminList(username);}savePermissionConfig();console['\u006C\u006F\u0067'](`已将用户 ${username} 设置为管理员: ${isAdmin}`);}}window['\u0061\u0064\u0064\u0054\u006F\u0041\u0064\u006D\u0069\u006E\u004C\u0069\u0073\u0074']=addToAdminList;window['\u0072\u0065\u006D\u006F\u0076\u0065\u0046\u0072\u006F\u006D\u0041\u0064\u006D\u0069\u006E\u004C\u0069\u0073\u0074']=removeFromAdminList;window['\u0073\u0065\u0074\u0055\u0073\u0065\u0072\u0041\u0073\u0041\u0064\u006D\u0069\u006E']=setUserAsAdmin;window['\u0073\u0068\u006F\u0077\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u004D\u0061\u006E\u0061\u0067\u0065\u0072']=showPermissionManager;window['\u0065\u0078\u0070\u006F\u0072\u0074\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0043\u006F\u006E\u0066\u0069\u0067']=exportPermissionConfig;window['\u0065\u0064\u0069\u0074\u0055\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']=editUserPermissions;window['\u0073\u0061\u0076\u0065\u0055\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']=saveUserPermissions;window['\u0075\u0070\u0064\u0061\u0074\u0065\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0056\u0061\u006C\u0075\u0065']=updatePermissionValue;window['\u0068\u0061\u0073\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E']=hasPermission;window['\u0063\u0061\u006E\u0056\u0069\u0065\u0077\u0053\u0069\u0074\u0065']=canViewSite;window['\u0063\u0061\u006E\u0056\u0069\u0065\u0077\u0054\u0061\u0062']=canViewTab;window['\u0073\u0068\u006F\u0077\u0041\u0064\u0064\u0055\u0073\u0065\u0072\u004D\u006F\u0064\u0061\u006C']=showAddUserModal;window['\u0064\u0065\u006C\u0065\u0074\u0065\u0055\u0073\u0065\u0072']=deleteUser;window['\u0067\u0065\u0074\u0041\u006C\u006C\u006F\u0077\u0065\u0064\u0054\u0061\u0062\u0073']=getAllowedTabs;window['\u0061\u0070\u0070\u006C\u0079\u0055\u0073\u0065\u0072\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0073']=applyUserPermissions;window['\u0069\u006E\u0069\u0074\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0053\u0079\u0073\u0074\u0065\u006D']=initPermissionSystem;window['\u006C\u006F\u0061\u0064\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0043\u006F\u006E\u0066\u0069\u0067']=loadPermissionConfig;window['\u0073\u0061\u0076\u0065\u0050\u0065\u0072\u006D\u0069\u0073\u0073\u0069\u006F\u006E\u0043\u006F\u006E\u0066\u0069\u0067']=savePermissionConfig;document['\u0061\u0064\u0064\u0045\u0076\u0065\u006E\u0074\u004C\u0069\u0073\u0074\u0065\u006E\u0065\u0072']("\u0044\u004F\u004D\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u004C\u006F\u0061\u0064\u0065\u0064",function(){setTimeout(function(){if(typeof initPermissionSystem==="noitcnuf".split("").reverse().join("")){initPermissionSystem();}},333567^333779);});
